@@ -1,2 +1,1 @@
-# dot-scripts-templates
-My scripts
+My dotfiles, scripts, templates, etc.
