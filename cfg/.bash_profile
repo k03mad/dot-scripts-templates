@@ -79,7 +79,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# auto nvm use at dir with .nvmrc
 enter_directory() {
     if [ "$PWD" != "$PREV_PWD" ]; then
         PREV_PWD="$PWD";
@@ -90,3 +89,8 @@ enter_directory() {
 }
 
 export PROMPT_COMMAND="enter_directory; $PROMPT_COMMAND"
+
+# ——————————————————————————————————————————————
+# autocorrect
+
+eval $(thefuck --alias)
