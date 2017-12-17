@@ -4,7 +4,7 @@ function run {
     echo -e "\033[0;33m🤖  RUNNING $1 \033[0m"
     cd /home/pi/git/$1/
     git pull
-    npm i
+    npm run setup
     npm run bot
 }
 
