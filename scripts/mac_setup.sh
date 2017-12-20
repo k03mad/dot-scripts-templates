@@ -11,6 +11,10 @@ function ___print {
 ___print "pre: install m-cli"
 brew install m-cli
 
+___print "pre: install bash completions"
+brew install bash-completion
+brew tap homebrew/completions
+
 ___print "pre: print hosts file"
 cat /private/etc/hosts
 echo

@@ -94,3 +94,9 @@ export PROMPT_COMMAND="enter_directory; $PROMPT_COMMAND"
 # autocorrect
 
 eval $(thefuck --alias)
+
+# ——————————————————————————————————————————————
+# autocomplete
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
