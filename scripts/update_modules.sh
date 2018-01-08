@@ -7,9 +7,7 @@ function ___print {
 ___print "brew: update"
 brew update
 brew upgrade
-brew cleanup
 brew tap caskroom/cask
-brew cask cleanup
 
 ___print "npm: install npm-check-updates"
 npm i npm -g

@@ -50,13 +50,6 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # trash
 #
 
-___print "trash: remove all .DS_Store and Icon? files"
-find . -type f -name '*.DS_Store' -print -delete
-find . -type f -name 'Icon?' -print -delete
-
-___print "trash: eject all disks"
-osascript -e 'tell application "Finder" to eject (every disk whose ejectable is true)'
-
 ___print "trash: disable the crash reporter"
 defaults write com.apple.CrashReporter DialogType -string "none"
 
@@ -66,9 +59,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 ___print "trash: disable the warning before emptying the trash"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
-
-___print "trash: clear trash and logs"
-sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
 
 #
 # finder
