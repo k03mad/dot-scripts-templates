@@ -11,10 +11,6 @@ function ___print {
 ___print "pre: install m-cli"
 brew install m-cli
 
-___print "pre: install bash completions"
-brew install bash-completion
-brew tap homebrew/completions
-
 ___print "pre: print hosts file"
 cat /private/etc/hosts
 echo
@@ -46,10 +42,6 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 defaults write com.apple.commerce AutoUpdate -bool true
-
-# ___print "system: disable gatekeeper and firewall"
-# sudo spctl --master-disable
-# sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
 
 ___print "system: automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
