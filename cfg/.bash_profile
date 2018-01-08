@@ -62,6 +62,7 @@ shopt -s cmdhist
 # ——————————————————————————————————————————————
 # vars
 
+export PATH=/usr/local/bin:$PATH
 export LANG=ru_RU.UTF-8
 export LC_CTYPE=ru_RU.UTF-8
 export HISTFILESIZE=20000
