@@ -4,17 +4,20 @@ function ___print {
     echo -e "\033[0;33m🤖  $1 \033[0m"
 }
 
-___print "brew: update"
+___print "update:"
+
+___print "brew"
 brew update
 brew upgrade
 brew tap caskroom/cask
+brew cleanup
+brew cask cleanup
 
-___print "npm: install packages"
+___print "npm"
 npm i npm -g
 npm i ttab -g
 npm i npm-check-updates -g
 
-___print "npm: update global"
 npm ls --depth=0 -g
 ncu -g
 for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f4)
@@ -23,7 +26,7 @@ do
     npm i "$package" -g
 done
 
-___print "NOW CLEANUP!"
+___print "cleanup:"
 
 ___print ".DS_Store"
 find . -type f -name '*.DS_Store' -print -delete
@@ -41,7 +44,3 @@ sudo rm -rfv ~/.Trash
 ___print "logs"
 sudo rm -rfv /private/var/log/asl/*.asl
 sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
-
-___print "brew"
-brew cleanup
-brew cask cleanup
