@@ -25,16 +25,23 @@ done
 
 ___print "NOW CLEANUP!"
 
-___print "remove all .DS_Store and Icon? files"
+___print ".DS_Store"
 find . -type f -name '*.DS_Store' -print -delete
+
+___print "Icon?"
 find . -type f -name 'Icon?' -print -delete
 
-___print "eject all disks"
+___print "eject"
 osascript -e 'tell application "Finder" to eject (every disk whose ejectable is true)'
 
-___print "clear trash and logs"
-sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+___print "trash"
+sudo rm -rfv /Volumes/*/.Trashes
+sudo rm -rfv ~/.Trash
 
-___print "brew cleanup"
+___print "logs"
+sudo rm -rfv /private/var/log/asl/*.asl
+sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+
+___print "brew"
 brew cleanup
 brew cask cleanup
