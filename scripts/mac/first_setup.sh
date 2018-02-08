@@ -13,14 +13,12 @@ brew install bash && \
 echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells && \
 chsh -s $(brew --prefix)/bin/bash
 
-___print "brew: install bash completion"
 brew uninstall bash-completion
 brew install bash-completion2
-brew install bash-snippets
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 
-___print "brew: install bash git prompt"
 brew install bash-git-prompt
+brew install bash-snippets
 
 ___print "brew: install others"
 brew install tree
@@ -29,6 +27,7 @@ brew install git
 brew install m-cli
 brew install mc
 brew install thefuck
+brew install --with-qt5 mkvtoolnix
 
 #
 # system
