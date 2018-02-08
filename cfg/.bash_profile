@@ -12,6 +12,7 @@ shopt -s cdspell
 shopt -s checkwinsize
 shopt -s histappend
 shopt -s cmdhist
+shopt -s nocaseglob
 
 # ——————————————————————————————————————————————
 # vars
