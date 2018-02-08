@@ -35,9 +35,9 @@ export NVM_DIR="$HOME/.nvm"
 
 enter_directory() {
     if [ "$PWD" != "$PREV_PWD" ]; then
-        PREV_PWD="$PWD";
+        PREV_PWD="$PWD"
         if [ -e ".nvmrc" ]; then
-            nvm install;
+            nvm install
         fi
     fi
 }
@@ -53,20 +53,30 @@ eval $(thefuck --alias)
 # autocomplete
 
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-    source "$(brew --prefix)/share/bash-completion/bash_completion";
+    source "$(brew --prefix)/share/bash-completion/bash_completion"
 elif [ -f /etc/bash_completion ]; then
-    source /etc/bash_completion;
+    source /etc/bash_completion
 fi;
 
 # ——————————————————————————————————————————————
 # prompt
 
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
-  GIT_PROMPT_PREFIX=""
-  GIT_PROMPT_SUFFIX=""
-  GIT_PROMPT_SEPARATOR=" "
-  GIT_PROMPT_COMMAND_OK="\[\033[1;32m\]\D{%H:%M} $(whoami)\[\033[0m\]"
-  GIT_PROMPT_END_USER="\n\[\033[1;97m\]>\[\033[0m\] "
-  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+    __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+    GIT_PROMPT_PREFIX=""
+    GIT_PROMPT_SUFFIX=""
+    GIT_PROMPT_SEPARATOR=" "
+    GIT_PROMPT_COMMAND_OK="\[\033[1;32m\]\D{%H:%M} $(whoami)\[\033[0m\]"
+    GIT_PROMPT_END_USER="\n\[\033[1;97m\]>\[\033[0m\] "
+    GIT_PROMPT_BRANCH=""
+    GIT_PROMPT_STAGED="staged: "
+    GIT_PROMPT_CONFLICTS="conflicts: "
+    GIT_PROMPT_CHANGED="changed: "
+    GIT_PROMPT_UNTRACKED="untracked: "
+    GIT_PROMPT_STASHED="stashed: "
+    GIT_PROMPT_CLEAN=""
+    GIT_PROMPT_SYMBOLS_AHEAD="ahead: "
+    GIT_PROMPT_SYMBOLS_BEHIND="behind: "
+    GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING=""
+    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
