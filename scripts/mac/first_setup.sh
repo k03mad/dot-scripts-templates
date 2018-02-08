@@ -16,16 +16,29 @@ cat /private/etc/hosts
 echo
 
 #
+# bash
+#
+
+___print "bash: install latest version"
+brew install bash && \
+echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells && \
+chsh -s $(brew --prefix)/bin/bash
+
+___print "bash: install completion"
+brew uninstall bash-completion
+brew tap homebrew/versions
+brew install bash-completion2
+echo set completion-ignore-case on | sudo tee -a /etc/inputrc
+
+___print "bash: install git prompt"
+brew install bash-git-prompt
+
+#
 # system
 #
 
 ___print "system: close any open system preferences panes"
 osascript -e 'tell application "System Preferences" to quit'
-
-___print "system: install latest bash version"
-brew install bash && \
-echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells && \
-chsh -s $(brew --prefix)/bin/bash
 
 ___print "system: set ntp server"
 m ntp enable
