@@ -27,6 +27,7 @@ brew install git
 brew install m-cli
 brew install mc
 brew install thefuck
+brew install httpie
 brew install --with-qt5 mkvtoolnix
 
 #
