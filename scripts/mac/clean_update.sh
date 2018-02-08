@@ -7,8 +7,13 @@ function ___print {
 ___print "update:"
 
 ___print "brew"
+brew update
+brew upgrade
 brew tap caskroom/cask
-brewup
+brew prune
+brew cleanup
+brew cask cleanup
+brew doctor
 
 ___print "npm"
 npm i npm -g
