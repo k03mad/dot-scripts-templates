@@ -3,6 +3,7 @@
 
 alias ds="echo megabytes; du -m | sort -n -r |more"
 alias fs="echo megabytes; find . -maxdepth 1 -type d -print | xargs du -sm | sort -rn"
+alias brewup="brew update; brew upgrade; brew prune; brew cleanup; brew cask cleanup; brew doctor"
 
 # ——————————————————————————————————————————————
 # options
