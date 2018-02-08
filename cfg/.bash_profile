@@ -63,5 +63,10 @@ fi;
 
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  GIT_PROMPT_PREFIX=""
+  GIT_PROMPT_SUFFIX=""
+  GIT_PROMPT_SEPARATOR=" "
+  GIT_PROMPT_COMMAND_OK="\[\033[1;32m\]\D{%H:%M} $(whoami)\[\033[0m\]"
+  GIT_PROMPT_END_USER="\n\[\033[1;97m\]>\[\033[0m\] "
   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
