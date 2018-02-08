@@ -17,7 +17,6 @@ brew doctor
 
 ___print "npm"
 npm i npm -g
-npm i ttab -g
 npm i npm-check-updates -g
 
 npm ls --depth=0 -g

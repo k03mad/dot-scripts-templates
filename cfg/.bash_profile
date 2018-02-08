@@ -60,14 +60,6 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # ——————————————————————————————————————————————
-# colored curl
-
-function curl() {
-    http "$@"
-}
-export -f curl
-
-# ——————————————————————————————————————————————
 # prompt
 
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then

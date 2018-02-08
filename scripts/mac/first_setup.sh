@@ -1,4 +1,5 @@
 # brew should be preinstalled https://brew.sh/index_ru.html
+# nvm and node should be preinstalled https://github.com/creationix/nvm
 
 function ___print {
     echo -e "\033[0;33m🤖  $1 \033[0m"
@@ -21,14 +22,25 @@ brew install bash-git-prompt
 brew install bash-snippets
 
 ___print "brew: install others"
-brew install tree
 brew install aria2
 brew install git
+brew install httpie
 brew install m-cli
 brew install mc
 brew install thefuck
-brew install httpie
+brew install tree
 brew install --with-qt5 mkvtoolnix
+
+#
+# npm
+#
+___print "npm: install packages"
+npm i gtop -g
+npm i slap -g
+npm i speed-test -g
+npm i ttab -g
+npm i ttystudio -g
+npm i osx-wifi-cli -g
 
 #
 # system
