@@ -26,8 +26,8 @@ chsh -s $(brew --prefix)/bin/bash
 
 ___print "bash: install completion"
 brew uninstall bash-completion
-brew tap homebrew/versions
 brew install bash-completion2
+brew install bash-snippets
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 
 ___print "bash: install git prompt"
