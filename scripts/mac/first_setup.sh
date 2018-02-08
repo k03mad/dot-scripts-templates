@@ -36,10 +36,8 @@ brew install --with-qt5 mkvtoolnix
 #
 ___print "npm: install packages"
 npm i gtop -g
-npm i slap -g
 npm i speed-test -g
 npm i ttab -g
-npm i ttystudio -g
 npm i osx-wifi-cli -g
 
 #
