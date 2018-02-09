@@ -78,6 +78,6 @@ if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
     GIT_PROMPT_CLEAN=""
     GIT_PROMPT_SYMBOLS_AHEAD=" ahead: "
     GIT_PROMPT_SYMBOLS_BEHIND="behind: "
-    GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING=""
+    GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING=" "
     source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
