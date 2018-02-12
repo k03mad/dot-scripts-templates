@@ -69,7 +69,7 @@ if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
     GIT_PROMPT_SEPARATOR=" "
     GIT_PROMPT_COMMAND_OK="\[\033[1;32m\]\D{%H:%M} $(whoami)\[\033[0m\]"
     GIT_PROMPT_END_USER="\n\[\033[1;97m\]>\[\033[0m\] "
-    GIT_PROMPT_BRANCH=""
+    GIT_PROMPT_BRANCH="\[\033[0;97m\]"
     GIT_PROMPT_STAGED="staged: "
     GIT_PROMPT_CONFLICTS="conflicts: "
     GIT_PROMPT_CHANGED="changed: "
