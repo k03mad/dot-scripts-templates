@@ -72,7 +72,7 @@ if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
     GIT_PROMPT_BRANCH="\[\033[0;97m\]"
     GIT_PROMPT_STAGED="staged: "
     GIT_PROMPT_CONFLICTS="conflicts: "
-    GIT_PROMPT_CHANGED="changed: "
+    GIT_PROMPT_CHANGED=" changed: "
     GIT_PROMPT_UNTRACKED=" untracked: "
     GIT_PROMPT_STASHED="stashed: "
     GIT_PROMPT_CLEAN=""
