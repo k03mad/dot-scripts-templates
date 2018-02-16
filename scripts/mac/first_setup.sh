@@ -29,7 +29,7 @@ brew install m-cli
 brew install mc
 brew install thefuck
 brew install tree
-brew install --with-qt5 mkvtoolnix
+brew install --with-qt mkvtoolnix
 
 #
 # npm
