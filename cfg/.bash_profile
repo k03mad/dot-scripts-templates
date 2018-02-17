@@ -17,6 +17,7 @@ shopt -s nocaseglob
 # vars
 
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/opt/curl/bin:$PATH
 export LANG=ru_RU.UTF-8
 export LC_CTYPE=ru_RU.UTF-8
 export HISTFILESIZE=20000
@@ -57,7 +58,7 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_c
     source "$(brew --prefix)/share/bash-completion/bash_completion"
 elif [ -f /etc/bash_completion ]; then
     source /etc/bash_completion
-fi;
+fi
 
 # ——————————————————————————————————————————————
 # prompt
