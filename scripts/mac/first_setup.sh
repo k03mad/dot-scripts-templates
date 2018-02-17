@@ -1,5 +1,4 @@
 # brew should be preinstalled https://brew.sh/index_ru.html
-# nvm and node should be preinstalled https://github.com/creationix/nvm
 
 function ___print {
     echo -e "\033[0;33m🤖  $1 \033[0m"
@@ -20,26 +19,18 @@ echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 brew install bash-git-prompt
 brew install bash-snippets
 
-___print "brew: install others"
+___print "brew: install soft"
 brew install aria2
 brew install curl
 brew install git
 brew install httpie
 brew install m-cli
 brew install mc
+brew install mkvdts2ac3
 brew install nano
 brew install thefuck
 brew install tree
 brew install --with-qt mkvtoolnix
-
-#
-# npm
-#
-___print "npm: install packages"
-npm i gtop -g
-npm i speed-test -g
-npm i ttab -g
-npm i osx-wifi-cli -g
 
 #
 # system

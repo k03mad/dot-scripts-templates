@@ -1,10 +1,11 @@
 # brew should be preinstalled https://brew.sh/index_ru.html
+# nvm and node should be preinstalled https://github.com/creationix/nvm
 
 function ___print {
     echo -e "\033[0;33m🤖  $1 \033[0m"
 }
 
-___print "update:"
+___print "UPDATE"
 
 ___print "brew"
 brew update
@@ -18,6 +19,10 @@ brew doctor
 ___print "npm"
 npm i npm -g
 npm i npm-check-updates -g
+npm i gtop -g
+npm i speed-test -g
+npm i ttab -g
+npm i osx-wifi-cli -g
 
 npm ls --depth=0 -g
 ncu -g
@@ -27,7 +32,7 @@ do
     npm i "$package" -g
 done
 
-___print "cleanup:"
+___print "CLEANUP"
 
 ___print ".DS_Store"
 find . -type f -name '*.DS_Store' -print -delete
