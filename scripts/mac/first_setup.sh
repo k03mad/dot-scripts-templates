@@ -1,5 +1,3 @@
-# brew should be preinstalled https://brew.sh/index_ru.html
-
 function ___print {
     echo -e "\033[0;33m🤖  $1 \033[0m"
 }
@@ -9,23 +7,27 @@ function ___print {
 #
 
 ___print "brew: install bash"
-brew install bash && \
-echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells && \
+brew install bash
+grep "$(brew --prefix)/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
 chsh -s $(brew --prefix)/bin/bash
 
 brew install bash-completion2
-echo set completion-ignore-case on | sudo tee -a /etc/inputrc
+grep "set completion-ignore-case on" /etc/inputrc &>/dev/null || echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 
 brew install bash-git-prompt
 brew install bash-snippets
 
 ___print "brew: install soft"
 brew install aria2
+brew install ccat
 brew install curl
 brew install git
+brew install hr
 brew install httpie
 brew install m-cli
+brew install mas
 brew install mc
+brew install micro
 brew install mkvdts2ac3
 brew install nano
 brew install thefuck

@@ -1,32 +1,38 @@
 # ——————————————————————————————————————————————
 # aliases
 
+alias ..="cd .."
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias ds="echo megabytes; du -m | sort -n -r |more"
 alias fs="echo megabytes; find . -maxdepth 1 -type d -print | xargs du -sm | sort -rn"
+alias reload="exec ${SHELL} -l"
+alias treels="tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX"
+eval $(thefuck --alias)
 
 # ——————————————————————————————————————————————
 # options
 
 shopt -s cdspell
 shopt -s checkwinsize
-shopt -s histappend
 shopt -s cmdhist
+shopt -s histappend
 shopt -s nocaseglob
 
 # ——————————————————————————————————————————————
 # vars
 
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/opt/curl/bin:$PATH
+export CLICOLOR=1
+export HISTFILESIZE=20000
+export HISTIGNORE="&:ls:[bf]g:exit"
+export HISTSIZE=10000
 export LANG=ru_RU.UTF-8
 export LC_CTYPE=ru_RU.UTF-8
-export HISTFILESIZE=20000
-export HISTSIZE=10000
-export HISTIGNORE="&:ls:[bf]g:exit"
-export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-PROMPT_COMMAND='history -a'
+export MANPAGER='less -X'
+export PATH=/usr/local/bin:$PATH
+export PATH=$(brew --prefix curl)/bin:$PATH
 HISTCONTROL=ignoredups:ignorespace
+PROMPT_COMMAND='history -a'
 
 # ——————————————————————————————————————————————
 # nvm
@@ -47,11 +53,6 @@ enter_directory() {
 export PROMPT_COMMAND="enter_directory; $PROMPT_COMMAND"
 
 # ——————————————————————————————————————————————
-# autocorrect
-
-eval $(thefuck --alias)
-
-# ——————————————————————————————————————————————
 # autocomplete
 
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
@@ -63,8 +64,8 @@ fi
 # ——————————————————————————————————————————————
 # prompt
 
-if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-    __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+    __GIT_PROMPT_DIR=$(brew --prefix bash-git-prompt)/share
     GIT_PROMPT_PREFIX=""
     GIT_PROMPT_SUFFIX=""
     GIT_PROMPT_SEPARATOR=" "
@@ -80,5 +81,5 @@ if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
     GIT_PROMPT_SYMBOLS_AHEAD=" ahead: "
     GIT_PROMPT_SYMBOLS_BEHIND=" behind: "
     GIT_PROMPT_SYMBOLS_NO_REMOTE_TRACKING=" "
-    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
