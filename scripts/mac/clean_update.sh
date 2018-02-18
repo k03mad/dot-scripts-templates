@@ -10,7 +10,7 @@ mas upgrade
 ___print "brew"
 brew update
 brew upgrade
-brew tap caskroom/cask
+brew cask upgrade
 brew prune
 brew cleanup
 brew cask cleanup

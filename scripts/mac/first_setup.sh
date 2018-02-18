@@ -6,6 +6,11 @@ function ___print {
 # brew
 #
 
+___print "brew: add casks"
+
+brew tap caskroom/cask
+brew tap caskroom/fonts
+
 ___print "brew: install bash"
 brew install bash
 grep "$(brew --prefix)/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
@@ -33,6 +38,7 @@ brew install nano
 brew install thefuck
 brew install tree
 brew install --with-qt mkvtoolnix
+brew cask install font-fira-code
 
 #
 # system
