@@ -3,6 +3,7 @@
 
 alias ..="cd .."
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias cat="ccat"
 alias ds="echo megabytes; du -m | sort -n -r |more"
 alias fs="echo megabytes; find . -maxdepth 1 -type d -print | xargs du -sm | sort -rn"
 alias reload="exec ${SHELL} -l"
