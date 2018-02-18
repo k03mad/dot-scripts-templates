@@ -5,7 +5,7 @@ function ___print {
 ___print "UPDATE"
 ___print "system"
 
-sudo softwareupdate -i -a
+mas upgrade
 
 ___print "brew"
 brew update
@@ -17,9 +17,9 @@ brew cask cleanup
 brew doctor
 
 ___print "npm"
+npm i npm -g
 npm i gtop -g
 npm i loadtest -g
-npm i npm -g
 npm i npm-check-updates -g
 npm i osx-wifi-cli -g
 npm i rename-cli -g
