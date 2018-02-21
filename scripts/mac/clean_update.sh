@@ -37,10 +37,10 @@ done
 ___print "CLEANUP"
 
 ___print ".DS_Store"
-find . -type f -name '*.DS_Store' -print -delete
+sudo find ~ -type f -name '*.DS_Store' -print -delete
 
 ___print "Icon?"
-find . -type f -name 'Icon?' -print -delete
+sudo find ~ -type f -name 'Icon?' -print -delete
 
 ___print "eject"
 osascript -e 'tell application "Finder" to eject (every disk whose ejectable is true)'
