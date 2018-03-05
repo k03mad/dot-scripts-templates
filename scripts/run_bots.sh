@@ -9,9 +9,13 @@ function run {
     npm run bot
 }
 
+if [ -z "$(forever)" ]; then
+    npm i -g forever
+fi
+
 run "yet-another-tlgrm-bot"
 run "raspi-tlgrm-bot"
-# run "grammar-tlgrm-bot"
+# # run "grammar-tlgrm-bot"
 
 # reboot pi after 12h
 sudo shutdown --no-wall -r +720
