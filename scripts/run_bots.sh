@@ -10,7 +10,7 @@ function run {
 
 run "yet-another-tlgrm-bot"
 run "raspi-tlgrm-bot"
-# # run "grammar-tlgrm-bot"
+# run "grammar-tlgrm-bot"
 
 # reboot pi after 12h
 sudo shutdown --no-wall -r +720
