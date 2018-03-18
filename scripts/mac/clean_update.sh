@@ -2,6 +2,15 @@ function ___print {
     echo -e "\033[0;33m🤖  $1 \033[0m"
 }
 
+function npmInstall {
+    if [ -z "$(npm list -g --depth=0 | grep $1)" ]; then
+        echo -e "Installing $1..."
+        npm i $1 -g
+    else
+        echo -e "$1 already installed"
+    fi
+}
+
 ___print "UPDATE"
 ___print "system"
 
@@ -17,14 +26,15 @@ brew cask cleanup
 brew doctor
 
 ___print "npm"
+
 npm i npm -g
-npm i gtop -g
-npm i loadtest -g
-npm i npm-check-updates -g
-npm i osx-wifi-cli -g
-npm i rename-cli -g
-npm i speed-test -g
-npm i ttab -g
+npmInstall "gtop"
+npmInstall "loadtest"
+npmInstall "npm-check-updates"
+npmInstall "osx-wifi-cli"
+npmInstall "rename-cli"
+npmInstall "speed-test"
+npmInstall "ttab"
 
 npm ls --depth=0 -g
 ncu -g
