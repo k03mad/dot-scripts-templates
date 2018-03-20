@@ -27,15 +27,6 @@ brew doctor
 
 ___print "npm"
 
-npm i npm -g
-npmInstall "gtop"
-npmInstall "loadtest"
-npmInstall "npm-check-updates"
-npmInstall "osx-wifi-cli"
-npmInstall "rename-cli"
-npmInstall "speed-test"
-npmInstall "ttab"
-
 npm ls --depth=0 -g
 ncu -g
 for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f4)
@@ -43,6 +34,14 @@ do
     echo $package
     npm i "$package" -g
 done
+
+npmInstall "gtop"
+npmInstall "loadtest"
+npmInstall "npm-check-updates"
+npmInstall "osx-wifi-cli"
+npmInstall "rename-cli"
+npmInstall "speed-test"
+npmInstall "ttab"
 
 ___print "CLEANUP"
 
