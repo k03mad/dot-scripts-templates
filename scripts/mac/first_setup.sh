@@ -41,6 +41,12 @@ brew install --with-qt mkvtoolnix
 brew cask install font-fira-code
 
 #
+# git
+#
+
+git config --global push.default current
+
+#
 # system
 #
 
