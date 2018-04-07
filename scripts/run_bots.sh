@@ -13,4 +13,4 @@ run "raspi-tlgrm-bot"
 # run "grammar-tlgrm-bot"
 
 # reboot pi after 12h
-sudo shutdown --no-wall -r +720
+# sudo shutdown --no-wall -r +720
