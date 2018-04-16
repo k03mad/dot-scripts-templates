@@ -9,5 +9,5 @@ function run {
 }
 
 run "raspi-tlgrm-bot"
-run "yet-another-tlgrm-bot"
+# run "yet-another-tlgrm-bot"
 # run "grammar-tlgrm-bot"
