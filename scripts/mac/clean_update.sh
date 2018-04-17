@@ -36,6 +36,7 @@ do
 done
 
 npmInstall "gtop"
+npmInstall "http-server"
 npmInstall "loadtest"
 npmInstall "npm-check-updates"
 npmInstall "osx-wifi-cli"
