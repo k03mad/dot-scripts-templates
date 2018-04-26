@@ -12,6 +12,7 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 
 ___print "brew: install bash"
+
 brew install bash
 grep "$(brew --prefix)/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
 chsh -s $(brew --prefix)/bin/bash
