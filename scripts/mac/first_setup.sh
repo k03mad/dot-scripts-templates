@@ -23,22 +23,50 @@ brew install bash-git-prompt
 brew install bash-snippets
 
 ___print "brew: install soft"
-brew install aria2
-brew install ccat
-brew install curl
-brew install git
-brew install hr
-brew install httpie
-brew install m-cli
-brew install mas
-brew install mc
-brew install micro
-brew install mkvdts2ac3
-brew install nano
-brew install thefuck
-brew install tree
-brew install --with-qt mkvtoolnix
-brew cask install font-fira-code
+
+termTools = (
+    aria2
+    ccat
+    curl
+    git
+    hr
+    httpie
+    m-cli
+    mas
+    mc
+    micro
+    mkvdts2ac3
+    nano
+    thefuck
+    tree
+    '--with-qt mkvtoolnix'
+)
+
+guiTools = (
+    appcleaner
+    font-fira-code
+    google-chrome
+    id3-editor
+    insomniax
+    omnidisksweeper
+    sopcast
+    telegram-desktop
+    the-unarchiver
+    transmission
+    vlc
+    yandex
+    yandex-disk
+)
+
+for i in "${termTools[@]}"
+do
+	brew install $i
+done
+
+for i in "${guiTools[@]}"
+do
+	brew cask install $i
+done
 
 #
 # git
