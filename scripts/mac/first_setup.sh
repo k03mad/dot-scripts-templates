@@ -39,6 +39,7 @@ termTools = (
     mkvdts2ac3
     nano
     thefuck
+    tldr
     tree
     '--with-qt mkvtoolnix'
 )
@@ -61,12 +62,12 @@ guiTools = (
 
 for i in "${termTools[@]}"
 do
-	brew install $i
+    brew install $i
 done
 
 for i in "${guiTools[@]}"
 do
-	brew cask install $i
+    brew cask install $i
 done
 
 #
@@ -236,5 +237,5 @@ m dock autohide NO
 
 ___print "done: kill affected applications"
 for app in "Dock" "Finder" "Photos" "Safari" "SystemUIServer" "Transmission"; do
-	killall "${app}" &> /dev/null
+    killall "${app}" &> /dev/null
 done
