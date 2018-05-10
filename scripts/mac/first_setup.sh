@@ -25,7 +25,7 @@ brew install bash-snippets
 
 ___print "brew: install soft"
 
-termTools = (
+termTools=(
     aria2
     ccat
     curl
@@ -44,7 +44,7 @@ termTools = (
     '--with-qt mkvtoolnix'
 )
 
-guiTools = (
+guiTools=(
     appcleaner
     font-fira-code
     google-chrome

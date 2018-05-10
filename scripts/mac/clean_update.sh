@@ -2,21 +2,13 @@ function ___print {
     echo -e "\033[0;33m🤖  $1 \033[0m"
 }
 
-function npmInstall {
-    if [ -z "$(npm list -g --depth=0 | grep $1)" ]; then
-        echo -e "Installing $1..."
-        npm i $1 -g
-    else
-        echo -e "$1 already installed"
-    fi
-}
-
 ___print "UPDATE"
 ___print "system"
 
 mas upgrade
 
 ___print "brew"
+
 brew update
 brew upgrade
 brew cask upgrade
@@ -27,23 +19,40 @@ brew doctor
 
 ___print "npm"
 
+installGlobal=(
+    flamebearer
+    forever
+    gtop
+    http-server
+    loadtest
+    nls
+    npm-check-updates
+    osx-wifi-cli
+    puppeteer-assets
+    rename-cli
+    selenium-standalone
+    speed-test
+    ttab
+)
+
+for i in "${installGlobal[@]}"
+do
+    if [ -z "$(npm list -g --depth=0 | grep $i)" ]; then
+        echo -e "Installing $i..."
+        npm i $i -g
+    else
+        echo -e "$i already installed"
+    fi
+done
+
 npm ls --depth=0 -g
 ncu -g
+
 for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f4)
 do
     echo $package
     npm i "$package" -g
 done
-
-npmInstall "gtop"
-npmInstall "http-server"
-npmInstall "loadtest"
-npmInstall "npm-check-updates"
-npmInstall "osx-wifi-cli"
-npmInstall "puppeteer-assets"
-npmInstall "rename-cli"
-npmInstall "speed-test"
-npmInstall "ttab"
 
 ___print "CLEANUP"
 
