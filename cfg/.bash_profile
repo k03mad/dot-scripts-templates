@@ -6,6 +6,7 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias cat="ccat"
 alias ds="echo megabytes; du -m | sort -n -r |more"
 alias fs="echo megabytes; find . -maxdepth 1 -type d -print | xargs du -sm | sort -rn"
+alias nvmup="nvm install node --reinstall-packages-from=node"
 alias reload="exec ${SHELL} -l"
 alias treels="tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX"
 eval $(thefuck --alias)
