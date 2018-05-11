@@ -46,6 +46,7 @@ termTools=(
 
 guiTools=(
     appcleaner
+    etcher
     font-fira-code
     google-chrome
     id3-editor
