@@ -41,11 +41,13 @@ termTools=(
     thefuck
     tldr
     tree
+    wget
     '--with-qt mkvtoolnix'
 )
 
 guiTools=(
     appcleaner
+    etcher
     font-fira-code
     google-chrome
     id3-editor
