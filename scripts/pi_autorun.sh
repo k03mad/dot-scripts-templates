@@ -5,12 +5,12 @@ function run {
     cd /home/pi/git/$1/
     git pull
     npm run setup
-    npm run bot
+    npm run $2
 }
 
-run "raspi-tlgrm-bot"
+run "raspi-tlgrm-bot" "bot"
 # run "yet-another-tlgrm-bot"
 # run "grammar-tlgrm-bot"
 
-# reboot pi every 6 hours
-sudo shutdown --no-wall -r +360
+# reboot pi every N hours
+sudo shutdown --no-wall -r +720
