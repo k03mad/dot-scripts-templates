@@ -9,8 +9,7 @@ function run {
 }
 
 run "raspi-tlgrm-bot" "bot"
-# run "yet-another-tlgrm-bot"
-# run "grammar-tlgrm-bot"
+run "adguard-dns-to-hosts" "deploy"
 
 # reboot pi every N hours
 sudo shutdown --no-wall -r +720
