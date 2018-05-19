@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function run {
-    echo -e "\033[0;33m🤖  RUNNING $1 \033[0m"
+    echo -e "\033[0;33m🤖  RUNNING $1 $2 \033[0m"
     cd /home/pi/git/$1/
     git pull
     npm run setup
