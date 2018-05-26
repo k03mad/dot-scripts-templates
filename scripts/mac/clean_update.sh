@@ -26,6 +26,8 @@ installGlobal=(
     http-server
     loadtest
     nls
+    ts-node
+    typescript
     npm-check-updates
     osx-wifi-cli
     puppeteer-assets
