@@ -41,7 +41,6 @@ termTools=(
     thefuck
     tldr
     tree
-    ttygif
     wget
     '--with-qt mkvtoolnix'
 )
