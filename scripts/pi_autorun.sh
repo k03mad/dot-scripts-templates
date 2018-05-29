@@ -9,7 +9,7 @@ function run {
 }
 
 run "raspi-tlgrm-bot" "bot"
-run "adguard-dns-to-hosts" "deploy"
+run "adblock-hosts-list" "deploy"
 
 # reboot pi every N hours
 sudo shutdown --no-wall -r +720
