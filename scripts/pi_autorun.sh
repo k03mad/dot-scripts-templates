@@ -11,5 +11,5 @@ function run {
 run "raspi-tlgrm-bot" "bot"
 run "adblock-hosts-list" "deploy"
 
-# reboot pi every N hours
-sudo shutdown --no-wall -r +720
+# reboot pi every N minutes
+sudo shutdown --no-wall -r +360
