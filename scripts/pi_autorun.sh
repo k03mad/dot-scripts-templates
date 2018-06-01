@@ -8,7 +8,7 @@ function run {
     npm run $2
 }
 
-run "raspi-tlgrm-bot" "bot"
+run "raspberry-tools" "bot"
 run "adblock-hosts-list" "deploy"
 
 # reboot pi every N minutes
