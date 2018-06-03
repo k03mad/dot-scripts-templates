@@ -12,4 +12,4 @@ run "raspberry-tools" "bot"
 run "adblock-hosts-list" "deploy"
 
 # reboot pi every N minutes
-sudo shutdown --no-wall -r +360
+sudo shutdown --no-wall -r +720
