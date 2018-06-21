@@ -50,7 +50,6 @@ guiTools=(
     etcher
     font-fira-code
     google-chrome
-    id3-editor
     insomniax
     omnidisksweeper
     sopcast
