@@ -32,6 +32,7 @@ termTools=(
     git
     hr
     httpie
+    id3v2
     m-cli
     mas
     mc
