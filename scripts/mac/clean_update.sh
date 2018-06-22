@@ -28,6 +28,7 @@ installGlobal=(
     nls
     ts-node
     typescript
+    metrx
     npm-check-updates
     osx-wifi-cli
     puppeteer-assets
