@@ -1,5 +1,7 @@
+#!/bin/bash
+
 function ___print {
-    echo -e "\033[0;33m🤖  $1 \033[0m"
+    echo -e "\\033[0;33m🤖  $1 \\033[0m"
 }
 
 ___print "UPDATE"
@@ -41,11 +43,11 @@ installGlobal=(
 
 for i in "${installGlobal[@]}"
 do
-    if [ -z "$(npm list -g --depth=0 | grep $i)" ]; then
-        echo -e "Installing $i..."
-        npm i $i -g
-    else
+    if npm list -g --depth=0 | grep -q "$i"; then
         echo -e "$i already installed"
+    else
+        echo -e "Installing $i..."
+        npm i "$i" -g
     fi
 done
 

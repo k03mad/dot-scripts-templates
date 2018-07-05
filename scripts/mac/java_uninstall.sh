@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo rm -rf /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
 sudo rm -rf /Library/PreferencesPanes/JavaControlPanel.prefPane
 sudo rm -rf ~/Library/Application\ Support/Java
