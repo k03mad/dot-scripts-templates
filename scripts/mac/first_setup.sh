@@ -52,6 +52,7 @@ termTools=(
 guiTools=(
     appcleaner
     etcher
+    exifrenamer
     font-fira-code
     google-chrome
     insomniax
