@@ -22,20 +22,21 @@ ___print "npm"
 installGlobal=(
     flamebearer
     forever
+    git-authors-cli
     gtop
     http-server
     loadtest
-    nls
-    ts-node
-    typescript
     metrx
+    nls
     npm-check-updates
     osx-wifi-cli
     puppeteer-assets
     rename-cli
     selenium-standalone
     speed-test
+    ts-node
     ttab
+    typescript
 )
 
 for i in "${installGlobal[@]}"
