@@ -17,7 +17,7 @@ ___print "brew: install bash"
 
 brew install bash
 grep "$(brew --prefix)/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
-chsh -s $(brew --prefix)/bin/bash
+chsh -s "$(brew --prefix)/bin/bash"
 
 brew install bash-completion2
 grep "set completion-ignore-case on" /etc/inputrc &>/dev/null || echo set completion-ignore-case on | sudo tee -a /etc/inputrc
@@ -67,12 +67,12 @@ guiTools=(
 
 for i in "${termTools[@]}"
 do
-    brew install $i
+    brew install "$i"
 done
 
 for i in "${guiTools[@]}"
 do
-    brew cask install $i
+    brew cask install "$i"
 done
 
 #
