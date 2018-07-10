@@ -21,36 +21,6 @@ brew doctor
 
 ___print "npm"
 
-installGlobal=(
-    flamebearer
-    forever
-    git-authors-cli
-    gtop
-    http-server
-    loadtest
-    metrx
-    nls
-    npm-check-updates
-    osx-wifi-cli
-    puppeteer-assets
-    rename-cli
-    selenium-standalone
-    speed-test
-    ts-node
-    ttab
-    typescript
-)
-
-for i in "${installGlobal[@]}"
-do
-    if npm list -g --depth=0 | grep -q "$i"; then
-        echo -e "$i already installed"
-    else
-        echo -e "Installing $i..."
-        npm i "$i" -g
-    fi
-done
-
 npm ls --depth=0 -g
 ncu -g
 

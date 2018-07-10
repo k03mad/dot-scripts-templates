@@ -25,7 +25,7 @@ grep "set completion-ignore-case on" /etc/inputrc &>/dev/null || echo set comple
 brew install bash-git-prompt
 brew install bash-snippets
 
-___print "brew: install soft"
+___print "brew: install tools"
 
 termTools=(
     aria2
@@ -74,6 +74,37 @@ done
 for i in "${guiTools[@]}"
 do
     brew cask install "$i"
+done
+
+#
+# npm
+#
+
+___print "npm: install tools"
+
+npmTools=(
+    flamebearer
+    forever
+    git-authors-cli
+    gtop
+    http-server
+    loadtest
+    metrx
+    nls
+    npm-check-updates
+    osx-wifi-cli
+    puppeteer-assets
+    rename-cli
+    selenium-standalone
+    speed-test
+    ts-node
+    ttab
+    typescript
+)
+
+for i in "${npmTools[@]}"
+do
+    npm i "$i" -g
 done
 
 #
