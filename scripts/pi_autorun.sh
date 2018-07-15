@@ -12,4 +12,3 @@ function run {
 sudo shutdown --no-wall -r +720
 
 run "raspberry-tools" "bot"
-run "adblock-hosts-list" "deploy"
