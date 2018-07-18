@@ -89,6 +89,7 @@ npmTools=(
     gtop
     http-server
     loadtest
+    make-space
     metrx
     nls
     npm-check-updates
