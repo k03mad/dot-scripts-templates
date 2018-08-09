@@ -57,6 +57,7 @@ guiTools=(
     google-chrome
     insomniax
     omnidisksweeper
+    oversight
     sopcast
     telegram-desktop
     the-unarchiver
