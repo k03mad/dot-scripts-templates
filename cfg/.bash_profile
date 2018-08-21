@@ -6,10 +6,14 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias cat="ccat"
 alias ds="echo megabytes; du -m | sort -n -r |more"
 alias fs="echo megabytes; find . -maxdepth 1 -type d -print | xargs du -sm | sort -rn"
-alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
 alias reload="exec ${SHELL} -l"
 alias treels="tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX"
-eval $(thefuck --alias)
+
+download() {
+    aria2c "$@" --file-allocation=falloc --max-connection-per-server=5 --split=5;
+}
+
+eval "$(thefuck --alias)"
 
 # ——————————————————————————————————————————————
 # options
