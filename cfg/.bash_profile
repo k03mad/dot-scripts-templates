@@ -10,7 +10,7 @@ alias reload="exec ${SHELL} -l"
 alias treels="tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX"
 
 download() {
-    aria2c "$@" --file-allocation=falloc --max-connection-per-server=5 --split=5;
+    aria2c "$@" --file-allocation=falloc --max-connection-per-server=3 --split=3 --max-tries=0 --retry-wait=5 --continue --remote-time;
 }
 
 eval "$(thefuck --alias)"
