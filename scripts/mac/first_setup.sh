@@ -35,6 +35,7 @@ termTools=(
     hr
     httpie
     id3v2
+    jq
     m-cli
     mas
     mc
