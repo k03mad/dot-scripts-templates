@@ -8,7 +8,4 @@ function run {
     npm run "$2"
 }
 
-# reboot pi every N minutes
-sudo shutdown --no-wall -r +720
-
 run "raspberry-tools" "bot"
