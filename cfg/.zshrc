@@ -1,6 +1,6 @@
 # zsh
 
-export ZSH="/Users/kirill-m/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME=""
 export UPDATE_ZSH_DAYS=1
