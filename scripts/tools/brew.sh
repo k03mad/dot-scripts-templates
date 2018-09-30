@@ -26,6 +26,7 @@ termTools=(
     tree
     wget
     zsh
+    zsh-completions
     '--with-qt mkvtoolnix'
 )
 
