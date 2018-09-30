@@ -4,121 +4,8 @@ function ___print {
     echo -e "\\033[0;33m🤖  $1 \\033[0m"
 }
 
-#
-# brew
-#
-
-___print "brew: add casks"
-
-brew tap caskroom/cask
-brew tap caskroom/fonts
-
-___print "brew: install bash"
-
-brew install bash
-grep "$(brew --prefix)/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
-chsh -s "$(brew --prefix)/bin/bash"
-
-brew install bash-completion2
-grep "set completion-ignore-case on" /etc/inputrc &>/dev/null || echo set completion-ignore-case on | sudo tee -a /etc/inputrc
-
-brew install bash-git-prompt
-brew install bash-snippets
-
-___print "brew: install tools"
-
-termTools=(
-    aria2
-    ccat
-    curl
-    git
-    hr
-    httpie
-    id3v2
-    jq
-    m-cli
-    mas
-    mc
-    micro
-    mkvdts2ac3
-    nano
-    shellcheck
-    thefuck
-    tldr
-    tree
-    wget
-    '--with-qt mkvtoolnix'
-)
-
-guiTools=(
-    appcleaner
-    etcher
-    exifrenamer
-    font-fira-code
-    google-chrome
-    insomniax
-    omnidisksweeper
-    oversight
-    sopcast
-    telegram-desktop
-    the-unarchiver
-    transmission
-    vlc
-    yandex
-    yandex-disk
-)
-
-for i in "${termTools[@]}"
-do
-    brew install "$i"
-done
-
-for i in "${guiTools[@]}"
-do
-    brew cask install "$i"
-done
-
-#
-# npm
-#
-
-___print "npm: install tools"
-
-npmTools=(
-    flamebearer
-    forever
-    git-authors-cli
-    gtop
-    http-server
-    loadtest
-    make-space
-    metrx
-    nls
-    npm-check-updates
-    osx-wifi-cli
-    puppeteer-assets
-    rename-cli
-    selenium-standalone
-    speed-test
-    ts-node
-    ttab
-    typescript
-)
-
-for i in "${npmTools[@]}"
-do
-    npm i "$i" -g
-done
-
-#
-# git
-#
-
+___print "git: push current branch"
 git config --global push.default current
-
-#
-# system
-#
 
 ___print "system: close any open system preferences panes"
 osascript -e 'tell application "System Preferences" to quit'
@@ -142,10 +29,6 @@ defaults write com.apple.commerce AutoUpdate -bool true
 ___print "system: automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-#
-# trash
-#
-
 ___print "trash: disable the crash reporter"
 defaults write com.apple.CrashReporter DialogType -string "none"
 
@@ -155,10 +38,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 ___print "trash: disable the warning before emptying the trash"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
-
-#
-# finder
-#
 
 ___print "finder: expand save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -192,10 +71,6 @@ sudo chflags nohidden /Volumes
 ___print "finder: prevent photos from opening automatically when devices are plugged in"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
-#
-# type
-#
-
 ___print "type: disable character accent after key long press"
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -205,10 +80,6 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 ___print "type: enable full keyboard access for all controls"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
-#
-# trackpad
-#
 
 ___print "trackpad: enable tap to click"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -220,10 +91,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCorner
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
-
-#
-# safari
-#
 
 ___print "safari: don't send search queries to apple"
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
@@ -241,20 +108,12 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
-#
-# transmission
-#
-
 ___print "transmission: trash original torrent files"
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 ___print "transmission: hide the donate message"
 defaults write org.m0k.transmission WarningDonate -bool false
 ___print "transmission: hide the legal disclaimer"
 defaults write org.m0k.transmission WarningLegal -bool false
-
-#
-# desktop
-#
 
 ___print "desktop: screen saver at top right screen corner"
 defaults write com.apple.dock wvous-tr-corner -int 5
@@ -263,17 +122,9 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 ___print "desktop: disable notification center and remove the menu bar icon"
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
-#
-# dock
-#
-
 ___print "dock: left side without autohide"
 m dock position LEFT
 m dock autohide NO
-
-#
-# restart apps
-#
 
 ___print "done: kill affected applications"
 for app in "Dock" "Finder" "Photos" "Safari" "SystemUIServer" "Transmission"; do
