@@ -15,6 +15,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# prompt
+
 autoload -U promptinit; promptinit
 PURE_PROMPT_SYMBOL=">"
 prompt pure
@@ -39,3 +41,6 @@ chpwd() {
 
 export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix curl)/bin:$PATH
+
+export LANG=ru_RU.UTF-8
+export LC_CTYPE=ru_RU.UTF-8
