@@ -10,6 +10,7 @@ npmTools=(
     make-space
     nls
     npm-check-updates
+    pure-prompt
     rename-cli
     selenium-standalone
     speed-test
