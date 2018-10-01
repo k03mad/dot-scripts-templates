@@ -21,7 +21,6 @@ termTools=(
     mkvdts2ac3
     nano
     shellcheck
-    thefuck
     tldr
     tree
     wget
