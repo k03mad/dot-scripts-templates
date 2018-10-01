@@ -14,6 +14,9 @@ ___print "system: set ntp server"
 m ntp enable
 m ntp set pool.ntp.org
 
+___print "system: mojave font fix"
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
+
 ___print "system: disable disk image verification"
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
