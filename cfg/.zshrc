@@ -24,6 +24,7 @@ prompt pure
 
 # my
 
+source ~/.keyrc
 alias cat=ccat
 
 download() {
