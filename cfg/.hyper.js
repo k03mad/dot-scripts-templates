@@ -15,6 +15,7 @@ module.exports = {
         'hyper-final-say',
         'hyper-hide-scroll',
         'hyper-hide-title',
+        'hyper-search',
         'hyperterm-material-theme',
     ],
 };
