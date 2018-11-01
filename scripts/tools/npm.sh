@@ -14,6 +14,7 @@ npmTools=(
     rename-cli
     selenium-standalone
     speed-test
+    start-ios-simulator
 )
 
 for i in "${npmTools[@]}"
