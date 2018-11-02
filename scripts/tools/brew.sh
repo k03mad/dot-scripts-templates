@@ -2,6 +2,7 @@
 
 termTools=(
     aria2
+    bat
     ccat
     coreutils
     curl
