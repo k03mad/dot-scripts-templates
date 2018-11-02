@@ -25,7 +25,6 @@ prompt pure
 # my
 
 source ~/.keyrc
-alias cat=ccat
 
 download() {
     aria2c "$@" --file-allocation=falloc --max-connection-per-server=3 --split=3 --max-tries=0 --retry-wait=5 --continue --remote-time;
