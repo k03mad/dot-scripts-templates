@@ -9,7 +9,7 @@ module.exports = {
         scrollback: 10000,
         shell: 'zsh',
         shellArgs: ['--login'],
-        updateChannel: 'canary',
+        updateChannel: 'stable',
     },
     plugins: [
         'hyper-final-say',
@@ -17,5 +17,6 @@ module.exports = {
         'hyper-hide-title',
         'hyper-search',
         'hyperterm-material-theme',
+        "hypercwd"
     ],
 };
