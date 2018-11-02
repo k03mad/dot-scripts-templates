@@ -35,7 +35,7 @@ chpwd() {
     if [ "$PWD" != "$PREV_PWD" ]; then
         PREV_PWD="$PWD"
         if [ -e ".nvmrc" ]; then
-            nvm install "$(cat .nvmrc)" --reinstall-packages-from=node
+            nvm install "$(cat .nvmrc)"
         fi
     fi
 }
