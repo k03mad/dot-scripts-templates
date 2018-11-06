@@ -13,6 +13,7 @@ npmTools=(
     pure-prompt
     rename-cli
     selenium-standalone
+    siteaudit
     speed-test
     start-ios-simulator
 )
