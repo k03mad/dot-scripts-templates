@@ -40,6 +40,8 @@ chpwd() {
     fi
 }
 
+alias nvmclean="rm -rfv \$(ls -td ~/.nvm/versions/node/* | tail -n +2)"
+
 export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix curl)/bin:$PATH
 
