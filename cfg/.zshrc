@@ -24,8 +24,6 @@ prompt pure
 
 # my
 
-source ~/.keyrc
-
 download() {
     aria2c "$@" --file-allocation=falloc --max-connection-per-server=3 --split=3 --max-tries=0 --retry-wait=5 --continue --remote-time;
 }
@@ -40,10 +38,10 @@ chpwd() {
     fi
 }
 
-alias nvmclean="rm -rfv \$(ls -td ~/.nvm/versions/node/* | tail -n +2)"
+alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
-export PATH=/usr/local/bin:$PATH
-export PATH=$(brew --prefix curl)/bin:$PATH
+source ~/.keyrc
 
+export PATH=/usr/local/bin:$(brew --prefix curl)/bin:$PATH
 export LANG=ru_RU.UTF-8
 export LC_CTYPE=ru_RU.UTF-8
