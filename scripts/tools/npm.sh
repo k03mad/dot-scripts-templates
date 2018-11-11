@@ -3,6 +3,7 @@
 npmTools=(
     flamebearer
     forever
+    fx
     git-authors-cli
     gtop
     http-server
