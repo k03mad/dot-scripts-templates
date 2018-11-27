@@ -17,6 +17,7 @@ termTools=(
     micro
     mkvdts2ac3
     nano
+    ranger
     shellcheck
     tldr
     tree
