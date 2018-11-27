@@ -17,6 +17,8 @@ termTools=(
     micro
     mkvdts2ac3
     nano
+    ncdu
+    peco
     ranger
     shellcheck
     tldr
