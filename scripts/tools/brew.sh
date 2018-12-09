@@ -6,6 +6,7 @@ termTools=(
     ccat
     coreutils
     curl
+    exa
     git
     hr
     httpie

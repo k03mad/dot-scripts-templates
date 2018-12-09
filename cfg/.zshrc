@@ -29,7 +29,7 @@ download() {
 }
 
 chpwd() {
-    ls
+    exa -al --group-directories-first
     if [ "$PWD" != "$PREV_PWD" ]; then
         PREV_PWD="$PWD"
         if [ -e ".nvmrc" ]; then
