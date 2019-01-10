@@ -9,7 +9,6 @@ DISABLE_UPDATE_PROMPT="true"
 plugins=(
     autoupdate
     fast-syntax-highlighting
-    k
     zsh-autosuggestions
     zsh-nvm
 )
