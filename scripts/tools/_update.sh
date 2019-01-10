@@ -5,7 +5,6 @@ mas upgrade
 brew update
 brew upgrade
 brew cask upgrade
-brew prune
 brew cleanup
 brew doctor
 
