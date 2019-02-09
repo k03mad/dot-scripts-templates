@@ -2,11 +2,13 @@
 
 brew tap caskroom/cask
 brew tap caskroom/fonts
+brew tap homebrew/cask-versions
 
 guiTools=(
     appcleaner
     etcher
     exifrenamer
+    firefox-beta
     font-fira-code
     google-chrome
     hyper
