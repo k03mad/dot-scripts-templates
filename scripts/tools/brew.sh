@@ -27,7 +27,6 @@ termTools=(
     wget
     zsh
     zsh-completions
-    '--with-qt mkvtoolnix'
 )
 
 for i in "${termTools[@]}"

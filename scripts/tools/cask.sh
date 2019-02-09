@@ -11,6 +11,7 @@ guiTools=(
     google-chrome
     hyper
     insomniax
+    mkvtoolnix-app
     omnidisksweeper
     oversight
     sopcast
@@ -18,7 +19,6 @@ guiTools=(
     the-unarchiver
     transmission
     vlc
-    yandex
     yandex-disk
 )
 
