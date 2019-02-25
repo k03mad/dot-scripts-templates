@@ -7,6 +7,7 @@ termTools=(
     coreutils
     curl
     exa
+    fx
     git
     hr
     httpie
