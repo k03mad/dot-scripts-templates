@@ -15,8 +15,8 @@ guiTools=(
     insomniax
     mkvtoolnix-app
     omnidisksweeper
-    oversight
     sopcast
+    pritunl
     telegram-desktop
     the-unarchiver
     transmission

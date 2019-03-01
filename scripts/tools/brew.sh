@@ -9,7 +9,6 @@ termTools=(
     exa
     fx
     git
-    hr
     httpie
     id3v2
     jq
