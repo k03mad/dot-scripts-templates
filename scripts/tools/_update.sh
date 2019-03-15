@@ -8,6 +8,9 @@ brew cask upgrade
 brew cleanup
 brew doctor
 
+npm i npm -g
+npm i npm-check-updates -g
+
 npm ls --depth=0 -g
 ncu -g
 

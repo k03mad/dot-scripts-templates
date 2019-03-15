@@ -12,7 +12,7 @@ osascript -e 'tell application "System Preferences" to quit'
 
 ___print "system: set ntp server"
 m ntp enable
-m ntp set pool.ntp.org
+m ntp set ru.pool.ntp.org
 
 ___print "system: mojave font fix"
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE

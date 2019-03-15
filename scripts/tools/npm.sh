@@ -2,6 +2,7 @@
 
 npmTools=(
     forever
+    fx
     gtop
     http-server
     npm-check-updates
