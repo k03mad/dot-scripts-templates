@@ -7,8 +7,6 @@ module.exports = {
         fontSize: 12,
         padding: '12px 14px',
         scrollback: 10000,
-        shell: 'zsh',
-        shellArgs: ['--login'],
         updateChannel: 'stable',
     },
     plugins: [
