@@ -37,6 +37,8 @@ chpwd() {
     fi
 }
 
+eval $(thefuck --alias)
+
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
 export PATH=/usr/local/bin:$(brew --prefix curl)/bin:$PATH
