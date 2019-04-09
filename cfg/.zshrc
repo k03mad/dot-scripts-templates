@@ -23,7 +23,7 @@ prompt pure
 
 # downloaders
 
-ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --split=3 --max-tries=0 --retry-wait=5 --continue --remote-time)
+ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
 
 download() {
     aria2c "$@" "${ARIA_ARGS[@]}"
