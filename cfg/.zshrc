@@ -21,11 +21,19 @@ autoload -U promptinit; promptinit
 PURE_PROMPT_SYMBOL=">"
 prompt pure
 
-# my
+# downloaders
+
+ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --split=3 --max-tries=0 --retry-wait=5 --continue --remote-time)
 
 download() {
-    aria2c "$@" --file-allocation=falloc --max-connection-per-server=3 --split=3 --max-tries=0 --retry-wait=5 --continue --remote-time;
+    aria2c "$@" "${ARIA_ARGS[@]}"
 }
+
+youtube() {
+    youtube-dl --verbose -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" --add-metadata --embed-subs --external-downloader aria2c --external-downloader-args "$(echo ${ARIA_ARGS[@]})" "$@"
+}
+
+# others
 
 chpwd() {
     exa -al --group-directories-first
