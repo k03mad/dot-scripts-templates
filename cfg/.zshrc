@@ -49,7 +49,7 @@ eval $(thefuck --alias)
 
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
-export PATH=/usr/local/bin:$(brew --prefix curl)/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$(brew --prefix curl)/bin:$PATH
 export LANG=ru_RU.UTF-8
 export LC_CTYPE=ru_RU.UTF-8
 
