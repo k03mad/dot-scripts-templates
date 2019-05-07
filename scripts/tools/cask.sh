@@ -12,6 +12,7 @@ guiTools=(
     google-chrome
     hyper
     insomniax
+    marta
     mkvtoolnix
     omnidisksweeper
     sopcast
