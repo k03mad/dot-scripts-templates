@@ -5,14 +5,14 @@ brew tap caskroom/fonts
 
 guiTools=(
     appcleaner
-    etcher
+    balenaetcher
     exifrenamer
     firefox
     font-fira-code
     google-chrome
     hyper
     insomniax
-    mkvtoolnix-app
+    mkvtoolnix
     omnidisksweeper
     sopcast
     pritunl
