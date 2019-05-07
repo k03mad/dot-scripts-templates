@@ -12,6 +12,7 @@ guiTools=(
     google-chrome
     hyper
     insomniax
+    integrity
     marta
     mkvtoolnix
     omnidisksweeper
