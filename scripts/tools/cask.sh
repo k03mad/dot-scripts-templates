@@ -4,24 +4,31 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 
 guiTools=(
+    android-file-transfer
+    angry-ip-scanner
     appcleaner
     balenaetcher
-    exifrenamer
     firefox
     font-fira-code
     google-chrome
     hyper
     insomniax
     integrity
-    marta
     mkvtoolnix
+    mucommander
     omnidisksweeper
+    openoffice
     sopcast
+    plex-media-server
+    postman
     pritunl
+    tableplus
+    teamviewer
     telegram-desktop
     the-unarchiver
     transmission
     vlc
+    whatsapp
     yandex-disk
 )
 
