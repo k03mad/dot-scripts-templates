@@ -11,7 +11,6 @@ guiTools=(
     firefox
     font-fira-code
     google-chrome
-    hyper
     insomniax
     integrity
     mkvtoolnix
