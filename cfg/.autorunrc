@@ -16,4 +16,7 @@ function run {
 
 run "rpi-tools-bot" "bot"
 run "rpi-tools-cron" "cron"
-run "myshows-magnet" "server"
+
+if [ -z "$SSH_TTY" ]; then
+    run "myshows-magnet" "start"
+fi
