@@ -1,6 +1,7 @@
 #!/bin/bash
 
 npmTools=(
+    npm
     forever
     fx
     http-server
