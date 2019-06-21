@@ -5,6 +5,7 @@ npmTools=(
     fx
     gtop
     http-server
+    jay-repl
     npm-check-updates
     pure-prompt
     rename-cli
