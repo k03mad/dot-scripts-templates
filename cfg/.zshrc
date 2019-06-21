@@ -18,8 +18,9 @@ source $ZSH/oh-my-zsh.sh
 # prompt
 
 autoload -U promptinit; promptinit
-PURE_PROMPT_SYMBOL=">"
 prompt pure
+PROMPT='%(?.%F{magenta}.%F{red}!%F{magenta})>%f '
+PURE_CMD_MAX_EXEC_TIME=0
 
 # downloaders
 
