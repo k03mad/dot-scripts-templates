@@ -34,7 +34,7 @@ youtube() {
     youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" --add-metadata --embed-subs --external-downloader aria2c --external-downloader-args "$(echo ${ARIA_ARGS[@]})" "$@"
 }
 
-# others
+# utils
 
 chpwd() {
     exa -al --group-directories-first
@@ -50,7 +50,12 @@ eval $(thefuck --alias)
 
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
-export PATH=/usr/local/bin:/usr/local/sbin:$(brew --prefix curl)/bin:$PATH
+#paths
+
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/curl/bin:$PATH
+
 export LANG=ru_RU.UTF-8
 export LC_CTYPE=ru_RU.UTF-8
 
