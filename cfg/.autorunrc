@@ -18,5 +18,5 @@ run "rpi-tools-bot" "bot"
 run "rpi-tools-cron" "cron"
 
 if [ -z "$SSH_TTY" ]; then
-    run "myshows-magnet" "start"
+    #
 fi
