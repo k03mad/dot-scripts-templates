@@ -17,5 +17,5 @@ function run {
 run "magnet-shows" "start"
 run "magnet-films" "start"
 
-run "rpi-tools-bot" "bot"
-run "rpi-tools-cron" "cron"
+run "rpi-tools-bot" "start"
+run "rpi-tools-cron" "start"
