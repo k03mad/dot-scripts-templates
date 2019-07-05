@@ -9,10 +9,8 @@ brew cleanup
 brew doctor
 
 npm i npm -g
-npm i npm-check-updates -g
-
 npm ls --depth=0 -g
-ncu -g
+npm outdated -g
 
 for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f4)
 do
