@@ -2,11 +2,11 @@
 
 npmTools=(
     npm
-    forever
     fx
     http-server
     jay-repl
     npm-check-updates
+    pm2
     pure-prompt
     speed-test
     start-ios-simulator
