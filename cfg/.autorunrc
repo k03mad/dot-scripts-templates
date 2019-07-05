@@ -14,9 +14,8 @@ function run {
     npm run "$2"
 }
 
+run "magnet-shows" "start"
+run "magnet-films" "start"
+
 run "rpi-tools-bot" "bot"
 run "rpi-tools-cron" "cron"
-
-if [ -z "$SSH_TTY" ]; then
-    #
-fi
