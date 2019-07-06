@@ -14,8 +14,7 @@ function run {
     npm run "$2"
 }
 
-run "magnet-shows" "start"
-run "magnet-films" "start"
+run "magnet-server" "start"
 
 run "rpi-tools-bot" "start"
 run "rpi-tools-cron" "start"
