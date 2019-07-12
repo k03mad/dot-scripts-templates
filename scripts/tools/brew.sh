@@ -16,6 +16,7 @@ termTools=(
     mc
     micro
     mkvdts2ac3
+    mosh
     nano
     ncdu
     peco
