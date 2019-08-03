@@ -1,6 +1,6 @@
 # zsh
 
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH=~/.oh-my-zsh
 
 ZSH_THEME=""
 export UPDATE_ZSH_DAYS=1
@@ -48,9 +48,13 @@ chpwd() {
 
 eval $(thefuck --alias)
 
-alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
+# aliases
 
-#paths
+alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
+alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
+alias st="speed-test -b -v"
+
+# others
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH

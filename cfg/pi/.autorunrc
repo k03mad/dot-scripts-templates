@@ -8,7 +8,7 @@ sudo sh -c 'echo 0 > /sys/class/leds/led0/brightness'
 function run {
     echo -e "\\033[0;33m🤖 Starting $1 - $2\\033[0m"
 
-    cd $HOME/git/"$1"/
+    cd ~/git/"$1"/
     git pull
     npm run setup
     npm run "$2"
