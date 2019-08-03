@@ -8,7 +8,6 @@ guiTools=(
     angry-ip-scanner
     appcleaner
     balenaetcher
-    firefox
     font-fira-code
     google-chrome
     insomniax
@@ -27,7 +26,7 @@ guiTools=(
     the-unarchiver
     transmission
     vlc
-    whatsapp
+    yandex
     yandex-disk
 )
 
