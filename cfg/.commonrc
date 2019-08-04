@@ -13,7 +13,7 @@ youtube() {
 }
 
 gc() {
-    git commit -m "$@" && git status
+    git commit -m "'$(echo $@)'" && git status
 }
 
 # aliases
