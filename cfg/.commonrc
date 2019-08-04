@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# aliases
+
+alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
+alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
+
+alias st="speed-test -b -v"
+alias delbranch="git branch -D $(git branch | grep -v \* | xargs)"
+alias spacedock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
+
+alias gs="git status -s"
+alias ga="gs && git add ."
+alias gp="gs && git push"
+alias gl="git log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]' --decorate --date=short"
+
 # functions
 
 ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
@@ -15,20 +29,6 @@ youtube() {
 gc() {
     gs && git commit -m "$(echo $@)"
 }
-
-# aliases
-
-alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
-alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
-
-alias st="speed-test -b -v"
-alias delbranch="git branch -D $(git branch | grep -v \* | xargs)"
-alias spacedock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
-
-alias ga="gs && git add ."
-alias gp="git push"
-alias gs="git status -s"
-alias gl="git log --pretty=format:'%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --date=short"
 
 # lang
 
