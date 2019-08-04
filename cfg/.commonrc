@@ -6,6 +6,8 @@ alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
 alias st="speed-test -b -v"
+alias ip='curl ipinfo.io -s | jq'
+
 alias delbranch="git branch -D $(git branch | grep -v \* | xargs)"
 alias spacedock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
 
@@ -13,6 +15,7 @@ alias gs="git status -s"
 alias ga="gs && git add ."
 alias gp="gs && git push"
 alias gl="git log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]' --decorate --date=short"
+alias gll="git log --pretty=format:'%C(yellow)%h %Cred%d %Creset%s%Cblue [%cn]' --decorate --numstat"
 
 # functions
 
