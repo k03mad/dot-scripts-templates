@@ -6,7 +6,7 @@ alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
 alias st="speed-test -b -v"
-alias ip='echo ipinfo.io && curl ipinfo.io -s | jq && echo ifconfig.co && curl ifconfig.co/json -s | jq'
+alias ip='curl ipinfo.io -s | jq && curl ifconfig.co/json -s | jq && curl ifconfig.me/all.json -s | jq'
 
 alias gs="git status -s"
 alias ga="gs && git add ."
