@@ -26,7 +26,7 @@ alias delbranch="git branch -D $(git branch | grep -v \* | xargs)"
 alias spacedock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
 
 alias ga="git add . && git status"
-alias gp="git push"
+alias gp="git push && git status"
 
 # lang
 
