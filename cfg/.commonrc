@@ -12,6 +12,10 @@ youtube() {
     youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" --add-metadata --embed-subs --external-downloader aria2c --external-downloader-args "$(echo ${ARIA_ARGS[@]})" "$@"
 }
 
+gc() {
+    git commit -m "$@"
+}
+
 # aliases
 
 alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
@@ -20,6 +24,8 @@ alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm 
 alias st="speed-test -b -v"
 alias delbranch="git branch -D $(git branch | grep -v \* | xargs)"
 alias spacedock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
+
+alias ga="git add ."
 
 # lang
 
