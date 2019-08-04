@@ -8,14 +8,14 @@ alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm 
 alias st="speed-test -b -v"
 alias ip='curl ipinfo.io -s | jq'
 
-alias delbranch="git branch -D $(git branch | grep -v \* | xargs)"
-alias spacedock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
-
 alias gs="git status -s"
 alias ga="gs && git add ."
 alias gp="gs && git push"
 alias gl="git log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]' --decorate --date=short"
 alias gll="git log --pretty=format:'%C(yellow)%h %Cred%d %Creset%s%Cblue [%cn]' --decorate --numstat"
+alias gdb="git branch -D \$(git branch | grep -v \* | xargs)"
+
+alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
 
 # functions
 
