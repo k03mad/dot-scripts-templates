@@ -1,3 +1,7 @@
+# updates
+
+pkg upgrade
+
 # zsh
 
 export PATH=/data/data/com.termux/files/usr/bin:$PATH
