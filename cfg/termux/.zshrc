@@ -25,4 +25,4 @@ chpwd() {
 # sources
 
 source ~/git/dot-scripts-templates/cfg/.commonrc
-~/git/ubuntu-in-termux/.start.sh
+~/git/ubuntu-in-termux/start.sh
