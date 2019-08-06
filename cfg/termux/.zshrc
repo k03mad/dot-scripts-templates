@@ -1,7 +1,3 @@
-# updates
-
-pkg upgrade
-
 # zsh
 
 export PATH=/data/data/com.termux/files/usr/bin:$PATH
@@ -29,3 +25,4 @@ chpwd() {
 # sources
 
 source ~/git/dot-scripts-templates/cfg/.commonrc
+~/git/ubuntu-in-termux/.start.sh
