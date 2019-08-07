@@ -79,7 +79,9 @@ chpwd() {
         if [ -e ".nvmrc" ]; then
             echo "\n${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
             echo "${C_GREEN}node used:${C_OFF} $(node -v)"
-            echo "${C_GREEN}node last:${C_OFF} $(nvm version-remote)"
+            if ! [ -x "$(command -v nvm)" ]; then
+                echo "${C_GREEN}node last:${C_OFF} $(nvm version-remote)"
+            fi
         fi
     fi
 }
