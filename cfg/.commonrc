@@ -77,7 +77,7 @@ gc() {
 # utils
 
 chpwd() {
-    ls -a --group-directories-first
+    ls -a
 
     if [ "$PWD" != "$PREV_PWD" ]; then
         PREV_PWD="$PWD"
