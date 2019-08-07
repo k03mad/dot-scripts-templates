@@ -65,6 +65,11 @@ gc() {
     gs && git commit -m "$(echo $@)"
 }
 
+# colors
+
+C_OFF="\033[0m"
+C_GREEN="\033[0;32m" # green
+
 # utils
 
 chpwd() {
@@ -72,9 +77,9 @@ chpwd() {
     if [ "$PWD" != "$PREV_PWD" ]; then
         PREV_PWD="$PWD"
         if [ -e ".nvmrc" ]; then
-            echo "nvmrc: $(cat .nvmrc)"
-            echo "node used: $(node -v)"
-            echo "node last: $(nvm version-remote)"
+            echo "\n${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
+            echo "${C_GREEN}node used:${C_OFF} $(node -v)"
+            echo "${C_GREEN}node last:${C_OFF} $(nvm version-remote)"
         fi
     fi
 }
