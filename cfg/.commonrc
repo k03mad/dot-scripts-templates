@@ -68,7 +68,7 @@ gc() {
 # colors
 
 C_OFF="\033[0m"
-C_GREEN="\033[0;32m" # green
+C_GREEN="\033[0;32m"
 
 # utils
 
