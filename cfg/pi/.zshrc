@@ -6,7 +6,7 @@ source ~/.keyrc
 # utils
 
 chpwd() {
-    exa -al --color-scale --group-directories-first
+    lls
 }
 
 eval $(thefuck --alias)
