@@ -1,24 +1,11 @@
-# updates
-
-pkg upgrade
-
 # zsh
 
 export PATH=/data/data/com.termux/files/usr/bin:$PATH
 export PATH=/data/data/com.termux/files/usr/bin/applets:$PATH
-export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="avit"
-export UPDATE_ZSH_DAYS=1
-DISABLE_UPDATE_PROMPT="true"
+# sources
 
-plugins=(
-    autoupdate
-    fast-syntax-highlighting
-    zsh-autosuggestions
-)
-
-source $ZSH/oh-my-zsh.sh
+source ~/git/dot-scripts-templates/cfg/.commonrc
 
 # utils
 
@@ -26,7 +13,10 @@ chpwd() {
     ls -alh
 }
 
-# sources
+# aliases
 
-source ~/git/dot-scripts-templates/cfg/.commonrc
-~/git/ubuntu-in-termux/start.sh
+alias ubuntu="~/git/ubuntu-in-termux/start.sh"
+
+# updates
+
+pkg upgrade

@@ -29,7 +29,4 @@ termTools=(
     zsh-completions
 )
 
-for i in "${termTools[@]}"
-do
-    brew install "$i"
-done
+brew install "${termTools[@]}"

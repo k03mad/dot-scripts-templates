@@ -30,7 +30,4 @@ guiTools=(
     yandex-disk
 )
 
-for i in "${guiTools[@]}"
-do
-    brew cask install "$i"
-done
+brew cask install "${guiTools[@]}"

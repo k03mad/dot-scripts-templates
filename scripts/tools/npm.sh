@@ -12,7 +12,4 @@ npmTools=(
     start-ios-simulator
 )
 
-for i in "${npmTools[@]}"
-do
-    npm i "$i" -g
-done
+npm i -g "${npmTools[@]}"

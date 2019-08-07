@@ -1,5 +1,30 @@
 #!/bin/bash
 
+# zsh
+
+export ZSH=~/.oh-my-zsh
+
+ZSH_THEME=""
+export UPDATE_ZSH_DAYS=1
+DISABLE_UPDATE_PROMPT="true"
+
+plugins=(
+    autoupdate
+    fast-syntax-highlighting
+    zsh-autosuggestions
+    zsh-nvm
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# prompt
+
+fpath+=("$NVM_DIR/versions/node/$(node -v)/lib/node_modules/pure-prompt/functions")
+autoload -U promptinit; promptinit
+prompt pure
+PROMPT="%(?.%F{magenta}.%F{red}!%F{magenta})>%f "
+PURE_CMD_MAX_EXEC_TIME=0
+
 # aliases
 
 alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
@@ -13,9 +38,13 @@ alias ga="gs && git add ."
 alias gp="gs && git push"
 alias gl="git log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]' --decorate --date=short"
 alias gll="git log --pretty=format:'%C(yellow)%h %Cred%d %Creset%s%Cblue [%cn]' --decorate --numstat"
-alias gdb="git branch -D \$(git branch | grep -v \* | xargs)"
+alias gbd="git branch -D \$(git branch | grep -v \* | xargs)"
 
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
+
+APTS_UPDATE="apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get autoclean"
+alias upall="$APTS_UPDATE"
+alias supall="sudo sh -c \"$APTS_UPDATE\""
 
 # functions
 
