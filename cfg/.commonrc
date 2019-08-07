@@ -77,12 +77,15 @@ gc() {
 # utils
 
 chpwd() {
-    ls -a
+    ls -a --group-directories-first
+
     if [ "$PWD" != "$PREV_PWD" ]; then
         PREV_PWD="$PWD"
+
         if [ -e ".nvmrc" ]; then
             echo "\n${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
         fi
+
         if [ -e "package.json" ]; then
             echo "${C_GREEN}node used:${C_OFF} $V_NODE_CURRENT"
             echo "${C_GREEN}node last:${C_OFF} $V_NODE_REMOTE"
