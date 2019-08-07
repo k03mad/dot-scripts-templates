@@ -29,7 +29,7 @@ PURE_CMD_MAX_EXEC_TIME=0
 
 # aliases
 
-alias nvmin="nvm install $(cat .nvmrc) --reinstall-packages-from=$(node -v | tr -d v)"
+alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
 alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
