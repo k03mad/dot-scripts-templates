@@ -29,8 +29,7 @@ PURE_CMD_MAX_EXEC_TIME=0
 
 # aliases
 
-alias lls="exa -al --color-scale --group-directories-first"
-
+alias nvmin="nvm install --reinstall-packages-from=node"
 alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
@@ -64,6 +63,12 @@ youtube() {
 
 gc() {
     gs && git commit -m "$(echo $@)"
+}
+
+# utils
+
+chpwd() {
+    ls -a
 }
 
 # lang

@@ -7,12 +7,6 @@ export PATH=/data/data/com.termux/files/usr/bin/applets:$PATH
 
 source ~/git/dot-scripts-templates/cfg/.commonrc
 
-# utils
-
-chpwd() {
-    ls -a
-}
-
 # aliases
 
 alias ubuntu="~/git/ubuntu-in-termux/start.sh"
