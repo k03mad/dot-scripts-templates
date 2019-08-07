@@ -62,13 +62,17 @@ youtube() {
 }
 
 gc() {
-    gs && git commit -m "$(echo $@)"
+    gs && git commit -m "$@"
 }
 
 # colors
 
 C_OFF="\033[0m"
 C_GREEN="\033[0;32m"
+
+# node versions
+NODE_V_CURRENT=$(node -v)
+NODE_V_REMOTE=$(nvm version-remote)
 
 # utils
 
@@ -78,10 +82,10 @@ chpwd() {
         PREV_PWD="$PWD"
         if [ -e ".nvmrc" ]; then
             echo "\n${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
-            echo "${C_GREEN}node used:${C_OFF} $(node -v)"
-            if [ -x "$(command -v nvm)" ]; then
-                echo "${C_GREEN}node last:${C_OFF} $(nvm version-remote)"
-            fi
+        fi
+        if [ -e "package.json" ]; then
+            echo "${C_GREEN}node used:${C_OFF} $NODE_V_CURRENT"
+            echo "${C_GREEN}node last:${C_OFF} $NODE_V_REMOTE"
         fi
     fi
 }
