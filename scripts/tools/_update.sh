@@ -8,7 +8,6 @@ brew cask upgrade
 brew cleanup
 brew doctor
 
-npm i npm -g
 npm ls --depth=0 -g
 npm outdated -g
 
