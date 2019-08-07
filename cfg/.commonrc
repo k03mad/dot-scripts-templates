@@ -22,13 +22,11 @@ source $ZSH/oh-my-zsh.sh
 C_OFF="\033[0m"
 C_GREEN="\033[0;32m"
 
-V_NODE_CURRENT=$(node -v)
-V_NODE_CURRENT_NUM=$(node -v | tr -d v)
 V_NODE_REMOTE=$(nvm version-remote)
 
 # prompt
 
-fpath+=("$NVM_DIR/versions/node/$V_NODE_CURRENT/lib/node_modules/pure-prompt/functions")
+fpath+=("$NVM_DIR/versions/node/$(node -v)/lib/node_modules/pure-prompt/functions")
 fpath+=("/data/data/com.termux/files/usr/lib/node_modules/pure-prompt/functions")
 
 autoload -U promptinit; promptinit
@@ -38,7 +36,7 @@ PURE_CMD_MAX_EXEC_TIME=0
 
 # aliases
 
-alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$V_NODE_CURRENT_NUM"
+alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
 alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
@@ -87,7 +85,7 @@ chpwd() {
         fi
 
         if [ -e "package.json" ]; then
-            echo "${C_GREEN}node used:${C_OFF} $V_NODE_CURRENT"
+            echo "${C_GREEN}node used:${C_OFF} $(node -v)"
             echo "${C_GREEN}node last:${C_OFF} $V_NODE_REMOTE"
         fi
     fi
