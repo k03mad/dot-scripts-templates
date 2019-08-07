@@ -62,7 +62,7 @@ youtube() {
 }
 
 gc() {
-    gs && git commit -m "$@"
+    gs && git commit -m "$(echo $@)"
 }
 
 # colors
