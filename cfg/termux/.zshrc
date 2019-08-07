@@ -10,7 +10,7 @@ source ~/git/dot-scripts-templates/cfg/.commonrc
 # utils
 
 chpwd() {
-    ls -alh
+    ls -a
 }
 
 # aliases
