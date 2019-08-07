@@ -29,7 +29,7 @@ PURE_CMD_MAX_EXEC_TIME=0
 
 # aliases
 
-alias nvmin="nvm install --reinstall-packages-from=node"
+alias nvmin="nvm install $(cat .nvmrc) --reinstall-packages-from=$(node -v | tr -d v)"
 alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
 
@@ -69,6 +69,14 @@ gc() {
 
 chpwd() {
     ls -a
+    if [ "$PWD" != "$PREV_PWD" ]; then
+        PREV_PWD="$PWD"
+        if [ -e ".nvmrc" ]; then
+            echo "nvmrc: $(cat .nvmrc)"
+            echo "node used: $(node -v)"
+            echo "node last: $(nvm version-remote)"
+        fi
+    fi
 }
 
 # lang
