@@ -72,6 +72,14 @@ gc() {
     gs && git commit -m "$(echo $@)"
 }
 
+gch() {
+    if [ -z "$*" ]; then
+        git checkout master
+    else
+        git checkout -b $@ || git checkout $@
+    fi
+}
+
 # utils
 
 chpwd() {
