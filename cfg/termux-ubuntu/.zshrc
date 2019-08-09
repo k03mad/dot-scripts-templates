@@ -1,7 +1,5 @@
-# sources
+#!/usr/bin/env zsh
 
-source ~/git/dot-scripts-templates/cfg/.commonrc
-
-# updates
+source ~/git/dot-scripts-templates/cfg/_index
 
 upall

@@ -1,0 +1,44 @@
+#!/usr/bin/env zsh
+
+C_OFF="\033[0m"
+C_GREEN="\033[0;32m"
+
+V_NODE_REMOTE=$(nvm version-remote)
+ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
+
+download() {
+    aria2c "$@" "${ARIA_ARGS[@]}"
+}
+
+youtube() {
+    youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" --add-metadata --embed-subs --external-downloader aria2c --external-downloader-args "$(echo ${ARIA_ARGS[@]})" "$@"
+}
+
+gc() {
+    gs && git commit -m "$(echo $@)"
+}
+
+gch() {
+    if [ -z "$*" ]; then
+        git checkout master
+    else
+        git checkout -b $@ || git checkout $@
+    fi
+}
+
+chpwd() {
+    ls -a
+
+    if [ "$PWD" != "$PREV_PWD" ]; then
+        PREV_PWD="$PWD"
+
+        if [ -e ".nvmrc" ]; then
+            echo "\n${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
+        fi
+
+        if [ -e "package.json" ]; then
+            echo "${C_GREEN}node used:${C_OFF} $(node -v)"
+            echo "${C_GREEN}node last:${C_OFF} $V_NODE_REMOTE"
+        fi
+    fi
+}

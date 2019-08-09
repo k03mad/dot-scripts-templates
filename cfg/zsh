@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+
+export ZSH=~/.oh-my-zsh
+
+ZSH_THEME=""
+export UPDATE_ZSH_DAYS=1
+DISABLE_UPDATE_PROMPT="true"
+
+plugins=(
+    autoupdate
+    fast-syntax-highlighting
+    zsh-autosuggestions
+    zsh-nvm
+)
+
+source $ZSH/oh-my-zsh.sh
+
+export LANG="ru_RU.UTF-8"
+export LC_CTYPE="ru_RU.UTF-8"

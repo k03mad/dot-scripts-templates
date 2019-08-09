@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+source ~/git/dot-scripts-templates/cfg/zsh
+source ~/git/dot-scripts-templates/cfg/prompt
+
+source ~/git/dot-scripts-templates/cfg/alias
+source ~/git/dot-scripts-templates/cfg/utils
