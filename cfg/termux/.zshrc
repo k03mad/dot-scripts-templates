@@ -5,6 +5,4 @@ export PATH=/data/data/com.termux/files/usr/bin/applets:$PATH
 
 source ~/git/dot-scripts-templates/cfg/_index
 
-alias ubuntu="~/git/ubuntu-in-termux/start.sh"
-
 pkg upgrade
