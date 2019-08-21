@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+fpath+=("$NVM_DIR/versions/node/$(node -v)/lib/node_modules/pure-prompt/functions")
+fpath+=("/data/data/com.termux/files/usr/lib/node_modules/pure-prompt/functions")
+
 autoload -U promptinit; promptinit
 prompt pure
 PROMPT="%(?.%F{magenta}.%F{red}!%F{magenta})>%f "
