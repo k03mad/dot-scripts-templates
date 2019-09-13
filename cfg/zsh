@@ -3,7 +3,7 @@
 export ZSH=~/.oh-my-zsh
 
 ZSH_THEME=""
-export UPDATE_ZSH_DAYS=1
+export UPDATE_ZSH_DAYS=7
 DISABLE_UPDATE_PROMPT="true"
 
 plugins=(
