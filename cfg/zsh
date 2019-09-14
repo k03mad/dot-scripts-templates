@@ -9,6 +9,7 @@ DISABLE_UPDATE_PROMPT="true"
 plugins=(
     alias-tips
     autoupdate
+    betterbrew
     brew
     common-aliases
     fast-syntax-highlighting
