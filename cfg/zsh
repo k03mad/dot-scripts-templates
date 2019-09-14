@@ -7,9 +7,13 @@ export UPDATE_ZSH_DAYS=7
 DISABLE_UPDATE_PROMPT="true"
 
 plugins=(
-    autoupdate
     alias-tips
+    autoupdate
+    brew
+    common-aliases
     fast-syntax-highlighting
+    git
+    npm
     zsh-autosuggestions
     zsh-nvm
 )
