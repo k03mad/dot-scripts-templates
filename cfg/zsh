@@ -13,7 +13,7 @@ plugins=(
     brew
     common-aliases
     fast-syntax-highlighting
-    gitfast
+    git
     npm
     zsh-autosuggestions
     zsh-nvm

@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡 "
+
 alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
 alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
 alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"

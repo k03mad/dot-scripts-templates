@@ -14,6 +14,7 @@ youtube() {
     youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" --add-metadata --embed-subs --external-downloader aria2c --external-downloader-args "$(echo ${ARIA_ARGS[@]})" "$@"
 }
 
+unalias gc
 gc() {
     gs && git commit -m "$(echo $@)"
 }
