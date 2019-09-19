@@ -8,4 +8,3 @@ fpath+=("/data/data/com.termux/files/usr/lib/node_modules/pure-prompt/functions"
 source ~/git/dot-scripts-templates/cfg/_index
 
 alias sudo=""
-alias ubuntu="~/git/ubuntu-in-termux/start.sh"
