@@ -9,12 +9,7 @@ DISABLE_UPDATE_PROMPT="true"
 plugins=(
     alias-tips
     autoupdate
-    betterbrew
-    brew
-    common-aliases
     fast-syntax-highlighting
-    git
-    npm
     zsh-autosuggestions
     zsh-nvm
 )
