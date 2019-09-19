@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2116 disable=SC2191
 
 C_OFF="\033[0m"
 C_GREEN="\033[0;32m"
@@ -11,11 +12,11 @@ download() {
 }
 
 youtube() {
-    youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" --add-metadata --embed-subs --external-downloader aria2c --external-downloader-args "$(echo ${ARIA_ARGS[@]})" "$@"
+    youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" --add-metadata --embed-subs --external-downloader aria2c --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
 }
 
 gc() {
-    gs && git commit -m "$(echo $@)"
+    gs && git commit -m "$(echo "$@")"
 }
 
 gch() {
