@@ -4,7 +4,7 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡 "
 
 alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
 alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
-alias nvmclean="rm -rfv \$(ls -td \$NVM_DIR/versions/node/* | tail -n +2) && rm -rfv \$NVM_DIR/.cache/bin"
+alias nvmclean="rm -rfv \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm -rfv \${NVM_DIR}/.cache/bin"
 
 alias st="speed-test -b -v"
 alias ip="curl ipinfo.io -s | jq && curl ifconfig.co/json -s | jq && curl ifconfig.me/all.json -s | jq"
@@ -19,3 +19,5 @@ alias gbd="git branch -D \$(git branch | grep -v \* | xargs)"
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
 
 alias aptall="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean"
+alias brewall="brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
+alias npmall="for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
