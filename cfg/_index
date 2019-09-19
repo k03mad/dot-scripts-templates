@@ -1,8 +1,12 @@
 #!/usr/bin/env zsh
 
+source ~/git/dot-scripts-templates/cfg/update
+
 source ~/git/dot-scripts-templates/cfg/zsh
 source ~/git/dot-scripts-templates/cfg/prompt
 
 source ~/git/dot-scripts-templates/cfg/alias
 source ~/git/dot-scripts-templates/cfg/utils
 source ~/git/dot-scripts-templates/cfg/locale
+
+source ~/.keyrc

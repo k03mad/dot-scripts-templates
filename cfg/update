@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+PREV_PWD="$PWD"
+cd ~/git/dot-scripts-templates/
+git pull
+cd $PREV_PWD
