@@ -1,7 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
+# shellcheck source=/dev/null
 
-source ~/git/dot-scripts-templates/cfg/_index
+source "${HOME}/git/dot-scripts-templates/cfg/_index"
 
 if [ -z "${SSH_TTY}" ]; then
-    source ~/git/dot-scripts-templates/cfg/pi/.autorunrc
+    source "${HOME}/git/dot-scripts-templates/cfg/pi/.autorunrc"
 fi

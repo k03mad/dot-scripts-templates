@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 C_OFF="\033[0m"
 C_GREEN="\033[0;32m"
@@ -22,7 +22,7 @@ gch() {
     if [ -z "$*" ]; then
         git checkout master
     else
-        git checkout -b $@ || git checkout $@
+        git checkout -b "$@" || git checkout "$@"
     fi
 }
 

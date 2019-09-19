@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡 "
 

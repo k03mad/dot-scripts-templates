@@ -1,12 +1,13 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
+# shellcheck source=/dev/null
 
-source ~/git/dot-scripts-templates/cfg/update
+source "${HOME}/git/dot-scripts-templates/cfg/update"
 
-source ~/git/dot-scripts-templates/cfg/zsh
-source ~/git/dot-scripts-templates/cfg/prompt
+source "${HOME}/git/dot-scripts-templates/cfg/zsh"
+source "${HOME}/git/dot-scripts-templates/cfg/prompt"
 
-source ~/git/dot-scripts-templates/cfg/alias
-source ~/git/dot-scripts-templates/cfg/utils
-source ~/git/dot-scripts-templates/cfg/locale
+source "${HOME}/git/dot-scripts-templates/cfg/alias"
+source "${HOME}/git/dot-scripts-templates/cfg/utils"
+source "${HOME}/git/dot-scripts-templates/cfg/locale"
 
-source ~/.keyrc
+source "${HOME}/.keyrc"
