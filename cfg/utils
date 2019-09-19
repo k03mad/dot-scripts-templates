@@ -29,8 +29,8 @@ gch() {
 chpwd() {
     ls -a
 
-    if [ "$PWD" != "$PREV_PWD" ]; then
-        PREV_PWD="$PWD"
+    if [ "${PWD}" != "${PREV_PWD}" ]; then
+        PREV_PWD="${PWD}"
 
         if [ -e ".nvmrc" ]; then
             echo "\n${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
