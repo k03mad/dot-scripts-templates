@@ -33,7 +33,8 @@ chpwd() {
         PREV_PWD="${PWD}"
 
         if [ -e ".nvmrc" ]; then
-            echo "\n${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
+            printf "\n"
+            echo "${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
         fi
 
         if [ -e "package.json" ]; then
