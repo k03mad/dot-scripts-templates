@@ -38,7 +38,7 @@ chpwd() {
 
         if [ -e "package.json" ]; then
             echo "${C_GREEN}node used:${C_OFF} $(node -v)"
-            echo "${C_GREEN}node last:${C_OFF} $V_NODE_REMOTE"
+            echo "${C_GREEN}node last:${C_OFF} ${V_NODE_REMOTE}"
         fi
     fi
 }
