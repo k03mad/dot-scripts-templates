@@ -1,10 +1,11 @@
 #!/bin/bash
 
 npmTools=(
-    npm
+    check-imports
     fx
     http-server
     jay-repl
+    npm
     npm-check-updates
     pm2
     pure-prompt
