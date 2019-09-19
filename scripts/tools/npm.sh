@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 npmTools=(
     check-imports

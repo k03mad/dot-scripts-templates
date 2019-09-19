@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function ___print {
     echo -e "\\033[0;33m🤖  $1 \\033[0m"

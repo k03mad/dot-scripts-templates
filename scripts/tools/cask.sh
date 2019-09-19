@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 brew tap caskroom/cask
 brew tap caskroom/fonts
