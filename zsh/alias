@@ -3,8 +3,8 @@
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡 "
 
 alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
-alias nvmup="nvm install node --reinstall-packages-from=node && npm i npm -g"
-alias nvmclean="rm -rfv \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm -rfv \${NVM_DIR}/.cache/bin"
+alias nvmup="nvm install node --reinstall-packages-from=node"
+alias nvmcl="rm -rfv \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm -rfv \${NVM_DIR}/.cache/bin"
 
 alias aptup="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean"
 alias brewup="brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
