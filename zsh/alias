@@ -13,6 +13,8 @@ alias npmup="ncu -g && for package in \$(npm -g outdated --parseable --depth=0 |
 alias st="speed-test -b -v"
 alias ip="curl ipinfo.io -s | jq && curl ifconfig.co/json -s | jq && curl ifconfig.me/all.json -s | jq"
 
+alias ccd="cd"
+
 alias gs="git status -s"
 alias ga="gs && git add ."
 alias gp="gs && git push"
