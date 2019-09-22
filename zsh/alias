@@ -10,9 +10,6 @@ alias aptup="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-up
 alias brewup="brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
 alias npmup="ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
 
-alias pipups="pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H pip3 install -U --user"
-alias pipup="pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U --user"
-
 alias st="speed-test -b -v"
 alias ip="curl ipinfo.io -s | jq && curl ifconfig.co/json -s | jq && curl ifconfig.me/all.json -s | jq"
 
