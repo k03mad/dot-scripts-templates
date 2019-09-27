@@ -2,9 +2,12 @@
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡 "
 
+alias ccd="cd"
+alias del="rm -rfv"
+
 alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
 alias nvmup="nvm install node --reinstall-packages-from=node"
-alias nvmcl="rm -rfv \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm -rfv \${NVM_DIR}/.cache/bin"
+alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${NVM_DIR}/.cache/bin"
 
 alias aptup="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean"
 alias brewup="brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
@@ -12,8 +15,6 @@ alias npmup="ncu -g && for package in \$(npm -g outdated --parseable --depth=0 |
 
 alias st="speed-test -b -v"
 alias ip="curl ipinfo.io -s | jq && curl ifconfig.co/json -s | jq && curl ifconfig.me/all.json -s | jq"
-
-alias ccd="cd"
 
 alias gs="git status -s"
 alias ga="gs && git add ."
