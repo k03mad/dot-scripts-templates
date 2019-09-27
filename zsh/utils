@@ -44,3 +44,7 @@ chpwd() {
         fi
     fi
 }
+
+one() {
+    npm run one-test-"$1" --target="${3:-stable}" --testcase="$2" --browserdebug --selenium
+}
