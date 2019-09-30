@@ -10,7 +10,6 @@ npmTools=(
     pm2
     pure-prompt
     speed-test
-    start-ios-simulator
 )
 
 npm i -g "${npmTools[@]}"
