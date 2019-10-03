@@ -23,6 +23,7 @@ termTools=(
     ranger
     shellcheck
     tldr
+    topgrade
     tree
     wget
     zsh
