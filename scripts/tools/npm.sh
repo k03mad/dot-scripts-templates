@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 npmTools=(
+    npm
     check-imports
     fx
     http-server
     jay-repl
-    npm
+    npkill
     npm-check-updates
     pm2
     pure-prompt
