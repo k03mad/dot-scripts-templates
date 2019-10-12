@@ -3,6 +3,8 @@
 
 C_OFF="\033[0m"
 C_GREEN="\033[0;32m"
+C_BLUE="\033[0;34m"
+C_MAGENTA="\033[0;35m"
 
 V_NODE_REMOTE=$(nvm version-remote)
 ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
@@ -21,8 +23,10 @@ gc() {
 
 gch() {
     if [ -z "$*" ]; then
+        echo "${C_GREEN}checkout to ${C_MAGENTA}master${C_OFF}"
         git checkout master
     else
+        echo "${C_GREEN}checkout to branch ${C_BLUE}$*${C_OFF}"
         git checkout -b "$@" || git checkout "$@"
     fi
 }

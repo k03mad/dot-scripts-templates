@@ -14,6 +14,7 @@ termTools=(
     nano
     ncdu
     shellcheck
+    tig
     tldr
     topgrade
     wget

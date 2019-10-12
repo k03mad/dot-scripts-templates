@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-brew tap caskroom/cask
-brew tap caskroom/fonts
+brew tap homebrew/cask
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
+brew tap homebrew/command-not-found
 
 guiTools=(
     android-file-transfer
@@ -11,9 +13,7 @@ guiTools=(
     font-fira-code
     google-chrome
     insomniax
-    integrity
     mkvtoolnix
-    mucommander
     omnidisksweeper
     openoffice
     sopcast
