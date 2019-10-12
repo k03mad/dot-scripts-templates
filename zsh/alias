@@ -9,11 +9,14 @@ alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${N
 
 alias aptup="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean"
 
+alias caskin="\${HOME}/git/dot-scripts-templates/scripts/tools/cask.sh"
 alias brewin="\${HOME}/git/dot-scripts-templates/scripts/tools/brew.sh"
 alias brewup="brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
 
 alias npmin="\${HOME}/git/dot-scripts-templates/scripts/tools/npm.sh"
 alias npmup="npm ls -g --depth=0 && ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
+
+alias zshin="\${HOME}/git/dot-scripts-templates/scripts/tools/zsh.sh"
 
 alias st="speed-test -b -v"
 alias ip="curl ipinfo.io -s | jq && curl ifconfig.co/json -s | jq && curl ifconfig.me/all.json -s | jq"
