@@ -23,7 +23,7 @@ alias ip="curl ipinfo.io -s | jq && curl ifconfig.co/json -s | jq && curl ifconf
 
 alias gs="git status -s"
 alias ga="gs && git add ."
-alias gps="git push"
+alias gp="git push"
 alias gpl="git pull"
 alias gplm="git pull origin master"
 
