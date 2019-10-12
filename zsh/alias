@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡 "
-
 alias ccd="cd"
 alias del="rm -rfv"
 
@@ -10,7 +8,11 @@ alias nvmup="nvm install node --reinstall-packages-from=node"
 alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${NVM_DIR}/.cache/bin"
 
 alias aptup="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean"
+
+alias brewin="\${HOME}/git/dot-scripts-templates/scripts/tools/brew.sh"
 alias brewup="brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
+
+alias npmin="\${HOME}/git/dot-scripts-templates/scripts/tools/npm.sh"
 alias npmup="npm ls -g --depth=0 && ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
 
 alias st="speed-test -b -v"
