@@ -27,8 +27,6 @@ alias gps="gs && git push"
 alias gpl="gs && git pull"
 alias gplm="gs && git pull origin master"
 
-alias gl="git log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]' --decorate --date=short"
-alias gll="git log --pretty=format:'%C(yellow)%h %Cred%d %Creset%s%Cblue [%cn]' --decorate --numstat"
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs)"
 
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
