@@ -18,7 +18,6 @@ termTools=(
     topgrade
     wget
     zsh
-    zsh-completions
 )
 
 brew install "${termTools[@]}"

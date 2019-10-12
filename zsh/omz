@@ -11,6 +11,7 @@ export plugins=(
     autoupdate
     fast-syntax-highlighting
     zsh-autosuggestions
+    zsh-completions
     zsh-nvm
 )
 
