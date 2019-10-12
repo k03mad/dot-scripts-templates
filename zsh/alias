@@ -23,9 +23,9 @@ alias ip="curl ipinfo.io -s | jq && curl ifconfig.co/json -s | jq && curl ifconf
 
 alias gs="git status -s"
 alias ga="gs && git add ."
-alias gps="gs && git push"
-alias gpl="gs && git pull"
-alias gplm="gs && git pull origin master"
+alias gps="git push"
+alias gpl="git pull"
+alias gplm="git pull origin master"
 
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs)"
 
