@@ -6,11 +6,13 @@ export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_THEME=""
 export UPDATE_ZSH_DAYS=7
 export DISABLE_UPDATE_PROMPT="true"
+export ZSH_PLUGINS="${ZSH}/custom/plugins"
 
 export plugins=(
     autoupdate
     fast-syntax-highlighting
     zsh-autosuggestions
+    zsh-better-npm-completion
     zsh-completions
     zsh-nvm
 )
