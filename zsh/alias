@@ -26,7 +26,7 @@ alias ga="gs && git add ."
 alias gp="git push"
 alias gpl="git pull"
 alias gplm="git pull origin master"
-
+alias grh="git reset --hard"
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs)"
 
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
