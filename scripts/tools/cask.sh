@@ -12,14 +12,14 @@ guiTools=(
     balenaetcher
     font-fira-code
     google-chrome
-    insomniax
+    keepingyouawake
     mkvtoolnix
     omnidisksweeper
     openoffice
-    sopcast
     plex-media-server
     postman
     pritunl
+    sopcast
     tableplus
     teamviewer
     telegram-desktop
