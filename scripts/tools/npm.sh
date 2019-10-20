@@ -4,6 +4,7 @@ npmTools=(
     npm
     check-imports
     fx
+    gtop
     http-server
     jay-repl
     npkill

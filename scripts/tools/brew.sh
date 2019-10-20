@@ -5,6 +5,7 @@ termTools=(
     bat
     curl
     git
+    glances
     id3v2
     jq
     m-cli
