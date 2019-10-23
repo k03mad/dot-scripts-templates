@@ -15,6 +15,7 @@ alias brewup="brew update && brew upgrade && brew cask upgrade && brew cleanup &
 
 alias npmin="\${HOME}/git/dot-scripts-templates/scripts/tools/npm.sh"
 alias npmup="npm ls -g --depth=0 && ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
+alias npmrm="npm ls -gp --depth=0 | awk -F/ '/node_modules/ && !/\/npm$/ {print \$NF}' | xargs npm -g rm"
 
 alias zshin="\${HOME}/git/dot-scripts-templates/scripts/tools/zsh.sh"
 
