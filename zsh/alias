@@ -2,7 +2,7 @@
 
 alias ccd="cd"
 alias del="rm -rfv"
-alias bat="bat --paging=never --theme=twodark -p"
+alias bat="bat --paging=never --theme=TwoDark -p"
 
 alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
 alias nvmup="nvm install node --reinstall-packages-from=node"
