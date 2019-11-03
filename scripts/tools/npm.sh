@@ -11,6 +11,7 @@ npmTools=(
     pm2
     pure-prompt
     speed-test
+    yarn
 )
 
 npm i -g "${npmTools[@]}"
