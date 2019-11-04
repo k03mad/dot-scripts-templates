@@ -3,6 +3,7 @@
 termTools=(
     aria2
     bat
+    ccat
     curl
     git
     glances
