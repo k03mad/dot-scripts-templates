@@ -18,6 +18,11 @@ alias npmin="\${HOME}/git/dot-scripts-templates/scripts/tools/npm.sh"
 alias npmup="npm ls -g --depth=0 && ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
 alias npmrm="npm ls -gp --depth=0 | awk -F/ '/node_modules/ && !/\/npm$/ {print \$NF}' | xargs npm -g rm"
 
+alias piplist="pip list && pip list -o"
+alias pip3list="pip3 list && pip3 list -o"
+alias pipup="piplist && pip freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs -n1 pip install -U; piplist"
+alias pip3up="pip3list && pip3 freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs -n1 pip3 install -U; pip3list"
+
 alias zshin="\${HOME}/git/dot-scripts-templates/scripts/tools/zsh.sh"
 
 alias st="speed-test -b -v"
