@@ -7,7 +7,3 @@ export PATH="/usr/local/opt/curl/bin:${PATH}"
 
 export ZSH_DOT_MAD="${HOME}/git/dot-scripts-templates/zsh"
 source "${ZSH_DOT_MAD}/_index"
-
-if brew command command-not-found-init > /dev/null 2>&1; then
-    eval "$(brew command-not-found-init)";
-fi
