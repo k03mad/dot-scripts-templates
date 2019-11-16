@@ -2,6 +2,7 @@
 # shellcheck source=/dev/null
 
 source "${ZSH_DOT_MAD}/update"
+source "${ZSH_DOT_MAD}/path"
 
 source "${ZSH_DOT_MAD}/omz"
 source "${ZSH_DOT_MAD}/prompt"
