@@ -32,7 +32,8 @@ gch() {
 }
 
 chpwd() {
-    ls -a
+    # ls -a
+    exa -alF --group-directories-first --git
 
     if [ "${PWD}" != "${PREV_PWD}" ]; then
         PREV_PWD="${PWD}"

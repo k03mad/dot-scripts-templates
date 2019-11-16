@@ -4,10 +4,10 @@
 source "${ZSH_DOT_MAD}/update"
 
 source "${ZSH_DOT_MAD}/omz"
+source "${ZSH_DOT_MAD}/env"
 source "${ZSH_DOT_MAD}/prompt"
 
 source "${ZSH_DOT_MAD}/alias"
 source "${ZSH_DOT_MAD}/utils"
-source "${ZSH_DOT_MAD}/locale"
 
 source "${HOME}/.keyrc"
