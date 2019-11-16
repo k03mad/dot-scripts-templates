@@ -6,7 +6,7 @@ export UPDATE_ZSH_DAYS=7
 export DISABLE_UPDATE_PROMPT="true"
 
 export plugins=(
-    autoupdate
+    auto update
     command-not-found
     fast-syntax-highlighting
     zsh-autosuggestions
