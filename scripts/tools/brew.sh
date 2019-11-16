@@ -5,6 +5,7 @@ termTools=(
     bat
     ccat
     curl
+    exa
     git
     glances
     id3v2
