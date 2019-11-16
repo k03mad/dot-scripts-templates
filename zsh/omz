@@ -9,7 +9,8 @@ export DISABLE_UPDATE_PROMPT="true"
 export ZSH_PLUGINS="${ZSH}/custom/plugins"
 
 export plugins=(
-    autoupdate
+    auto update
+    command-not-found
     fast-syntax-highlighting
     zsh-autosuggestions
     zsh-better-npm-completion
