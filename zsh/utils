@@ -60,7 +60,6 @@ zshup() {
     cd "${ZSH_CUSTOM}/themes/powerlevel10k" || return
     git pull
     cd "${START_PWD}" || return
-    zsh
 
     unset SKIP_CHPWD
 }
