@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-PREV_PWD="${PWD}"
-cd "${ZSH_DOT_MAD}" || exit
-git pull
-cd "${PREV_PWD}" || exit

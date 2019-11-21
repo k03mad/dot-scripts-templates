@@ -7,4 +7,6 @@ git clone https://github.com/zdharma/fast-syntax-highlighting "${ZSH_PLUGINS}/fa
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_PLUGINS}/zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-completions "${ZSH_PLUGINS}/zsh-completions"
 
+git clone --depth=1 https://github.com/romkatv/powerlevel10k "${ZSH_CUSTOM}/themes/powerlevel10k"
+
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh

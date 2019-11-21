@@ -32,7 +32,9 @@ gch() {
 }
 
 chpwd() {
-    exa -alF --group-directories-first --git
+    if [ -z "${SKIP_CHPWD}" ]; then
+        exa -alF --group-directories-first --git
+    fi
 
     if [ "${PWD}" != "${PREV_PWD}" ]; then
         PREV_PWD="${PWD}"
@@ -47,6 +49,19 @@ chpwd() {
             echo "${C_GREEN}node last:${C_OFF} ${V_NODE_REMOTE}"
         fi
     fi
+}
+
+zshup() {
+    SKIP_CHPWD=true
+    START_PWD=${PWD}
+
+    cd "${ZSH_DOT_MAD}" || return
+    git pull
+    cd "${ZSH_CUSTOM}/themes/powerlevel10k" || return
+    git pull
+    cd "${START_PWD}" || return
+
+    unset SKIP_CHPWD
 }
 
 one() {

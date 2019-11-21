@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck source=/dev/null
 
-source "${ZSH_DOT_MAD}/update"
 source "${ZSH_DOT_MAD}/path"
 
 source "${ZSH_DOT_MAD}/omz"
-source "${ZSH_DOT_MAD}/prompt"
+source "${ZSH_DOT_MAD}/p10k"
 
 source "${ZSH_DOT_MAD}/alias"
 source "${ZSH_DOT_MAD}/utils"
