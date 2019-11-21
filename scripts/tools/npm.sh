@@ -9,7 +9,6 @@ npmTools=(
     npkill
     npm-check-updates
     pm2
-    pure-prompt
     speed-test
     yarn
 )
