@@ -58,7 +58,6 @@ zshup() {
     cd "${ZSH_DOT_MAD}" || return
     git pull
     cd "${START_PWD}" || return
-    zsh
 
     unset SKIP_CHPWD
 }
