@@ -6,7 +6,6 @@ C_GREEN="\033[0;32m"
 C_BLUE="\033[0;34m"
 C_MAGENTA="\033[0;35m"
 
-V_NODE_REMOTE=$(nvm version-remote)
 ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
 
 download() {
@@ -44,10 +43,15 @@ chpwd() {
             echo "${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
         fi
 
-        if [ -e "package.json" ]; then
-            echo "${C_GREEN}node used:${C_OFF} $(node -v)"
-            echo "${C_GREEN}node last:${C_OFF} ${V_NODE_REMOTE}"
-        fi
+        # if [ -e "package.json" ]; then
+        #     if [ -z "${V_NODE_USED}" ]; then
+        #         V_NODE_USED=$(node -v)
+        #         V_NODE_REMOTE=$(nvm version-remote)
+        #     fi
+
+        #     echo "${C_GREEN}node used:${C_OFF} ${V_NODE_USED}"
+        #     echo "${C_GREEN}node last:${C_OFF} ${V_NODE_REMOTE}"
+        # fi
     fi
 }
 
