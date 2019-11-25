@@ -72,8 +72,8 @@
       # nordvpn               # nordvpn connection status, linux only (https://nordvpn.com/)
       # ranger                # ranger shell (https://github.com/ranger/ranger)
       # vpn_ip                # virtual private network indicator
-      # ram                   # free RAM
-      # load                  # CPU load
+      ram                     # free RAM
+      load                    # CPU load
       time                    # current time
       # =========================[ Line #2 ]=========================
       newline
@@ -519,7 +519,7 @@
   # RAM color.
   typeset -g POWERLEVEL9K_RAM_FOREGROUND=66
   # Custom icon.
-  # typeset -g POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_EXPANSION='r'
 
   ######################################[ load: CPU load ]######################################
   # Show average CPU load over this many last minutes. Valid values are 1, 5 and 15.
@@ -531,7 +531,7 @@
   # Load color when load is over 70%.
   typeset -g POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND=166
   # Custom icon.
-  # typeset -g POWERLEVEL9K_LOAD_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_LOAD_VISUAL_IDENTIFIER_EXPANSION='c'
 
   ##################################[ context: user@hostname ]##################################
   # Default context color.
