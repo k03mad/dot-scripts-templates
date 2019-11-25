@@ -10,7 +10,6 @@ npmTools=(
     npm-check-updates
     pm2
     speed-test
-    yarn
 )
 
 npm i -g "${npmTools[@]}"
