@@ -13,11 +13,8 @@ export DISABLE_UPDATE_PROMPT="true"
 export ZSH_PLUGINS="${ZSH_CUSTOM}/plugins"
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export NVM_LAZY_LOAD="true"
-
 export plugins=(
     autoupdate
-    # command-not-found
     fast-syntax-highlighting
     zsh-autosuggestions
     zsh-better-npm-completion
