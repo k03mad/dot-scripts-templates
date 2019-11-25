@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2116 disable=SC2191
 
-C_OFF="\033[0m"
-C_GREEN="\033[0;32m"
-C_BLUE="\033[0;34m"
-C_MAGENTA="\033[0;35m"
-
 ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
 
 download() {

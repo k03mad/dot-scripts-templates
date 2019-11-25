@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck source=/dev/null
 
+source "${ZSH_DOT_MAD}/colors"
 source "${ZSH_DOT_MAD}/path"
 
 source "${ZSH_DOT_MAD}/omz"
