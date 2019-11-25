@@ -42,14 +42,6 @@ chpwd() {
             printf "\n"
             echo "${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
         fi
-
-        if [ -e "package.json" ]; then
-            if [ -z "${V_NODE_REMOTE}" ]; then
-                V_NODE_REMOTE=$(nvm version-remote)
-            fi
-
-            echo "${C_GREEN}node last:${C_OFF} ${V_NODE_REMOTE}"
-        fi
     fi
 }
 
