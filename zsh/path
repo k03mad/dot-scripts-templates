@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 export PATH="${HOME}/.cargo/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 export PATH="/data/data/com.termux/files/usr/bin:${PATH}"
 export PATH="/data/data/com.termux/files/usr/bin/applets:${PATH}"
