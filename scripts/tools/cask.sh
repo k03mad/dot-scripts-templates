@@ -10,6 +10,7 @@ guiTools=(
     angry-ip-scanner
     appcleaner
     balenaetcher
+    brooklyn
     font-fira-code
     google-chrome
     keepingyouawake
