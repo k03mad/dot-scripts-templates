@@ -8,7 +8,7 @@ alias aptup="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-up
 
 alias caskin="\${HOME}/git/dot-scripts-templates/scripts/tools/cask.sh"
 alias brewin="\${HOME}/git/dot-scripts-templates/scripts/tools/brew.sh"
-alias brewup="brew analytics off && brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
+alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew leaves && echo \"\${C_YELLOW}casks installed:\${C_OFF}\" && brew cask list && brew analytics off && brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
 
 alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
 alias nvmup="nvm install node --reinstall-packages-from=node"
