@@ -148,6 +148,8 @@
     (( VCS_STATUS_NUM_UNSTAGED   )) && res+=" ${modified}!${VCS_STATUS_NUM_UNSTAGED}"
     (( VCS_STATUS_NUM_UNTRACKED  )) && res+=" ${untracked}${POWERLEVEL9K_VCS_UNTRACKED_ICON}${VCS_STATUS_NUM_UNTRACKED}"
 
+    res+=" ($(git log --oneline --format=%B -n 1 HEAD | head -n 1))"
+
     typeset -g my_git_format=$res
   }
   functions -M my_git_formatter 2>/dev/null
