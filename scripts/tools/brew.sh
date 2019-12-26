@@ -19,6 +19,7 @@ termTools=(
     nano
     ncdu
     neofetch
+    nmap
     shellcheck
     tig
     tldr
