@@ -12,6 +12,7 @@ termTools=(
     jq
     m-cli
     mc
+    micro
     mkvdts2ac3
     mosh
     nano
