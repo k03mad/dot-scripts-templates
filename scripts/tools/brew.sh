@@ -8,6 +8,7 @@ termTools=(
     exa
     git
     glances
+    htop
     id3v2
     jq
     m-cli
