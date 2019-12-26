@@ -16,11 +16,13 @@ termTools=(
     mosh
     nano
     ncdu
+    neofetch
     shellcheck
     tig
     tldr
     topgrade
     wget
+    youtube-dl
     zsh
 )
 
