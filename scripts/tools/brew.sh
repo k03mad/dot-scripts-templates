@@ -9,6 +9,7 @@ termTools=(
     git
     glances
     htop
+    hub
     id3v2
     jq
     m-cli
@@ -24,6 +25,7 @@ termTools=(
     tig
     tldr
     topgrade
+    tree
     wget
     youtube-dl
     zsh
