@@ -7,8 +7,22 @@ download() {
     aria2c "$@" "${ARIA_ARGS[@]}"
 }
 
-youtube() {
-    youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" --add-metadata --embed-subs --external-downloader aria2c --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
+youvid() {
+    youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" \
+        --add-metadata \
+        --embed-subs \
+        --external-downloader aria2c \
+        --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
+}
+youmus() {
+    youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" \
+        --extract-audio \
+        --audio-format mp3 \
+        --audio-quality 0 \
+        --add-metadata \
+        --embed-thumbnail \
+        --external-downloader aria2c \
+        --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
 }
 
 gc() {
