@@ -28,7 +28,7 @@ alias zshin="\${HOME}/git/dot-scripts-templates/scripts/tools/zsh.sh"
 alias zshcol="for i in {0..255}; do print -Pn \"%\${i}F\${(l:3::0:)i}%f \" \${\${(M)\$((i%8)):#7}:+$'\n'}; done"
 
 alias st="speed-test -b -v"
-alias ip="curl https://ipinfo.io -s | jq && curl https://ifconfig.co/json -s | jq && curl https://ifconfig.me/all.json -s | jq"
+alias ip="curl https://ipinfo.io -sS | jq && curl https://ifconfig.co/json -sS | jq && curl https://extreme-ip-lookup.com/json/ -sS | jq && curl https://ifconfig.me/all.json -sS | jq"
 
 alias gs="git status -s"
 alias ga="gs && git add ."
