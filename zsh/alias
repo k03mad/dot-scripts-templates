@@ -33,8 +33,8 @@ alias ip="curl https://ipinfo.io -sS | jq && curl https://ifconfig.co/json -sS |
 alias gs="git status -s"
 alias ga="gs && git add ."
 alias gp="git push"
-alias gpm="git pull origin master"
-alias gpo="git pull origin \$(git branch | grep '\*' | cut -d' ' -f2-)"
+alias gplm="git pull origin master"
+alias gplo="git pull origin \$(git branch | grep '\*' | cut -d' ' -f2-)"
 alias grh="git reset --hard"
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs)"
 
