@@ -58,7 +58,7 @@ zshup() {
     SKIP_CHPWD=true
     START_PWD=${PWD}
 
-    cd "${ZSH_DOT_MAD}" || return
+    cd "${ZSH_DOT_MAD}" || exit 1
     git pull
     cd "${START_PWD}" || return
 
