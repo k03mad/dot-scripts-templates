@@ -29,6 +29,10 @@ gc() {
     gs && git commit -m "$(echo "$@")"
 }
 
+gce() {
+    gs && git commit -m "$(curl -sL https://newfuture.github.io/emoji/e.sh | sh) $(echo "$@")"
+}
+
 gch() {
     if [ -z "$*" ]; then
         echo "${C_GREEN}checkout to ${C_MAGENTA}master${C_OFF}"
