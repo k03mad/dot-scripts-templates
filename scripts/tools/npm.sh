@@ -2,7 +2,6 @@
 
 npmTools=(
     check-imports
-    fkill-cli
     fx
     http-server
     jay-repl
