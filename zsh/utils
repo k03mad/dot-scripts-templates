@@ -73,5 +73,5 @@ one() {
     npm run "$1" --target="${3:-stable}" --testcase="$2" --browserdebug --selenium
 }
 oneg() {
-    npm run "$1" --target="${3:-stable}" --testcase="$2"
+    npm run "$1" --target="${3:-stable}" --testcase="$2" --record
 }
