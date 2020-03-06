@@ -1,32 +1,16 @@
 #!/usr/bin/env bash
 
-alias ccd="cd"
 alias del="rm -rfv"
 alias bat="bat --tabs=0 --paging=never"
 alias tree="tree -aIC 'node_modules|.git' --dirsfirst --sort=name"
 
 alias aptup="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean"
-
-alias caskin="\${HOME}/git/dot-scripts-templates/scripts/tools/cask.sh"
-alias brewin="\${HOME}/git/dot-scripts-templates/scripts/tools/brew.sh"
 alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew leaves && echo \"\${C_YELLOW}casks installed:\${C_OFF}\" && brew cask list && brew analytics off && brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
-
-alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=\$(node -v | tr -d v)"
+alias npmup="npm ls -g --depth=0 && ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
 alias nvmup="nvm install node --reinstall-packages-from=node"
+
 alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${NVM_DIR}/.cache/bin"
 alias nvmls="echo \"\${C_MAGENTA}current:\${C_OFF} \$(node -v)\" && echo \"\${C_MAGENTA}remote:\${C_OFF} \$(nvm version-remote)\" && echo && nvm ls"
-
-alias npmin="\${HOME}/git/dot-scripts-templates/scripts/tools/npm.sh"
-alias npmup="npm ls -g --depth=0 && ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
-alias npmrm="npm ls -gp --depth=0 | awk -F/ '/node_modules/ && !/\/npm$/ {print \$NF}' | xargs npm -g rm"
-
-alias piplist="pip list && pip list -o"
-alias pip3list="pip3 list && pip3 list -o"
-alias pipup="piplist && pip freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs -n1 pip install -U; piplist"
-alias pip3up="pip3list && pip3 freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs -n1 pip3 install -U; pip3list"
-
-alias zshin="\${HOME}/git/dot-scripts-templates/scripts/tools/zsh.sh"
-alias zshcol="for i in {0..255}; do print -Pn \"%\${i}F\${(l:3::0:)i}%f \" \${\${(M)\$((i%8)):#7}:+$'\n'}; done"
 
 alias st="speed-test -b -v"
 alias ip="curl https://ipinfo.io -sS | jq && curl https://extreme-ip-lookup.com/json/ -sS | jq && curl https://ifconfig.me/all.json -sS | jq"
