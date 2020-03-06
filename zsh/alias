@@ -2,7 +2,7 @@
 
 alias del="rm -rfv"
 alias bat="bat --tabs=0 --paging=never"
-alias tree="tree -aIC 'node_modules|.git' --dirsfirst --sort=name"
+alias tree="pwd && tree -aIC 'node_modules|.git' --dirsfirst --sort=name"
 
 alias aptup="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get clean"
 alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew leaves | xargs && echo \"\${C_YELLOW}casks installed:\${C_OFF}\" && brew cask list | xargs && brew analytics off && brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
