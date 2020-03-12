@@ -52,8 +52,7 @@ chpwd() {
         PREV_PWD="${PWD}"
 
         if [ -e ".nvmrc" ]; then
-            printf "\n"
-            echo "${C_GREEN}nvmrc:${C_OFF} $(cat .nvmrc)"
+            nvm use
         fi
     fi
 }
