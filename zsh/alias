@@ -9,6 +9,7 @@ alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew leaves | xar
 alias npmup="npm ls -g --depth=0 && ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
 alias nvmup="nvm install node --reinstall-packages-from=node"
 
+alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=node"
 alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${NVM_DIR}/.cache/bin"
 alias nvmls="echo \"\${C_MAGENTA}current:\${C_OFF} \$(node -v)\" && echo \"\${C_MAGENTA}remote:\${C_OFF} \$(nvm version-remote)\" && echo && nvm ls"
 
