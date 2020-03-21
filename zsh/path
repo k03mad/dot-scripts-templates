@@ -9,3 +9,5 @@ export PATH="/data/data/com.termux/files/usr/bin/applets:${PATH}"
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/sbin:${PATH}"
 export PATH="/usr/local/opt/curl/bin:${PATH}"
+
+export PATH="/sbin:${PATH}"
