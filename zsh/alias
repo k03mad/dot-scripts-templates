@@ -14,7 +14,6 @@ alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${N
 alias nvmls="echo \"\${C_MAGENTA}current:\${C_OFF} \$(node -v)\" && echo \"\${C_MAGENTA}remote:\${C_OFF} \$(nvm version-remote)\" && echo && nvm ls"
 
 alias st="speed-test -b -v"
-alias ip="curl https://ipinfo.io -sS | jq && curl https://extreme-ip-lookup.com/json/ -sS | jq && curl https://ifconfig.me/all.json -sS | jq"
 
 alias gs="git status -s"
 alias ga="gs && git add ."
