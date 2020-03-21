@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 npmTools=(
+    @k03mad/get-ip-info
     check-imports
     fx
     http-server
