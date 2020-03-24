@@ -284,7 +284,7 @@
       return
     fi
 
-    local  commitMsg='%244F'  # grey foreground #!
+    local    commitMsg='%244F'  # grey foreground #!
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
