@@ -286,8 +286,9 @@
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
+      local  commitMsg='%240F'  # gray foreground #!
       local       meta='%f'     # default foreground
-      #? local      clean='%76F'   # green foreground
+      #? local   clean='%76F'   # green foreground
       local      clean='%140F'  # green foreground #!
       local   modified='%178F'  # yellow foreground
       local  untracked='%39F'   # blue foreground
@@ -359,7 +360,7 @@
     local commit_subj                                            #!
     if commit_subj=$(git log -n1 --format=%s 2>/dev/null); then  #!
       if [[ -n $commit_subj ]]; then                             #!
-        res+=" ${meta}(${commit_subj//\%/%%})"                   #!
+        res+=" ${meta}${commitMsg}(${commit_subj//\%/%%})"       #!
       else                                                       #!
         res+=" ${meta}[no message]"                              #!
       fi                                                         #!
