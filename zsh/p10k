@@ -284,9 +284,10 @@
       return
     fi
 
+    local  commitMsg='%244F'  # grey foreground #!
+
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local  commitMsg='%240F'  # gray foreground #!
       local       meta='%f'     # default foreground
       #? local   clean='%76F'   # green foreground
       local      clean='%140F'  # green foreground #!
