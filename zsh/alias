@@ -16,7 +16,7 @@ alias nvmls="echo \"\${C_MAGENTA}current:\${C_OFF} \$(node -v)\" && echo \"\${C_
 alias st="speed-test -b -v"
 
 alias gs="git status -s"
-alias ga="gs && git add ."
+alias ga="git add . && gs"
 alias gp="git push"
 alias gpl="git pull origin master"
 alias gplo="git pull origin \$(git branch | grep '\*' | cut -d' ' -f2-)"
