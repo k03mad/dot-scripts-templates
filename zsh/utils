@@ -48,11 +48,13 @@ chpwd() {
         exa -alF --group-directories-first --git
     fi
 
-    if [ "${PWD}" != "${PREV_PWD}" ]; then
-        PREV_PWD="${PWD}"
+    if [ -z "${SKIP_NVRMC}" ]; then
+        if [ "${PWD}" != "${PREV_PWD}" ]; then
+            PREV_PWD="${PWD}"
 
-        if [ -e ".nvmrc" ]; then
-            nvm use
+            if [ -e ".nvmrc" ]; then
+                nvm use
+            fi
         fi
     fi
 }
