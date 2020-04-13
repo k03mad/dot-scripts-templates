@@ -1,0 +1,478 @@
+GRAY: #aeaeae;
+GRAY_LIGHT: #ECEFF1;
+
+DARK: #21252b;
+DARK_MEDIUM: #2b2f38;
+DARK_LIGHT: #3c4049;
+
+BLUE: #304d87;
+BLUE_MEDIUM: #64B5F6;
+
+GREEN: #AED581;
+GREEN_LIGHT: #9fede0;
+
+BLACK: #000000;
+RED: #FF3D00;
+ORANGE: #FFB74D;
+YELLOW: #FFD54F;
+MAGENTA: #9575CD;
+PINK: #E57373;
+CYAN: #4DD0E1;
+PURPLE: #7986CB;
+
+ALPHA: #00000000;
+ALPHA_BLACK: #00000050;
+ALPHA_RED: #f43030AA;
+
+activeButtonBg: DARK_MEDIUM;
+activeButtonBgOver: DARK_LIGHT;
+activeButtonBgRipple: DARK_LIGHT;
+activeButtonFg: GRAY_LIGHT;
+activeButtonFgOver: GRAY_LIGHT;
+activeButtonSecondaryFg: GRAY_LIGHT;
+activeButtonSecondaryFgOver: GRAY_LIGHT;
+activeLineFg: GRAY;
+activeLineFgError: RED;
+
+attentionButtonBgOver: ALPHA;
+attentionButtonBgRipple: RED;
+attentionButtonFg: RED;
+attentionButtonFgOver: RED;
+
+boxBg: DARK;
+boxSearchBg: DARK;
+boxSearchCancelIconFg: GRAY;
+boxSearchCancelIconFgOver: GRAY_LIGHT;
+boxTextFg: GRAY_LIGHT;
+boxTextFgError: RED;
+boxTextFgGood: BLUE_MEDIUM;
+boxTitleAdditionalFg: GRAY;
+boxTitleCloseFg: GRAY;
+boxTitleCloseFgOver: GRAY_LIGHT;
+boxTitleFg: GRAY_LIGHT;
+
+cancelIconFg: GRAY;
+cancelIconFgOver: GRAY_LIGHT;
+
+checkboxFg: DARK_LIGHT;
+
+contactsBg: DARK;
+contactsBgOver: DARK_MEDIUM;
+contactsNameFg: GRAY_LIGHT;
+contactsStatusFg: GRAY;
+contactsStatusFgOnline: BLUE_MEDIUM;
+contactsStatusFgOver: GRAY;
+
+dialogsBg: DARK;
+dialogsBgActive: DARK_MEDIUM;
+dialogsBgOver: DARK;
+dialogsChatIconFg: GRAY_LIGHT;
+dialogsChatIconFgActive: GRAY_LIGHT;
+dialogsChatIconFgOver: GRAY_LIGHT;
+dialogsDateFg: GRAY;
+dialogsDateFgActive: GRAY;
+dialogsDateFgOver: GRAY;
+dialogsDraftFg: BLUE_MEDIUM;
+dialogsDraftFgActive: BLUE_MEDIUM;
+dialogsDraftFgOver: BLUE_MEDIUM;
+dialogsForwardBg: DARK_MEDIUM;
+dialogsForwardFg: GRAY_LIGHT;
+dialogsMenuIconFg: GRAY;
+dialogsMenuIconFgOver: GRAY_LIGHT;
+dialogsNameFg: GRAY_LIGHT;
+dialogsNameFgActive: GRAY_LIGHT;
+dialogsNameFgOver: GRAY_LIGHT;
+dialogsOnlineBadgeFg: BLUE_MEDIUM;
+dialogsOnlineBadgeFgActive: BLUE_MEDIUM;
+dialogsSendingIconFg: GRAY;
+dialogsSendingIconFgActive: GRAY;
+dialogsSendingIconFgOver: GRAY;
+dialogsSentIconFg: BLUE_MEDIUM;
+dialogsSentIconFgActive: BLUE_MEDIUM;
+dialogsSentIconFgOver: BLUE_MEDIUM;
+dialogsScamFg: RED;
+dialogsScamFgOver: RED;
+dialogsScamFgActive: RED;
+dialogsTextFg: GRAY;
+dialogsTextFgActive: GRAY;
+dialogsTextFgOver: GRAY;
+dialogsTextFgService: GRAY;
+dialogsTextFgServiceActive: GRAY;
+dialogsTextFgServiceOver: GRAY;
+dialogsUnreadBg: BLUE_MEDIUM;
+dialogsUnreadBgActive: BLUE_MEDIUM;
+dialogsUnreadBgMuted: DARK_LIGHT;
+dialogsUnreadBgMutedActive: DARK_LIGHT;
+dialogsUnreadBgMutedOver: DARK_LIGHT;
+dialogsUnreadBgOver: DARK_LIGHT;
+dialogsUnreadFg: GRAY_LIGHT;
+dialogsUnreadFgActive: GRAY_LIGHT;
+dialogsUnreadFgOver: GRAY_LIGHT;
+dialogsVerifiedIconBg: BLUE_MEDIUM;
+dialogsVerifiedIconBgActive: BLUE_MEDIUM;
+dialogsVerifiedIconBgOver: BLUE_MEDIUM;
+dialogsVerifiedIconFg: GRAY_LIGHT;
+dialogsVerifiedIconFgActive: GRAY_LIGHT;
+dialogsVerifiedIconFgOver: GRAY_LIGHT;
+
+emojiPanBg: DARK;
+emojiPanCategories: DARK;
+emojiPanHeaderBg: DARK;
+emojiPanHeaderFg: BLUE_MEDIUM;
+
+filterInputBorderFg: DARK_MEDIUM;
+filterInputInactiveBg: DARK_MEDIUM;
+
+historyCaptionInFg: GRAY_LIGHT;
+historyCaptionOutFg: GRAY_LIGHT;
+historyComposeAreaBg: DARK_MEDIUM;
+historyComposeAreaFg: GRAY_LIGHT;
+historyComposeAreaFgService: GRAY;
+historyComposeButtonBg: DARK;
+historyComposeButtonBgOver: DARK_MEDIUM;
+historyComposeButtonBgRipple: DARK;
+historyComposeIconFg: GRAY;
+historyComposeIconFgOver: GRAY_LIGHT;
+historyFileInIconFg: DARK;
+historyFileInIconFgSelected: DARK;
+historyFileInRadialFg: DARK;
+historyFileInRadialFgSelected: DARK;
+historyFileNameInFg: GRAY_LIGHT;
+historyFileNameOutFg: GRAY_LIGHT;
+historyFileOutIconFg: DARK;
+historyFileOutIconFgSelected: DARK;
+historyFileOutRadialFg: DARK;
+historyFileOutRadialFgSelected: DARK;
+historyFileThumbIconFg: GRAY;
+historyFileThumbIconFgSelected: GRAY;
+historyFileThumbRadialFg: DARK;
+historyFileThumbRadialFgSelected: DARK;
+historyForwardChooseBg: DARK_LIGHT;
+historyForwardChooseFg: GRAY_LIGHT;
+historyIconFgInverted: GRAY_LIGHT;
+historyLinkInFg: BLUE_MEDIUM;
+historyLinkOutFg: BLUE_MEDIUM;
+historyOutIconFg: BLUE_MEDIUM;
+historyOutIconFgSelected: BLUE_MEDIUM;
+historyPeer1NameFg: ORANGE;
+historyPeer1UserpicBg: ORANGE;
+historyPeer2NameFg: GREEN;
+historyPeer2UserpicBg: GREEN;
+historyPeer3NameFg: YELLOW;
+historyPeer3UserpicBg: YELLOW;
+historyPeer4NameFg: BLUE_MEDIUM;
+historyPeer4UserpicBg: BLUE_MEDIUM;
+historyPeer5NameFg: MAGENTA;
+historyPeer5UserpicBg: MAGENTA;
+historyPeer6NameFg: PINK;
+historyPeer6UserpicBg: PINK;
+historyPeer7NameFg: CYAN;
+historyPeer7UserpicBg: CYAN;
+historyPeer8NameFg: PURPLE;
+historyPeer8UserpicBg: PURPLE;
+historyPeerUserpicFg: GRAY_LIGHT;
+historyPinnedBg: DARK_MEDIUM;
+historyReplyBg: DARK_MEDIUM;
+historyReplyCancelFg: GRAY;
+historyReplyCancelFgOver: GRAY_LIGHT;
+historyScrollBarBg: DARK;
+historyScrollBarBgOver: DARK_MEDIUM;
+historyScrollBg: DARK;
+historyScrollBgOver: DARK;
+historySendIconFg: GRAY;
+historySendIconFgOver: GRAY_LIGHT;
+historySendingInIconFg: GRAY;
+historySendingInvertedIconFg: BLUE_MEDIUM;
+historySendingOutIconFg: GRAY;
+historySystemBg: GRAY_LIGHT;
+historySystemBgSelected: DARK_MEDIUM;
+historySystemFg: GRAY_LIGHT;
+historyTextInFg: GRAY_LIGHT;
+historyTextOutFg: GRAY_LIGHT;
+historyToDownBg: DARK_MEDIUM;
+historyToDownBgOver: DARK_MEDIUM;
+historyToDownBgRipple: DARK;
+historyToDownFg: GRAY_LIGHT;
+historyToDownFgOver: GRAY_LIGHT;
+historyToDownShadow: ALPHA;
+historyUnreadBarBg: DARK;
+historyUnreadBarBorder: DARK;
+historyUnreadBarFg: GRAY_LIGHT;
+
+imageBg: DARK;
+imageBgTransparent: GRAY_LIGHT;
+
+inputBorderFg: DARK;
+
+introBg: DARK;
+introCoverBottomBg: BLUE_MEDIUM;
+introCoverIconsFg: BLUE_MEDIUM;
+introCoverPlaneInner: GRAY_LIGHT;
+introCoverPlaneOuter: GRAY;
+introCoverPlaneTop: GRAY_LIGHT;
+introCoverPlaneTrace: BLUE_MEDIUM;
+introCoverTopBg: BLUE_MEDIUM;
+introDescriptionFg: GRAY_LIGHT;
+introErrorFg: RED;
+introTitleFg: GRAY_LIGHT;
+
+layerBg: ALPHA_BLACK;
+
+lightButtonBg: DARK;
+lightButtonBgOver: DARK_MEDIUM;
+lightButtonBgRipple: DARK;
+lightButtonFg: GRAY;
+lightButtonFgOver: GRAY_LIGHT;
+
+mainMenuBg: DARK;
+mainMenuCoverBg: DARK;
+mainMenuCoverFg: GRAY_LIGHT;
+
+mediaInFg: GRAY;
+mediaInFgSelected: GRAY_LIGHT;
+mediaOutFg: GRAY;
+mediaOutFgSelected: GRAY_LIGHT;
+mediaPlayerActiveFg: GRAY;
+mediaPlayerBg: DARK;
+mediaPlayerDisabledFg: GRAY_LIGHT;
+mediaPlayerInactiveFg: DARK;
+mediaviewBg: ALPHA_BLACK;
+mediaviewCaptionBg: ALPHA_BLACK;
+mediaviewCaptionFg: GRAY_LIGHT;
+mediaviewControlBg: ALPHA_BLACK;
+mediaviewControlFg: GRAY_LIGHT;
+mediaviewFileBg: DARK_LIGHT;
+mediaviewFileBlueCornerFg: BLUE_MEDIUM;
+mediaviewFileExtFg: GRAY_LIGHT;
+mediaviewFileGreenCornerFg: GREEN;
+mediaviewFileNameFg: GRAY_LIGHT;
+mediaviewFileRedCornerFg: RED;
+mediaviewFileSizeFg: GRAY;
+mediaviewFileYellowCornerFg: YELLOW;
+mediaviewMenuBg: DARK;
+mediaviewMenuBgOver: DARK;
+mediaviewMenuBgRipple: DARK_MEDIUM;
+mediaviewMenuFg: GRAY_LIGHT;
+mediaviewPlaybackActive: DARK_LIGHT;
+mediaviewPlaybackActiveOver: GRAY_LIGHT;
+mediaviewPlaybackIconFg: DARK_LIGHT;
+mediaviewPlaybackIconFgOver: GRAY_LIGHT;
+mediaviewPlaybackInactive: ALPHA_BLACK;
+mediaviewPlaybackInactiveOver: DARK_LIGHT;
+mediaviewPlaybackProgressFg: GRAY_LIGHT;
+mediaviewSaveMsgBg: ALPHA_BLACK;
+mediaviewSaveMsgFg: ALPHA_BLACK;
+mediaviewTextLinkFg: BLUE_MEDIUM;
+mediaviewTransparentBg: DARK;
+mediaviewTransparentFg: GRAY_LIGHT;
+mediaviewVideoBg: ALPHA_BLACK;
+
+membersAboutLimitFg: GRAY_LIGHT;
+
+menuBg: DARK;
+menuBgOver: DARK;
+menuBgRipple: GRAY_LIGHT;
+menuFgDisabled: DARK_LIGHT;
+menuIconFg: GRAY;
+menuIconFgOver: GRAY_LIGHT;
+menuSeparatorFg: DARK;
+menuSubmenuArrowFg: GRAY_LIGHT;
+
+msgBotKbIconFg: BLUE_MEDIUM;
+msgBotKbOverBgAdd: DARK_LIGHT;
+msgBotKbRippleBg: ALPHA_BLACK;
+msgDateImgBg: ALPHA_BLACK;
+msgDateImgBgOver: ALPHA_BLACK;
+msgDateImgBgSelected: ALPHA_BLACK;
+msgDateImgFg: GRAY_LIGHT;
+msgFile1Bg: DARK_MEDIUM;
+msgFile1BgDark: ALPHA_BLACK;
+msgFile1BgOver: ALPHA_BLACK;
+msgFile1BgSelected: ALPHA_BLACK;
+msgFile2Bg: BLUE_MEDIUM;
+msgFile2BgDark: BLUE_MEDIUM;
+msgFile2BgOver: BLUE_MEDIUM;
+msgFile2BgSelected: BLUE_MEDIUM;
+msgFile3Bg: ORANGE;
+msgFile3BgDark: ORANGE;
+msgFile3BgOver: #ORANGE;
+msgFile3BgSelected: ORANGE;
+msgFile4Bg: PURPLE;
+msgFile4BgDark: PURPLE;
+msgFile4BgOver: PURPLE;
+msgFile4BgSelected: PURPLE;
+msgFileInBg: BLUE_MEDIUM;
+msgFileInBgOver: BLUE_MEDIUM;
+msgFileInBgSelected: BLUE_MEDIUM;
+msgFileOutBg: BLUE_MEDIUM;
+msgFileOutBgOver: BLUE_MEDIUM;
+msgFileOutBgSelected: BLUE_MEDIUM;
+msgFileThumbLinkInFg: BLUE_MEDIUM;
+msgFileThumbLinkInFgSelected: BLUE_MEDIUM;
+msgFileThumbLinkOutFg: BLUE_MEDIUM;
+msgFileThumbLinkOutFgSelected: BLUE_MEDIUM;
+msgImgReplyBarColor: BLUE_MEDIUM;
+msgInBg: DARK_MEDIUM;
+msgInBgSelected: DARK_LIGHT;
+msgInDateFg: GRAY;
+msgInDateFgSelected: GRAY_LIGHT;
+msgInMonoFg: GREEN_LIGHT;
+msgInReplyBarColor: BLUE_MEDIUM;
+msgInReplyBarSelColor: BLUE_MEDIUM;
+msgInServiceFg: BLUE_MEDIUM;
+msgInServiceFgSelected: BLUE_MEDIUM;
+msgInShadow: ALPHA;
+msgInShadowSelected: ALPHA;
+msgOutBg: BLUE;
+msgOutBgSelected: DARK_LIGHT;
+msgOutDateFg: GRAY;
+msgOutDateFgSelected: GRAY_LIGHT;
+msgOutMonoFg: GREEN_LIGHT;
+msgOutReplyBarColor: BLUE_MEDIUM;
+msgOutReplyBarSelColor: BLUE_MEDIUM;
+msgOutServiceFg: BLUE_MEDIUM;
+msgOutServiceFgSelected: BLUE_MEDIUM;
+msgOutShadow: ALPHA;
+msgOutShadowSelected: ALPHA;
+msgSelectOverlay: ALPHA_BLACK;
+msgServiceBg: DARK_MEDIUM;
+msgServiceBgSelected: DARK_MEDIUM;
+msgServiceFg: GRAY_LIGHT;
+msgStickerOverlay: ALPHA_BLACK;
+msgWaveformInActive: BLUE_MEDIUM;
+msgWaveformInActiveSelected: BLUE_MEDIUM;
+msgWaveformInInactive: GRAY;
+msgWaveformInInactiveSelected: GRAY;
+msgWaveformOutActive: BLUE_MEDIUM;
+msgWaveformOutActiveSelected: BLUE_MEDIUM;
+msgWaveformOutInactive: GRAY;
+msgWaveformOutInactiveSelected: GRAY;
+
+notificationBg: DARK;
+notificationSampleCloseFg: GRAY;
+notificationSampleNameFg: GRAY_LIGHT;
+notificationSampleTextFg: GRAY_LIGHT;
+notificationSampleUserpicFg: GRAY;
+notificationsBoxMonitorFg: GRAY_LIGHT;
+notificationsBoxScreenBg: DARK_MEDIUM;
+
+outlineButtonBg: DARK;
+outlineButtonBgOver: DARK;
+outlineButtonBgRipple: DARK;
+outlineButtonOutlineFg: GRAY_LIGHT;
+
+overviewCheckBg: GRAY_LIGHT;
+overviewCheckFg: DARK_MEDIUM;
+overviewCheckFgActive: DARK;
+overviewPhotoSelectOverlay: ALPHA_BLACK;
+
+photoCropFadeBg: ALPHA_BLACK;
+photoCropPointFg: GRAY_LIGHT;
+
+placeholderFg: GRAY;
+placeholderFgActive: GRAY_LIGHT;
+
+profileAdminStartFg: BLUE_MEDIUM;
+profileStatusFgOver: GRAY;
+profileVerifiedCheckBg: BLUE_MEDIUM;
+profileVerifiedCheckFg: GRAY_LIGHT;
+
+radialBg: GRAY;
+radialFg: GRAY_LIGHT;
+
+reportSpamBg: attentionButtonBgOver;
+reportSpamFg: attentionButtonFgOver;
+
+scrollBarBg: DARK;
+scrollBarBgOver: DARK_MEDIUM;
+scrollBg: ALPHA;
+scrollBgOver: ALPHA;
+
+searchedBarBg: DARK;
+searchedBarBorder: DARK;
+searchedBarFg: GRAY;
+
+sideBarBadgeBg: BLUE_MEDIUM;
+sideBarBadgeFg: DARK;
+sideBarBg: DARK;
+sideBarBgActive: DARK;
+sideBarBgRipple: DARK;
+sideBarIconFgActive: BLUE_MEDIUM;
+sideBarTextFg: GRAY;
+sideBarTextFgActive: BLUE_MEDIUM;
+
+shadowFg: ALPHA;
+
+slideFadeOutBg: ALPHA_BLACK;
+slideFadeOutShadowFg: ALPHA;
+sliderBgActive: GRAY_LIGHT;
+sliderBgInactive: GRAY;
+
+smallCloseIconFg: GRAY;
+smallCloseIconFgOver: GRAY_LIGHT;
+
+spellUnderline: ALPHA_RED;
+
+stickerPanDeleteBg: ALPHA_BLACK;
+stickerPanDeleteFg: GRAY_LIGHT;
+stickerPreviewBg: ALPHA_BLACK;
+
+titleBg: DARK;
+titleBgActive: DARK;
+
+titleButtonBg: DARK;
+titleButtonBgActive: DARK;
+titleButtonBgActiveOver: titleBDARKuttonBgOver;
+titleButtonBgOver: DARK;
+titleButtonCloseBg: DARK;
+titleButtonCloseBgActive: DARK;
+titleButtonCloseBgActiveOver: RED;
+titleButtonCloseBgOver: RED;
+titleButtonCloseFg: GRAY;
+titleButtonCloseFgActive: GRAY;
+titleButtonCloseFgActiveOver: ORANGE;
+titleButtonCloseFgOver: ORANGE;
+titleButtonFg: GRAY;
+titleButtonFgActive: GRAY;
+titleButtonFgActiveOver: GRAY_LIGHT;
+titleButtonFgOver: GRAY_LIGHT;
+
+titleFg: DARK;
+titleFgActive: DARK;
+titleShadow: ALPHA;
+
+toastBg: ALPHA_BLACK;
+toastFg: GRAY_LIGHT;
+
+tooltipBg: DARK;
+tooltipBorderFg: DARK;
+tooltipFg: GRAY_LIGHT;
+
+topBarBg: DARK;
+
+trayCounterBg: RED;
+trayCounterBgMacInvert: GRAY_LIGHT;
+trayCounterBgMute: GRAY;
+trayCounterFg: GRAY_LIGHT;
+trayCounterFgMacInvert: GRAY_LIGHT;
+
+videoPlayIconBg: DARK_LIGHT;
+videoPlayIconFg: DARK;
+
+windowActiveTextFg: BLUE_MEDIUM;
+windowBg: DARK;
+windowBgActive: GRAY;
+windowBgOver: DARK_MEDIUM;
+windowBgRipple: DARK_MEDIUM;
+windowBoldFg: GRAY_LIGHT;
+windowBoldFgOver: GRAY_LIGHT;
+windowFg: GRAY_LIGHT;
+windowFgActive: GRAY_LIGHT;
+windowFgOver: GRAY_LIGHT;
+windowShadowFg: BLACK;
+windowShadowFgFallback: BLACK;
+windowSubTextFg: GRAY;
+windowSubTextFgOver: GRAY_LIGHT;
+
+youtubePlayIconBg: RED;
+youtubePlayIconFg: GRAY_LIGHT;
