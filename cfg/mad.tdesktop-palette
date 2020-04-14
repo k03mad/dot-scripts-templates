@@ -182,7 +182,7 @@ historyScrollBgOver: DARK;
 historySendIconFg: GRAY;
 historySendIconFgOver: GRAY_LIGHT;
 historySendingInIconFg: GRAY;
-historySendingInvertedIconFg: BLUE_MEDIUM;
+historySendingInvertedIconFg: GRAY_LIGHT;
 historySendingOutIconFg: GRAY;
 historySystemBg: GRAY_LIGHT;
 historySystemBgSelected: DARK_MEDIUM;
