@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2154
 
 alias del="rm -rfv"
 alias bat="bat --tabs=0 --paging=never"
