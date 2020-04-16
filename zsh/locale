@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
-if [ -z "${SKIP_LOCALE}" ]; then
-    export LANG=ru_RU.UTF-8
-    export LC_ALL=ru_RU.UTF-8
-fi
+export LANG=ru_RU.UTF-8
+export LC_ALL=ru_RU.UTF-8
