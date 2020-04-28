@@ -456,8 +456,8 @@ trayCounterBgMute: GRAY;
 trayCounterFg: GRAY_LIGHT;
 trayCounterFgMacInvert: GRAY_LIGHT;
 
-videoPlayIconBg: DARK_LIGHT;
-videoPlayIconFg: BLUE_MEDIUM;
+videoPlayIconBg: ALPHA_BLACK;
+videoPlayIconFg: GRAY_LIGHT;
 
 windowActiveTextFg: BLUE_MEDIUM;
 windowBg: DARK;
