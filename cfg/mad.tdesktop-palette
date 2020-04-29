@@ -21,7 +21,8 @@ CYAN: #4DD0E1;
 PURPLE: #7986CB;
 
 ALPHA: #00000000;
-ALPHA_BLACK: #00000050;
+ALPHA_DARK: #000000aa;
+ALPHA_DARK_MEDIUM: #00000050;
 ALPHA_RED: #f43030AA;
 
 activeButtonBg: DARK_MEDIUM;
@@ -216,7 +217,7 @@ introDescriptionFg: GRAY_LIGHT;
 introErrorFg: RED;
 introTitleFg: GRAY_LIGHT;
 
-layerBg: ALPHA_BLACK;
+layerBg: ALPHA_DARK_MEDIUM;
 
 lightButtonBg: DARK;
 lightButtonBgOver: DARK_MEDIUM;
@@ -236,10 +237,10 @@ mediaPlayerActiveFg: GRAY;
 mediaPlayerBg: DARK;
 mediaPlayerDisabledFg: GRAY_LIGHT;
 mediaPlayerInactiveFg: DARK;
-mediaviewBg: ALPHA_BLACK;
-mediaviewCaptionBg: ALPHA_BLACK;
+mediaviewBg: ALPHA_DARK;
+mediaviewCaptionBg: ALPHA_DARK_MEDIUM;
 mediaviewCaptionFg: GRAY_LIGHT;
-mediaviewControlBg: ALPHA_BLACK;
+mediaviewControlBg: ALPHA_DARK_MEDIUM;
 mediaviewControlFg: GRAY_LIGHT;
 mediaviewFileBg: DARK_LIGHT;
 mediaviewFileBlueCornerFg: BLUE_MEDIUM;
@@ -257,15 +258,15 @@ mediaviewPlaybackActive: DARK_LIGHT;
 mediaviewPlaybackActiveOver: GRAY_LIGHT;
 mediaviewPlaybackIconFg: DARK_LIGHT;
 mediaviewPlaybackIconFgOver: GRAY_LIGHT;
-mediaviewPlaybackInactive: ALPHA_BLACK;
+mediaviewPlaybackInactive: ALPHA_DARK_MEDIUM;
 mediaviewPlaybackInactiveOver: DARK_LIGHT;
 mediaviewPlaybackProgressFg: GRAY_LIGHT;
-mediaviewSaveMsgBg: ALPHA_BLACK;
-mediaviewSaveMsgFg: ALPHA_BLACK;
+mediaviewSaveMsgBg: ALPHA_DARK_MEDIUM;
+mediaviewSaveMsgFg: ALPHA_DARK_MEDIUM;
 mediaviewTextLinkFg: BLUE_MEDIUM;
 mediaviewTransparentBg: DARK;
 mediaviewTransparentFg: GRAY_LIGHT;
-mediaviewVideoBg: ALPHA_BLACK;
+mediaviewVideoBg: ALPHA_DARK_MEDIUM;
 
 membersAboutLimitFg: GRAY_LIGHT;
 
@@ -280,15 +281,15 @@ menuSubmenuArrowFg: GRAY_LIGHT;
 
 msgBotKbIconFg: BLUE_MEDIUM;
 msgBotKbOverBgAdd: DARK_LIGHT;
-msgBotKbRippleBg: ALPHA_BLACK;
-msgDateImgBg: ALPHA_BLACK;
-msgDateImgBgOver: ALPHA_BLACK;
-msgDateImgBgSelected: ALPHA_BLACK;
+msgBotKbRippleBg: ALPHA_DARK_MEDIUM;
+msgDateImgBg: ALPHA_DARK_MEDIUM;
+msgDateImgBgOver: ALPHA_DARK_MEDIUM;
+msgDateImgBgSelected: ALPHA_DARK_MEDIUM;
 msgDateImgFg: GRAY_LIGHT;
 msgFile1Bg: DARK_MEDIUM;
-msgFile1BgDark: ALPHA_BLACK;
-msgFile1BgOver: ALPHA_BLACK;
-msgFile1BgSelected: ALPHA_BLACK;
+msgFile1BgDark: ALPHA_DARK_MEDIUM;
+msgFile1BgOver: ALPHA_DARK_MEDIUM;
+msgFile1BgSelected: ALPHA_DARK_MEDIUM;
 msgFile2Bg: BLUE_MEDIUM;
 msgFile2BgDark: BLUE_MEDIUM;
 msgFile2BgOver: BLUE_MEDIUM;
@@ -334,11 +335,11 @@ msgOutServiceFg: BLUE_MEDIUM;
 msgOutServiceFgSelected: BLUE_MEDIUM;
 msgOutShadow: ALPHA;
 msgOutShadowSelected: ALPHA;
-msgSelectOverlay: ALPHA_BLACK;
+msgSelectOverlay: ALPHA_DARK_MEDIUM;
 msgServiceBg: DARK_MEDIUM;
 msgServiceBgSelected: DARK_MEDIUM;
 msgServiceFg: GRAY_LIGHT;
-msgStickerOverlay: ALPHA_BLACK;
+msgStickerOverlay: ALPHA_DARK_MEDIUM;
 msgWaveformInActive: BLUE_MEDIUM;
 msgWaveformInActiveSelected: BLUE_MEDIUM;
 msgWaveformInInactive: GRAY;
@@ -364,9 +365,9 @@ outlineButtonOutlineFg: GRAY_LIGHT;
 overviewCheckBg: GRAY_LIGHT;
 overviewCheckFg: DARK_MEDIUM;
 overviewCheckFgActive: DARK;
-overviewPhotoSelectOverlay: ALPHA_BLACK;
+overviewPhotoSelectOverlay: ALPHA_DARK_MEDIUM;
 
-photoCropFadeBg: ALPHA_BLACK;
+photoCropFadeBg: ALPHA_DARK_MEDIUM;
 photoCropPointFg: GRAY_LIGHT;
 
 placeholderFg: GRAY;
@@ -403,7 +404,7 @@ sideBarTextFgActive: BLUE_MEDIUM;
 
 shadowFg: ALPHA;
 
-slideFadeOutBg: ALPHA_BLACK;
+slideFadeOutBg: ALPHA_DARK_MEDIUM;
 slideFadeOutShadowFg: ALPHA;
 sliderBgActive: GRAY_LIGHT;
 sliderBgInactive: GRAY;
@@ -413,9 +414,9 @@ smallCloseIconFgOver: GRAY_LIGHT;
 
 spellUnderline: ALPHA_RED;
 
-stickerPanDeleteBg: ALPHA_BLACK;
+stickerPanDeleteBg: ALPHA_DARK_MEDIUM;
 stickerPanDeleteFg: GRAY_LIGHT;
-stickerPreviewBg: ALPHA_BLACK;
+stickerPreviewBg: ALPHA_DARK_MEDIUM;
 
 titleBg: DARK;
 titleBgActive: DARK;
@@ -441,7 +442,7 @@ titleFg: DARK;
 titleFgActive: DARK;
 titleShadow: ALPHA;
 
-toastBg: ALPHA_BLACK;
+toastBg: ALPHA_DARK_MEDIUM;
 toastFg: GRAY_LIGHT;
 
 tooltipBg: DARK;
@@ -456,7 +457,7 @@ trayCounterBgMute: GRAY;
 trayCounterFg: GRAY_LIGHT;
 trayCounterFgMacInvert: GRAY_LIGHT;
 
-videoPlayIconBg: ALPHA_BLACK;
+videoPlayIconBg: ALPHA_DARK_MEDIUM;
 videoPlayIconFg: GRAY_LIGHT;
 
 windowActiveTextFg: BLUE_MEDIUM;
