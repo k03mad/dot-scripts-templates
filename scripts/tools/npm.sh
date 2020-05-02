@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 npmTools=(
+    @danakt/pshe
     @k03mad/get-ip-info
     check-imports
     fx
