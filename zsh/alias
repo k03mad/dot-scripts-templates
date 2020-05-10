@@ -24,4 +24,6 @@ alias gplo="git pull origin \$(git branch | grep '\*' | cut -d' ' -f2-)"
 alias grh="git reset --hard"
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs)"
 
+alias depup="gpl && ncu -u && npm run setup && ga && gce 'update deps' && gp"
+
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
