@@ -45,7 +45,11 @@ gch() {
 
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
-        exa -alF --group-directories-first --git
+        if [ -z "${NO_EXA}" ]; then
+            exa -alF --group-directories-first --git
+        else
+            ls -alh
+        fi
     fi
 
     if [ -z "${SKIP_NVRMC}" ]; then
