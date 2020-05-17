@@ -13,6 +13,7 @@ npmTools=(
     npm-check-updates
     pm2
     speed-test
+    why-npm-i-so-long
 )
 
 npm i -g "${npmTools[@]}"
