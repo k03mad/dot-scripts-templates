@@ -3,6 +3,7 @@
 npmTools=(
     @danakt/pshe
     @k03mad/get-ip-info
+    @k03mad/mikrotik-pptp-hidemy-ip
     check-imports
     fx
     http-server
@@ -12,7 +13,6 @@ npmTools=(
     npm-check-updates
     pm2
     speed-test
-    yarn
 )
 
 npm i -g "${npmTools[@]}"
