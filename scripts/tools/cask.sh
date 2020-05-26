@@ -20,6 +20,7 @@ guiTools=(
     plex-media-server
     postman
     pritunl
+    responsively
     sopcast
     tableplus
     teamviewer
