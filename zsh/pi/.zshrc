@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # shellcheck source=/dev/null
 
 export SKIP_NVRMC=true

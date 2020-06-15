@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 export C_OFF="\033[0m"
 
 export C_GREEN="\033[0;32m"

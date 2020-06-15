@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 echo -e "\\033[0;33m🤖 Disable RPi LED \\033[0m"
 
 sudo sh -c 'echo 0 > /sys/class/leds/led1/brightness'

@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 termTools=(
     aria2
     bat

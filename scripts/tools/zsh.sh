@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 git clone https://github.com/lukechilds/zsh-better-npm-completion "${ZSH_CUSTOM}/plugins/zsh-better-npm-completion"
 git clone https://github.com/lukechilds/zsh-nvm "${ZSH_CUSTOM}/plugins/zsh-nvm"
 git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM}/plugins/autoupdate"
