@@ -1,7 +1,7 @@
 npmTools=(
     @danakt/pshe
     @k03mad/get-ip-info
-    @k03mad/mikrotik-pptp-hidemy-ip
+    @k03mad/mikrotik-tools
     check-imports
     fx
     http-server
