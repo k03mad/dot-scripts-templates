@@ -1,3 +1,5 @@
+#! /usr/bin/env zsh
+
 npmTools=(
     @danakt/pshe
     @k03mad/get-ip-info
