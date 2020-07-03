@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
 
 git clone https://github.com/lukechilds/zsh-better-npm-completion "${ZSH_CUSTOM}/plugins/zsh-better-npm-completion"
 git clone https://github.com/lukechilds/zsh-nvm "${ZSH_CUSTOM}/plugins/zsh-nvm"

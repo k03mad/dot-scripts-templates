@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
 
 export PATH="${HOME}/.cargo/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"

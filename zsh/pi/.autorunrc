@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
 
 echo -e "\\033[0;33m🤖 Disable RPi LED \\033[0m"
 

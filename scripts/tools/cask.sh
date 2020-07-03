@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
 
 brew tap homebrew/cask
 brew tap homebrew/cask-fonts

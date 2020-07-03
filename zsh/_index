@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
 # shellcheck source=/dev/null
 
 source "${ZSH_DOT_MAD}/colors"

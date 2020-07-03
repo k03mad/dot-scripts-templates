@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
 # shellcheck disable=SC2154
 
 alias del="rm -rfv"
