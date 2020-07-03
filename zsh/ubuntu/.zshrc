@@ -1,3 +1,4 @@
+#! /usr/bin/env zsh
 # shellcheck source=/dev/null
 
 export NO_EXA=true

@@ -1,3 +1,4 @@
+#! /usr/bin/env zsh
 # shellcheck source=/dev/null
 
 export ZSH="${HOME}/.oh-my-zsh"

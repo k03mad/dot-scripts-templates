@@ -1,3 +1,5 @@
+#! /usr/bin/env zsh
+
 termTools=(
     aria2
     bat
