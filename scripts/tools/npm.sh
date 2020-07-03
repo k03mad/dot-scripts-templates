@@ -2,6 +2,7 @@
 
 npmTools=(
     @danakt/pshe
+    @k03mad/change-node-version
     @k03mad/get-ip-info
     @k03mad/mikrotik-tools
     check-imports
@@ -11,8 +12,8 @@ npmTools=(
     npkill
     npm
     npm-check-updates
-    pnpm
     pm2
+    pnpm
     speed-test
     why-npm-i-so-long
     yarn
