@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 # shellcheck source=/dev/null
 
+source "${ZSH_DOT_MAD}/vars"
 source "${ZSH_DOT_MAD}/colors"
 source "${ZSH_DOT_MAD}/path"
 
