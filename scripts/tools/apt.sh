@@ -26,4 +26,7 @@ aptTools=(
     zsh
 )
 
-sudo apt-get install "${aptTools[@]}"
+for i in "${aptTools[@]}"
+do
+    sudo apt-get install "$i"
+done
