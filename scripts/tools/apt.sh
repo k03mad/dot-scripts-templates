@@ -6,6 +6,8 @@ aptTools=(
     git
     glances
     htop
+    hub
+    id3v2
     jq
     mc
     mosh
