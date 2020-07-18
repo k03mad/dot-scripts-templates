@@ -24,4 +24,4 @@ aptTools=(
     zsh
 )
 
-sudo apt-get install "${aptTools[@]}"
+sudo apt-get install "${aptTools[@]}" | apt-get install "${aptTools[@]}"
