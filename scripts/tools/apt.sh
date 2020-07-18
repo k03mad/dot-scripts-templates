@@ -2,16 +2,12 @@
 
 aptTools=(
     aria2
-    bat
     curl
     git
     glances
     htop
-    hub
-    id3v2
     jq
     mc
-    micro
     mosh
     nano
     ncdu
