@@ -2,6 +2,7 @@
 
 aptTools=(
     aria2
+    bat
     curl
     git
     glances
@@ -10,6 +11,7 @@ aptTools=(
     id3v2
     jq
     mc
+    micro
     mosh
     nano
     ncdu
@@ -24,4 +26,7 @@ aptTools=(
     zsh
 )
 
-sudo apt-get install "${aptTools[@]}" | apt-get install "${aptTools[@]}"
+for i in "${aptTools[@]}"
+do
+    sudo apt-get install "$i" | apt-get install "$i"
+done
