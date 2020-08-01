@@ -7,6 +7,7 @@ brew tap homebrew/command-not-found
 
 guiTools=(
     android-file-transfer
+    android-platform-tools
     angry-ip-scanner
     appcleaner
     balenaetcher
