@@ -1,6 +1,25 @@
 #!/usr/bin/env zsh
 # shellcheck source=/dev/null
 
+export ZSH_DOT_MAD="${HOME}/git/dot-scripts-templates/zsh"
+
+if [ -n "${IS_RPI}" ]; then
+    export SKIP_NVRMC=true
+
+    if [ -z "${SSH_TTY}" ]; then
+        source "${ZSH_DOT_MAD}/pi/autorun"
+    fi
+fi
+
+if [ -n "${IS_TERMUX}" ]; then
+    export SKIP_NVRMC=true
+    export NO_SUDO=true
+fi
+
+if [ -n "${IS_UBUNTU}" ]; then
+    export NO_EXA=true
+fi
+
 source "${ZSH_DOT_MAD}/vars"
 source "${ZSH_DOT_MAD}/path"
 
