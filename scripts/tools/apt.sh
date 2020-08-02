@@ -28,5 +28,9 @@ aptTools=(
 
 for i in "${aptTools[@]}"
 do
-    sudo apt-get install "$i" | apt-get install "$i"
+    if [ -z "${NO_SUDO}" ]; then
+        apt-get install "$i"
+    else
+        sudo apt-get install "$i"
+    fi
 done

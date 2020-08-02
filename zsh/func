@@ -14,6 +14,7 @@ youvid() {
         --external-downloader aria2c \
         --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
 }
+
 youmus() {
     youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" \
         --extract-audio \
@@ -26,11 +27,8 @@ youmus() {
 }
 
 gc() {
-    gs && git commit -m "$(echo "$@")"
-}
-
-gce() {
-    gs && git commit -m "$(curl -sL https://newfuture.github.io/emoji/e.sh | sh) $(echo "$@")"
+    gs
+    git commit -m "$(echo "$@")"
 }
 
 gch() {
