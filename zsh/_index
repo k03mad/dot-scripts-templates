@@ -1,14 +1,14 @@
 #!/usr/bin/env zsh
 # shellcheck source=/dev/null
+# shellcheck disable=SC2164
 
-export ZSH_DOT_MAD="${HOME}/git/dot-scripts-templates/zsh"
+export DOT_FOLDER="${HOME}/git/dot-scripts-templates"
+export DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
+export DOT_FOLDER_TOOLS="${DOT_FOLDER}/scripts/tools"
 
 if [ -n "${IS_RPI}" ]; then
     export SKIP_NVRMC=true
-
-    if [ -z "${SSH_TTY}" ]; then
-        source "${ZSH_DOT_MAD}/pi/autorun"
-    fi
+    source "${DOT_FOLDER_ZSH}/pi/autorun"
 fi
 
 if [ -n "${IS_TERMUX}" ]; then
@@ -17,17 +17,17 @@ if [ -n "${IS_TERMUX}" ]; then
 fi
 
 if [ -n "${IS_UBUNTU}" ]; then
-    cd ~ || true
     export NO_EXA=true
+    cd ~
 fi
 
-source "${ZSH_DOT_MAD}/vars"
-source "${ZSH_DOT_MAD}/path"
+source "${DOT_FOLDER_ZSH}/vars"
+source "${DOT_FOLDER_ZSH}/path"
 
-source "${ZSH_DOT_MAD}/omz"
-source "${ZSH_DOT_MAD}/p10k"
+source "${DOT_FOLDER_ZSH}/omz"
+source "${DOT_FOLDER_ZSH}/p10k"
 
-source "${ZSH_DOT_MAD}/alias"
-source "${ZSH_DOT_MAD}/func"
+source "${DOT_FOLDER_ZSH}/alias"
+source "${DOT_FOLDER_ZSH}/func"
 
 source "${HOME}/.keyrc"

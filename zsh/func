@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# shellcheck disable=SC2116,SC2191
+# shellcheck disable=SC2116,SC2191,2164
 
 ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
 
@@ -65,9 +65,9 @@ zshup() {
     SKIP_CHPWD=true
     START_PWD=${PWD}
 
-    cd "${ZSH_DOT_MAD}" || exit 1
+    cd "${DOT_FOLDER_ZSH}"
     git pull
-    cd "${START_PWD}" || return
+    cd "${START_PWD}"
 
     unset SKIP_CHPWD
 }

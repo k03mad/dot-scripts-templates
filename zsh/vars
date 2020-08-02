@@ -1,8 +1,5 @@
 #!/usr/bin/env zsh
 
-export ZSH="${HOME}/.oh-my-zsh"
-export DOT_SCRIPTS="${HOME}/git/dot-scripts-templates"
-
 export LANG="ru_RU.UTF-8"
 export LC_ALL="ru_RU.UTF-8"
 

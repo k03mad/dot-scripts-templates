@@ -1,20 +1,19 @@
 #!/usr/bin/env zsh
+# shellcheck disable=SC2164
 
-echo -e "\\033[0;33m🤖 Disable RPi LED \\033[0m"
+if [ -z "${SSH_TTY}" ]; then
+    sudo sh -c 'echo 0 > /sys/class/leds/led1/brightness'
+    sudo sh -c 'echo 0 > /sys/class/leds/led0/brightness'
 
-sudo sh -c 'echo 0 > /sys/class/leds/led1/brightness'
-sudo sh -c 'echo 0 > /sys/class/leds/led0/brightness'
+    run() {
+        cd ~/git/"$1"/
+        git pull
+        npm run setup
+        npm run "$2"
+    }
 
-run() {
-    echo -e "\\033[0;33m🤖 Starting $1 - $2\\033[0m"
+    run "magnet-co-parser" "server"
 
-    cd ~/git/"$1"/ || true
-    git pull || true
-    npm run setup || true
-    npm run "$2" || true
-}
-
-run "magnet-co-parser" "server"
-
-run "rpi-tools-bot" "start"
-run "rpi-tools-cron" "start"
+    run "rpi-tools-bot" "start"
+    run "rpi-tools-cron" "start"
+fi
