@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 # shellcheck disable=SC2154,SC2142
 
+alias sudo="sudo "
+
 alias del="rm -rfv"
 alias bat="bat --tabs=0 --paging=never"
 alias tree="pwd && tree -aIC 'node_modules|.git' --dirsfirst --sort=name"
