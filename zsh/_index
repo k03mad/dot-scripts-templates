@@ -17,6 +17,7 @@ if [ -n "${IS_TERMUX}" ]; then
 fi
 
 if [ -n "${IS_UBUNTU}" ]; then
+    cd ~ || true
     export NO_EXA=true
 fi
 
