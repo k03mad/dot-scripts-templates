@@ -16,4 +16,6 @@ if [ -z "${SSH_TTY}" ]; then
 
     run "rpi-tools-bot" "start"
     run "rpi-tools-cron" "start"
+
+    cd ~
 fi
