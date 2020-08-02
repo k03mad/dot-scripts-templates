@@ -5,21 +5,19 @@
     "copyOnSelect": false,
     "copyFormatting": false,
 
-    "profiles":
-    {
-        "defaults":
-        {
+    "profiles": {
+        "defaults": {
             "fontFace": "Fira Code",
             "fontSize": 10
         },
-        "list":
-        [
+        "list": [
             {
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl",
                 "colorScheme": "Material",
-                "hidden": false
+                "hidden": false,
+                "startingDirectory": "//wsl$/Ubuntu-20.04/home/mad"
             },
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -110,8 +108,7 @@
         }
     ],
 
-    "keybindings":
-    [
+    "keybindings": [
         { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
         { "command": "paste", "keys": "ctrl+v" },
         { "command": "find", "keys": "ctrl+shift+f" },
