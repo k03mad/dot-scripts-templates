@@ -80,3 +80,11 @@ one() {
 oneg() {
     npm run "$1" --target="${3:-stable}" --testcase="$2" --record --grid
 }
+
+join_by() {
+    local d=$1
+    shift
+    echo -n "$1"
+    shift
+    printf "%s" "${@/#/$d}"
+}
