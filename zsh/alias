@@ -1,15 +1,13 @@
 #!/usr/bin/env zsh
 # shellcheck disable=SC2154,SC2142
 
-alias sudo='sudo '
-
 alias del="rm -rfv"
 alias bat="bat --tabs=0 --paging=never"
 alias tree="pwd && tree -aIC 'node_modules|.git' --dirsfirst --sort=name"
 
 alias aptin="\${DOT_SCRIPTS}/scripts/tools/apt.sh"
 alias aptup="apt-get update && apt-get upgrade && apt-get dist-upgrade && apt-get autoremove && apt-get autoclean && apt-get clean"
-alias aptups="sudo aptup"
+alias aptups="sudo sh -c aptup"
 
 alias brewin="\${DOT_SCRIPTS}/scripts/tools/brew.sh && \${DOT_SCRIPTS}/scripts/tools/cask.sh"
 alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew leaves | xargs && echo \"\${C_YELLOW}casks installed:\${C_OFF}\" && brew cask list | xargs && brew analytics off && brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
