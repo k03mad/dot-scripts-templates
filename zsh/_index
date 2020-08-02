@@ -18,7 +18,6 @@ fi
 
 if [ -n "${IS_UBUNTU}" ]; then
     export NO_EXA=true
-    cd ~
 fi
 
 source "${DOT_FOLDER_ZSH}/vars"
