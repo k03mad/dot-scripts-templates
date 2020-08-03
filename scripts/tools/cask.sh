@@ -23,6 +23,7 @@ guiTools=(
     pritunl
     responsively
     sopcast
+    spotify
     tableplus
     teamviewer
     telegram-desktop
