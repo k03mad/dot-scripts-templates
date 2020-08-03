@@ -8,7 +8,6 @@ export DOT_FOLDER_TOOLS="${DOT_FOLDER}/scripts/tools"
 
 if [ -n "${IS_RPI}" ]; then
     export SKIP_NVRMC=true
-    source "${DOT_FOLDER_ZSH}/pi/autorun"
 fi
 
 if [ -n "${IS_TERMUX}" ]; then
@@ -30,3 +29,7 @@ source "${DOT_FOLDER_ZSH}/alias"
 source "${DOT_FOLDER_ZSH}/func"
 
 source "${HOME}/.keyrc"
+
+if [ -n "${IS_RPI}" ] && [ -z "${SSH_TTY}" ]; then
+    source "${DOT_FOLDER_ZSH}/pi/autorun"
+fi
