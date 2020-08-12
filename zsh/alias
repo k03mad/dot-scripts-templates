@@ -11,7 +11,7 @@ alias aptup="apt-get update && apt-get dist-upgrade && apt-get autoremove && apt
 alias aptups="sudo -- sh -c '$(whence aptup)'"
 
 alias brewin="\${DOT_FOLDER_TOOLS}/brew.sh && \${DOT_FOLDER_TOOLS}/cask.sh"
-alias brewup="echo '\${C_GREEN}brews installed:\${C_OFF}' && brew leaves | xargs && echo '\${C_YELLOW}casks installed:\${C_OFF}' && brew cask list | xargs && brew analytics off && brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
+alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew leaves | xargs && echo \"\${C_YELLOW}casks installed:\${C_OFF}\" && brew cask list | xargs && brew analytics off && brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor"
 
 alias npmin="\${DOT_FOLDER_TOOLS}/npm.sh"
 alias npmls="npm ls -g --depth=0"
