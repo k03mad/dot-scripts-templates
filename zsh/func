@@ -48,10 +48,10 @@ gch() {
 
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
-        if [ -z "${NO_EXA}" ]; then
-            exa -alF --group-directories-first --git
-        else
+        if [ -n "${NO_EXA}" ]; then
             ls -alh
+        else
+            exa -alF --group-directories-first --git
         fi
     fi
 
