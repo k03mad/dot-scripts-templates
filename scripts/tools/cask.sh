@@ -28,6 +28,7 @@ guiTools=(
     teamviewer
     telegram-desktop
     the-unarchiver
+    toinane-colorpicker
     transmission
     vlc
     yandex
