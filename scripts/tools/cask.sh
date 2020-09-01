@@ -3,7 +3,6 @@
 brew tap homebrew/cask
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
-brew tap homebrew/command-not-found
 
 guiTools=(
     android-file-transfer
@@ -21,6 +20,7 @@ guiTools=(
     plex-media-server
     postman
     pritunl
+    proxyman
     responsively
     sopcast
     spotify
