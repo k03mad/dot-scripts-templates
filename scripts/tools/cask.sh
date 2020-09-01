@@ -33,6 +33,7 @@ guiTools=(
     vlc
     yandex
     yandex-disk
+    zoomus
 )
 
 brew cask install "${guiTools[@]}"
