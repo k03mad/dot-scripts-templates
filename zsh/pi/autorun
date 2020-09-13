@@ -13,7 +13,7 @@ run() {
 
 run "magnet-co-parser" "server"
 
-run "rpi-tools-bot" "start"
 run "rpi-tools-cron" "start"
+run "rpi-tools-bot" "start"
 
 cd ~
