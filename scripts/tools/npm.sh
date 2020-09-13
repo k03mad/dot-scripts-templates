@@ -13,7 +13,6 @@ npmTools=(
     npm
     npm-check-updates
     pm2
-    pnpm
     speed-test
     why-npm-i-so-long
     yarn
