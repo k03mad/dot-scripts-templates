@@ -4,9 +4,9 @@
 alias del="rm -rfv"
 alias bat="bat --tabs=0 --paging=never"
 alias tree="pwd && tree -aIC 'node_modules|.git' --dirsfirst --sort=name"
+alias els="exa -alF --group-directories-first --git"
 
 alias aptin="\${DOT_FOLDER_TOOLS}/apt.sh"
-
 alias aptup="apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean"
 alias aptups="sudo -- sh -c '$(whence aptup)'"
 
