@@ -9,6 +9,7 @@ termTools=(
     git
     glances
     htop
+    httpie
     hub
     id3v2
     jq
