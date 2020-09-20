@@ -6,7 +6,7 @@ sudo sh -c 'echo 0 > /sys/class/leds/led0/brightness'
 
 run() {
     cd ~/git/"$1"/
-    git pull
+    gpl
     npm run setup
     npm run "$2"
 }
@@ -15,5 +15,7 @@ run "magnet-co-parser" "server"
 
 run "rpi-tools-cron" "start"
 run "rpi-tools-bot" "start"
+
+zshup
 
 cd ~
