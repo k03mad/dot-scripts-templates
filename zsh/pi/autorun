@@ -8,13 +8,13 @@ run() {
     cd ~/git/"$1"/
     gpl
     npm run setup
-    npm run "$2"
+    npm run "${2:-start}"
 }
 
 run "magnet-co-parser" "server"
 
-run "rpi-tools-cron" "start"
-run "rpi-tools-bot" "start"
+run "rpi-tools-cron"
+run "rpi-tools-bot"
 
 zshup
 
