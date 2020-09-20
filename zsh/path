@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export BAT_CONFIG_PATH="${DOT_FOLDER}/cfg/bat.conf"
+
 export PATH="${HOME}/.cargo/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 
