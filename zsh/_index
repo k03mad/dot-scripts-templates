@@ -19,8 +19,7 @@ if [ -n "${IS_UBUNTU}" ]; then
     export NO_EXA=true
 fi
 
-source "${DOT_FOLDER_ZSH}/var"
-source "${DOT_FOLDER_ZSH}/path"
+source "${DOT_FOLDER_ZSH}/vars"
 
 source "${DOT_FOLDER_ZSH}/omz"
 source "${DOT_FOLDER_ZSH}/p10k"
