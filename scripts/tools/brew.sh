@@ -3,6 +3,7 @@
 termTools=(
     aria2
     bat
+    bettercap
     ccat
     curl
     exa
