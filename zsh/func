@@ -48,7 +48,11 @@ gch() {
 
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
-        dls
+        if [ -n "${NO_EXA}" ]; then
+            ls -alh
+        else
+            els
+        fi
     fi
 
     if [ -z "${SKIP_NVMRC}" ]; then

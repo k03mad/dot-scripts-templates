@@ -15,6 +15,10 @@ if [ -n "${IS_TERMUX}" ]; then
     export NO_SUDO=true
 fi
 
+if [ -n "${IS_UBUNTU}" ]; then
+    export NO_EXA=true
+fi
+
 source "${DOT_FOLDER_ZSH}/vars"
 
 source "${DOT_FOLDER_ZSH}/omz"
