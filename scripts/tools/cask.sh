@@ -11,7 +11,7 @@ guiTools=(
     appcleaner
     balenaetcher
     brooklyn
-    font-fira-code
+    font-fira-code-nerd-font
     google-chrome
     keepingyouawake
     mkvtoolnix
