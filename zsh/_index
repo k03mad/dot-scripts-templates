@@ -7,11 +7,11 @@ export DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
 export DOT_FOLDER_TOOLS="${DOT_FOLDER}/scripts/tools"
 
 if [ -n "${IS_RPI}" ]; then
-    export SKIP_NVRMC=true
+    export SKIP_NVMRC=true
 fi
 
 if [ -n "${IS_TERMUX}" ]; then
-    export SKIP_NVRMC=true
+    export SKIP_NVMRC=true
     export NO_SUDO=true
 fi
 

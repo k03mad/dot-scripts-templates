@@ -48,14 +48,10 @@ gch() {
 
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
-        if [ -n "${NO_LSD}" ]; then
-            ls -alh
-        else
-            dls
-        fi
+        dls
     fi
 
-    if [ -z "${SKIP_NVRMC}" ]; then
+    if [ -z "${SKIP_NVMRC}" ]; then
         if [ "${PWD}" != "${PREV_PWD}" ]; then
             PREV_PWD="${PWD}"
 
