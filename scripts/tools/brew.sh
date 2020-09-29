@@ -14,6 +14,7 @@ termTools=(
     hub
     id3v2
     jq
+    lsd
     m-cli
     mc
     micro

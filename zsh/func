@@ -48,10 +48,10 @@ gch() {
 
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
-        if [ -n "${NO_EXA}" ]; then
+        if [ -n "${NO_LSD}" ]; then
             ls -alh
         else
-            els
+            dls
         fi
     fi
 
