@@ -96,7 +96,6 @@
     # time                  # current time
     # =========================[ Line #2 ]=========================
     newline
-    package                 # name@version from package.json (https://docs.npmjs.com/files/package.json) #!
     node_version            # node.js version #!
     context                 # user@hostname   #!
     # ip                    # ip address and bandwidth usage for a specified network interface
