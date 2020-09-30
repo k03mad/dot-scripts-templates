@@ -27,6 +27,7 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
+    context                 # user@hostname #!
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
@@ -97,7 +98,6 @@
     # =========================[ Line #2 ]=========================
     newline
     node_version            # node.js version #!
-    context                 # user@hostname   #!
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
