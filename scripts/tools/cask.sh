@@ -23,8 +23,6 @@ guiTools=(
     proxyman
     responsively
     sopcast
-    spotify
-    spotify-now-playing
     tableplus
     teamviewer
     telegram-desktop
