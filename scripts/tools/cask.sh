@@ -7,20 +7,15 @@ brew tap homebrew/cask-versions
 guiTools=(
     android-file-transfer
     android-platform-tools
-    angry-ip-scanner
     appcleaner
     balenaetcher
-    brooklyn
     font-fira-code-nerd-font
     google-chrome
     keepingyouawake
     mkvtoolnix
     omnidisksweeper
     openoffice
-    plex-media-server
-    postman
     pritunl
-    proxyman
     responsively
     sopcast
     tableplus
