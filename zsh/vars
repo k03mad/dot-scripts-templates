@@ -1,8 +1,5 @@
 #!/usr/bin/env zsh
 
-export LANG="ru_RU.UTF-8"
-export LC_ALL="ru_RU.UTF-8"
-
 export C_OFF="\033[0m"
 export C_GREEN="\033[0;32m"
 export C_YELLOW="\033[0;33m"
