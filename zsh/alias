@@ -28,7 +28,7 @@ alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${N
 alias nvmls="echo \"\${C_MAGENTA}current:\${C_OFF} \$(node -v)\" && echo \"\${C_MAGENTA}remote:\${C_OFF} \$(nvm version-remote)\" && echo && nvm ls"
 
 alias st="speed-test -b -v"
-alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=30000 && del testfile.mad"
+alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=30000 && del ./testfile.mad"
 
 alias gs="git status -s"
 alias ga="git add . && gs"
