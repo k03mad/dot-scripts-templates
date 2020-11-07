@@ -20,7 +20,7 @@ alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew list --formu
 alias npmin="\${DOT_FOLDER_TOOLS}/npm.sh"
 alias npmls="npm ls -g --depth=0"
 alias npmup="npmls && ncu -g && for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm i \${package} -g; done"
-alias npmrm="npmls --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs npm -g rm"
+alias npmcl="npmls --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs npm -g rm"
 
 alias nvmup="nvm install node --reinstall-packages-from=node"
 alias nvmin="nvm install \$(cat .nvmrc) --reinstall-packages-from=node"
