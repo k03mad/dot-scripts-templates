@@ -10,7 +10,6 @@ npmTools=(
     http-server
     jay-repl
     npkill
-    npm
     npm-check-updates
     pm2
     speed-test
