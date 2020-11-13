@@ -25,6 +25,10 @@ source "${DOT_FOLDER_ZSH}/func"
 
 source "${HOME}/.keyrc"
 
+if [ -n "${IS_WORK}" ]; then
+    source "${HOME}/.workrc"
+fi
+
 if [ -n "${IS_RPI}" ] && [ -z "${SSH_TTY}" ]; then
     source "${DOT_FOLDER_ZSH}/pi/autorun"
 fi
