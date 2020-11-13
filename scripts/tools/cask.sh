@@ -9,6 +9,7 @@ guiTools=(
     android-platform-tools
     appcleaner
     balenaetcher
+    eul
     font-fira-code-nerd-font
     google-chrome
     keepingyouawake
