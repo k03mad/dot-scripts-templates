@@ -31,6 +31,6 @@ do
     if [ -n "${NO_SUDO}" ]; then
         apt-get install "$i"
     else
-        sudo apt-get install "$i"
+        sudo apt-get install "$i" -y
     fi
 done
