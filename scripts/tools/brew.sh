@@ -23,6 +23,7 @@ termTools=(
     nano
     ncdu
     neofetch
+    nextdns
     nmap
     shellcheck
     tig
