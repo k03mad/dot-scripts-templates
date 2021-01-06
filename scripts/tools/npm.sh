@@ -2,9 +2,9 @@
 
 npmTools=(
     @danakt/pshe
-    @k03mad/change-node-version
-    @k03mad/get-ip-info
-    @k03mad/mikrotik-tools
+    @k03mad/cli-tools-mikrotik
+    @k03mad/cli-tools-node
+    @k03mad/cli-tools-lan
     check-imports
     fx
     http-server
@@ -13,8 +13,6 @@ npmTools=(
     npm-check-updates
     pm2
     speed-test
-    why-npm-i-so-long
-    yarn
 )
 
 npm i -g "${npmTools[@]}"
