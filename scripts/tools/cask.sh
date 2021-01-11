@@ -13,12 +13,10 @@ guiTools=(
     font-fira-code-nerd-font
     google-chrome
     keepingyouawake
-    mkvtoolnix
     omnidisksweeper
     openoffice
     pritunl
     responsively
-    sopcast
     tableplus
     teamviewer
     telegram-desktop
