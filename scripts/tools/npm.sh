@@ -1,10 +1,6 @@
 #!/usr/bin/env zsh
 
 npmTools=(
-    pnpm
-)
-
-pnpmTools=(
     @k03mad/cli-tools-lan
     @k03mad/cli-tools-mikrotik
     @k03mad/cli-tools-next
@@ -20,4 +16,3 @@ pnpmTools=(
 )
 
 npm i -g "${npmTools[@]}"
-pnpm i -g "${pnpmTools[@]}"
