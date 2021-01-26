@@ -19,7 +19,7 @@ alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew list --formu
 
 alias npmin="\${DOT_FOLDER_TOOLS}/npm.sh"
 alias npmls="npm ls -g --depth=0 && npm outdated -g"
-alias npmup="for package in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do if [[ ! \"\${package}\" =~ ^npm@ ]]; then echo \"\n➡️  \"\${package}\"\" && npm i -g \"\${package}\"; fi; done"
+alias npmup="npm -g outdated --parseable --depth=0 | pjs --after \"LINES.map(elem => elem.split(':')[3]).filter(elem => elem.startsWith('npm@') === false).join(' ')\" | xargs -t npm i -g"
 alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs npm remove -g"
 
 alias nvmup="nvm install node && npmin"
