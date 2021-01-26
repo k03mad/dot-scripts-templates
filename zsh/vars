@@ -6,6 +6,8 @@ export C_YELLOW="\033[0;33m"
 export C_BLUE="\033[0;34m"
 export C_MAGENTA="\033[0;35m"
 
+export HOMEBREW_NO_ANALYTICS=1
+
 export BAT_CONFIG_PATH="${DOT_FOLDER}/cfg/bat.conf"
 
 export PATH="${HOME}/.cargo/bin:${PATH}"
