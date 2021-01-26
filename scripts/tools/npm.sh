@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
 npmTools=(
-    @danakt/pshe
     @k03mad/cli-tools-lan
     @k03mad/cli-tools-mikrotik
     @k03mad/cli-tools-next
@@ -12,6 +11,7 @@ npmTools=(
     jay-repl
     npkill
     npm-check-updates
+    pjs-tool
     pm2
     speed-test
 )
