@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 # shellcheck disable=SC2154
 
-alias hr="eval printf %.1s '—{1..'\"\${COLUMNS:-\$(tput cols)}\"\}; echo"
+alias hr="tput cols | pjs \"''.padEnd(_, '—')\""
 alias bat="hr && bat"
 alias del="rm -rfv"
 alias els="exa -alF --group-directories-first --git"
