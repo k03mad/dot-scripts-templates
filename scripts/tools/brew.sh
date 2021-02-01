@@ -24,6 +24,7 @@ termTools=(
     ncdu
     neofetch
     nmap
+    pyenv
     shellcheck
     tig
     tldr
