@@ -42,4 +42,5 @@ alias syncbb="git pull origin master --no-edit && git pull bb master --no-edit &
 
 alias depup="gpl && ncu -u && npm run setup && ga && gce 'update deps' && gp"
 
+alias dsc="find . -name '.DS_Store' -type f -exec rm -rfv {} \;"
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
