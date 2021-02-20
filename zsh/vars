@@ -18,6 +18,7 @@ export PATH="${HOME}/.local/bin:${PATH}"
 
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/opt/curl/bin:${PATH}"
+export PATH="/usr/local/opt/findutils/libexec/gnubin:${PATH}"
 
 export PATH="/sbin:${PATH}"
 export PATH="/usr/sbin:${PATH}"

@@ -7,6 +7,7 @@ termTools=(
     ccat
     curl
     exa
+    findutils
     git
     glances
     htop
