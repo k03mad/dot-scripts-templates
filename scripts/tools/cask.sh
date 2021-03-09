@@ -9,6 +9,7 @@ guiTools=(
     android-platform-tools
     appcleaner
     balenaetcher
+    caramba-switcher
     eul
     font-fira-code-nerd-font
     google-chrome
@@ -29,4 +30,4 @@ guiTools=(
     zoom
 )
 
-brew cask install "${guiTools[@]}"
+brew install "${guiTools[@]}"
