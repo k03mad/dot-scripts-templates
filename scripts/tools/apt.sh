@@ -17,7 +17,7 @@ aptTools=(
     nano
     ncdu
     neofetch
-    nmap
+    # nmap
     shellcheck
     tig
     tldr

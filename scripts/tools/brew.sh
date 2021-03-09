@@ -3,7 +3,7 @@
 termTools=(
     aria2
     bat
-    bettercap
+    # bettercap
     ccat
     curl
     exa
@@ -24,7 +24,7 @@ termTools=(
     nano
     ncdu
     neofetch
-    nmap
+    # nmap
     pyenv
     shellcheck
     tig
