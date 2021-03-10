@@ -1,6 +1,14 @@
 #!/usr/bin/env zsh
 
-termTools=(
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-drivers
+brew tap homebrew/command-not-found
+
+tools=(
+    #
+    # CLI
+    #
     aria2
     bat
     # bettercap
@@ -34,6 +42,32 @@ termTools=(
     wget
     youtube-dl
     zsh
+    #
+    # GUI
+    #
+    android-file-transfer
+    android-platform-tools
+    appcleaner
+    balenaetcher
+    caramba-switcher
+    eul
+    font-fira-code-nerd-font
+    google-chrome
+    keepingyouawake
+    omnidisksweeper
+    openoffice
+    pritunl
+    responsively
+    tableplus
+    teamviewer
+    telegram-desktop
+    the-unarchiver
+    toinane-colorpicker
+    transmission
+    vlc
+    yandex
+    yandex-disk
+    zoom
 )
 
-brew install "${termTools[@]}"
+brew install "${tools[@]}"

@@ -10,6 +10,7 @@ export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 export plugins=(
     autoupdate
+    command-not-found
     fast-syntax-highlighting
     zsh-autosuggestions
     zsh-better-npm-completion
