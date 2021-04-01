@@ -29,6 +29,7 @@ aptTools=(
 
 for i in "${aptTools[@]}"
 do
+    printf "\n ✨ %s \n\n" "$i"
     if [ -n "${NO_SUDO}" ]; then
         apt-get -y install "$i"
     else
