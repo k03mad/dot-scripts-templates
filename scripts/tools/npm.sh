@@ -10,7 +10,6 @@ npmTools=(
     http-server
     jay-repl
     npkill
-    npm
     npm-check
     npm-check-updates
     pjs-tool
