@@ -14,7 +14,7 @@ npmTools=(
     npm-check-updates
     pjs-tool
     pm2
-    speed-test
+    speed-cloudflare-cli
 )
 
 for i in "${npmTools[@]}"
