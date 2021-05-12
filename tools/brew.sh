@@ -13,7 +13,6 @@ tools=(
     aria2
     bat
     # bettercap
-    ccat
     curl
     exa
     findutils
