@@ -64,6 +64,7 @@ tools=(
     the-unarchiver
     toinane-colorpicker
     transmission
+    visual-studio-code
     vlc
     yandex
     yandex-disk
