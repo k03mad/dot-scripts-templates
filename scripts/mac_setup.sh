@@ -14,8 +14,8 @@ ___print "system: set ntp server"
 m ntp enable
 m ntp set ru.pool.ntp.org
 
-___print "system: mojave font fix"
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
+# ___print "system: mojave font fix"
+# defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
 ___print "system: disable disk image verification"
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
@@ -112,12 +112,12 @@ defaults write org.m0k.transmission WarningDonate -bool false
 ___print "transmission: hide the legal disclaimer"
 defaults write org.m0k.transmission WarningLegal -bool false
 
-___print "desktop: screen saver at top right screen corner"
-defaults write com.apple.dock wvous-tr-corner -int 5
-defaults write com.apple.dock wvous-tr-modifier -int 0
+# ___print "desktop: screen saver at top right screen corner"
+# defaults write com.apple.dock wvous-tr-corner -int 5
+# defaults write com.apple.dock wvous-tr-modifier -int 0
 
-___print "desktop: disable notification center and remove the menu bar icon"
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+# ___print "desktop: disable notification center and remove the menu bar icon"
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 ___print "dock: left side without autohide"
 m dock position LEFT
