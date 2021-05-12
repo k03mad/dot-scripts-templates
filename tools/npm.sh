@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-npmTools=(
+tools=(
     @k03mad/cli-tools-lan
     @k03mad/cli-tools-mikrotik
     @k03mad/cli-tools-next
@@ -19,12 +19,4 @@ npmTools=(
     speed-test
 )
 
-for i in "${npmTools[@]}"
-do
-    printf "\n ✨ %s \n" "$i"
-    if npm list -g "$i" > /dev/null 2>&1; then
-        printf " ✅ already installed \n"
-    else
-        npm i -g "$i"
-    fi
-done
+npm i -g "${tools[@]}"
