@@ -9,5 +9,4 @@ git clone https://github.com/zsh-users/zsh-completions "${ZSH_CUSTOM}/plugins/zs
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k "${ZSH_CUSTOM}/themes/powerlevel10k"
 
-ln -s "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport" "/usr/local/bin/airport"
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
