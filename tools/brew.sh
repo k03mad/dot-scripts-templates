@@ -9,6 +9,7 @@ tools=(
     #
     # CLI
     #
+    android-platform-tools
     aria2
     bat
     # bettercap
@@ -16,6 +17,7 @@ tools=(
     curl
     exa
     findutils
+    font-fira-code-nerd-font
     git
     glances
     htop
@@ -46,12 +48,11 @@ tools=(
     # GUI
     #
     android-file-transfer
-    android-platform-tools
     appcleaner
     balenaetcher
     caramba-switcher
     eul
-    font-fira-code-nerd-font
+    firefox
     google-chrome
     keepingyouawake
     omnidisksweeper
