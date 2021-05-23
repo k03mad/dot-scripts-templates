@@ -381,8 +381,8 @@ profileVerifiedCheckFg: GRAY_LIGHT;
 radialBg: GRAY;
 radialFg: GRAY_LIGHT;
 
-reportSpamBg: attentionButtonBgOver;
-reportSpamFg: attentionButtonFgOver;
+reportSpamBg: ALPHA;
+reportSpamFg: RED;
 
 scrollBarBg: DARK;
 scrollBarBgOver: DARK_MEDIUM;
@@ -423,7 +423,7 @@ titleBgActive: DARK;
 
 titleButtonBg: DARK;
 titleButtonBgActive: DARK;
-titleButtonBgActiveOver: titleBDARKuttonBgOver;
+titleButtonBgActiveOver: DARK;
 titleButtonBgOver: DARK;
 titleButtonCloseBg: DARK;
 titleButtonCloseBgActive: DARK;
