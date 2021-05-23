@@ -12,6 +12,7 @@ export plugins=(
     autoupdate
     command-not-found
     fast-syntax-highlighting
+    you-should-use
     zsh-autosuggestions
     zsh-better-npm-completion
     zsh-completions
