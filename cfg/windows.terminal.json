@@ -7,7 +7,7 @@
 
     "profiles": {
         "defaults": {
-            "fontFace": "Fira Code",
+            "fontFace": "FiraCode NF",
             "fontSize": 10
         },
         "list": [
