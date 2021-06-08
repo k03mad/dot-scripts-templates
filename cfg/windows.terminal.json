@@ -28,7 +28,7 @@
             },
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "PowerShell",
+                "name": "PowerShell 5",
                 "commandline": "powershell.exe",
                 "colorScheme": "Material Ocean",
                 "hidden": false
@@ -38,6 +38,13 @@
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell 7",
+                "colorScheme": "Material Ocean",
+                "source": "Windows.Terminal.PowershellCore"
             }
         ]
     },
