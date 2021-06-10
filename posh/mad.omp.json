@@ -21,6 +21,7 @@
             "foreground": "#587ac4",
             "properties": {
               "prefix": "",
+              "postfix": "",
               "style": "full"
             }
           },
@@ -30,6 +31,7 @@
             "foreground": "#C678DD",
             "properties": {
               "prefix": "",
+              "postfix": "",
               "display_status": true
             }
           },
@@ -39,6 +41,7 @@
             "foreground": "#98C379",
             "properties": {
               "prefix": "",
+              "postfix": "",
               "display_version": true
             }
           },
@@ -47,7 +50,8 @@
             "style": "plain",
             "foreground": "#C94A16",
             "properties": {
-              "prefix": "x",
+              "prefix": "",
+              "postfix": "",
               "display_exit_code": true
             }
           }
@@ -62,9 +66,10 @@
             "style": "plain",
             "foreground": "#9ca77e",
             "properties": {
+              "prefix": "",
+              "postfix": "",
               "threshold": 3000,
-              "style": "austin",
-              "prefix": ""
+              "style": "austin"
             }
           },
           {
@@ -72,6 +77,8 @@
             "style": "plain",
             "foreground": "#507085",
             "properties": {
+              "prefix": "",
+              "postfix": "",
               "time_format": "15:00"
             }
           }
@@ -88,6 +95,7 @@
             "foreground": "#a9b4ac",
             "properties": {
               "prefix": "",
+              "postfix": "",
               "text": "$"
             }
           }
