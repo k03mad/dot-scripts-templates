@@ -21,7 +21,7 @@
             "foreground": "#587ac4",
             "properties": {
               "prefix": "",
-              "postfix": "",
+              "postfix": " ",
               "style": "full"
             }
           },
@@ -31,7 +31,7 @@
             "foreground": "#C678DD",
             "properties": {
               "prefix": "",
-              "postfix": "",
+              "postfix": " ",
               "display_status": true
             }
           },
@@ -41,7 +41,7 @@
             "foreground": "#98C379",
             "properties": {
               "prefix": "",
-              "postfix": "",
+              "postfix": " ",
               "display_version": true
             }
           },
@@ -67,7 +67,7 @@
             "foreground": "#9ca77e",
             "properties": {
               "prefix": "",
-              "postfix": "",
+              "postfix": " ",
               "threshold": 3000,
               "style": "austin"
             }
@@ -95,7 +95,7 @@
             "foreground": "#a9b4ac",
             "properties": {
               "prefix": "",
-              "postfix": "",
+              "postfix": " ",
               "text": "$"
             }
           }
