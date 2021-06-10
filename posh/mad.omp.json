@@ -11,9 +11,8 @@
             "style": "plain",
             "foreground": "#E06C75",
             "properties": {
-              "root_icon": "root",
               "prefix": "",
-              "postfix": ""
+              "postfix": " "
             }
           },
           {
@@ -21,8 +20,8 @@
             "style": "plain",
             "foreground": "#587ac4",
             "properties": {
-              "style": "full",
-              "prefix": ""
+              "prefix": "",
+              "style": "full"
             }
           },
           {
@@ -39,8 +38,8 @@
             "style": "plain",
             "foreground": "#98C379",
             "properties": {
-              "display_version": true,
-              "prefix": ""
+              "prefix": "",
+              "display_version": true
             }
           },
           {
@@ -49,7 +48,7 @@
             "foreground": "#C94A16",
             "properties": {
               "prefix": "x",
-              "display_exit_code": false
+              "display_exit_code": true
             }
           }
         ]
