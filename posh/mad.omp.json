@@ -29,7 +29,6 @@
             "style": "plain",
             "foreground": "#C678DD",
             "properties": {
-              "prefix": "",
               "display_status": true
             }
           },
