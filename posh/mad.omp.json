@@ -21,7 +21,7 @@
             "style": "plain",
             "foreground": "#587ac4",
             "properties": {
-              "style": "folder",
+              "style": "full",
               "prefix": ""
             }
           },
@@ -63,7 +63,7 @@
             "style": "plain",
             "foreground": "#9ca77e",
             "properties": {
-              "threshold": 100,
+              "threshold": 3000,
               "style": "austin",
               "prefix": ""
             }
