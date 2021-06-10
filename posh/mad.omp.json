@@ -20,6 +20,8 @@
             "style": "plain",
             "foreground": "#587ac4",
             "properties": {
+              "prefix": "",
+              "postfix": " ",
               "style": "full"
             }
           },
