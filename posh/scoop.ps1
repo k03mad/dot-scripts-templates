@@ -8,7 +8,10 @@ $buckets = @(
     'wsl https://git.irs.sh/KNOXDEV/wsl'
 )
 
-$buckets | ForEach-Object {scoop bucket add $PSItem}
+$buckets | ForEach-Object {
+    "$_"
+    scoop bucket add $_
+}
 
 $tools = @(
     'aria2',
@@ -21,4 +24,7 @@ $tools = @(
     'https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json'
 )
 
-$tools | ForEach-Object {scoop install $PSItem}
+$tools | ForEach-Object {
+    "$_"
+    scoop install $_
+}
