@@ -9,7 +9,7 @@ $buckets = @(
 )
 
 $buckets | ForEach-Object {
-    echo "\n✨ $_"
+    echo "`n `u{1F31F} $_"
     scoop bucket add $_
 }
 
@@ -25,6 +25,6 @@ $tools = @(
 )
 
 $tools | ForEach-Object {
-    echo "\n✨ $_"
+    echo "`n `u{1F31F} $_"
     scoop install $_
 }
