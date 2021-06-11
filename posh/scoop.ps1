@@ -10,7 +10,8 @@ $buckets = @(
 
 $buckets | ForEach-Object {
     echo "`n> $_"
-    scoop bucket add $_
+    $name, $repo = $_.split(' ')
+    scoop bucket add $name $repo
 }
 
 $tools = @(
