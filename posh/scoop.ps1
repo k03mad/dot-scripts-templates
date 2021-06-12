@@ -11,7 +11,7 @@ $buckets = @(
 $buckets | ForEach-Object {
     $name, $repo = $_.split(' ')
 
-    echo "`n> $name"
+    Write-Output "`n> $name"
     scoop bucket add $name $repo
 }
 
@@ -27,6 +27,6 @@ $tools = @(
 )
 
 $tools | ForEach-Object {
-    echo "`n> $_"
+    Write-Output "`n> $_"
     scoop install $_
 }

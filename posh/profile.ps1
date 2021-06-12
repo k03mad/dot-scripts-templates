@@ -5,9 +5,9 @@ fnm env --use-on-cd | Out-String | Invoke-Expression
 
 Function UpdateDot {
     $current = $pwd
-    cd ~\git\dot-scripts-templates
+    Set-Location ~\git\dot-scripts-templates
     git pull
-    cd $current
+    Set-Location $current
 }
 
 Set-Alias -Name zshup -Value UpdateDot
