@@ -11,3 +11,4 @@ Function UpdateDot {
 }
 
 Set-Alias -Name zshup -Value UpdateDot
+Set-Alias -Name scoopup -Value ~/git/dot-scripts-templates/posh/scoop.ps1
