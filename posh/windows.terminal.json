@@ -1,9 +1,9 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-
+    "theme": "dark",
     "copyOnSelect": false,
-    "copyFormatting": false,
+    "copyFormatting": "none",
 
     "profiles": {
         "defaults": {
@@ -23,28 +23,28 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "CMD",
                 "commandline": "cmd.exe",
-                "colorScheme": "Material Palenight",
+                "colorScheme": "Material",
                 "hidden": false
             },
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "PowerShell 5",
                 "commandline": "powershell.exe",
-                "colorScheme": "Material Ocean",
+                "colorScheme": "Material",
                 "hidden": false
             },
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false,
                 "name": "PowerShell 7",
-                "colorScheme": "Material Ocean",
-                "source": "Windows.Terminal.PowershellCore"
+                "colorScheme": "Material",
+                "source": "Windows.Terminal.PowershellCore",
+                "hidden": false
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": true,
                 "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
+                "source": "Windows.Terminal.Azure",
+                "hidden": true
             }
         ]
     },
@@ -52,53 +52,11 @@
     "schemes": [
         {
             "name": "Material",
-            "background": "#202632",
+            "background": "#21252b",
             "foreground": "#eeffff",
             "black": "#000000",
             "blue": "#82aaff",
             "brightBlack": "#546e7a",
-            "brightBlue": "#82aaff",
-            "brightCyan": "#89ddff",
-            "brightGreen": "#c3e88d",
-            "brightPurple": "#c792ea",
-            "brightRed": "#ff5370",
-            "brightWhite": "#ffffff",
-            "brightYellow": "#ffcb6b",
-            "cyan": "#89ddff",
-            "green": "#c3e88d",
-            "purple": "#c792ea",
-            "red": "#ff5370",
-            "white": "#ffffff",
-            "yellow": "#ffcb6b"
-        },
-        {
-            "name": "Material Palenight",
-            "background": "#292d3e",
-            "foreground": "#a6accd",
-            "black": "#000000",
-            "blue": "#82aaff",
-            "brightBlack": "#676e95",
-            "brightBlue": "#82aaff",
-            "brightCyan": "#89ddff",
-            "brightGreen": "#c3e88d",
-            "brightPurple": "#c792ea",
-            "brightRed": "#ff5370",
-            "brightWhite": "#ffffff",
-            "brightYellow": "#ffcb6b",
-            "cyan": "#89ddff",
-            "green": "#c3e88d",
-            "purple": "#c792ea",
-            "red": "#ff5370",
-            "white": "#ffffff",
-            "yellow": "#ffcb6b"
-        },
-        {
-            "name": "Material Ocean",
-            "background": "#0f111a",
-            "foreground": "#8f93a2",
-            "black": "#000000",
-            "blue": "#82aaff",
-            "brightBlack": "#464b5d",
             "brightBlue": "#82aaff",
             "brightCyan": "#89ddff",
             "brightGreen": "#c3e88d",
