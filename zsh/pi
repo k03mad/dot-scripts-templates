@@ -16,6 +16,7 @@ run "magnet-co-parser" "server"
 run "rpi-tools-cron"
 run "rpi-tools-bot"
 
+pm2 save
 zshup
 
 cd ~
