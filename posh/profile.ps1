@@ -12,3 +12,4 @@ Function UpdateDot {
 
 Set-Alias -Name zshup -Value UpdateDot
 Set-Alias -Name scoopup -Value ~/git/dot-scripts-templates/posh/scoop.ps1
+Set-Alias -Name wingetrm -Value ~/git/dot-scripts-templates/posh/winget.ps1
