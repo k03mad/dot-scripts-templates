@@ -18,8 +18,6 @@ alias brewup="echo \"\${C_GREEN}brews installed:\${C_OFF}\" && brew list --formu
 
 alias npmin="\${DOT_FOLDER_SCRIPTS}/npm.sh"
 alias npmls="npm ls -g --depth=0 && npm outdated -g"
-alias npmup="for i in \$(npm -g outdated --parseable --depth=0 | cut -d: -f4); do printf \"\n ✨ %s \n\" \"\$i\" && npm i -g \"\$i\"; done"
-
 alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs -t npm remove -g"
 
 alias nvmup="nvm install node && npmin"

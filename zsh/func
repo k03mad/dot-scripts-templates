@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# shellcheck disable=SC2116,SC2191,2164
+# shellcheck disable=2116,2191,2164,2207
 
 ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
 
@@ -75,6 +75,18 @@ zshup() {
     cd "${START_PWD}"
 
     unset SKIP_CHPWD
+}
+
+npmup() {
+    OUTDATED=$(npm -g outdated --parseable --depth=0)
+
+    NPM_FROM=($(echo "$OUTDATED" | cut -d: -f3))
+    NPM_TO=($(echo "$OUTDATED" | cut -d: -f4))
+
+    for (( i = 1; i <= $#NPM_FROM; i++ )) do
+        printf "\n ✨ %s => %s \n" "${NPM_FROM[i]}" "${NPM_TO[i]}"
+        npm i -g "${NPM_TO[i]}"
+    done
 }
 
 one() {
