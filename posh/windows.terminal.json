@@ -7,14 +7,14 @@
     "profiles": {
         "defaults": {
             "fontFace": "FiraCode NF",
-            "fontSize": 10
+            "fontSize": 10,
+            "colorScheme": "Material"
         },
         "list": [
             {
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl",
-                "colorScheme": "Material",
                 "hidden": false,
                 "startingDirectory": "//wsl$/Ubuntu-20.04/home/mad"
             },
@@ -22,20 +22,17 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "CMD",
                 "commandline": "cmd.exe",
-                "colorScheme": "Material",
                 "hidden": false
             },
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "PowerShell 5",
                 "commandline": "powershell.exe",
-                "colorScheme": "Material",
                 "hidden": false
             },
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "name": "PowerShell 7",
-                "colorScheme": "Material",
                 "source": "Windows.Terminal.PowershellCore",
                 "hidden": false
             },
