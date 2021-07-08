@@ -22,6 +22,7 @@ aptTools=(
     tig
     tldr
     tree
+    unzip
     wget
     youtube-dl
     zsh
