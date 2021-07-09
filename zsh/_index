@@ -29,8 +29,14 @@ if [ -n "${IS_WORK}" ]; then
     source "${HOME}/.workrc"
 fi
 
-if [ -n "${IS_RPI}" ] && [ -z "${SSH_TTY}" ]; then
-    source "${DOT_FOLDER_ZSH}/pi"
+if [ -z "${SSH_TTY}" ]; then
+    if [ -n "${IS_RPI}" ]; then
+        source "${DOT_FOLDER_ZSH}/pi"
+    fi
+
+    if [ -n "${IS_CLOUD}" ]; then
+        source "${DOT_FOLDER_ZSH}/cloud"
+    fi
 fi
 
 if command -v pyenv 1>/dev/null 2>&1; then
