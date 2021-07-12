@@ -20,7 +20,6 @@ aptTools=(
     # nmap
     shellcheck
     tig
-    tldr
     tree
     unzip
     wget
