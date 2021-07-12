@@ -17,6 +17,7 @@ tools=(
     pm2
     speed-cloudflare-cli
     speed-test
+    tldr
 )
 
 npm i -g "${tools[@]}"
