@@ -37,7 +37,6 @@ tools=(
     pyenv
     shellcheck
     tig
-    tldr
     topgrade
     tree
     wget
