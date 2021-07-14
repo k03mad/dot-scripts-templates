@@ -34,7 +34,6 @@ tools=(
     ncdu
     neofetch
     # nmap
-    pyenv
     shellcheck
     tig
     topgrade
