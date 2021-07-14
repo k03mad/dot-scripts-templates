@@ -1,19 +1,9 @@
 #!/usr/bin/env zsh
 # shellcheck source=/dev/null
-# shellcheck disable=SC2164
 
 export DOT_FOLDER="${HOME}/git/dot-scripts-templates"
 export DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
 export DOT_FOLDER_SCRIPTS="${DOT_FOLDER}/zsh/scripts"
-
-if [ -n "${IS_RPI}" ]; then
-    export SKIP_NVMRC=true
-fi
-
-if [ -n "${IS_TERMUX}" ]; then
-    export SKIP_NVMRC=true
-    export NO_SUDO=true
-fi
 
 source "${DOT_FOLDER_ZSH}/vars"
 

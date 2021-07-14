@@ -1,5 +1,15 @@
 #!/usr/bin/env zsh
 
+if [ -n "${IS_RPI}" ]; then
+    export SKIP_NVMRC=true
+fi
+
+if [ -n "${IS_TERMUX}" ]; then
+    export SKIP_NVMRC=true
+    export NO_SUDO=true
+    export OPENSSL_DIR=${PREFIX}
+fi
+
 export C_OFF="\033[0m"
 export C_GREEN="\033[0;32m"
 export C_YELLOW="\033[0;33m"
