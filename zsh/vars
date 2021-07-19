@@ -1,9 +1,5 @@
 #!/usr/bin/env zsh
 
-if [ -n "${IS_RPI}" ]; then
-    export SKIP_NVMRC=true
-fi
-
 if [ -n "${IS_TERMUX}" ]; then
     export SKIP_NVMRC=true
     export NO_SUDO=true
