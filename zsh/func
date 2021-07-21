@@ -52,7 +52,7 @@ gch() {
 
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
-        dls
+        els
     fi
 
     if [ -z "${SKIP_NVMRC}" ]; then
