@@ -14,7 +14,6 @@ tools=(
     bat
     # bettercap
     curl
-    exa
     findutils
     font-fira-code-nerd-font
     git
@@ -24,7 +23,6 @@ tools=(
     hub
     id3v2
     jq
-    lsd
     m-cli
     mc
     micro

@@ -2,6 +2,7 @@
 
 tools=(
     cargo-update
+    exa
     lsd
 )
 

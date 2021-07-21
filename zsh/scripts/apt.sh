@@ -10,7 +10,6 @@ aptTools=(
     hub
     id3v2
     jq
-    lsd
     mc
     micro
     mosh
