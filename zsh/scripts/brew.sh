@@ -26,6 +26,7 @@ tools=(
     m-cli
     mc
     micro
+    MisterTea/et/et
     mkvdts2ac3
     mosh
     nano
