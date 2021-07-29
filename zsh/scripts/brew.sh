@@ -6,9 +6,6 @@ brew tap homebrew/cask-drivers
 brew tap homebrew/command-not-found
 
 tools=(
-    #
-    # CLI
-    #
     android-platform-tools
     aria2
     bat
@@ -26,7 +23,6 @@ tools=(
     m-cli
     mc
     micro
-    MisterTea/et/et
     mkvdts2ac3
     mosh
     nano
@@ -40,32 +36,7 @@ tools=(
     wget
     youtube-dl
     zsh
-    #
-    # GUI
-    #
-    android-file-transfer
-    appcleaner
-    balenaetcher
-    caramba-switcher
-    eul
-    firefox
-    google-chrome
-    keepingyouawake
-    omnidisksweeper
-    openoffice
-    pritunl
-    responsively
-    tableplus
-    teamviewer
-    telegram-desktop
-    the-unarchiver
-    toinane-colorpicker
-    transmission
-    visual-studio-code
-    vlc
-    yandex
-    yandex-disk
-    zoom
+    MisterTea/et/et
 )
 
 brew install "${tools[@]}"
