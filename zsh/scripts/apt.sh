@@ -10,6 +10,7 @@ aptTools=(
     hub
     id3v2
     jq
+    libssl-dev
     mc
     micro
     mosh
