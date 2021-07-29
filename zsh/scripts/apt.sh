@@ -17,6 +17,7 @@ aptTools=(
     ncdu
     neofetch
     # nmap
+    pkg-config
     shellcheck
     tig
     tree
