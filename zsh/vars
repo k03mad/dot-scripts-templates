@@ -13,6 +13,7 @@ export C_BLUE="\033[0;34m"
 export C_MAGENTA="\033[0;35m"
 
 export HOMEBREW_NO_ANALYTICS=1
+export ET_NO_TELEMETRY=1
 
 export BAT_CONFIG_PATH="${DOT_FOLDER}/extra/bat.conf"
 
