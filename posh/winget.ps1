@@ -13,10 +13,12 @@ $uninstall = @(
     'Microsoft.WindowsAlarms_8wekyb3d8bbwe',
     'Microsoft.WindowsCamera_8wekyb3d8bbwe',
     'Microsoft.WindowsMaps_8wekyb3d8bbwe',
+    'Microsoft.XboxApp_8wekyb3d8bbwe',
     'Microsoft.XboxGameOverlay_8wekyb3d8bbwe',
     'Microsoft.XboxGamingOverlay_8wekyb3d8bbwe',
     'Microsoft.XboxIdentityProvider_8wekyb3d8bbwe',
     'Microsoft.XboxSpeechToTextOverlay_8wekyb3d8bbwe',
+    'Microsoft.Xbox.TCUI_8wekyb3d8bbwe',
     'Microsoft.YourPhone_8wekyb3d8bbwe'
 )
 
