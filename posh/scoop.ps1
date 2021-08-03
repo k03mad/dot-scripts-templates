@@ -26,7 +26,7 @@ $tools = @(
 )
 
 $sudo_tools = @(
-    'firacode-nf',
+    'firacode-nf'
 )
 
 $tools | ForEach-Object {
