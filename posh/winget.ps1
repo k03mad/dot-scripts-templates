@@ -2,10 +2,10 @@ $uninstall = @(
     # Проверка работоспособности ПК Windows
     '{DAA78B45-828D-4E8C-848C-50A70ACC6747}',
     # Cortana
-    'Microsoft.549981C3F5F10_8wekyb3d8bbwe'
+    'Microsoft.549981C3F5F10_8wekyb3d8bbwe',
     # Xbox
-    'Microsoft.GamingApp_8wekyb3d8bbwe'
-    'Microsoft.GetHelp_8wekyb3d8bbwe'
+    'Microsoft.GamingApp_8wekyb3d8bbwe',
+    'Microsoft.GetHelp_8wekyb3d8bbwe',
     'Microsoft.HEIFImageExtension_8wekyb3d8bbwe',
     'Microsoft.People_8wekyb3d8bbwe',
     'Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe',
