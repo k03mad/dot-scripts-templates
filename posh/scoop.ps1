@@ -18,7 +18,6 @@ $buckets | ForEach-Object {
 $tools = @(
     'aria2',
     'curl',
-    'firacode-nf',
     'fnm',
     'git',
     'nano'
@@ -26,7 +25,16 @@ $tools = @(
     'https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json'
 )
 
+$sudo_tools = @(
+    'firacode-nf',
+)
+
 $tools | ForEach-Object {
     Write-Output "`n> $_"
     scoop install $_
+}
+
+$sudo_tools | ForEach-Object {
+    Write-Output "`n> $_"
+    sudo scoop install $_
 }
