@@ -2,7 +2,6 @@
 
 aptTools=(
     aria2
-    bat
     curl
     git
     glances
