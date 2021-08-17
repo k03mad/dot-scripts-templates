@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 tools=(
+    bat
     cargo-update
     exa
     lsd
