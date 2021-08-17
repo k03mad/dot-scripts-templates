@@ -12,6 +12,7 @@ source "${DOT_FOLDER_ZSH}/p10k"
 
 source "${DOT_FOLDER_ZSH}/alias"
 source "${DOT_FOLDER_ZSH}/func"
+source "${DOT_FOLDER_ZSH}/eval"
 
 source "${HOME}/.keyrc"
 
