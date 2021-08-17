@@ -4,6 +4,7 @@ tools=(
     cargo-update
     exa
     lsd
+    zoxide
 )
 
 for i in "${tools[@]}"
