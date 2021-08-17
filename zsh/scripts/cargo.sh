@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+rustup update
+
 tools=(
     bat
     cargo-update
