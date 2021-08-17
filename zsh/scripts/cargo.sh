@@ -4,6 +4,7 @@ tools=(
     bat
     cargo-update
     exa
+    fd-find
     lsd
     zoxide
 )
