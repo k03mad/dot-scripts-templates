@@ -8,7 +8,6 @@ brew tap homebrew/command-not-found
 tools=(
     android-platform-tools
     aria2
-    bat
     # bettercap
     curl
     findutils
