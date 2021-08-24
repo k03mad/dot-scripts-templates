@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 tools=(
+    bandwhich
     bat
     cargo-update
     exa
