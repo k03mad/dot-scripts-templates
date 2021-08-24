@@ -7,6 +7,7 @@ tools=(
     exa
     fd-find
     lsd
+    procs
     zoxide
 )
 
