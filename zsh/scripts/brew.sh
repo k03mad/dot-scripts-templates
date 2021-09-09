@@ -30,6 +30,7 @@ tools=(
     # nmap
     shellcheck
     tig
+    the_silver_searcher
     topgrade
     tree
     wget
