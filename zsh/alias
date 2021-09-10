@@ -30,7 +30,7 @@ alias nvmin="nvm install \$(cat .nvmrc) && npmin"
 alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${NVM_DIR}/.cache/bin"
 alias nvmls="echo \"\${C_BLUE}npm current:\${C_OFF} v\$(npm -v)\" && echo \"\${C_MAGENTA}node current:\${C_OFF} \$(node -v)\" && echo \"\${C_MAGENTA}node remote:\${C_OFF} \$(nvm version-remote)\" && echo && nvm ls"
 
-alias st="speed-cloudflare-cli"
+alias st="echo 'https://speed.cloudflare.com/\n' && speed-cloudflare-cli"
 alias stn="speed-test -v"
 alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=30000 && del ./testfile.mad"
 
