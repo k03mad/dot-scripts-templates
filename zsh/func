@@ -88,10 +88,3 @@ npmup() {
         npm i -g "${NPM_TO[i]}"
     done
 }
-
-one() {
-    npm run "$1" --env="${3:-stable}" --testcase="$2"
-}
-oneg() {
-    npm run "$1" --env="${3:-stable}" --testcase="$2" --record --grid
-}
