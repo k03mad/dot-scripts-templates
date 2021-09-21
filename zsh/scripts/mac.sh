@@ -51,6 +51,11 @@ ___print "show hidden files and filenames"
 defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+___print "show status and path bars"
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
 ___print "keep folders on top when sorting by name"
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
@@ -86,6 +91,9 @@ ___print "enable tap to click"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+___print "disable the sound effects on boot"
+sudo nvram SystemAudioVolume=" "
 
 ___print "done: kill affected applications"
 for app in "Dock" "Finder" "Photos" "SystemUIServer"; do
