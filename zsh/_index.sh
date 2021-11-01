@@ -17,5 +17,5 @@ if [ -n "${IS_WORK}" ]; then
 fi
 
 if [ -n "${IS_CLOUD}" ] && [ -z "${SSH_CLIENT}" ]; then
-    source "${DOT_FOLDER_ZSH}/cloud"
+    source "${DOT_FOLDER_ZSH}/cloud.sh"
 fi
