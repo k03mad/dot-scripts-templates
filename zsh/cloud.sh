@@ -1,5 +1,4 @@
-#!/usr/bin/env zsh
-# shellcheck disable=SC2164
+# shellcheck disable=2164
 
 run() {
     cd ~/git/"$1"/

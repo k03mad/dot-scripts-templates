@@ -1,5 +1,6 @@
-#!/usr/bin/env zsh
 # shellcheck disable=2116,2191,2164,2207
+
+eval "$(zoxide init zsh)"
 
 ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
 
@@ -42,10 +43,10 @@ gce() {
 
 gch() {
     if [ -z "$*" ]; then
-        echo "${C_GREEN}checkout to ${C_MAGENTA}master${C_OFF}"
+        echo "${c[green]}checkout to ${c[magenta]}master${c[reset]}"
         git checkout master
     else
-        echo "${C_GREEN}checkout to branch ${C_BLUE}$*${C_OFF}"
+        echo "${c[green]}checkout to branch ${c[blue]}$*${c[reset]}"
         git checkout -b "$@" || git checkout "$@"
     fi
 }
