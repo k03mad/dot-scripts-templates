@@ -17,7 +17,7 @@ alias aptup="apt-get update && apt-get dist-upgrade && apt-get autoremove && apt
 alias aptups="sudo -- sh -c 'apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean'"
 
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
-alias brewup="echo \"\${c[green]}brews installed:\${c[reset]}\" && brew list --formula && echo \"\${c[yellow]}casks installed:\${c[reset]}\" && brew list --cask && brew update && brew upgrade && brew cleanup -s && brew doctor"
+alias brewup="brew list && brew update && brew upgrade && brew cleanup -s && brew doctor"
 
 alias cargoin="\${DOT_FOLDER_ZSH_SCRIPTS}/cargo.sh"
 alias cargoup="rustup update && cargo install-update -a"
