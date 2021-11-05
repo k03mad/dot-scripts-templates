@@ -16,12 +16,14 @@ export BAT_CONFIG_PATH="${DOT_FOLDER}/extra/bat.conf"
 export PATH="\
 /sbin:\
 /usr/local/bin:\
+/usr/local/go/bin:\
 /usr/local/opt/curl/bin:\
 /usr/local/opt/findutils/libexec/gnubin:\
 /usr/local/sbin:\
 /usr/sbin:\
 ${HOME}/.cargo/bin:\
 ${HOME}/.local/bin:\
+${HOME}/go/bin:\
 ${TERMUX_BIN}:\
 ${TERMUX_BIN}/applets:\
 ${PATH}\
