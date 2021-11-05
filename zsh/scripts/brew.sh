@@ -9,6 +9,7 @@ tools=(
     android-platform-tools
     aria2
     # bettercap
+    ccat
     curl
     findutils
     font-fira-code-nerd-font

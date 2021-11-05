@@ -1,8 +1,17 @@
-# shellcheck disable=2116,2191,2164,2207
+# shellcheck disable=2116,2154,2191,2164,2207
 
 eval "$(zoxide init zsh)"
 
-ARIA_ARGS=(--file-allocation=falloc --max-connection-per-server=3 --max-concurrent-downloads=3 --split=3 --max-tries=120 --retry-wait=5 --continue --remote-time)
+ARIA_ARGS=(
+    --file-allocation=falloc
+    --max-connection-per-server=3
+    --max-concurrent-downloads=3
+    --split=3
+    --max-tries=120
+    --retry-wait=5
+    --continue
+    --remote-time
+)
 
 doh() {
     curl -H 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$1" | jq .
@@ -34,11 +43,6 @@ youmus() {
 gc() {
     gs
     git commit -m "$(echo "$@")"
-}
-
-gce() {
-    gs
-    git commit -m "$(curl -sL https://newfuture.github.io/emoji/e.sh | sh) $(echo "$@")"
 }
 
 gch() {
