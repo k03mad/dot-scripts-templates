@@ -25,7 +25,7 @@ alias adblist="\
 "
 
 alias aptin="\${DOT_FOLDER_ZSH_SCRIPTS}/apt.sh"
-alias aptup="\apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean"
+alias aptup="apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean"
 alias aptups="sudo -- sh -c 'apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean'"
 
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
