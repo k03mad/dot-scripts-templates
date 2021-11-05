@@ -1,4 +1,4 @@
-# shellcheck disable=2154
+# shellcheck disable=2139,2154
 
 alias hr="tput cols | pjs \"''.padEnd(_, '—')\""
 alias bat="hr && bat"
