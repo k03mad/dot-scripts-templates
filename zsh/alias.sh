@@ -12,6 +12,9 @@ alias ports="sudo lsof -i -P -n | grep LISTEN"
 
 alias zshin="\${DOT_FOLDER_ZSH_SCRIPTS}/zsh.sh"
 
+alias adblist="adb shell 'pm list packages -f' | sed -e 's/.*=//' | sort"
+alias adbdisable="adb shell pm disable-user --user 0"
+
 alias aptin="\${DOT_FOLDER_ZSH_SCRIPTS}/apt.sh"
 alias aptup="apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean"
 alias aptups="sudo -- sh -c 'apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean'"
