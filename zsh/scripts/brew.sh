@@ -4,6 +4,7 @@ brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-drivers
 brew tap homebrew/command-not-found
+brew tap jandedobbeleer/oh-my-posh
 
 tools=(
     android-platform-tools
@@ -28,6 +29,7 @@ tools=(
     nano
     ncdu
     neofetch
+    oh-my-posh
     # nmap
     shellcheck
     tig
