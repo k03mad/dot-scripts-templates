@@ -36,6 +36,8 @@ alias aptin="\${DOT_FOLDER_ZSH_SCRIPTS}/apt.sh"
 alias aptup="apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean"
 alias aptups="sudo -- sh -c '$(alias aptup | sed s/aptup=// | cut -c2- | rev | cut -c2- | rev)'"
 
+alias pkgup="pkg update && pkg upgrade && pkg autoclean && pkg clean"
+
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
 alias brewup="brew list && brew update && brew upgrade && brew cleanup -s && brew doctor"
 
