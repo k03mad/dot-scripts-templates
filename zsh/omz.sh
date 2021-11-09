@@ -9,12 +9,14 @@ export plugins=(
     autoupdate
     colors
     command-not-found
+    copyfile
     fast-syntax-highlighting
     you-should-use
     zsh-autosuggestions
     zsh-better-npm-completion
     zsh-completions
     zsh-nvm
+    web-search
 )
 
 source "${ZSH}/oh-my-zsh.sh"
