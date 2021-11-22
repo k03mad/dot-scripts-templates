@@ -40,6 +40,7 @@ tools=(
     youtube-dl
     zsh
     MisterTea/et/et
+    ycd/tap/dstp
 )
 
 brew install "${tools[@]}"
