@@ -7,13 +7,11 @@ tools=(
     @k03mad/cli-tools-node
     check-imports
     fx
-    http-server
     jay-repl
     npkill
     npm
     npm-check
     npm-check-updates
-    pjs-tool
     pm2
     speed-cloudflare-cli
     speed-test
