@@ -8,6 +8,7 @@ tools=(
     check-imports
     fx
     jay-repl
+    http-server
     npkill
     npm
     npm-check
