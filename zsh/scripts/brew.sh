@@ -15,7 +15,6 @@ tools=(
     findutils
     font-fira-code-nerd-font
     git
-    glances
     htop
     httpie
     hub

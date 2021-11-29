@@ -4,7 +4,6 @@ aptTools=(
     aria2
     curl
     git
-    glances
     htop
     hub
     id3v2
