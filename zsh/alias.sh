@@ -1,5 +1,7 @@
 # shellcheck disable=2139,2154
 
+alias ex="exit"
+
 alias hr="tput cols | pjs \"''.padEnd(_, '—')\""
 alias del="rm -rfv"
 
