@@ -12,10 +12,9 @@ run "magnet-co-parser" "server"
 run "cloud-tools-cron"
 run "cloud-tools-bot"
 
-run "madz-alice-bot"
-
 pm2 flush
 pm2 save
+
 zshup
 
 cd ~
