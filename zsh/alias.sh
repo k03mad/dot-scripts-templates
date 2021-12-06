@@ -1,5 +1,7 @@
 # shellcheck disable=2139,2154
 
+alias npm-check="npm cache clean --force && npm-check"
+
 alias ex="exit"
 
 alias hr="tput cols | pjs \"''.padEnd(_, '—')\""
