@@ -2,9 +2,7 @@
 
 alias npm-check="npm cache clean --force && npm-check"
 
-alias ex="exit"
-alias quit="exit"
-alias npmi="npm i"
+alias q="exit"
 
 alias hr="tput cols | pjs \"''.padEnd(_, '—')\""
 alias del="rm -rfv"
