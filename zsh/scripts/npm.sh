@@ -9,7 +9,6 @@ tools=(
     jay-repl
     http-server
     npkill
-    npm
     npm-check
     npm-check-updates
     pm2
