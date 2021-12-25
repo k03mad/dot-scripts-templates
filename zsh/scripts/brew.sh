@@ -42,4 +42,8 @@ tools=(
     ycd/tap/dstp
 )
 
-brew install "${tools[@]}"
+for i in "${tools[@]}"
+do
+    printf "\n ✨ %s \n\n" "$i"
+    brew install "$i"
+done

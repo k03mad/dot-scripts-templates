@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-aptTools=(
+tools=(
     aria2
     curl
     git
@@ -26,7 +26,7 @@ aptTools=(
     zsh
 )
 
-for i in "${aptTools[@]}"
+for i in "${tools[@]}"
 do
     printf "\n ✨ %s \n\n" "$i"
     if [ -n "${NO_SUDO}" ]; then
