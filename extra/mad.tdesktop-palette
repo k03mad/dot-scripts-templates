@@ -222,7 +222,7 @@ layerBg: ALPHA_DARK_MEDIUM;
 lightButtonBg: DARK;
 lightButtonBgOver: DARK_MEDIUM;
 lightButtonBgRipple: DARK;
-lightButtonFg: GRAY;
+lightButtonFg: GRAY_LIGHT;
 lightButtonFgOver: GRAY_LIGHT;
 
 mainMenuBg: DARK;
