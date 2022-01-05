@@ -1,7 +1,5 @@
 # shellcheck disable=2139,2154
 
-alias npm-check="npm cache clean --force && npm-check"
-
 alias q="exit"
 
 alias hr="tput cols | pjs \"''.padEnd(_, '—')\""
@@ -18,9 +16,10 @@ alias ports="sudo lsof -i -P -n | grep LISTEN"
 alias dsc="find . -name '.DS_Store' -type f -exec rm -rfv {} \;"
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
 
-alias st="echo 'https://speed.cloudflare.com/\n' && speed-cloudflare-cli"
+alias st="speed-cloudflare-cli"
 alias stn="speed-test -v"
 alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=30000 && del ./testfile.mad"
+alias ipinfo="curl https://ipinfo.io | jq"
 
 alias adbenable="adb shell pm enable --user 0"
 alias adbdisable="adb shell pm disable-user --user 0"
