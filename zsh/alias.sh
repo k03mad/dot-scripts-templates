@@ -19,7 +19,7 @@ alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-dat
 alias st="speed-cloudflare-cli"
 alias stn="speed-test -v"
 alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=30000 && del ./testfile.mad"
-alias ipinfo="curl ipinfo.io | jq"
+alias ipinfo="curl -s ipinfo.io | jq"
 
 alias adbenable="adb shell pm enable --user 0"
 alias adbdisable="adb shell pm disable-user --user 0"
