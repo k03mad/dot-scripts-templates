@@ -95,3 +95,7 @@ npmup() {
         fi
     done
 }
+
+cpcloud() {
+    scp -P "$CLOUD_SSH_PORT" -r "${1}" "$CLOUD_SSH_USER"@"$CLOUD_DOMAIN":"${2:-~}"
+}
