@@ -10,8 +10,8 @@ source "${dir}/p10k.sh"
 source "${dir}/alias.sh"
 source "${dir}/func.sh"
 
-source "${HOME}/.keyrc"
-source "${HOME}/.workrc" || true
+[[ -f "${HOME}/.workrc" ]] && source "${HOME}/.keyrc"
+[[ -f "${HOME}/.workrc" ]] && source "${HOME}/.workrc"
 
 echo "debug"
 
