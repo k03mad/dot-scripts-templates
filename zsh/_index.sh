@@ -11,10 +11,9 @@ source "${dir}/alias.sh"
 source "${dir}/func.sh"
 
 source "${HOME}/.keyrc"
+source "${HOME}/.workrc" || true
 
-if [ -n "${IS_WORK}" ]; then
-    source "${HOME}/.workrc"
-fi
+echo "debug"
 
 if [ -n "${IS_CLOUD}" ] && [ -z "${SSH_CLIENT}" ]; then
     source "${DOT_FOLDER_ZSH}/cloud.sh"
