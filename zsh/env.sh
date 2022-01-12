@@ -11,7 +11,6 @@ export HOMEBREW_NO_ANALYTICS=1
 export ET_NO_TELEMETRY=1
 
 export TERMUX_BIN="/data/data/com.termux/files/usr/bin"
-export BAT_CONFIG_PATH="${DOT_FOLDER}/extra/bat.conf"
 
 export PATH="\
 /sbin:\
@@ -29,7 +28,7 @@ ${TERMUX_BIN}/applets:\
 ${PATH}\
 "
 
-if [ -n "${IS_TERMUX}" ]; then
+if [ -n "${TERMUX_VERSION}" ]; then
     export SKIP_NVMRC=true
     export NO_SUDO=true
     export OPENSSL_DIR=${PREFIX}
