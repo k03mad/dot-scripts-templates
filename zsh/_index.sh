@@ -10,10 +10,8 @@ source "${dir}/p10k.sh"
 source "${dir}/alias.sh"
 source "${dir}/func.sh"
 
-[[ -f "${HOME}/.workrc" ]] && source "${HOME}/.keyrc"
+[[ -f "${HOME}/.keyrc" ]] && source "${HOME}/.keyrc"
 [[ -f "${HOME}/.workrc" ]] && source "${HOME}/.workrc"
-
-echo "debug"
 
 if [ -n "${IS_CLOUD}" ] && [ -z "${SSH_CLIENT}" ]; then
     source "${DOT_FOLDER_ZSH}/cloud.sh"
