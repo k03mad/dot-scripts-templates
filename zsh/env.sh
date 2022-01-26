@@ -8,6 +8,7 @@ export ZSH_CUSTOM_PLUGINS="${ZSH_CUSTOM}/plugins"
 export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
 
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1
 
 export TERMUX_BIN="/data/data/com.termux/files/usr/bin"

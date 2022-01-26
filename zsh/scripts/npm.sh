@@ -8,7 +8,6 @@ tools=(
     check-imports
     fx
     http-server
-    jay-repl
     npkill
     npm-check
     npm-check-updates
