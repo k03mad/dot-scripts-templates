@@ -19,6 +19,7 @@ export PATH="\
 /usr/local/go/bin:\
 /usr/local/opt/curl/bin:\
 /usr/local/opt/findutils/libexec/gnubin:\
+/usr/local/opt/maven@3.5/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
 ${HOME}/.cargo/bin:\

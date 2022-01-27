@@ -20,6 +20,7 @@ tools=(
     hub
     id3v2
     jq
+    maven@3.5
     m-cli
     mc
     micro
