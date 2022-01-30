@@ -7,7 +7,8 @@ tools=(
     exa
     fd-find
     lsd
-    procs
+    price
+    viu
     zoxide
 )
 
