@@ -1,6 +1,6 @@
 # shellcheck source=/dev/null
 
-export UPDATE_ZSH_DAYS=7
+export UPDATE_ZSH_DAYS=30
 export DISABLE_UPDATE_PROMPT="true"
 
 export ZSH_THEME="powerlevel10k/powerlevel10k"
