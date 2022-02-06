@@ -20,3 +20,4 @@ export plugins=(
 )
 
 source "${ZSH}/oh-my-zsh.sh"
+autoload -Uz compinit && compinit
