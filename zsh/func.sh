@@ -59,6 +59,16 @@ chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
         dls
     fi
+
+    if [ -z "${SKIP_NVMRC}" ]; then
+        if [ "${PWD}" != "${PREV_PWD}" ]; then
+            PREV_PWD="${PWD}"
+
+            if [ -e ".nvmrc" ]; then
+                nvm use
+            fi
+        fi
+    fi
 }
 
 zshup() {

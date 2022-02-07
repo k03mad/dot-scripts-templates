@@ -7,8 +7,6 @@ export ZSH_CUSTOM="${ZSH}/custom"
 export ZSH_CUSTOM_PLUGINS="${ZSH_CUSTOM}/plugins"
 export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
 
-export NVM_AUTO_USE=true
-
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1
@@ -31,6 +29,6 @@ ${PATH}\
 "
 
 if [ -n "${TERMUX_VERSION}" ]; then
-    unset NVM_AUTO_USE
+    export SKIP_NVMRC=true
     export OPENSSL_DIR=${PREFIX}
 fi
