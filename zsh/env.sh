@@ -7,11 +7,11 @@ export ZSH_CUSTOM="${ZSH}/custom"
 export ZSH_CUSTOM_PLUGINS="${ZSH_CUSTOM}/plugins"
 export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
 
+export NVM_AUTO_USE=true
+
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1
-
-export TERMUX_BIN="/data/data/com.termux/files/usr/bin"
 
 export PATH="\
 /sbin:\
@@ -22,16 +22,15 @@ export PATH="\
 /usr/local/opt/maven@3.5/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
+/data/data/com.termux/files/usr/bin:\
+/data/data/com.termux/files/usr/bin/applets:\
 ${HOME}/.cargo/bin:\
 ${HOME}/.local/bin:\
 ${HOME}/go/bin:\
-${TERMUX_BIN}:\
-${TERMUX_BIN}/applets:\
 ${PATH}\
 "
 
 if [ -n "${TERMUX_VERSION}" ]; then
-    export SKIP_NVMRC=true
-    export NO_SUDO=true
+    unset NVM_AUTO_USE
     export OPENSSL_DIR=${PREFIX}
 fi

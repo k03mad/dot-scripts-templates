@@ -13,10 +13,6 @@ ARIA_ARGS=(
     --remote-time
 )
 
-doh() {
-    curl -H 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$1" | jq .
-}
-
 download() {
     aria2c "$@" "${ARIA_ARGS[@]}"
 }
@@ -40,6 +36,10 @@ youmus() {
         --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
 }
 
+doh() {
+    curl -H 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$1" | jq .
+}
+
 gc() {
     gs
     git commit -m "$(echo "$@")"
@@ -58,16 +58,6 @@ gch() {
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
         dls
-    fi
-
-    if [ -z "${SKIP_NVMRC}" ]; then
-        if [ "${PWD}" != "${PREV_PWD}" ]; then
-            PREV_PWD="${PWD}"
-
-            if [ -e ".nvmrc" ]; then
-                nvm use
-            fi
-        fi
     fi
 }
 
