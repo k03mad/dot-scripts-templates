@@ -15,6 +15,7 @@ tools=(
     findutils
     font-fira-code-nerd-font
     git
+    gping
     htop
     httpie
     hub
