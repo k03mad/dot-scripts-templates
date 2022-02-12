@@ -7,6 +7,8 @@ export ZSH_CUSTOM="${ZSH}/custom"
 export ZSH_CUSTOM_PLUGINS="${ZSH_CUSTOM}/plugins"
 export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
 
+export FZF_DEFAULT_OPTS="--info=hidden --prompt="
+
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1

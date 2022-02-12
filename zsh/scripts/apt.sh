@@ -3,6 +3,7 @@
 tools=(
     aria2
     curl
+    fzf
     git
     htop
     hub

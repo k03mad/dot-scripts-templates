@@ -4,7 +4,6 @@ theme=romkatv/powerlevel10k
 
 plugins=(
     Aloxaf/fzf-tab
-    fzf-zsh-plugin
     lukechilds/zsh-better-npm-completion
     lukechilds/zsh-nvm
     MichaelAquilina/zsh-you-should-use:you-should-use
