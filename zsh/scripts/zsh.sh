@@ -1,15 +1,41 @@
 #!/usr/bin/env zsh
 
-rm -rf "${ZSH_CUSTOM_PLUGINS}"
-rm -rf "${ZSH_CUSTOM_THEMES}"
+theme=romkatv/powerlevel10k
 
-git clone https://github.com/lukechilds/zsh-better-npm-completion "${ZSH_CUSTOM_PLUGINS}/zsh-better-npm-completion"
-git clone https://github.com/lukechilds/zsh-nvm "${ZSH_CUSTOM_PLUGINS}/zsh-nvm"
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git "${ZSH_CUSTOM_PLUGINS}/you-should-use"
-git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins "${ZSH_CUSTOM_PLUGINS}/autoupdate"
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting "${ZSH_CUSTOM_PLUGINS}/fast-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM_PLUGINS}/zsh-autosuggestions"
-git clone https://github.com/zsh-users/zsh-completions "${ZSH_CUSTOM_PLUGINS}/zsh-completions"
-git clone https://github.com/zpm-zsh/colors "${ZSH_CUSTOM_PLUGINS}/colors"
+plugins=(
+    Aloxaf/fzf-tab
+    fzf-zsh-plugin
+    lukechilds/zsh-better-npm-completion
+    lukechilds/zsh-nvm
+    MichaelAquilina/zsh-you-should-use:you-should-use
+    TamCore/autoupdate-oh-my-zsh-plugins:autoupdate
+    zdharma-continuum/fast-syntax-highlighting
+    zpm-zsh/colors
+    zsh-users/zsh-autosuggestions
+    zsh-users/zsh-completions
+)
 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k "${ZSH_CUSTOM_THEMES}/powerlevel10k"
+rm -rfv "${ZSH_CUSTOM_PLUGINS}"
+mkdir "${ZSH_CUSTOM_PLUGINS}"
+
+cd "${ZSH_CUSTOM_PLUGINS}" || exit
+
+for i in "${plugins[@]}"
+do
+    printf "\n ✨ %s \n\n" "$i"
+    githubUrl=https://github.com/"$(echo "$i" | cut -d ":" -f 1)".git
+    clonePath="$(echo "$i" | cut -d ":" -f 2)"
+
+    if [[ "${clonePath}" =~ "/" ]]; then
+        git clone --depth=1 "$githubUrl"
+    else
+        git clone --depth=1 "$githubUrl" "$clonePath"
+    fi
+done
+
+rm -rfv "${ZSH_CUSTOM_THEMES}"
+mkdir "${ZSH_CUSTOM_THEMES}"
+
+cd "${ZSH_CUSTOM_THEMES}" || exit
+
+git clone --depth=1 https://github.com/"$theme".git

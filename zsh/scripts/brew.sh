@@ -14,6 +14,7 @@ tools=(
     curl
     findutils
     font-fira-code-nerd-font
+    fzf
     git
     gping
     htop

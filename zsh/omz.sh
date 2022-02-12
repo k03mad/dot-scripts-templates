@@ -11,6 +11,7 @@ export plugins=(
     command-not-found
     copyfile
     fast-syntax-highlighting
+    fzf-tab
     you-should-use
     zsh-autosuggestions
     zsh-better-npm-completion
