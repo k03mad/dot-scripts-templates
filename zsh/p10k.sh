@@ -469,7 +469,7 @@
     local commit_subj                                            #!
     if commit_subj=$(git log -n1 --format=%s 2>/dev/null); then  #!
       if [[ -n $commit_subj ]]; then                             #!
-        res+=" ${meta}${commitMsg}(${commit_subj//\%/%%})"       #!
+        res+=" ${meta}${commitMsg}${commit_subj//\%/%%}"         #!
       else                                                       #!
         res+=" ${meta}[no message]"                              #!
       fi                                                         #!
