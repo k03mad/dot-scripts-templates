@@ -3,15 +3,10 @@
 tools=(
     bandwhich
     bottom
-    broot
     cargo-update
-    du-dust
-    exa
     fd-find
-    jql
     lsd
     procs
-    ripgrep
     viu
     zoxide
 )
