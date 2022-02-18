@@ -1,0 +1,22 @@
+[pull]
+    rebase = false
+[push]
+    default = current
+[init]
+    defaultBranch = master
+[rerere]
+    enabled = true
+    autoupdate = true
+[color]
+    ui = true
+[help]
+    autocorrect = 1
+[core]
+    editor = code
+[diff]
+    renames = true
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[log]
+    abbrevCommit = true
