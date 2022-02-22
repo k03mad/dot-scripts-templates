@@ -10,7 +10,7 @@ export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
 
 export GIT_CONFIG_GLOBAL="${DOT_FOLDER_EXTRA}/.gitconfig"
 export FZF_DEFAULT_OPTS="--info=hidden --prompt="
-export NVM_LAZY_LOAD=true
+# export NVM_LAZY_LOAD=true
 
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
