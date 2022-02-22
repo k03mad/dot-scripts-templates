@@ -7,12 +7,13 @@ run() {
     npm run "${2:-start}"
 }
 
+pm2 flush
+
 run "magnet-co-parser" "server"
 
 run "cloud-tools-cron"
 run "cloud-tools-bot"
 
-pm2 flush
 pm2 save
 
 zshup
