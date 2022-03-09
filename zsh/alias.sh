@@ -49,7 +49,7 @@ alias npmls="npm ls -g --depth=0 && npm outdated -g"
 alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs -t npm remove -g"
 
 alias nvmin="nvm install \$(cat .nvmrc) && npmin"
-alias nvmup="nvm install node && npm i npm -g && npmin"
+alias nvmup="nvm install node && npmin"
 alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${NVM_DIR}/.cache/bin"
 alias nvmls="\
     echo \"\${c[blue]}npm current:\${c[reset]} v\$(npm -v)\"\
