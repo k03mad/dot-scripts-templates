@@ -17,9 +17,9 @@ export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1
 
 export PATH="\
-/sbin:\
 /data/data/com.termux/files/usr/bin:\
 /data/data/com.termux/files/usr/bin/applets:\
+/sbin:\
 /usr/local/bin:\
 /usr/local/go/bin:\
 /usr/local/opt/curl/bin:\
@@ -30,6 +30,7 @@ export PATH="\
 ${HOME}/.cargo/bin:\
 ${HOME}/.local/bin:\
 ${HOME}/arcadia:\
+${HOME}/bin:\
 ${HOME}/go/bin:\
 ${PATH}\
 "
