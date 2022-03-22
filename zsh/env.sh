@@ -18,6 +18,8 @@ export ET_NO_TELEMETRY=1
 
 export PATH="\
 /sbin:\
+/data/data/com.termux/files/usr/bin:\
+/data/data/com.termux/files/usr/bin/applets:\
 /usr/local/bin:\
 /usr/local/go/bin:\
 /usr/local/opt/curl/bin:\
@@ -25,10 +27,9 @@ export PATH="\
 /usr/local/opt/maven@3.5/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
-/data/data/com.termux/files/usr/bin:\
-/data/data/com.termux/files/usr/bin/applets:\
 ${HOME}/.cargo/bin:\
 ${HOME}/.local/bin:\
+${HOME}/arcadia:\
 ${HOME}/go/bin:\
 ${PATH}\
 "
