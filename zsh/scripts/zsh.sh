@@ -6,6 +6,7 @@ plugins=(
     Aloxaf/fzf-tab
     lukechilds/zsh-better-npm-completion
     lukechilds/zsh-nvm
+    mafredri/zsh-async:async
     MichaelAquilina/zsh-you-should-use:you-should-use
     TamCore/autoupdate-oh-my-zsh-plugins:autoupdate
     zdharma-continuum/fast-syntax-highlighting

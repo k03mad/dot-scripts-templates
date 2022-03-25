@@ -55,6 +55,21 @@ gch() {
     fi
 }
 
+ac() {
+    as
+    arc commit -m "$(echo "$@")"
+}
+
+ach() {
+    if [ -z "$*" ]; then
+        echo "${c[green]}checkout to ${c[magenta]}trunk${c[reset]}"
+        arc checkout trunk
+    else
+        echo "${c[green]}checkout to branch ${c[blue]}$*${c[reset]}"
+        arc checkout -b "$@" || arc checkout "$@"
+    fi
+}
+
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
         dls

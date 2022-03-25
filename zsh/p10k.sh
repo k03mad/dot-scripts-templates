@@ -1591,13 +1591,6 @@
     p10k segment -f 208 -i '⭐' -t 'hello, %n'
   }
 
-  function prompt_arc() {                              #!
-    if [[ "$PWD" =~ /arcadia ]]; then                  #!
-        arcStatus=$(arc info --json | jq '.remote' -r) #!
-        p10k segment -f 208 -i '' -t $arcStatus       #!
-    fi                                                 #!
-  }                                                    #!
-
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
   # is to generate the prompt segment for display in instant prompt. See
   # https://github.com/romkatv/powerlevel10k/blob/master/README.md#instant-prompt.
@@ -1658,3 +1651,8 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
+
+if [[ -f "${HOME}/.p10k_arc/arc.zsh" ]]; then                #!
+    typeset -g POWERLEVEL9K_ARC_VISUAL_IDENTIFIER_EXPANSION= #!
+    source "${HOME}/.p10k_arc/arc.zsh"                       #!
+fi                                                           #!

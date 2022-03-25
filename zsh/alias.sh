@@ -70,3 +70,7 @@ alias gpl="git pull origin master --no-edit"
 alias gplo="git pull origin \$(git branch | grep '\*' | cut -d' ' -f2-) --no-edit"
 alias grh="git reset --hard"
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs -r)"
+
+alias as="arc status -s"
+alias apl="arc pull"
+alias arh="arc reset --hard"
