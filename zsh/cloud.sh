@@ -9,6 +9,8 @@ run() {
 
 pm2 flush
 
+run "magnet-co-parser" "server"
+
 run "cloud-tools-cron"
 run "cloud-tools-bot"
 
