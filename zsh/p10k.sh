@@ -32,6 +32,7 @@
     context                 # user@hostname #!
     dir                     # current directory
     vcs                     # git status
+    arc #!
     # =========================[ Line #2 ]=========================
     newline                 # \n
     prompt_char             # prompt symbol
@@ -1589,6 +1590,13 @@
   function prompt_example() {
     p10k segment -f 208 -i '⭐' -t 'hello, %n'
   }
+
+  function prompt_arc() {                              #!
+    if [[ "$PWD" =~ /arcadia ]]; then                  #!
+        arcStatus=$(arc info --json | jq '.remote' -r) #!
+        p10k segment -f 208 -i '' -t $arcStatus       #!
+    fi                                                 #!
+  }                                                    #!
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
   # is to generate the prompt segment for display in instant prompt. See
