@@ -5,7 +5,6 @@ tools=(
 
     @k03mad/cli-tools-lan
     @k03mad/cli-tools-mikrotik
-    @k03mad/cli-tools-next
     check-imports
     fx
     http-server
