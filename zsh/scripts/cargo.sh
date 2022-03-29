@@ -3,6 +3,7 @@
 tools=(
     bandwhich
     bottom
+    broot
     cargo-update
     fd-find
     lsd
