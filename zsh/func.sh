@@ -60,6 +60,11 @@ ac() {
     arc commit -m "$(echo "$@")"
 }
 
+apr() {
+    as
+    arc pr create -m "$(echo "$@")"
+}
+
 ach() {
     if [ -z "$*" ]; then
         echo "${c[green]}checkout to ${c[magenta]}trunk${c[reset]}"
