@@ -72,6 +72,7 @@ alias grh="git reset --hard"
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs -r)"
 
 alias aa="arc add . && as"
+alias ap="arc push"
 alias am="arc mount ~/arcadia"
 alias as="arc status -s"
 alias apl="arc pull"
