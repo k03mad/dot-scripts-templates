@@ -62,7 +62,7 @@ ac() {
 
 apr() {
     as
-    arc pr create -m "$(echo "$@")"
+    arc pr create --push -m "$(echo "$@")"
 }
 
 ach() {

@@ -71,6 +71,7 @@ alias gplo="git pull origin \$(git branch | grep '\*' | cut -d' ' -f2-) --no-edi
 alias grh="git reset --hard"
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs -r)"
 
+alias aa="arc add . && as"
 alias am="arc mount ~/arcadia"
 alias as="arc status -s"
 alias apl="arc pull"
