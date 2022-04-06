@@ -35,6 +35,11 @@ ${HOME}/go/bin:\
 ${PATH}\
 "
 
+export FPATH="\
+${HOME}/.zfunc:\
+${FPATH}\
+"
+
 if [ -n "${TERMUX_VERSION}" ]; then
     export SKIP_NVMRC=true
     export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
