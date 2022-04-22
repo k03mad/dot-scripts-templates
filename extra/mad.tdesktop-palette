@@ -471,6 +471,8 @@ BLUE_MEDIUM: #64B5F6;
 
 ALPHA: #ffffff00;
 
+boxSearchBg: DARK_MEDIUM;
+
 dialogsBg: DARK;
 dialogsBgActive: DARK_MEDIUM;
 dialogsBgOver: DARK;
@@ -495,6 +497,7 @@ dialogsUnreadFg: GRAY_LIGHT;
 dialogsUnreadFgActive: GRAY_LIGHT;
 dialogsUnreadFgOver: GRAY_LIGHT;
 
+filterInputActiveBg: DARK_MEDIUM;
 filterInputBorderFg: DARK_MEDIUM;
 filterInputInactiveBg: DARK_MEDIUM;
 
@@ -505,6 +508,9 @@ historyPinnedBg: DARK_MEDIUM;
 
 historyReplyBg: DARK_MEDIUM;
 
+historyScrollBg: ALPHA;
+historyScrollBgOver: ALPHA;
+
 historyToDownBg: DARK_MEDIUM;
 historyToDownBgOver: DARK_MEDIUM;
 historyToDownBgRipple: DARK;
@@ -513,11 +519,15 @@ historyUnreadBarBg: DARK;
 historyUnreadBarBorder: DARK;
 
 msgInBg: DARK_MEDIUM;
+msgInBgSelected: BLUE;
 
 msgOutBg: BLUE;
 
 placeholderFg: GRAY;
 placeholderFgActive: ALPHA;
+
+scrollBg: ALPHA;
+scrollBgOver: ALPHA;
 
 shadowFg: ALPHA;
 
