@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-tools=(
-    npm
+npm i -g npm
 
+tools=(
     @k03mad/cli-tools-lan
     @k03mad/cli-tools-mikrotik
     check-imports
