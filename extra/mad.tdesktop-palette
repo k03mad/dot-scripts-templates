@@ -469,8 +469,9 @@ GRAY: #aeaeae;
 GRAY_LIGHT: #ECEFF1;
 
 DARK: #21252b;
-DARK_MEDIUM: #2b2f38;
-DARK_LIGHT: #3c4049;
+DARK_HIGH: #2b2f38;
+DARK_MEDIUM: #3c4049;
+DARK_LIGHT: #8d939e;
 
 BLUE: #304d87;
 BLUE_MEDIUM: #64B5F6;
@@ -478,69 +479,58 @@ BLUE_MEDIUM: #64B5F6;
 GREEN_LIGHT: #9fede0;
 
 ALPHA: #00000000;
-ALPHA_RED: #f43030AA;
+ALPHA_RED: #ff5a5aa6;
 
 // ELEMENTS
 
-activeButtonBg: DARK_MEDIUM;
-activeButtonBgOver: DARK_LIGHT;
+activeButtonBg: DARK_HIGH;
+activeButtonBgOver: DARK_MEDIUM;
 activeButtonBgRipple: DARK_LIGHT;
-activeButtonFg: GRAY_LIGHT;
-activeButtonFgOver: GRAY_LIGHT;
-activeButtonSecondaryFg: GRAY_LIGHT;
-activeButtonSecondaryFgOver: GRAY_LIGHT;
 
 botKbBg: DARK;
-botKbDownBg: DARK_MEDIUM;
+botKbDownBg: DARK_HIGH;
 
 boxBg: DARK;
 boxDividerBg: DARK;
-boxSearchBg: DARK_MEDIUM;
+boxSearchBg: DARK_HIGH;
 
 contactsBg: DARK;
-contactsBgOver: DARK_MEDIUM;
+contactsBgOver: DARK_HIGH;
 contactsNameFg: GRAY_LIGHT;
 
 dialogsBg: DARK;
-dialogsBgActive: DARK_MEDIUM;
+dialogsBgActive: DARK_HIGH;
 dialogsBgOver: DARK;
-dialogsChatIconFg: GRAY_LIGHT;
-dialogsChatIconFgActive: GRAY_LIGHT;
-dialogsChatIconFgOver: GRAY_LIGHT;
-dialogsDateFg: GRAY;
-dialogsDateFgActive: GRAY;
-dialogsDateFgOver: GRAY;
+dialogsDateFg: DARK_LIGHT;
+dialogsDateFgActive: DARK_LIGHT;
+dialogsDateFgOver: DARK_LIGHT;
 dialogsDraftFg: BLUE_MEDIUM;
 dialogsDraftFgActive: BLUE_MEDIUM;
 dialogsDraftFgOver: BLUE_MEDIUM;
-dialogsForwardBg: DARK_MEDIUM;
-dialogsForwardFg: GRAY_LIGHT;
-dialogsMenuIconFg: GRAY;
-dialogsMenuIconFgOver: GRAY_LIGHT;
 dialogsNameFg: GRAY_LIGHT;
 dialogsNameFgActive: GRAY_LIGHT;
 dialogsNameFgOver: GRAY_LIGHT;
 dialogsOnlineBadgeFg: BLUE_MEDIUM;
 dialogsOnlineBadgeFgActive: BLUE_MEDIUM;
 dialogsRippleBg: DARK;
-dialogsRippleBgActive: DARK_MEDIUM;
-dialogsSendingIconFg: GRAY;
-dialogsSendingIconFgActive: GRAY;
-dialogsSendingIconFgOver: GRAY;
+dialogsRippleBgActive: DARK_HIGH;
+dialogsSendingIconFg: BLUE_MEDIUM;
+dialogsSendingIconFgActive: BLUE_MEDIUM;
+dialogsSendingIconFgOver: BLUE_MEDIUM;
 dialogsSentIconFg: BLUE_MEDIUM;
 dialogsSentIconFgActive: BLUE_MEDIUM;
 dialogsSentIconFgOver: BLUE_MEDIUM;
-dialogsTextFg: GRAY;
-dialogsTextFgActive: GRAY;
-dialogsTextFgOver: GRAY;
-dialogsTextFgService: GRAY;
-dialogsTextFgServiceActive: GRAY;
-dialogsTextFgServiceOver: GRAY;
+dialogsTextFg: DARK_LIGHT;
+dialogsTextFgActive: DARK_LIGHT;
+dialogsTextFgOver: DARK_LIGHT;
+dialogsTextFgService: DARK_LIGHT;
+dialogsTextFgServiceActive: DARK_LIGHT;
+dialogsTextFgServiceOver: DARK_LIGHT;
 dialogsUnreadBg: BLUE_MEDIUM;
 dialogsUnreadBgActive: BLUE_MEDIUM;
-dialogsUnreadBgMuted: DARK_LIGHT;
-dialogsUnreadBgMutedActive: DARK_LIGHT;
-dialogsUnreadBgMutedOver: DARK_LIGHT;
+dialogsUnreadBgMuted: DARK_MEDIUM;
+dialogsUnreadBgMutedActive: DARK_MEDIUM;
+dialogsUnreadBgMutedOver: DARK_MEDIUM;
 dialogsUnreadBgOver: BLUE_MEDIUM;
 dialogsUnreadFg: GRAY_LIGHT;
 dialogsUnreadFgActive: GRAY_LIGHT;
@@ -552,35 +542,36 @@ dialogsVerifiedIconFg: GRAY_LIGHT;
 dialogsVerifiedIconFgActive: GRAY_LIGHT;
 dialogsVerifiedIconFgOver: GRAY_LIGHT;
 
-emojiPanBg: DARK_MEDIUM;
-emojiPanCategories: DARK_MEDIUM;
-emojiPanHeaderBg: DARK_MEDIUM;
+emojiPanBg: DARK_HIGH;
+emojiPanCategories: DARK_HIGH;
+emojiPanHeaderBg: DARK_HIGH;
 emojiPanHeaderFg: BLUE_MEDIUM;
 
-filterInputActiveBg: DARK_MEDIUM;
-filterInputBorderFg: DARK_MEDIUM;
-filterInputInactiveBg: DARK_MEDIUM;
+filterInputActiveBg: DARK_HIGH;
+filterInputBorderFg: DARK_HIGH;
+filterInputInactiveBg: DARK_HIGH;
 
-historyComposeAreaBg: DARK_MEDIUM;
+historyComposeAreaBg: DARK_HIGH;
 historyComposeAreaFg: GRAY_LIGHT;
 historyComposeAreaFgService: GRAY;
 historyComposeButtonBg: DARK;
-historyComposeButtonBgOver: DARK_MEDIUM;
+historyComposeButtonBgOver: DARK_HIGH;
 historyComposeButtonBgRipple: DARK;
 historyComposeIconFg: GRAY;
 historyComposeIconFgOver: GRAY_LIGHT;
+historyIconFgInverted: GRAY_LIGHT;
 historyLinkInFg: BLUE_MEDIUM;
 historyLinkOutFg: BLUE_MEDIUM;
-historyPinnedBg: DARK_MEDIUM;
-historyReplyBg: DARK_MEDIUM;
+historyPinnedBg: DARK_HIGH;
+historyReplyBg: DARK_HIGH;
 historyReplyCancelFg: GRAY;
 historyReplyCancelFgOver: GRAY_LIGHT;
-historyScrollBarBg: GRAY;
-historyScrollBarBgOver: GRAY;
+historyScrollBarBg: DARK_LIGHT;
+historyScrollBarBgOver: DARK_LIGHT;
 historyScrollBg: ALPHA;
 historyScrollBgOver: ALPHA;
-historyToDownBg: DARK_MEDIUM;
-historyToDownBgOver: DARK_LIGHT;
+historyToDownBg: DARK_HIGH;
+historyToDownBgOver: DARK_MEDIUM;
 historyToDownBgRipple: DARK;
 historyToDownFg: GRAY_LIGHT;
 historyToDownFgOver: GRAY_LIGHT;
@@ -590,46 +581,35 @@ historyUnreadBarBorder: DARK;
 historyUnreadBarFg: GRAY_LIGHT;
 
 lightButtonBg: DARK;
-lightButtonBgOver: DARK_MEDIUM;
-lightButtonBgRipple: DARK;
-lightButtonFg: GRAY_LIGHT;
-lightButtonFgOver: GRAY_LIGHT;
+lightButtonBgOver: DARK_HIGH;
+lightButtonBgRipple: DARK_MEDIUM;
 
 mainMenuBg: DARK;
-mainMenuCoverBg: DARK;
-mainMenuCoverFg: GRAY_LIGHT;
 
 mediaPlayerBg: DARK;
 
-menuBg: DARK;
-menuBgOver: DARK;
-menuBgRipple: GRAY_LIGHT;
-menuFgDisabled: DARK_LIGHT;
-menuIconFg: GRAY;
-menuIconFgOver: GRAY_LIGHT;
 menuSeparatorFg: DARK;
-menuSubmenuArrowFg: GRAY_LIGHT;
 
-msgBotKbOverBgAdd: DARK_LIGHT;
-msgInBg: DARK_MEDIUM;
-msgInBgSelected: DARK_LIGHT;
-msgInDateFg: GRAY;
-msgInDateFgSelected: GRAY_LIGHT;
+msgBotKbOverBgAdd: DARK_MEDIUM;
+msgInBg: DARK_HIGH;
+msgInBgSelected: DARK_MEDIUM;
+msgInDateFg: DARK_LIGHT;
+msgInDateFgSelected: DARK_LIGHT;
 msgInMonoFg: GREEN_LIGHT;
 msgOutBg: BLUE;
-msgOutBgSelected: DARK_LIGHT;
+msgOutBgSelected: DARK_MEDIUM;
 msgOutDateFg: GRAY;
-msgOutDateFgSelected: GRAY_LIGHT;
+msgOutDateFgSelected: GRAY;
 msgOutMonoFg: GREEN_LIGHT;
-msgServiceBg: DARK_MEDIUM;
+msgServiceBg: DARK_HIGH;
 
-placeholderFg: GRAY;
-placeholderFgActive: DARK_MEDIUM;
+placeholderFg: DARK_HIGH;
+placeholderFgActive: DARK_HIGH;
 
-scrollBarBg: GRAY;
-scrollBarBgOver: GRAY;
-scrollBg: ALPHA;
-scrollBgOver: ALPHA;
+scrollBarBg: historyScrollBarBg;
+scrollBarBgOver: historyScrollBarBgOver;
+scrollBg: historyScrollBg;
+scrollBgOver: historyScrollBgOver;
 
 searchedBarBg: DARK;
 searchedBarBorder: DARK;
@@ -642,8 +622,9 @@ sideBarBadgeFg: DARK;
 sideBarBg: DARK;
 sideBarBgActive: DARK;
 sideBarBgRipple: DARK;
+sideBarIconFg: DARK_LIGHT;
 sideBarIconFgActive: BLUE_MEDIUM;
-sideBarTextFg: GRAY;
+sideBarTextFg: DARK_LIGHT;
 sideBarTextFgActive: BLUE_MEDIUM;
 
 spellUnderline: ALPHA_RED;
@@ -656,6 +637,6 @@ titleFgActive: DARK;
 topBarBg: DARK;
 
 windowBg: DARK;
-windowBgOver: DARK_MEDIUM;
-windowBgRipple: DARK_LIGHT;
+windowBgOver: DARK_HIGH;
+windowBgRipple: DARK_MEDIUM;
 windowShadowFg: ALPHA;
