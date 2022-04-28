@@ -29,7 +29,7 @@ tools=(
 
 for i in "${tools[@]}"
 do
-    printf "\n ✨ %s \n\n" "$i"
+    printf "✨ %s\n" "$i"
     if [ -n "${NO_SUDO}" ]; then
         apt-get -y install "$i"
     else

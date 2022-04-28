@@ -22,7 +22,7 @@ cd "${ZSH_CUSTOM_PLUGINS}" || exit
 
 for i in "${plugins[@]}"
 do
-    printf "\n ✨ %s \n\n" "$i"
+    printf "✨ %s\n" "$i"
     githubUrl=https://github.com/"$(echo "$i" | cut -d ":" -f 1)".git
     clonePath="$(echo "$i" | cut -d ":" -f 2)"
 

@@ -14,6 +14,6 @@ tools=(
 
 for i in "${tools[@]}"
 do
-    printf "\n ✨ %s \n\n" "$i"
+    printf "✨ %s\n" "$i"
     cargo install "$i"
 done

@@ -47,6 +47,6 @@ tools=(
 
 for i in "${tools[@]}"
 do
-    printf "\n ✨ %s \n\n" "$i"
+    printf "✨ %s\n" "$i"
     brew install "$i"
 done

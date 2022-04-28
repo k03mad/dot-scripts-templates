@@ -20,6 +20,8 @@ tools=(
 
 for i in "${tools[@]}"
 do
-    printf "\n ✨ %s \n\n" "$i"
-    npm i -g "$i"
+    printf "✨ %s\n" "$i"
+    # npm i -g "$i"
 done
+
+npm i -g "${tools[@]}"
