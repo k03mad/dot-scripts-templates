@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-npm i -g npm
-
 tools=(
     @k03mad/cli-tools-lan
     @k03mad/cli-tools-mikrotik
@@ -24,4 +22,5 @@ do
     # npm i -g "$i"
 done
 
+npm i -g npm
 npm i -g "${tools[@]}"
