@@ -109,7 +109,7 @@ npmup() {
     NPM_TO=($(echo "$OUTDATED" | cut -d: -f4))
 
     for (( i = 1; i <= $#NPM_FROM; i++ )) do
-        printf "\n ✨ %s => %s \n" "${NPM_FROM[i]}" "${NPM_TO[i]}";
+        printf "✨ %s => %s\n" "${NPM_FROM[i]}" "${NPM_TO[i]}";
     done
 
     npm i -g "${NPM_TO[@]}";
