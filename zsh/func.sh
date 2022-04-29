@@ -110,8 +110,9 @@ npmup() {
 
     for (( i = 1; i <= $#NPM_FROM; i++ )) do
         printf "\n ✨ %s => %s \n" "${NPM_FROM[i]}" "${NPM_TO[i]}";
-        npm i -g "${NPM_TO[i]}";
     done
+
+    npm i -g "${NPM_TO[@]}";
 }
 
 cpcloud() {

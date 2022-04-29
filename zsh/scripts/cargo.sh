@@ -12,8 +12,5 @@ tools=(
     zoxide
 )
 
-for i in "${tools[@]}"
-do
-    printf "✨ %s\n" "$i"
-    cargo install "$i"
-done
+printf "✨ %s\n" "${tools[@]}"
+cargo install "${tools[@]}"

@@ -16,11 +16,7 @@ tools=(
     tldr
 )
 
-for i in "${tools[@]}"
-do
-    printf "✨ %s\n" "$i"
-    # npm i -g "$i"
-done
+printf "✨ %s\n" "${tools[@]}"
 
 npm i -g npm
 npm i -g "${tools[@]}"

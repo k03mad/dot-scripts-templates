@@ -27,12 +27,10 @@ tools=(
     zsh
 )
 
-for i in "${tools[@]}"
-do
-    printf "✨ %s\n" "$i"
-    if [ -n "${NO_SUDO}" ]; then
-        apt-get -y install "$i"
-    else
-        sudo apt-get -y install "$i"
-    fi
-done
+printf "✨ %s\n" "${tools[@]}"
+
+if [ -n "${NO_SUDO}" ]; then
+    apt-get -y install "${tools[@]}"
+else
+    sudo apt-get -y install "${tools[@]}"
+fi

@@ -1,10 +1,12 @@
 #!/usr/bin/env zsh
 
-brew tap homebrew/cask-fonts
-brew tap homebrew/cask-versions
-brew tap homebrew/cask-drivers
-brew tap homebrew/command-not-found
-brew tap jandedobbeleer/oh-my-posh
+taps=(
+    homebrew/cask-fonts
+    homebrew/cask-versions
+    homebrew/cask-drivers
+    homebrew/command-not-found
+    jandedobbeleer/oh-my-posh
+)
 
 tools=(
     android-platform-tools
@@ -45,8 +47,8 @@ tools=(
     ycd/tap/dstp
 )
 
-for i in "${tools[@]}"
-do
-    printf "✨ %s\n" "$i"
-    brew install "$i"
-done
+printf "✨ %s\n" "${taps[@]}"
+brew tap "${taps[@]}"
+
+printf "✨ %s\n" "${tools[@]}"
+brew install "${tools[@]}"
