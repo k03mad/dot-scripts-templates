@@ -7,8 +7,6 @@ run() {
     npm run "${2:-start}"
 }
 
-run "magnet-co-parser" "server"
-
 run "cloud-tools-cron"
 run "cloud-tools-bot"
 
