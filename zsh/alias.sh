@@ -8,7 +8,7 @@ alias del="rm -rfv"
 alias dls="lsd -lA --group-dirs first --date relative --blocks permission,date,size,name"
 alias tls="dls --tree --ignore-glob node_modules --ignore-glob .git"
 
-alias ft="ag -uf --depth=-1"
+alias ft="ag -fi --depth=-1"
 alias ports="sudo lsof -i -P -n | grep LISTEN"
 
 alias dsc="find . -name '.DS_Store' -type f -exec rm -rfv {} \;"
