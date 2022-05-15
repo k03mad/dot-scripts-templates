@@ -14,6 +14,7 @@ tools=(
     # bettercap
     ccat
     curl
+    dog
     findutils
     font-fira-code-nerd-font
     fzf
