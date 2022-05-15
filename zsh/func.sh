@@ -37,7 +37,11 @@ youmus() {
 }
 
 doh() {
-    curl -H 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$1" | jq .
+    dog "$1" --json --time --https @https://1.1.1.1/dns-query | jq
+}
+
+dot() {
+    dog "$1" --json --time --tls @1.1.1.1 | jq
 }
 
 gc() {
