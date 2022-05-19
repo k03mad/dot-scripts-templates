@@ -9,6 +9,7 @@ source "${dir}/p10k.sh"
 
 source "${dir}/alias.sh"
 source "${dir}/func.sh"
+source "${dir}/eval.sh"
 
 [[ -f "${HOME}/.keyrc" ]] && source "${HOME}/.keyrc"
 [[ -f "${HOME}/.workrc" ]] && source "${HOME}/.workrc"

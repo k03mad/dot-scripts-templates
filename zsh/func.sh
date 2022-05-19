@@ -1,7 +1,5 @@
 # shellcheck disable=2116,2154,2191,2164,2207
 
-eval "$(zoxide init zsh)"
-
 ARIA_ARGS=(
     --file-allocation=falloc
     --max-connection-per-server=3
