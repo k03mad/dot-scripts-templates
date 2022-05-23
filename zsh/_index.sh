@@ -11,8 +11,8 @@ source "${dir}/alias.sh"
 source "${dir}/func.sh"
 source "${dir}/eval.sh"
 
-[[ -f "${HOME}/.keyrc" ]] && source "${HOME}/.keyrc"
-[[ -f "${HOME}/.workrc" ]] && source "${HOME}/.workrc"
+[ -f "${HOME}/.keyrc" ] && source "${HOME}/.keyrc"
+[ -f "${HOME}/.workrc" ] && source "${HOME}/.workrc"
 
 if [ -n "${IS_CLOUD}" ] && [ -z "${SSH_CLIENT}" ]; then
     source "${DOT_FOLDER_ZSH_SCRIPTS}/cloud.sh"
