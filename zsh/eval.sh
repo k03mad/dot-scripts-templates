@@ -1,2 +1,5 @@
 eval "$(zoxide init zsh)"
-eval "$(thefuck --alias f)"
+
+if [ -z "${TERMUX_VERSION}" ]; then
+    eval "$(thefuck --alias f)"
+fi

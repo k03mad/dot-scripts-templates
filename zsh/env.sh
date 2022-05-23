@@ -42,5 +42,5 @@ ${FPATH}\
 if [ -n "${TERMUX_VERSION}" ]; then
     export SKIP_NVMRC=true
     export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-    export OPENSSL_DIR=${PREFIX}
+    export OPENSSL_DIR="${PREFIX}"
 fi
