@@ -115,7 +115,7 @@ npmup() {
     done
 
     if (( ${#NPM_TO[@]} != 0 )); then
-        npm i -g "${NPM_TO[@]}"
+        npm i "${NPM_TO[@]}" --location=global
     fi
 }
 
