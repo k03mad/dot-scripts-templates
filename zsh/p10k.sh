@@ -1652,7 +1652,7 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
 
-if [ -f "${HOME}/.p10k_arc/arc.zsh" ]; then                  #!
+if [ -f "${ARC_P10K_PROMPT}" ]; then                         #!
     typeset -g POWERLEVEL9K_ARC_VISUAL_IDENTIFIER_EXPANSION= #!
-    source "${HOME}/.p10k_arc/arc.zsh"                       #!
+    source "${ARC_P10K_PROMPT}"                              #!
 fi                                                           #!

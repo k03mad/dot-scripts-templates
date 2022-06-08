@@ -1,3 +1,5 @@
+# shellcheck source=/dev/null
+
 export DOT_FOLDER="${HOME}/git/dot-scripts-templates"
 export DOT_FOLDER_EXTRA="${DOT_FOLDER}/extra"
 export DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
@@ -44,3 +46,6 @@ if [ -n "${TERMUX_VERSION}" ]; then
     export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
     export OPENSSL_DIR="${PREFIX}"
 fi
+
+[ -f "${HOME}/.keyrc" ] && source "${HOME}/.keyrc"
+[ -f "${HOME}/.workrc" ] && source "${HOME}/.workrc"
