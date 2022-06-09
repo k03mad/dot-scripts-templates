@@ -1,4 +1,4 @@
-# shellcheck source=/dev/null
+# shellcheck source=/dev/null disable=2016
 
 export UPDATE_ZSH_DAYS=30
 export DISABLE_UPDATE_PROMPT="true"
@@ -20,6 +20,10 @@ export plugins=(
     zsh-completions
     zsh-nvm
 )
+
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd --group-dirs="first" --color="always" $realpath'
+zstyle ':fzf-tab:complete:cat:*' fzf-preview '[[ $(file --mime-type $realpath) == *"binary"* ]] && echo binary || cat $realpath'
+zstyle ':fzf-tab:complete:ccat:*' fzf-preview '[[ $(file --mime-type $realpath) == *"binary"* ]] && echo binary || ccat --color="always" $realpath'
 
 source "${ZSH}/oh-my-zsh.sh"
 autoload -Uz compinit && compinit
