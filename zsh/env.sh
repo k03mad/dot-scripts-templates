@@ -12,7 +12,7 @@ export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
 
 export GIT_CONFIG_GLOBAL="${DOT_FOLDER_EXTRA}/.gitconfig"
 
-export FZF_DEFAULT_OPTS="--info=hidden --prompt="
+export FZF_DEFAULT_OPTS="--preview-window 70% --info=hidden --prompt="
 
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1

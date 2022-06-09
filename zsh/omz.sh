@@ -21,9 +21,10 @@ export plugins=(
     zsh-nvm
 )
 
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd --group-dirs="first" --color="always" $realpath'
-zstyle ':fzf-tab:complete:cat:*' fzf-preview '[[ $(file --mime-type $realpath) == *"binary"* ]] && echo binary || cat $realpath'
-zstyle ':fzf-tab:complete:ccat:*' fzf-preview '[[ $(file --mime-type $realpath) == *"binary"* ]] && echo binary || ccat --color="always" $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -A --group-dirs="first" --color="always" $realpath'
+zstyle ':fzf-tab:complete:z:*' fzf-preview 'lsd -A --group-dirs="first" --color="always" $realpath'
+zstyle ':fzf-tab:complete:cat:*' fzf-preview '! [[ $(file --mime-type $realpath) =~ "directory|binary" ]] && cat $realpath'
+zstyle ':fzf-tab:complete:ccat:*' fzf-preview '! [[ $(file --mime-type $realpath) =~ "directory|binary" ]] && ccat --color="always" $realpath'
 
 source "${ZSH}/oh-my-zsh.sh"
 autoload -Uz compinit && compinit
