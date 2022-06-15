@@ -105,7 +105,7 @@ zshup() {
 }
 
 npmup() {
-    OUTDATED=$(npm -g outdated --parseable --depth=0)
+    OUTDATED=$(npm outdated --location=global --parseable --depth=0)
 
     NPM_FROM=($(echo "$OUTDATED" | cut -d: -f3))
     NPM_TO=($(echo "$OUTDATED" | cut -d: -f4))
