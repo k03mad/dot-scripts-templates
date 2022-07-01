@@ -39,7 +39,7 @@ alias aptups="sudo -- sh -c '$(alias aptup | sed s/aptup=// | cut -c2- | rev | c
 alias pkgup="pkg update && pkg upgrade && pkg autoclean && pkg clean && aptup"
 
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
-alias brewup="brew list && brew update && brew upgrade && brew cleanup -s && brew doctor"
+alias brewup="brew list && brew update && brew upgrade && brew cleanup -s && brew doctor || true"
 
 alias cargoin="\${DOT_FOLDER_ZSH_SCRIPTS}/cargo.sh"
 alias cargoup="rustup update && cargo install-update -a"
