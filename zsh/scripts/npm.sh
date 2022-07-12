@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
 
 tools=(
-    @k03mad/cli-tools-lan
-    @k03mad/cli-tools-mikrotik
     check-imports
     fx
     http-server

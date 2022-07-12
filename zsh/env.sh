@@ -48,5 +48,4 @@ if [ -n "${TERMUX_VERSION}" ]; then
     export OPENSSL_DIR="${PREFIX}"
 fi
 
-[ -f "${HOME}/.keyrc" ] && source "${HOME}/.keyrc"
 [ -f "${HOME}/.workrc" ] && source "${HOME}/.workrc"
