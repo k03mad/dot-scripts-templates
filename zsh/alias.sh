@@ -2,7 +2,6 @@
 
 alias q="exit"
 
-alias hr="tput cols | pjs \"''.padEnd(_, '—')\""
 alias del="rm -rfv"
 
 alias dls="lsd -lA --group-dirs first --date relative --blocks permission,date,size,name"
