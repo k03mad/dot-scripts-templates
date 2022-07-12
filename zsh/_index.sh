@@ -10,7 +10,3 @@ source "${dir}/p10k.sh"
 source "${dir}/alias.sh"
 source "${dir}/func.sh"
 source "${dir}/eval.sh"
-
-if [ -n "${IS_CLOUD}" ] && [ -z "${SSH_CLIENT}" ]; then
-    source "${DOT_FOLDER_ZSH_SCRIPTS}/cloud.sh"
-fi
