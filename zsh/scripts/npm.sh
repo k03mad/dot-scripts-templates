@@ -17,6 +17,4 @@ tools=(
 )
 
 printf "✨ %s\n" "${tools[@]}"
-
-npm i npm --location=global
 npm i "${tools[@]}" --location=global
