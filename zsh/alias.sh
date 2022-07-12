@@ -45,8 +45,8 @@ alias cargoin="\${DOT_FOLDER_ZSH_SCRIPTS}/cargo.sh"
 alias cargoup="rustup update && cargo install-update -a"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
-alias npmls="npm ls --location=global --depth=0 && npm outdated --location=global"
-alias npmcl="npm ls --location=global --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs -t npm remove --location=global"
+alias npmls="npm -v && npm ls -g --depth=0 && npm outdated -g"
+alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs -t npm remove -g"
 
 alias nvmin="nvm install \$(cat .nvmrc) && npmin"
 alias nvmup="nvm install node && npmin"
