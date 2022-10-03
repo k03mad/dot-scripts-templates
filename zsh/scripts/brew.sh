@@ -15,37 +15,37 @@ tools=(
     ccat
     curl
     dog
-    findutils
+    # findutils
     font-fira-code-nerd-font
     fzf
     git
-    gping
-    htop
-    httpie
-    hub
-    id3v2
+    # gping
+    # htop
+    # httpie
+    # hub
+    # id3v2
     jq
     maven@3.5
     m-cli
-    mc
-    micro
-    mkvdts2ac3
-    mosh
+    # mc
+    # micro
+    # mkvdts2ac3
+    # mosh
     nano
     ncdu
-    neofetch
-    oh-my-posh
+    # neofetch
+    # oh-my-posh
     # nmap
     shellcheck
-    tig
+    # tig
     the_silver_searcher
     topgrade
-    tree
+    # tree
     wget
     youtube-dl
     zsh
-    MisterTea/et/et
-    ycd/tap/dstp
+    # MisterTea/et/et
+    # ycd/tap/dstp
 )
 
 printf "✨ %s\n" "${taps[@]}"

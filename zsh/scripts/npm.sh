@@ -2,7 +2,7 @@
 
 tools=(
     check-imports
-    fx
+    # fx
     # http-server
     # jay-repl
     npkill

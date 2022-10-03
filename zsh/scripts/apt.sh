@@ -5,23 +5,23 @@ tools=(
     curl
     fzf
     git
-    htop
-    hub
-    id3v2
+    # htop
+    # hub
+    # id3v2
     jq
-    libssl-dev
-    mc
-    micro
-    mosh
+    # libssl-dev
+    # mc
+    # micro
+    # mosh
     nano
     ncdu
-    neofetch
+    # neofetch
     # nmap
-    pkg-config
+    # pkg-config
     shellcheck
-    tig
-    tree
-    unzip
+    # tig
+    # tree
+    # unzip
     wget
     youtube-dl
     zsh
