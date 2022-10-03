@@ -1,14 +1,14 @@
 #!/usr/bin/env zsh
 
 tools=(
-    bandwhich
-    bottom
-    broot
+    # bandwhich
+    # bottom
+    # broot
     cargo-update
     fd-find
     lsd
-    procs
-    viu
+    # procs
+    # viu
     zoxide
 )
 
