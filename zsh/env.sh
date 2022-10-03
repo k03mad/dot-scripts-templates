@@ -50,4 +50,9 @@ if [ -n "${TERMUX_VERSION}" ]; then
     export OPENSSL_DIR="${PREFIX}"
 fi
 
-[ -f "${HOME}/.workrc" ] && source "${HOME}/.workrc"
+if [ -f "${HOME}/.workrc" ]; then
+    source "${HOME}/.workrc"
+
+    JAVA_HOME="$(/usr/libexec/java_home -v 16)"
+    export JAVA_HOME
+fi
