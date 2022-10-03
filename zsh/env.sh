@@ -18,6 +18,8 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1
 
+export NVM_LAZY_LOAD="true"
+
 export PATH="\
 /data/data/com.termux/files/usr/bin:\
 /data/data/com.termux/files/usr/bin/applets:\
