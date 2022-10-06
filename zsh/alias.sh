@@ -14,7 +14,6 @@ alias dsc="find . -name '.DS_Store' -type f -exec rm -rfv {} \;"
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
 
 alias st="speed-cloudflare-cli"
-alias stn="speed-test -v"
 alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=30000 && del ./testfile.mad"
 
 alias adbenable="adb shell pm enable --user 0"

@@ -10,7 +10,6 @@ tools=(
     npm-check-updates
     # pm2
     speed-cloudflare-cli
-    speed-test
     tldr
 )
 
