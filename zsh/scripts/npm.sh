@@ -9,7 +9,6 @@ tools=(
     npm-check
     npm-check-updates
     # pm2
-    speed-cloudflare-cli
     tldr
 )
 
