@@ -20,6 +20,3 @@
     cmd = code --wait --diff $LOCAL $REMOTE
 [log]
     abbrevCommit = true
-[user]
-	name = k03mad
-	email = k03.mad@gmail.com
