@@ -13,7 +13,6 @@ alias ports="sudo lsof -i -P -n | grep LISTEN"
 alias dsc="find . -name '.DS_Store' -type f -exec rm -rfv {} \;"
 alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
 
-alias st="speed-cloudflare-cli"
 alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=30000 && del ./testfile.mad"
 
 alias adbenable="adb shell pm enable --user 0"
@@ -43,7 +42,7 @@ alias cargoin="\${DOT_FOLDER_ZSH_SCRIPTS}/cargo.sh"
 alias cargoup="rustup update && cargo install-update -a"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
-alias npmls="npm ls -g --depth=0 && npm outdated -g"
+alias npmls="npm -v && npm ls -g --depth=0 && npm outdated -g"
 alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs -t npm remove -g"
 
 alias nvmin="nvm install \$(cat .nvmrc) && npmin"
