@@ -10,10 +10,8 @@ export plugins=(
     autoupdate
     colors
     command-not-found
-    copyfile
     fast-syntax-highlighting
     fzf-tab
-    web-search
     you-should-use
     zsh-autosuggestions
     zsh-better-npm-completion
