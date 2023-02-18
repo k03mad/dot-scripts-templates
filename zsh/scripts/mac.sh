@@ -1,9 +1,5 @@
 #!/usr/bin/env zsh
 
-function ___print {
-    echo -e "\\033[0;33m🤖  $1 \\033[0m"
-}
-
 ___print "quit prefs"
 osascript -e 'tell application "System Preferences" to quit'
 

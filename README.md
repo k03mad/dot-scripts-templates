@@ -1,1 +1,1 @@
-My dotfiles, scripts, templates, etc.
+# My dotfiles

@@ -1,4 +1,4 @@
-# shellcheck disable=2116,2154,2191,2164,2207
+# shellcheck disable=2116,2154,2191,2164,2206,2207
 
 ARIA_ARGS=(
     --file-allocation=falloc
@@ -108,10 +108,16 @@ npmup() {
     OUTDATED=$(npm outdated -g --parseable --depth=0)
 
     NPM_FROM=($(echo "$OUTDATED" | cut -d: -f3))
-    NPM_TO=($(echo "$OUTDATED" | cut -d: -f4))
+    NPM_FROM_FILTERED=(${NPM_FROM[@]//npm@*})
 
-    if [[ "${NPM_FROM[i]}" != npm@* ]]; then
-        printf "✨ %s => %s\n" "${NPM_FROM[i]}" "${NPM_TO[i]}";
-        npm i -g "${NPM_TO[i]}";
+    NPM_TO=($(echo "$OUTDATED" | cut -d: -f4))
+    NPM_TO_FILTERED=(${NPM_TO[@]//npm@*})
+
+    for (( i = 1; i <= $#NPM_FROM_FILTERED; i++ )) do
+        printf "✨ %s => %s\n" "${NPM_FROM_FILTERED[i]}" "${NPM_TO_FILTERED[i]}";
+    done
+
+    if (( ${#NPM_TO_FILTERED[@]} != 0 )); then
+        npm i "${NPM_TO_FILTERED[@]}" -g
     fi
 }
