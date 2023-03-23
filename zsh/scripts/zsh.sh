@@ -4,6 +4,7 @@ theme="romkatv/powerlevel10k"
 
 plugins=(
     "Aloxaf/fzf-tab"
+    "clarketm/zsh-completions"
     "lukechilds/zsh-better-npm-completion"
     "lukechilds/zsh-nvm"
     "mafredri/zsh-async:async"
@@ -12,7 +13,6 @@ plugins=(
     "zdharma-continuum/fast-syntax-highlighting"
     "zpm-zsh/colors"
     "zsh-users/zsh-autosuggestions"
-    "zsh-users/zsh-completions"
 )
 
 rm -rfv "${ZSH_CUSTOM_PLUGINS}"
