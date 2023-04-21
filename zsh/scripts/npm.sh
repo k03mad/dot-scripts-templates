@@ -10,6 +10,7 @@ tools=(
     "npm-check-updates"
     # "pm2"
     "tldr"
+    "zx"
 )
 
 printf "✨ %s\n" "${tools[@]}"
