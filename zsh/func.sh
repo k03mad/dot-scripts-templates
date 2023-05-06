@@ -35,11 +35,17 @@ youmus() {
 }
 
 doh() {
-    dog "$1" --json --time --https @https://1.1.1.1/dns-query | jq
+    query="@https://${2:-1.1.1.1}/dns-query"
+    echo "${query}"
+
+    dog "$1" --time --https "${query}"
 }
 
 dot() {
-    dog "$1" --json --time --tls @1.1.1.1 | jq
+    query="@${2:-1.1.1.1}"
+    echo "${query}"
+
+    dog "$1" --time --tls "${query}"
 }
 
 gc() {
