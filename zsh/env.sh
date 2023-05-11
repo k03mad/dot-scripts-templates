@@ -36,6 +36,7 @@ ${HOME}/.local/bin:\
 ${HOME}/arcadia:\
 ${HOME}/bin:\
 ${HOME}/go/bin:\
+${HOME}/.gvm/go/bin:\
 ${PATH}\
 "
 
