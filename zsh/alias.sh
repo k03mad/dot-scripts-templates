@@ -1,5 +1,6 @@
 # shellcheck disable=2139,2154
 
+alias s="sudo $(history -p !!)"
 alias q="exit"
 
 alias del="rm -rfv"
