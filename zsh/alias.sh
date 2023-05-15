@@ -30,8 +30,7 @@ alias adblist="\
 "
 
 alias aptin="\${DOT_FOLDER_ZSH_SCRIPTS}/apt.sh"
-alias aptup="apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get clean"
-alias aptups="sudo -- sh -c '$(alias aptup | sed s/aptup=// | cut -c2- | rev | cut -c2- | rev)'"
+alias aptup="sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean"
 
 alias pkgup="pkg update && pkg upgrade && pkg autoclean && pkg clean && aptup"
 
@@ -76,9 +75,9 @@ alias apl="arc pull"
 alias arh="arc reset --hard"
 alias abd="arc branch | grep -v trunk | xargs -L 1 arc branch -D"
 
-alias scstatus="systemctl status"
-alias screstart="systemctl daemon-reload && systemctl restart"
-alias scenable="systemctl enable"
-alias scdisable="systemctl disable"
-alias scstart="systemctl start"
-alias scstop="systemctl stop"
+alias scstatus="sudo systemctl status"
+alias screstart="sudo systemctl daemon-reload && systemctl restart"
+alias scenable="sudo systemctl enable"
+alias scdisable="sudo systemctl disable"
+alias scstart="sudo systemctl start"
+alias scstop="sudo systemctl stop"
