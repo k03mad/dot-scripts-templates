@@ -85,7 +85,12 @@ ach() {
 
 chpwd() {
     if [ -z "${SKIP_CHPWD}" ]; then
-        dls
+        if command -v lsd &> /dev/null
+            then
+                dls
+            else
+                els
+        fi
     fi
 
     if [ -z "${SKIP_NVMRC}" ]; then

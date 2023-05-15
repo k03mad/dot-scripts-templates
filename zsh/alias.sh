@@ -4,6 +4,7 @@ alias q="exit"
 
 alias del="rm -rfv"
 
+alias els="exa --all --long --group-directories-first --modified --icons --no-user"
 alias dls="lsd -lA --group-dirs first --date relative --blocks permission,date,size,name"
 alias tls="dls --tree --ignore-glob node_modules --ignore-glob .git"
 
