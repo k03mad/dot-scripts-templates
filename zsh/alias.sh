@@ -1,7 +1,8 @@
 # shellcheck disable=2139,2154
 
-alias s="sudo \$(fc -ln -1)"
 alias sudo="sudo "
+alias s="sudo \$(fc -ln -1)"
+
 
 alias q="exit"
 
