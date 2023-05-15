@@ -77,7 +77,7 @@ alias arh="arc reset --hard"
 alias abd="arc branch | grep -v trunk | xargs -L 1 arc branch -D"
 
 alias scstatus="sudo systemctl status"
-alias screstart="sudo systemctl daemon-reload && systemctl restart"
+alias screstart="sudo systemctl daemon-reload && sudo systemctl restart"
 alias scenable="sudo systemctl enable"
 alias scdisable="sudo systemctl disable"
 alias scstart="sudo systemctl start"
