@@ -15,8 +15,6 @@ alias chmox="chmod +x"
 alias df='df -h'
 alias du='du -h'
 
-alias apt-get="apt-get -q -o Dpkg::Progress=true -o Dpkg::Progress-Fancy=true -o APT::Get::AutomaticRemove=true"
-
 # misc
 alias s="sudo \$(fc -ln -1)"
 alias q="exit"
