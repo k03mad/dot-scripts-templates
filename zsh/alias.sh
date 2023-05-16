@@ -1,12 +1,26 @@
 # shellcheck disable=2139,2154
 
+# rewrites
 alias sudo="sudo "
+
+alias rm="rm -rfv"
+alias mkdir="mkdir -pv"
+alias cp="cp -v"
+alias mv="mv -v"
+
+alias chown="chown -v"
+alias chmod="chmod -v"
+alias chmox="chmod +x"
+
+alias df='df -h'
+alias du='du -h'
+
+alias apt-get="apt-get -q -o Dpkg::Progress=true -o Dpkg::Progress-Fancy=true -o APT::Get::AutomaticRemove=true"
+
+# misc
 alias s="sudo \$(fc -ln -1)"
-
-
 alias q="exit"
-
-alias del="rm -rfv"
+alias w="which"
 
 alias els="exa --all --long --group-directories-first --modified --icons"
 alias dls="lsd -lA --group-dirs first --date relative --blocks permission,date,size,name"
@@ -20,6 +34,7 @@ alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-dat
 
 alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=30000 && del ./testfile.mad"
 
+# adb
 alias adbenable="adb shell pm enable --user 0"
 alias adbdisable="adb shell pm disable-user --user 0"
 alias adbdnson="adb shell settings put global private_dns_mode hostname && adb shell settings put global private_dns_specifier"
@@ -34,6 +49,7 @@ alias adblist="\
     && adb shell 'pm list packages -d' | sed 's/package://' | sort\
 "
 
+# pkg managers
 alias aptin="\${DOT_FOLDER_ZSH_SCRIPTS}/apt.sh"
 alias aptup="sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean"
 
@@ -64,6 +80,7 @@ alias nvmls="\
 
 alias zshin="\${DOT_FOLDER_ZSH_SCRIPTS}/zsh.sh"
 
+# git/arc
 alias gs="git status -s"
 alias ga="git add . && gs"
 alias gp="git push"
@@ -80,6 +97,7 @@ alias apl="arc pull"
 alias arh="arc reset --hard"
 alias abd="arc branch | grep -v trunk | xargs -L 1 arc branch -D"
 
+# service
 alias scstatus="sudo systemctl status"
 alias screstart="sudo systemctl daemon-reload && sudo systemctl restart"
 alias scenable="sudo systemctl enable"
