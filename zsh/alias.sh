@@ -65,7 +65,7 @@ alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")
 
 alias nvmin="nvm install \$(cat .nvmrc) && npmin"
 alias nvmup="nvm install node && npmin"
-alias nvmcl="del \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && del \${NVM_DIR}/.cache/bin"
+alias nvmcl="rm \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm \${NVM_DIR}/.cache/bin"
 alias nvmls="\
     echo \"\${c[blue]}npm current:\${c[reset]} v\$(npm -v)\"\
     && echo \"\${c[magenta]}node current:\${c[reset]} \$(node -v)\"\
