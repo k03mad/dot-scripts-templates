@@ -11,11 +11,11 @@ ARIA_ARGS=(
     --remote-time
 )
 
-download() {
+dl() {
     aria2c "$@" "${ARIA_ARGS[@]}"
 }
 
-youvid() {
+yvid() {
     youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" \
         --add-metadata \
         --embed-subs \
@@ -23,7 +23,7 @@ youvid() {
         --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
 }
 
-youmus() {
+ymus() {
     youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" \
         --extract-audio \
         --audio-format mp3 \
