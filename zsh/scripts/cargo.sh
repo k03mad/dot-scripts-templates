@@ -8,6 +8,7 @@ tools=(
     "fd-find"
     "lsd"
     # "procs"
+    # "prometheus_wireguard_exporter"
     # "viu"
     "zoxide"
 )
