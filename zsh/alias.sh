@@ -20,6 +20,8 @@ alias s="sudo \$(fc -ln -1)"
 alias q="exit"
 alias w="which"
 
+alias del="rm -rfv"
+
 alias els="exa --all --long --group-directories-first --modified --icons"
 alias dls="lsd -lA --group-dirs first --date relative --blocks permission,date,size,name"
 alias tls="dls --tree --ignore-glob node_modules --ignore-glob .git"
