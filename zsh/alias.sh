@@ -61,6 +61,9 @@ alias brewup="brew list && brew update && brew upgrade && brew cleanup -s && bre
 alias cargoin="\${DOT_FOLDER_ZSH_SCRIPTS}/cargo.sh"
 alias cargoup="rustup update && cargo install-update -a"
 
+alias goin="\${DOT_FOLDER_ZSH_SCRIPTS}/go.sh"
+alias goup="go-global-update"
+
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="npm ls -g --depth=0 && npm outdated -g"
 alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs -t npm remove -g"

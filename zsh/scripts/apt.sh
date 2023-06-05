@@ -23,7 +23,7 @@ tools=(
     # "tree"
     # "unzip"
     "wget"
-    "youtube-dl"
+    # "youtube-dl"
     "zsh"
 )
 
