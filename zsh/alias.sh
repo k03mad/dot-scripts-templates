@@ -4,13 +4,14 @@
 alias sudo="sudo "
 
 alias rm="rm -rfv"
+alias del="rm -rfv"
+
 alias mkdir="mkdir -pv"
 alias cp="cp -v"
 alias mv="mv -v"
 
 alias chown="chown -v"
 alias chmod="chmod -v"
-alias chmox="chmod +x"
 
 alias df='df -h'
 alias du='du -h'
@@ -19,8 +20,6 @@ alias du='du -h'
 alias s="sudo \$(fc -ln -1)"
 alias q="exit"
 alias w="which"
-
-alias del="rm -rfv"
 
 alias els="exa --all --long --group-directories-first --modified --icons"
 alias dls="lsd -lA --group-dirs first --date relative --blocks permission,date,size,name"
