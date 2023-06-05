@@ -5,5 +5,8 @@ tools=(
     "github.com/owenthereal/ccat@latest"
 )
 
-printf "✨ %s\n" "${tools[@]}"
-go install "${tools[@]}"
+for i in "${tools[@]}"
+do
+    printf "✨ %s\n" "$i"
+    go install "$i"
+done
