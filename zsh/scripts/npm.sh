@@ -1,16 +1,16 @@
 #!/usr/bin/env zsh
 
 tools=(
-    "check-imports"
+    # "check-imports"
     # "fx"
     # "http-server"
     # "jay-repl"
-    "npkill"
+    # "npkill"
     "npm-check"
     "npm-check-updates"
     # "pm2"
     "tldr"
-    "zx"
+    # "zx"
 )
 
 printf "✨ %s\n" "${tools[@]}"
