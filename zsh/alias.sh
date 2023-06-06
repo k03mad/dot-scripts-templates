@@ -63,6 +63,9 @@ alias cargoup="rustup update && cargo install-update -a"
 alias goin="\${DOT_FOLDER_ZSH_SCRIPTS}/go.sh"
 alias goup="go-global-update"
 
+alias pipin="\${DOT_FOLDER_ZSH_SCRIPTS}/pip.sh"
+alias pipup="\${DOT_FOLDER_ZSH_SCRIPTS}/pip.sh"
+
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="npm ls -g --depth=0 && npm outdated -g"
 alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' | xargs -t npm remove -g"
