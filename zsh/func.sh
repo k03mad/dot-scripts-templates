@@ -119,16 +119,18 @@ npmup() {
     OUTDATED=$(npm outdated -g --parseable --depth=0)
 
     NPM_FROM=($(echo "$OUTDATED" | cut -d: -f3))
-    NPM_FROM_FILTERED=(${NPM_FROM[@]//npm@*})
+    NPM_FROM=(${NPM_FROM[@]//npm@*})
+    NPM_FROM=(${NPM_FROM[@]//corepack@*})
 
     NPM_TO=($(echo "$OUTDATED" | cut -d: -f4))
-    NPM_TO_FILTERED=(${NPM_TO[@]//npm@*})
+    NPM_TO=(${NPM_TO[@]//npm@*})
+    NPM_TO=(${NPM_TO[@]//corepack@*})
 
-    for (( i = 1; i <= $#NPM_FROM_FILTERED; i++ )) do
-        printf "✨ %s => %s\n" "${NPM_FROM_FILTERED[i]}" "${NPM_TO_FILTERED[i]}";
+    for (( i = 1; i <= $#NPM_FROM; i++ )) do
+        printf "✨ %s => %s\n" "${NPM_FROM[i]}" "${NPM_TO[i]}";
     done
 
-    if (( ${#NPM_TO_FILTERED[@]} != 0 )); then
-        npm i "${NPM_TO_FILTERED[@]}" -g
+    if (( ${#NPM_TO[@]} != 0 )); then
+        npm i "${NPM_TO[@]}" -g
     fi
 }
