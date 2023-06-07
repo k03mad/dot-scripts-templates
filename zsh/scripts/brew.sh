@@ -11,7 +11,7 @@ tools=(
     "android-platform-tools"
     "aria2"
     # "bettercap"
-    "ccat"
+    # "ccat"
     "curl"
     "dog"
     # "findutils"

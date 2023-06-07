@@ -5,7 +5,7 @@ tools=(
     # "bottom"
     # "broot"
     "cargo-update"
-    "fd-find"
+    # "fd-find"
     "lsd"
     # "procs"
     # "prometheus_wireguard_exporter"

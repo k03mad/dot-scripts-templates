@@ -2,6 +2,7 @@
 
 tools=(
     "cf-speedtest"
+    # "youtube-dl"
 )
 
 printf "✨ %s\n" "${tools[@]}"
