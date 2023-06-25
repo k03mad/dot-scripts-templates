@@ -52,7 +52,7 @@ alias adblist="\
 alias aptin="\${DOT_FOLDER_ZSH_SCRIPTS}/apt.sh"
 alias aptup="sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean"
 
-alias pkgup="pkg update && pkg upgrade && pkg autoclean && pkg clean && aptup"
+alias pkgup="pkg update && pkg upgrade && pkg autoclean && pkg clean && apt autoremove"
 
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
 alias brewup="brew list && brew update && brew upgrade && brew cleanup -s && brew doctor || true"
