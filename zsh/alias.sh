@@ -86,7 +86,7 @@ alias nvmls="\
 alias zshin="\${DOT_FOLDER_ZSH_SCRIPTS}/zsh.sh"
 
 # docker
-alias dcup="docker-compose pull && docker-compose up -d"
+alias dcup="docker-compose pull && docker-compose up -d && dprune"
 alias dprune="docker system prune -af"
 
 # git/arc
