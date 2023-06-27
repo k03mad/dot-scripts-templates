@@ -35,7 +35,7 @@ ymus() {
 }
 
 doh() {
-    query="@https://${2:-1.1.1.1}/dns-query"
+    query="@https://${2:-1.1.1.1/dns-query}"
     echo "${query}"
 
     dog "$1" --time --https "${query}"
