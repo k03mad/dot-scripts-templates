@@ -6,6 +6,7 @@ tools=(
     # "broot"
     "cargo-update"
     # "fd-find"
+    # "hurl"
     "lsd"
     # "procs"
     # "prometheus_wireguard_exporter"
