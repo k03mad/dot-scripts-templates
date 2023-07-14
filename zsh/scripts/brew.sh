@@ -40,7 +40,7 @@ tools=(
     # "topgrade"
     # "tree"
     "wget"
-    # "youtube-dl"
+    # "yt-dlp"
     "zsh"
     "MisterTea/et/et"
     # "ycd/tap/dstp"

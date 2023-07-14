@@ -1,38 +1,4 @@
-# shellcheck disable=2116,2154,2191,2164,2206,2207
-
-ARIA_ARGS=(
-    --file-allocation=falloc
-    --max-connection-per-server=3
-    --max-concurrent-downloads=3
-    --split=3
-    --max-tries=120
-    --retry-wait=5
-    --continue
-    --remote-time
-)
-
-dl() {
-    aria2c "$@" "${ARIA_ARGS[@]}"
-}
-
-yvid() {
-    youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" \
-        --add-metadata \
-        --embed-subs \
-        --external-downloader aria2c \
-        --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
-}
-
-ymus() {
-    youtube-dl -o "youtube-dl/%(uploader)s - %(title)s.%(ext)s" \
-        --extract-audio \
-        --audio-format mp3 \
-        --audio-quality 0 \
-        --add-metadata \
-        --embed-thumbnail \
-        --external-downloader aria2c \
-        --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
-}
+# shellcheck disable=2116,2154,2206,2207
 
 ipi() {
     curl -s "https://ipinfo.io/widget/demo/${1:-$(curl -s https://ipecho.net/plain)}" -H 'referer: https://ipinfo.io/' | jq
@@ -112,9 +78,9 @@ zshup() {
     SKIP_CHPWD=true
     START_PWD=${PWD}
 
-    cd "${DOT_FOLDER_ZSH}"
+    cd "${DOT_FOLDER_ZSH}" || exit
     git pull
-    cd "${START_PWD}"
+    cd "${START_PWD}" || exit
 
     unset SKIP_CHPWD
 }
