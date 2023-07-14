@@ -15,6 +15,7 @@ tools=(
     "curl"
     "dog"
     # "findutils"
+    # "exifrenamer"
     "font-fira-code-nerd-font"
     "fzf"
     "git"
