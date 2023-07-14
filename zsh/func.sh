@@ -1,7 +1,10 @@
 # shellcheck disable=2116,2154,2206,2207
 
 ipi() {
-    curl -s "https://ipinfo.io/widget/demo/${1:-$(curl -s https://ipecho.net/plain)}" -H 'referer: https://ipinfo.io/' | jq '.data' | jq --arg delim '.' 'reduce (tostream|select(length==2)) as $i ({};.[[$i[0][]|tostring]|join($delim)] = $i[1])'
+    curl -s "https://ipinfo.io/widget/demo/${1:-$(curl -s https://ipecho.net/plain)}" \
+        -H 'referer: https://ipinfo.io/' \
+        | jq '.data' \
+        | jq --arg delim '.' 'reduce (tostream|select(length==2)) as $i ({};.[[$i[0][]|tostring]|join($delim)] = $i[1])'
 }
 
 doh() {
