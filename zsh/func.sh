@@ -34,6 +34,10 @@ ymus() {
         --external-downloader-args "$(echo "${ARIA_ARGS[@]}")" "$@"
 }
 
+ipi() {
+    curl -s "https://ipinfo.io/widget/demo/${1:-$(curl -s https://ipecho.net/plain)}" -H 'referer: https://ipinfo.io/' | jq
+}
+
 doh() {
     query="@https://${2:-1.1.1.1/dns-query}"
     echo "${query}"
