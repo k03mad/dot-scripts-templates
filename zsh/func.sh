@@ -1,5 +1,9 @@
 # shellcheck disable=2116,2154,2206,2207
 
+chs() {
+    curl "cheat.sh/$1"
+}
+
 ipi() {
     curl -s "https://ipinfo.io/widget/demo/${1:-$(curl -s https://ipecho.net/plain)}" \
         -H 'referer: https://ipinfo.io/' \
