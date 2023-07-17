@@ -54,6 +54,10 @@ fi
 if [ -f "${HOME}/.workrc" ]; then
     source "${HOME}/.workrc"
 
-    JAVA_HOME="$(/usr/libexec/java_home -v 16)"
-    export JAVA_HOME
+    # JAVA_HOME="$(/usr/libexec/java_home -v 16)"
+    # export JAVA_HOME
+fi
+
+if [ -f "${HOME}/.keyrc" ]; then
+    source "${HOME}/.keyrc"
 fi
