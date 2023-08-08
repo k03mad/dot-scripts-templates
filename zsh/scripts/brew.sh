@@ -41,6 +41,7 @@ tools=(
     # "topgrade"
     # "tree"
     "wget"
+    "whois"
     # "yt-dlp"
     "zsh"
     "MisterTea/et/et"
