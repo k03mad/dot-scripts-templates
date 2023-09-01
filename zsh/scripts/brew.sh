@@ -10,6 +10,7 @@ taps=(
 tools=(
     "android-platform-tools"
     "aria2"
+    "balenaetcher"
     # "bettercap"
     # "ccat"
     "curl"
