@@ -5,6 +5,7 @@ tools=(
     # "bottom"
     # "broot"
     "cargo-update"
+    "eza"
     # "fd-find"
     # "hurl"
     "lsd"
