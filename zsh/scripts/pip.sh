@@ -6,4 +6,4 @@ tools=(
 )
 
 printf "✨ %s\n" "${tools[@]}"
-pip install -U "${tools[@]}"
+python3 -m pip install -U "${tools[@]}"
