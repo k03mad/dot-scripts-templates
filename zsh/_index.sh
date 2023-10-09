@@ -9,4 +9,3 @@ source "${dir}/p10k.sh"
 
 source "${dir}/alias.sh"
 source "${dir}/func.sh"
-source "${dir}/eval.sh"
