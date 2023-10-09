@@ -25,4 +25,6 @@ zstyle ':fzf-tab:complete:cat:*' fzf-preview '! [[ $(file --mime-type $realpath)
 zstyle ':fzf-tab:complete:ccat:*' fzf-preview '! [[ $(file --mime-type $realpath) =~ "directory|binary" ]] && ccat --color="always" $realpath'
 
 source "${ZSH}/oh-my-zsh.sh"
-autoload -Uz compinit && compinit
+
+autoload -Uz compinit
+compinit
