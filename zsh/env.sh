@@ -1,5 +1,7 @@
 # shellcheck source=/dev/null
 
+setopt histignorealldups
+
 export DOT_FOLDER="${HOME}/git/dot-scripts-templates"
 export DOT_FOLDER_EXTRA="${DOT_FOLDER}/extra"
 export DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
