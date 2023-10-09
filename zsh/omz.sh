@@ -26,5 +26,7 @@ zstyle ':fzf-tab:complete:ccat:*' fzf-preview '! [[ $(file --mime-type $realpath
 
 source "${ZSH}/oh-my-zsh.sh"
 
+eval "$(zoxide init zsh)"
+
 autoload -Uz compinit
 compinit
