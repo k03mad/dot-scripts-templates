@@ -26,6 +26,7 @@ export PATH="\
 /data/data/com.termux/files/usr/bin:\
 /data/data/com.termux/files/usr/bin/applets:\
 /opt/homebrew/bin:\
+/opt/homebrew/sbin:\
 /opt/homebrew/opt/curl/bin:\
 /sbin:\
 /usr/local/bin:\
