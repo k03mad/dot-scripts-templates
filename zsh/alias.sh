@@ -17,7 +17,7 @@ alias df='df -h'
 alias du='du -h'
 
 # misc
-alias aria="aria2c --continue=true --split=16 --max-connection-per-server=16 --min-split-size=1M --max-concurrent-downloads=1"
+alias aria="aria2c --continue=true --split=10 --max-connection-per-server=10 --min-split-size=1M --max-concurrent-downloads=1 --check-certificate=false"
 alias ytv="yt-dlp -v -o \"%(upload_date)s %(title)s.%(ext)s\" -f \"bv*+?ba/b\" --extractor-args \"youtube:player_client=default,ios\" -S hdr:dv,res,vcodec:av1,acodec:opus,br --sponsorblock-mark all --sponsorblock-remove \"sponsor, selfpromo\" --embed-thumbnail --embed-chapters --embed-metadata --embed-subs --sub-langs all"
 
 alias s="sudo \$(fc -ln -1)"
