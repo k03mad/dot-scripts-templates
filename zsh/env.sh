@@ -20,9 +20,6 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1
 
-export ANDROID_HOME="${HOME}/Library/Android/sdk"
-export ANDROID_HOME_BUILD_TOOLS="${ANDROID_HOME}/build-tools/$(ls "${ANDROID_HOME}/build-tools" | sort -r | head -n 1)"
-
 export NVM_LAZY_LOAD="true"
 
 export PATH="\
@@ -45,9 +42,6 @@ ${HOME}/arcadia:\
 ${HOME}/bin:\
 ${HOME}/go/bin:\
 ${HOME}/.gvm/go/bin:\
-${ANDROID_HOME}/tools:\
-${ANDROID_HOME}/platform-tools:\
-${ANDROID_HOME_BUILD_TOOLS}:\
 ${PATH}\
 "
 
@@ -65,8 +59,9 @@ fi
 if [ -f "${HOME}/.workrc" ]; then
     source "${HOME}/.workrc"
 
-    # JAVA_HOME="$(/usr/libexec/java_home -v 16)"
-    # export JAVA_HOME
+    export ANDROID_HOME="${HOME}/Library/Android/sdk"
+    export ANDROID_HOME_BUILD_TOOLS="${ANDROID_HOME}/build-tools/$(ls "${ANDROID_HOME}/build-tools" | sort -r | head -n 1)"
+    export PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME_BUILD_TOOLS}:${PATH}"
 fi
 
 if [ -f "${HOME}/.keyrc" ]; then
