@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
 
 tools=(
-    # "check-imports"
+    "@k03mad/dns-leak"
+    "check-imports"
     # "fx"
     # "http-server"
     # "jay-repl"
