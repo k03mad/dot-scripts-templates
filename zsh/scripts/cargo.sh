@@ -5,14 +5,14 @@ tools=(
     # "bottom"
     # "broot"
     "cargo-update"
-    "eza"
+    # "eza"
     # "fd-find"
     # "hurl"
-    "lsd"
+    # "lsd"
     # "procs"
     # "prometheus_wireguard_exporter"
     # "viu"
-    "zoxide"
+    # "zoxide"
 )
 
 printf "✨ %s\n" "${tools[@]}"
