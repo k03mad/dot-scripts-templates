@@ -60,8 +60,11 @@ if [ -f "${HOME}/.workrc" ]; then
     source "${HOME}/.workrc"
 
     export ANDROID_HOME="${HOME}/Library/Android/sdk"
+    export ANDROID_HOME_TOOLS="${ANDROID_HOME}/tools"
     export ANDROID_HOME_BUILD_TOOLS="${ANDROID_HOME}/build-tools/$(ls "${ANDROID_HOME}/build-tools" | sort -r | head -n 1)"
-    export PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME_BUILD_TOOLS}:${PATH}"
+    export ANDROID_HOME_PLATFORM_TOOLS="${ANDROID_HOME}/platform-tools"
+
+    export PATH="${ANDROID_HOME_TOOLS}:${ANDROID_HOME_PLATFORM_TOOLS}:${ANDROID_HOME_BUILD_TOOLS}:${PATH}"
 fi
 
 if [ -f "${HOME}/.keyrc" ]; then
