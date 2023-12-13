@@ -1,18 +1,16 @@
 #!/usr/bin/env zsh
 
 tools=(
-    # "bandwhich"
-    # "bottom"
-    # "broot"
+    "bandwhich"
+    "bottom"
+    "broot"
     "cargo-update"
-    # "eza"
-    # "fd-find"
-    # "hurl"
-    # "lsd"
-    # "procs"
-    # "prometheus_wireguard_exporter"
-    # "viu"
-    # "zoxide"
+    "eza"
+    "fd-find"
+    "lsd"
+    "procs"
+    "viu"
+    "zoxide"
 )
 
 printf "✨ %s\n" "${tools[@]}"

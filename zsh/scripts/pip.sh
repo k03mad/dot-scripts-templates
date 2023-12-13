@@ -2,7 +2,7 @@
 
 tools=(
     "cf-speedtest"
-    # "yt-dlp"
+    "yt-dlp"
 )
 
 printf "✨ %s\n" "${tools[@]}"
