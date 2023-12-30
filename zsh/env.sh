@@ -21,6 +21,7 @@ export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1
 
 export NVM_LAZY_LOAD="true"
+export M2_HOME="/usr/local/bin/maven"
 
 export PATH="\
 /data/data/com.termux/files/usr/bin:\
@@ -42,6 +43,7 @@ ${HOME}/arcadia:\
 ${HOME}/bin:\
 ${HOME}/go/bin:\
 ${HOME}/.gvm/go/bin:\
+${M2_HOME}/bin:\
 ${PATH}\
 "
 
