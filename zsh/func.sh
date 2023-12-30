@@ -113,6 +113,6 @@ npmup() {
 }
 
 prdel() {
-    curl -X POST -vg "http://localhost:12000/api/v1/admin/tsdb/delete_series?match[]=$1"
+    curl -X POST -v -g "http://localhost:12000/api/v1/admin/tsdb/delete_series?match[]=$1"
     curl -X POST -v http://localhost:12000/api/v1/admin/tsdb/clean_tombstones
 }
