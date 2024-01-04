@@ -23,6 +23,15 @@ export ET_NO_TELEMETRY=1
 export NVM_LAZY_LOAD="true"
 export M2_HOME="/usr/local/bin/maven"
 
+export PNPM_HOME="${HOME}/Library/pnpm"
+
+if [ -n "${TERMUX_VERSION}" ]; then
+    export SKIP_NVMRC=true
+    export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+    export OPENSSL_DIR="${PREFIX}"
+    export PNPM_HOME="${HOME}/.local/share/pnpm"
+fi
+
 export PATH="\
 /data/data/com.termux/files/usr/bin:\
 /data/data/com.termux/files/usr/bin/applets:\
@@ -44,6 +53,7 @@ ${HOME}/bin:\
 ${HOME}/go/bin:\
 ${HOME}/.gvm/go/bin:\
 ${M2_HOME}/bin:\
+${PNPM_HOME}:\
 ${PATH}\
 "
 
@@ -51,12 +61,6 @@ export FPATH="\
 ${HOME}/.zfunc:\
 ${FPATH}\
 "
-
-if [ -n "${TERMUX_VERSION}" ]; then
-    export SKIP_NVMRC=true
-    export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-    export OPENSSL_DIR="${PREFIX}"
-fi
 
 if [ -f "${HOME}/.workrc" ]; then
     source "${HOME}/.workrc"
