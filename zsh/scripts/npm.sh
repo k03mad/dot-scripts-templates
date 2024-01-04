@@ -15,8 +15,12 @@ pnpmTools=(
     "tldr"
 )
 
-printf "✨ npm: %s\n" "${npmTools[@]}"
+printf "✨ npm instal: %s\n" "${npmTools[@]}"
+
 npm i "${npmTools[@]}" -g
 
-printf "✨ pnpm: %s\n" "${pnpmTools[@]}"
+printf "\n"
+printf "✨ pnpm install: %s\n" "${pnpmTools[@]}"
+printf "\n"
+
 pnpm i "${pnpmTools[@]}" -g

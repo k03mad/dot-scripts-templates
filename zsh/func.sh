@@ -93,6 +93,10 @@ zshup() {
 }
 
 npmup() {
+    npmls
+
+    printf "✨ npm update\n\n"
+
     OUTDATED=$(npm outdated -g --parseable --depth=0)
 
     NPM_FROM=($(echo "$OUTDATED" | cut -d: -f3))
@@ -110,6 +114,9 @@ npmup() {
     if (( ${#NPM_TO[@]} != 0 )); then
         npm i "${NPM_TO[@]}" -g
     fi
+
+    printf "✨ pnpm update\n\n"
+    pnpm update -g --latest
 }
 
 prdel() {
