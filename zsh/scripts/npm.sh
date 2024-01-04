@@ -1,6 +1,10 @@
 #!/usr/bin/env zsh
 
-tools=(
+npmTools=(
+    "pnpm"
+)
+
+pnpmTools=(
     "@k03mad/dns-leak"
     "check-imports"
     "fx"
@@ -11,5 +15,8 @@ tools=(
     "tldr"
 )
 
-printf "✨ %s\n" "${tools[@]}"
-npm i "${tools[@]}" -g
+printf "✨ npm: %s\n" "${npmTools[@]}"
+npm i "${npmTools[@]}" -g
+
+printf "✨ pnpm: %s\n" "${pnpmTools[@]}"
+pnpm i "${pnpmTools[@]}" -g
