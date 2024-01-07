@@ -18,6 +18,7 @@ tools=(
     "exifrenamer"
     "font-fira-code-nerd-font"
     "fzf"
+    "gh"
     "git"
     "gping"
     "htop"
