@@ -70,7 +70,8 @@ alias pipin="\${DOT_FOLDER_ZSH_SCRIPTS}/pip.sh"
 alias pipup="\${DOT_FOLDER_ZSH_SCRIPTS}/pip.sh"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
-alias npmls="echo \"✨ npm ls\n\" && npm ls -g --depth=0 && (npm outdated -g || true) && echo \"\" && echo \"✨ pnpm ls\n\" && pnpm ls -g && echo \"\" && pnpm outdated -g"
+alias npmls="npm ls -g --depth=0 && npm outdated -g"
+alias npmcl="npm ls -g --json | jq -r '.dependencies|keys-[\"npm\",\"corepack\"]|join(\"\n\")' | xargs -t npm remove -g"
 
 alias nvmin="nvm install \$(cat .nvmrc) && npmin"
 alias nvmup="nvm install node && npmin"
