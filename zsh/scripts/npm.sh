@@ -5,6 +5,7 @@ tools=(
     "check-imports"
     "fx"
     "http-server"
+    "knip"
     "npkill"
     "npm-check"
     "npm-check-updates"
