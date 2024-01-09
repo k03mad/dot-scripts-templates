@@ -3,6 +3,7 @@
 tools=(
     "@k03mad/dns-leak"
     "check-imports"
+    "fkill-cli"
     "fx"
     "http-server"
     "knip"
