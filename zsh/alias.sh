@@ -33,6 +33,8 @@ alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-dat
 
 alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=3000000 status=progress && del ./testfile.mad"
 
+alias aadb="aapt dump badging"
+
 # adb
 alias adbenable="adb shell pm enable --user 0"
 alias adbdisable="adb shell pm disable-user --user 0"
