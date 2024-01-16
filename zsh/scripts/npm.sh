@@ -2,6 +2,7 @@
 
 tools=(
     "@k03mad/dns-leak"
+    "@k03mad/ip2geo"
     "check-imports"
     "fkill-cli"
     "fx"
