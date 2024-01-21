@@ -1,6 +1,10 @@
 #!/usr/bin/env zsh
 
-tools=(
+npmTools=(
+    "pnpm"
+)
+
+pnpmTools=(
     "@k03mad/dns-leak"
     "@k03mad/ip2geo"
     "check-imports"
@@ -14,5 +18,12 @@ tools=(
     "tldr"
 )
 
-printf "✨ npm instal: %s\n" "${tools[@]}"
-npm i "${tools[@]}" -g
+printf "✨ npm instal: %s\n" "${npmTools[@]}"
+
+npm i "${npmTools[@]}" -g
+
+printf "\n"
+printf "✨ pnpm install: %s\n" "${pnpmTools[@]}"
+printf "\n"
+
+pnpm i "${pnpmTools[@]}" -g
