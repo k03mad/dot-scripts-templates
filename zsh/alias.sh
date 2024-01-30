@@ -119,9 +119,9 @@ alias npmcl="\
     echo \
     && echo ✨ npm rm \
     && echo \
-    && npm ls -g --json \
+    && (npm ls -g --json \
         | jq -r '.dependencies|keys-[\"npm\",\"corepack\",\"pnpm\"]|join(\"\n\")' \
-        | xargs -t npm remove -g \
+        | xargs -t npm remove -g || true) \
     && echo ✨ pnpm rm \
     && echo \
     && echo rm -rf \$(dirname \$(pnpm root -g)) \
