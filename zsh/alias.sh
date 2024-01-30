@@ -58,6 +58,7 @@ alias pkgup="pkg update && pkg upgrade && pkg autoclean && pkg clean && apt auto
 
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
 alias brewup="brew list && brew update && brew upgrade && brew autoremove && brew cleanup -s && brew doctor"
+alias brewcl="brew remove $(brew list --formula)"
 
 alias cargoin="\${DOT_FOLDER_ZSH_SCRIPTS}/cargo.sh"
 alias cargoup="rustup update && cargo install-update -a"
