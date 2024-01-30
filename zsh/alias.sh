@@ -128,7 +128,7 @@ alias npmcl="\
     && echo rm -rf \$(pnpm store path) \
     && echo Press enter to continue... \
     && read -s -n 2 \
-    && rm -rf \$(dirname \$(pnpm root -g)) \
+    && rm -rfv \$(dirname \$(pnpm root -g)) \
     && rm -rf \$(pnpm store path)
 "
 
