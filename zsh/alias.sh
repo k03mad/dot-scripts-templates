@@ -1,4 +1,4 @@
-# shellcheck disable=2139,2154
+# shellcheck disable=SC2154
 
 # rewrites
 alias sudo="sudo "
@@ -53,7 +53,7 @@ alias pkgup="pkg update && pkg upgrade && pkg autoclean && pkg clean && apt auto
 
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
 alias brewup="brew list && brew update && brew upgrade && brew autoremove && brew cleanup -s && brew doctor"
-alias brewcl="brew remove $(brew list --formula)"
+alias brewcl="brew remove \$(brew list --formula)"
 
 alias cargoin="\${DOT_FOLDER_ZSH_SCRIPTS}/cargo.sh"
 alias cargoup="rustup update && cargo install-update -a"
@@ -66,7 +66,7 @@ alias pipup="\${DOT_FOLDER_ZSH_SCRIPTS}/pip.sh"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="echo \"✨ npm ls\n\" && npm ls -g --depth=0 && (npm outdated -g || true) && echo \"\" && echo \"✨ pnpm ls\n\" && pnpm ls -g && echo \"\" && pnpm outdated -g"
-alias npmcl="echo \"✨ pnpm rm\n\" && rm -rfv $(pnpm root -g) && rm -rf $(pnpm store path) && echo \"\n✨ npm rm\n\" && npm ls -g --json | jq -r '.dependencies|keys-[\"npm\",\"corepack\",\"pnpm\"]|join(\"\n\")' | xargs -t npm remove -g"
+alias npmcl="echo \"✨ pnpm rm\n\" && rm -rfv \$(pnpm root -g) && rm -rf \$(pnpm store path) && echo \"\n✨ npm rm\n\" && npm ls -g --json | jq -r '.dependencies|keys-[\"npm\",\"corepack\",\"pnpm\"]|join(\"\n\")' | xargs -t npm remove -g"
 
 alias nvmin="nvm install \$(cat .nvmrc) && npmin"
 alias nvmup="nvm install node && npmin"

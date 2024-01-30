@@ -1,4 +1,4 @@
-# shellcheck disable=2116,2154,2206,2207
+# shellcheck disable=SC2206,SC2207,SC2116,SC2154
 
 chs() {
     curl "cheat.sh/$1"
