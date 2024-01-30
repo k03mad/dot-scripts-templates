@@ -3,12 +3,7 @@
 # rewrites
 alias sudo="sudo "
 
-alias rm="rm -rfv"
 alias del="rm -rfv"
-
-alias mkdir="mkdir -pv"
-alias cp="cp -v"
-alias mv="mv -v"
 
 alias chown="chown -v"
 alias chmod="chmod -v"
@@ -71,6 +66,7 @@ alias pipup="\${DOT_FOLDER_ZSH_SCRIPTS}/pip.sh"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="echo \"✨ npm ls\n\" && npm ls -g --depth=0 && (npm outdated -g || true) && echo \"\" && echo \"✨ pnpm ls\n\" && pnpm ls -g && echo \"\" && pnpm outdated -g"
+alias npmcl="echo \"✨ pnpm rm\n\" && rm -rfv $(pnpm root -g) && rm -rf $(pnpm store path) && echo \"\n✨ npm rm\n\" && npm ls -g --json | jq -r '.dependencies|keys-[\"npm\",\"corepack\",\"pnpm\"]|join(\"\n\")' | xargs -t npm remove -g"
 
 alias nvmin="nvm install \$(cat .nvmrc) && npmin"
 alias nvmup="nvm install node && npmin"
