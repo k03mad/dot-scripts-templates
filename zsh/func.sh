@@ -95,7 +95,9 @@ zshup() {
 npmup() {
     npmls
 
-    printf "✨ npm update\n\n"
+    echo
+    echo "✨ ${c[green]}npm update${c[reset]}"
+    echo
 
     OUTDATED=$(npm outdated -g --parseable --depth=0)
 
@@ -108,14 +110,17 @@ npmup() {
     NPM_TO=(${NPM_TO[@]/#corepack@*})
 
     for (( i = 1; i <= $#NPM_FROM; i++ )) do
-        printf "✨ %s => %s\n" "${NPM_FROM[i]}" "${NPM_TO[i]}";
+        echo "✨ ${c[yellow]}${NPM_FROM[i]}${c[reset]} => ${c[green]}${NPM_TO[i]}${c[reset]}"
     done
 
     if (( ${#NPM_TO[@]} != 0 )); then
         npm i "${NPM_TO[@]}" -g
     fi
 
-    printf "✨ pnpm update\n\n"
+    echo
+    echo "✨ ${c[green]}pnpm update${c[reset]}"
+    echo
+
     pnpm update -g --latest
 }
 

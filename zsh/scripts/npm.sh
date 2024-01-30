@@ -17,6 +17,7 @@ pnpmTools=(
     "npm-check-updates"
 )
 
+printf "\n"
 printf "✨ npm install: %s\n" "${npmTools[@]}"
 
 npm i "${npmTools[@]}" -g
