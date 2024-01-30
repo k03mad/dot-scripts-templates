@@ -135,7 +135,7 @@ alias npmcl="\
 
 alias nvmin="nvm install \$(cat .nvmrc) && echo && npmin"
 alias nvmup="nvm install node && echo && npmin"
-alias nvmcl="rm \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm \${NVM_DIR}/.cache/bin"
+alias nvmcl="rm -rfv \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm -rfv \${NVM_DIR}/.cache/bin"
 alias nvmls="\
     echo \
     && echo \"✨ \${c[green]}npm  \${c[blue]}current\${c[reset]} v\$(npm -v)\" \
