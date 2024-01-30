@@ -133,8 +133,8 @@ alias npmcl="\
     && rm -rf \$(pnpm store path)
 "
 
-alias nvmin="nvm install \$(cat .nvmrc) && npmin"
-alias nvmup="nvm install node && npmin"
+alias nvmin="nvm install \$(cat .nvmrc) && echo && npmin"
+alias nvmup="nvm install node && echo && npmin"
 alias nvmcl="rm \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm \${NVM_DIR}/.cache/bin"
 alias nvmls="\
     echo \
