@@ -129,8 +129,8 @@ alias npmcl="\
     && echo rm -rf \$(pnpm store path) \
     && echo Press enter to continue... \
     && read -s -n 2 \
-    && rm -rfv \$(dirname \$(pnpm root -g)) \
-    && rm -rfv \$(pnpm store path)
+    && rm -rf \$(dirname \$(pnpm root -g)) \
+    && rm -rf \$(pnpm store path)
 "
 
 alias nvmin="nvm install \$(cat .nvmrc) && npmin"
