@@ -15,7 +15,6 @@ pnpmTools=(
     "npkill"
     "npm-check"
     "npm-check-updates"
-    "tldr"
 )
 
 printf "✨ npm install: %s\n" "${npmTools[@]}"
