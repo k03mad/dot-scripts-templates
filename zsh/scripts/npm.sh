@@ -15,10 +15,10 @@ pnpmTools=(
     "npkill"
     "npm-check"
     "npm-check-updates"
-    "tldr"
 )
 
-printf "✨ npm instal: %s\n" "${npmTools[@]}"
+printf "\n"
+printf "✨ npm install: %s\n" "${npmTools[@]}"
 
 npm i "${npmTools[@]}" -g
 

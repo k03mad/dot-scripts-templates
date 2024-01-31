@@ -1,5 +1,4 @@
-# shellcheck source=/dev/null disable=2154
-
+# shellcheck source=/dev/null disable=SC2154
 dir=${funcsourcetrace[1]%/*}
 
 source "${dir}/env.sh"
