@@ -12,17 +12,25 @@ ipi() {
 }
 
 doh() {
-    query="@https://${2:-1.1.1.1}/dns-query"
-    echo "${query}"
+    resolver=${2:-@https://one.one.one.one/dns-query}
 
-    dog "$1" --time --https "${query}"
+    if [ -z "$2" ]; then
+        echo "${resolver}"
+    fi
+
+    echo
+    dog "$1" --time --https "${resolver}"
 }
 
 dot() {
-    query="@${2:-1.1.1.1}"
-    echo "${query}"
+    resolver=${2:-@one.one.one.one}
 
-    dog "$1" --time --tls "${query}"
+    if [ -z "$2" ]; then
+        echo "${resolver}"
+    fi
+
+    echo
+    dog "$1" --time --tls "${resolver}"
 }
 
 gc() {
