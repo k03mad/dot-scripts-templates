@@ -126,6 +126,7 @@ npmup() {
     fi
 
     echo
+    echo
     echo "✨ ${c[green]}pnpm update${c[reset]}"
     echo
 
