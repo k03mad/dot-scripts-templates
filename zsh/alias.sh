@@ -13,7 +13,7 @@ alias aria="aria2c \
     --max-connection-per-server=5 \
     --min-split-size=1M \
     --max-tries=5 \
-    --retry-wait=5
+    --retry-wait=5 \
 "
 alias ytv="yt-dlp \
     -v -o \"%(upload_date)s %(title)s.%(ext)s\" \
@@ -26,7 +26,7 @@ alias ytv="yt-dlp \
     --embed-chapters \
     --embed-metadata \
     --embed-subs \
-    --sub-langs all
+    --sub-langs all \
 "
 
 alias s="sudo \$(fc -ln -1)"
@@ -52,7 +52,7 @@ alias adbenable="adb shell pm enable --user 0"
 alias adbdisable="adb shell pm disable-user --user 0"
 alias adbdnson="\
     adb shell settings put global private_dns_mode hostname \
-    && adb shell settings put global private_dns_specifier
+    && adb shell settings put global private_dns_specifier \
 "
 alias adbdnsoff="adb shell settings put global private_dns_mode off"
 alias adblist="\
@@ -62,7 +62,7 @@ alias adblist="\
     && echo \
     && echo disabled: \
     && echo \
-    && adb shell 'pm list packages -d' | sed 's/package://' | sort
+    && adb shell 'pm list packages -d' | sed 's/package://' | sort \
 "
 
 # pkg managers
@@ -71,7 +71,7 @@ alias aptup="\
     sudo apt-get update \
     && sudo apt-get dist-upgrade \
     && sudo apt-get autoremove \
-    && sudo apt-get clean
+    && sudo apt-get clean \
 "
 
 alias pkgup="\
@@ -79,7 +79,7 @@ alias pkgup="\
     && pkg upgrade \
     && pkg autoclean \
     && pkg clean \
-    && apt autoremove
+    && apt autoremove \
 "
 
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
@@ -89,7 +89,7 @@ alias brewup="\
     && brew upgrade \
     && brew autoremove \
     && brew cleanup -s \
-    && brew doctor
+    && brew doctor \
 "
 alias brewcl="brew remove \$(brew list --formula)"
 
@@ -113,7 +113,7 @@ alias npmls="\
     && echo ✨ \${c[green]}pnpm ls\${c[reset]} \
     && echo \
     && pnpm ls -g \
-    && pnpm outdated -g
+    && pnpm outdated -g \
 "
 alias npmcl="\
     echo \
@@ -128,7 +128,7 @@ alias npmcl="\
     && echo rm -rf \$(dirname \$(pnpm root -g)) \
     && echo Press enter to continue... \
     && read -s -n 2 \
-    && rm -rf \$(dirname \$(pnpm root -g))
+    && rm -rf \$(dirname \$(pnpm root -g)) \
 "
 
 alias nvmin="nvm install \$(cat .nvmrc) && echo && npmin"
@@ -143,7 +143,7 @@ alias nvmls="\
     && echo \"✨ \${c[green]}node \${c[magenta]}remote\${c[reset]}  \$(nvm version-remote)\" \
     && echo \
     && nvm ls \
-    && npmls
+    && npmls \
 "
 
 alias zshin="\${DOT_FOLDER_ZSH_SCRIPTS}/zsh.sh"
