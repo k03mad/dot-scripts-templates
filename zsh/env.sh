@@ -1,4 +1,4 @@
-# shellcheck source=/dev/null
+# shellcheck source=/dev/null disable=SC2012,SC2155
 setopt histignorealldups
 
 export DOT_FOLDER="${HOME}/git/dot-scripts-templates"
@@ -62,10 +62,18 @@ if [ -f "${HOME}/.workrc" ]; then
 
     export ANDROID_HOME="${HOME}/Library/Android/sdk"
     export ANDROID_HOME_TOOLS="${ANDROID_HOME}/tools"
-    export ANDROID_HOME_BUILD_TOOLS="${ANDROID_HOME}/build-tools/\$(ls "${ANDROID_HOME}/build-tools" | sort -r | head -n 1)"
     export ANDROID_HOME_PLATFORM_TOOLS="${ANDROID_HOME}/platform-tools"
 
-    export PATH="${ANDROID_HOME_TOOLS}:${ANDROID_HOME_PLATFORM_TOOLS}:${ANDROID_HOME_BUILD_TOOLS}:${PATH}"
+    export ANDROID_HOME_BUILD_TOOLS_VERSION=$(ls "${ANDROID_HOME}/build-tools" | sort -r | head -n 1)
+    export ANDROID_HOME_BUILD_TOOLS="${ANDROID_HOME}/build-tools/${ANDROID_HOME_BUILD_TOOLS_VERSION}"
+
+    export PATH="\
+${ANDROID_HOME_TOOLS}:\
+${ANDROID_HOME_PLATFORM_TOOLS}:\
+${ANDROID_HOME_BUILD_TOOLS}:\
+${ANDROID_HOME_BUILD_TOOLS_VERSION}:\
+${PATH}\
+    "
 fi
 
 if [ -f "${HOME}/.keyrc" ]; then
