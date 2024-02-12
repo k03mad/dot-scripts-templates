@@ -9,10 +9,10 @@ alias aria="aria2c \
     --continue=true \
     --remote-time=true \
     --check-certificate=false \
-    --split=5 \
-    --max-connection-per-server=5 \
+    --split=3 \
+    --max-connection-per-server=3 \
     --min-split-size=1M \
-    --max-tries=5 \
+    --max-tries=12 \
     --retry-wait=5 \
 "
 alias ytv="yt-dlp \
