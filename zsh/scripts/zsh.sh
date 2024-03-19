@@ -39,3 +39,6 @@ mkdir "${ZSH_CUSTOM_THEMES}"
 cd "${ZSH_CUSTOM_THEMES}" || exit
 
 git clone --depth=1 "https://github.com/$theme.git"
+
+cd "${ZSH}" || exit
+git reset --hard
