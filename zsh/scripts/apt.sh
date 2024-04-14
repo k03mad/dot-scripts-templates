@@ -2,6 +2,7 @@
 
 tools=(
     "aria2"
+    "command-not-found"
     "curl"
     "fzf"
     "git"
