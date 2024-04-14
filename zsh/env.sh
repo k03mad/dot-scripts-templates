@@ -58,6 +58,11 @@ if [ -n "${TERMUX_VERSION}" ]; then
     export OPENSSL_DIR="${PREFIX}"
 fi
 
+if [ -n "${IS_RPI}" ]; then
+    sudo sh -c 'echo 0 > /sys/class/leds/PWR/brightness'
+    sudo sh -c 'echo 0 > /sys/class/leds/ACT/brightness'
+fi
+
 if [ -f "${HOME}/.workrc" ]; then
     source "${HOME}/.workrc"
 
