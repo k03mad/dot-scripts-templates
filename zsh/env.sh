@@ -63,7 +63,7 @@ fi
 if [ -n "${IS_RPI}" ]; then
     sudo sh -c 'echo 0 > /sys/class/leds/PWR/brightness'
     sudo sh -c 'echo 0 > /sys/class/leds/ACT/brightness'
-    sudo ~/git/lan951x-led-ctl --fdx=0 --lnk=0 --spd=0
+    sudo "${GIT_FOLDER}/lan951x-led-ctl" --fdx=0 --lnk=0 --spd=0
 fi
 
 if [ -f "${HOME}/.workrc" ]; then
