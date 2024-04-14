@@ -1,7 +1,9 @@
 # shellcheck source=/dev/null disable=SC2012,SC2155
 setopt histignorealldups
 
-export DOT_FOLDER="${HOME}/git/dot-scripts-templates"
+export GIT_FOLDER="${HOME}/git"
+
+export DOT_FOLDER="${GIT_FOLDER}/dot-scripts-templates"
 export DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
 export DOT_FOLDER_ZSH_SCRIPTS="${DOT_FOLDER}/zsh/scripts"
 export DOT_FOLDER_CONFIGS="${DOT_FOLDER}/configs"
@@ -61,6 +63,7 @@ fi
 if [ -n "${IS_RPI}" ]; then
     sudo sh -c 'echo 0 > /sys/class/leds/PWR/brightness'
     sudo sh -c 'echo 0 > /sys/class/leds/ACT/brightness'
+    sudo ~/git/lan951x-led-ctl --fdx=0 --lnk=0 --spd=0
 fi
 
 if [ -f "${HOME}/.workrc" ]; then
