@@ -1,5 +1,13 @@
 # shellcheck disable=SC2206,SC2207,SC2116,SC2154
 
+w() {
+    echo "${c[green]}which:${c[reset]}"
+    which "$1"
+    echo
+    echo "${c[yellow]}where:${c[reset]}"
+    where "$1"
+}
+
 tldr() {
     curl "cheat.sh/$1"
 }

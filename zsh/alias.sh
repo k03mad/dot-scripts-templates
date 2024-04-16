@@ -31,7 +31,7 @@ alias ytv="yt-dlp \
 
 alias s="sudo \$(fc -ln -1)"
 alias q="exit"
-alias w="which"
+alias й="exit"
 
 alias els="eza --all --long --group-directories-first --modified --icons"
 alias dls="lsd -lA --group-dirs first --date relative --blocks permission,date,size,name"
