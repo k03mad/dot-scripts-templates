@@ -1,10 +1,29 @@
 # shellcheck disable=SC2154
 
-# rewrites
 alias sudo="sudo "
+alias s="sudo \$(fc -ln -1)"
+
+alias q="exit"
+alias й=q
+
 alias del="rm -rfv"
 
-# various
+alias lsd="lsd -lA --group-dirs first --size short --date '+[%d.%m.%y %X]'"
+alias dls="lsd --blocks date,size,name"
+alias sls="lsd --total-size"
+alias tls="dls --tree --ignore-glob node_modules --ignore-glob .git"
+
+alias ft="ag -fi --depth=-1"
+alias ports="sudo lsof -i -P -n | grep LISTEN"
+
+alias dsc="find . -name '.DS_Store' -type f -exec rm -rfv {} \;"
+alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
+
+alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=3000000 status=progress && del ./testfile.mad"
+
+alias aadb="aapt dump badging"
+
+# downloaders
 alias aria="aria2c \
     --continue=true \
     --remote-time=true \
@@ -28,24 +47,6 @@ alias ytv="yt-dlp \
     --embed-subs \
     --sub-langs all \
 "
-
-alias s="sudo \$(fc -ln -1)"
-alias q="exit"
-alias й="exit"
-
-alias els="eza --all --long --group-directories-first --modified --icons"
-alias dls="lsd -lA --group-dirs first --date relative --blocks permission,date,size,name"
-alias tls="dls --tree --ignore-glob node_modules --ignore-glob .git"
-
-alias ft="ag -fi --depth=-1"
-alias ports="sudo lsof -i -P -n | grep LISTEN"
-
-alias dsc="find . -name '.DS_Store' -type f -exec rm -rfv {} \;"
-alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}' && killall Dock"
-
-alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=3000000 status=progress && del ./testfile.mad"
-
-alias aadb="aapt dump badging"
 
 # adb
 alias adbenable="adb shell pm enable --user 0"
