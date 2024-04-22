@@ -10,7 +10,7 @@ alias del="rm -rfv"
 
 alias lsd="lsd -lA --group-dirs first --size short --date '+[%d.%m.%y %X]'"
 alias dls="lsd --blocks date,size,name"
-alias sls="lsd --total-size"
+alias sls="dls --total-size"
 alias tls="dls --tree --ignore-glob node_modules --ignore-glob .git"
 
 alias ft="ag -fi --depth=-1"
