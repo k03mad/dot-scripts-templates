@@ -15,6 +15,7 @@ pnpmTools=(
     "npkill"
     "npm-check"
     "npm-check-updates"
+    "terminal-image-cli"
 )
 
 printf "\n"
