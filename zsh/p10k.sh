@@ -52,8 +52,8 @@
     time                    # current time
     # =========================[ Line #2 ]=========================
     newline
-    package                 # name@version from package.json (https://docs.npmjs.com/files/package.json)
     node_version            # node.js version
+    # package               # name@version from package.json (https://docs.npmjs.com/files/package.json)
     # anaconda              # conda environment (https://conda.io/)
     # asdf                  # asdf version manager (https://github.com/asdf-vm/asdf)
     # aws                   # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
