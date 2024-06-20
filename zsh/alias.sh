@@ -163,12 +163,19 @@ alias grh="git reset --hard"
 alias gbd="git branch -D \$(git branch | grep -v \* | xargs -r)"
 
 alias aa="arc add . && as"
+alias фф=aa
 alias ap="arc push"
+alias фз=ap
 alias am="arc mount ~/arcadia"
+alias фь=am
 alias as="arc status -s"
+alias фы=as
 alias apl="arc pull"
+alias фзд=apl
 alias arh="arc reset --hard"
+alias фкр=arh
 alias abd="arc branch | grep -v trunk | xargs -L 1 arc branch -D"
+alias фив=abd
 
 # service
 alias scstatus="sudo systemctl status"
