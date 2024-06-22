@@ -29,10 +29,10 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     # os_icon               # os identifier
-    context                 # user@hostname #!
+    context                 # user@hostname
     dir                     # current directory
     vcs                     # git status
-    arc #!
+    arc                     # arc status
     # =========================[ Line #2 ]=========================
     newline                 # \n
     prompt_char             # prompt symbol
@@ -47,78 +47,67 @@
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
     background_jobs         # presence of background jobs
-    battery                 # internal battery #!
-    time                    # current time     #!
-    direnv                  # direnv status (https://direnv.net/)
-    asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
-    virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
-    anaconda                # conda environment (https://conda.io/)
-    pyenv                   # python environment (https://github.com/pyenv/pyenv)
-    goenv                   # go environment (https://github.com/syndbg/goenv)
-    #? nodenv               # node.js version from nodenv (https://github.com/nodenv/nodenv)
-    #? nvm                  # node.js version from nvm (https://github.com/nvm-sh/nvm)
-    #? nodeenv              # node.js environment (https://github.com/ekalinin/nodeenv)
-    # node_version          # node.js version
-    # go_version            # go version (https://golang.org)
-    # rust_version          # rustc version (https://www.rust-lang.org)
-    # dotnet_version        # .NET version (https://dotnet.microsoft.com)
-    # php_version           # php version (https://www.php.net/)
-    # laravel_version       # laravel php framework version (https://laravel.com/)
-    # java_version          # java version (https://www.java.com/)
-    # package               # name@version from package.json (https://docs.npmjs.com/files/package.json)
-    rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
-    rvm                     # ruby version from rvm (https://rvm.io)
-    fvm                     # flutter version management (https://github.com/leoafarias/fvm)
-    luaenv                  # lua version from luaenv (https://github.com/cehoffman/luaenv)
-    jenv                    # java version from jenv (https://github.com/jenv/jenv)
-    plenv                   # perl version from plenv (https://github.com/tokuhirom/plenv)
-    perlbrew                # perl version from perlbrew (https://github.com/gugod/App-perlbrew)
-    phpenv                  # php version from phpenv (https://github.com/phpenv/phpenv)
-    scalaenv                # scala version from scalaenv (https://github.com/scalaenv/scalaenv)
-    haskell_stack           # haskell version from stack (https://haskellstack.org/)
-    kubecontext             # current kubernetes context (https://kubernetes.io/)
-    terraform               # terraform workspace (https://www.terraform.io)
-    # terraform_version     # terraform version (https://www.terraform.io)
-    aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
-    aws_eb_env              # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
-    azure                   # azure account name (https://docs.microsoft.com/en-us/cli/azure)
-    gcloud                  # google cloud cli account and project (https://cloud.google.com/)
-    google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
-    toolbox                 # toolbox name (https://github.com/containers/toolbox)
-    #? context              # user@hostname
-    nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
-    ranger                  # ranger shell (https://github.com/ranger/ranger)
-    nnn                     # nnn shell (https://github.com/jarun/nnn)
-    lf                      # lf shell (https://github.com/gokcehan/lf)
-    xplr                    # xplr shell (https://github.com/sayanarijit/xplr)
-    vim_shell               # vim shell indicator (:sh)
-    midnight_commander      # midnight commander shell (https://midnight-commander.org/)
-    nix_shell               # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
-    # vpn_ip                # virtual private network indicator
-    # load                  # CPU load
-    # disk_usage            # disk usage
-    # ram                   # free RAM
-    # swap                  # used swap
-    todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
-    timewarrior             # timewarrior tracking status (https://timewarrior.net/)
-    taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
-    # cpu_arch              # CPU architecture
-    # time                  # current time
+    battery                 # internal battery
+    disk_usage            # disk usage
+    time                    # current time
     # =========================[ Line #2 ]=========================
     newline
-    node_version            # node.js version #!
-    go_version              # go version (https://golang.org) #!
-    rust_version            # rustc version (https://www.rust-lang.org) #!
-    dotnet_version          # .NET version (https://dotnet.microsoft.com) #!
-    php_version             # php version (https://www.php.net/) #!
-    laravel_version         # laravel php framework version (https://laravel.com/) #!
-    java_version            # java version (https://www.java.com/) #!
+    node_version            # node.js version
+    # package               # name@version from package.json (https://docs.npmjs.com/files/package.json)
+    # anaconda              # conda environment (https://conda.io/)
+    # asdf                  # asdf version manager (https://github.com/asdf-vm/asdf)
+    # aws                   # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+    # aws_eb_env            # aws elastic beanstalk environment (https://aws.amazon.com/elasticbeanstalk/)
+    # azure                 # azure account name (https://docs.microsoft.com/en-us/cli/azure)
+    # cpu_arch              # CPU architecture
+    # direnv                # direnv status (https://direnv.net/)
+    # dotnet_version        # .NET version (https://dotnet.microsoft.com)
+    # fvm                   # flutter version management (https://github.com/leoafarias/fvm)
+    # gcloud                # google cloud cli account and project (https://cloud.google.com/)
+    # go_version            # go version (https://golang.org)
+    # goenv                 # go environment (https://github.com/syndbg/goenv)
+    # google_app_cred       # google application credentials (https://cloud.google.com/docs/authentication/production)
+    # haskell_stack         # haskell version from stack (https://haskellstack.org/)
     # ip                    # ip address and bandwidth usage for a specified network interface
-    # public_ip             # public IP address
+    # java_version          # java version (https://www.java.com/)
+    # jenv                  # java version from jenv (https://github.com/jenv/jenv)
+    # kubecontext           # current kubernetes context (https://kubernetes.io/)
+    # laravel_version       # laravel php framework version (https://laravel.com/)
+    # lf                    # lf shell (https://github.com/gokcehan/lf)
+    # load                  # CPU load
+    # luaenv                # lua version from luaenv (https://github.com/cehoffman/luaenv)
+    # midnight_commander    # midnight commander shell (https://midnight-commander.org/)
+    # nix_shell             # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
+    # nnn                   # nnn shell (https://github.com/jarun/nnn)
+    # nodeenv               # node.js environment (https://github.com/ekalinin/nodeenv)
+    # nodenv                # node.js version from nodenv (https://github.com/nodenv/nodenv)
+    # nordvpn               # nordvpn connection status, linux only (https://nordvpn.com/)
+    # nvm                   # node.js version from nvm (https://github.com/nvm-sh/nvm)
+    # perlbrew              # perl version from perlbrew (https://github.com/gugod/App-perlbrew)
+    # php_version           # php version (https://www.php.net/)
+    # phpenv                # php version from phpenv (https://github.com/phpenv/phpenv)
+    # plenv                 # perl version from plenv (https://github.com/tokuhirom/plenv)
     # proxy                 # system-wide http/https/ftp proxy
-    # battery               # internal battery
+    # public_ip             # public IP address
+    # pyenv                 # python environment (https://github.com/pyenv/pyenv)
+    # ram                   # free RAM
+    # ranger                # ranger shell (https://github.com/ranger/ranger)
+    # rbenv                 # ruby version from rbenv (https://github.com/rbenv/rbenv)
+    # rust_version          # rustc version (https://www.rust-lang.org)
+    # rvm                   # ruby version from rvm (https://rvm.io)
+    # scalaenv              # scala version from scalaenv (https://github.com/scalaenv/scalaenv)
+    # swap                  # used swap
+    # taskwarrior           # taskwarrior task count (https://taskwarrior.org/)
+    # terraform             # terraform workspace (https://www.terraform.io)
+    # terraform_version     # terraform version (https://www.terraform.io)
+    # timewarrior           # timewarrior tracking status (https://timewarrior.net/)
+    # todo                  # todo items (https://github.com/todotxt/todo.txt-cli)
+    # toolbox               # toolbox name (https://github.com/containers/toolbox)
+    # vim_shell             # vim shell indicator (:sh)
+    # virtualenv            # python virtual environment (https://docs.python.org/3/library/venv.html)
+    # vpn_ip                # virtual private network indicator
     # wifi                  # wifi speed
-    # example               # example user-defined segment (see prompt_example function below)
+    # xplr                  # xplr shell (https://github.com/sayanarijit/xplr)
   )
 
   # Defines character set used by powerlevel10k. It's best to let `p10k configure` set it for you.
@@ -199,13 +188,13 @@
 
   ################################[ prompt_char: prompt symbol ]################################
   # Green prompt symbol if the last command succeeded.
-  #? typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=76
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=244 #!
+  #typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=76
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=244
   # Red prompt symbol if the last command failed.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=196
   # Default prompt symbol.
-  #? typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='$' #!
+  #typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='$'
   # Prompt symbol in command vi mode.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
   # Prompt symbol in visual vi mode.
@@ -220,9 +209,9 @@
 
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
-  #? typeset -g POWERLEVEL9K_DIR_FOREGROUND=31
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=25 #!
-  typeset -g POWERLEVEL9K_DIR_VISUAL_IDENTIFIER_EXPANSION='' #!
+  #typeset -g POWERLEVEL9K_DIR_FOREGROUND=31
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=25
+  typeset -g POWERLEVEL9K_DIR_VISUAL_IDENTIFIER_EXPANSION=''
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
@@ -232,8 +221,8 @@
   typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=103
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  #? typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=39
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=68 #!
+  #typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=39
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=68
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -357,8 +346,8 @@
 
     #####################################[ vcs: git status ]######################################
   # Branch icon. Set this parameter to '\uF126 ' for the popular Powerline branch icon.
-  #? typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=
-  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 ' #!
+  #typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=
+  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
   # Untracked files icon. It's really a question mark, your font isn't broken.
   # Change the value of this parameter to show a different icon.
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
@@ -381,13 +370,13 @@
       return
     fi
 
-    local    commitMsg='%244F'  # grey foreground #!
+    local    commitMsg='%244F'  # grey foreground
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
       local       meta='%f'     # default foreground
-      #? local   clean='%76F'   # green foreground
-      local      clean='%140F'  # green foreground #!
+      #local   clean='%76F'   # green foreground
+      local      clean='%140F'  # green foreground
       local   modified='%178F'  # yellow foreground
       local  untracked='%39F'   # blue foreground
       local conflicted='%196F'  # red foreground
@@ -476,14 +465,14 @@
     # in this case.
     (( VCS_STATUS_HAS_UNSTAGED == -1 )) && res+=" ${modified}─"
 
-    local commit_subj                                            #!
-    if commit_subj=$(git log -n1 --format=%s 2>/dev/null); then  #!
-      if [[ -n $commit_subj ]]; then                             #!
-        res+=" ${meta}${commitMsg}${commit_subj//\%/%%}"         #!
-      else                                                       #!
-        res+=" ${meta}[no message]"                              #!
-      fi                                                         #!
-    fi                                                           #!
+    local commit_subj
+    if commit_subj=$(git log -n1 --format=%s 2>/dev/null); then
+      if [[ -n $commit_subj ]]; then
+        res+=" ${meta}${commitMsg}${commit_subj//\%/%%}"
+      else
+        res+=" ${meta}[no message]"
+      fi
+    fi
 
     typeset -g my_git_format=$res
   }
@@ -516,7 +505,7 @@
   typeset -g POWERLEVEL9K_VCS_LOADING_VISUAL_IDENTIFIER_COLOR=244
   # Custom icon.
   # typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION='⭐'
-  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION='' #!
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION=''
   # Custom prefix.
   # typeset -g POWERLEVEL9K_VCS_PREFIX='%fon '
 
@@ -578,14 +567,14 @@
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
   # Custom icon.
   # typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_VISUAL_IDENTIFIER_EXPANSION='⭐'
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_VISUAL_IDENTIFIER_EXPANSION='' #!
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_VISUAL_IDENTIFIER_EXPANSION=''
   # Custom prefix.
   # typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PREFIX='%ftook '
 
   #######################[ background_jobs: presence of background jobs ]#######################
   # Don't show the number of background jobs.
-  #? typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=true #!
+  #typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=true
   # Background jobs color.
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=70
   # Custom icon.
@@ -807,10 +796,10 @@
   typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_FOREGROUND=220
   typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_FOREGROUND=160
   # Thresholds for different levels of disk usage (percentage points).
-  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_LEVEL=90
-  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=95
+  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_LEVEL=80
+  typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_LEVEL=90
   # If set to true, hide disk usage when below $POWERLEVEL9K_DISK_USAGE_WARNING_LEVEL percent.
-  typeset -g POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=false
+  typeset -g POWERLEVEL9K_DISK_USAGE_ONLY_WARNING=true
   # Custom icon.
   # typeset -g POWERLEVEL9K_DISK_USAGE_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
@@ -1068,7 +1057,7 @@
   typeset -g POWERLEVEL9K_NODE_VERSION_PROJECT_ONLY=true
   # Custom icon.
   # typeset -g POWERLEVEL9K_NODE_VERSION_VISUAL_IDENTIFIER_EXPANSION='⭐'
-  typeset -g POWERLEVEL9K_NODE_VERSION_VISUAL_IDENTIFIER_EXPANSION='n' #!
+  typeset -g POWERLEVEL9K_NODE_VERSION_VISUAL_IDENTIFIER_EXPANSION='n'
 
   #######################[ go_version: go version (https://golang.org) ]########################
   # Go version color.
@@ -1077,7 +1066,7 @@
   typeset -g POWERLEVEL9K_GO_VERSION_PROJECT_ONLY=true
   # Custom icon.
   # typeset -g POWERLEVEL9K_GO_VERSION_VISUAL_IDENTIFIER_EXPANSION='⭐'
-  typeset -g POWERLEVEL9K_GO_VERSION_VISUAL_IDENTIFIER_EXPANSION='g' #!
+  typeset -g POWERLEVEL9K_GO_VERSION_VISUAL_IDENTIFIER_EXPANSION='g'
 
   #################[ rust_version: rustc version (https://www.rust-lang.org) ]##################
   # Rust version color.
@@ -1117,7 +1106,7 @@
   # Show brief version.
   typeset -g POWERLEVEL9K_JAVA_VERSION_FULL=false
   # Custom icon.
-  typeset -g POWERLEVEL9K_JAVA_VERSION_VISUAL_IDENTIFIER_EXPANSION='j' #!
+  typeset -g POWERLEVEL9K_JAVA_VERSION_VISUAL_IDENTIFIER_EXPANSION='j'
 
   ###[ package: name@version from package.json (https://docs.npmjs.com/files/package.json) ]####
   # Package color.
@@ -1129,7 +1118,7 @@
   #
   # typeset -g POWERLEVEL9K_PACKAGE_CONTENT_EXPANSION='${P9K_PACKAGE_NAME//\%/%%}@${P9K_PACKAGE_VERSION//\%/%%}'
   # Custom icon.
-  # typeset -g POWERLEVEL9K_PACKAGE_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_PACKAGE_VISUAL_IDENTIFIER_EXPANSION='pkg'
 
   #############[ rbenv: ruby version from rbenv (https://github.com/rbenv/rbenv) ]##############
   # Rbenv color.
@@ -1617,21 +1606,21 @@
 
   ################################[ battery: internal battery ]#################################
   # Show battery in red when it's below this level and not connected to power supply.
-  #? typeset -g POWERLEVEL9K_BATTERY_LOW_THRESHOLD=20
-  typeset -g POWERLEVEL9K_BATTERY_LOW_THRESHOLD=50 #!
+  #typeset -g POWERLEVEL9K_BATTERY_LOW_THRESHOLD=20
+  typeset -g POWERLEVEL9K_BATTERY_LOW_THRESHOLD=50
   typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND=160
   # Show battery in green when it's charging or fully charged.
-  #? typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND=70
-  typeset -g POWERLEVEL9K_BATTERY_{DISCONNECTED,CHARGING,CHARGED}_FOREGROUND=60 #!
+  #typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND=70
+  typeset -g POWERLEVEL9K_BATTERY_{DISCONNECTED,CHARGING,CHARGED}_FOREGROUND=60
   # Show battery in yellow when it's discharging.
-  #? typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=178
+  #typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=178
   # Battery pictograms going from low to high level of charge.
-  #? typeset -g POWERLEVEL9K_BATTERY_STAGES=('%K{232}▁' '%K{232}▂' '%K{232}▃' '%K{232}▄' '%K{232}▅' '%K{232}▆' '%K{232}▇' '%K{232}█')
-  typeset -g POWERLEVEL9K_BATTERY_STAGES= #!
+  #typeset -g POWERLEVEL9K_BATTERY_STAGES=('%K{232}▁' '%K{232}▂' '%K{232}▃' '%K{232}▄' '%K{232}▅' '%K{232}▆' '%K{232}▇' '%K{232}█')
+  typeset -g POWERLEVEL9K_BATTERY_STAGES=
   # Don't show the remaining time to charge/discharge.
   typeset -g POWERLEVEL9K_BATTERY_VERBOSE=false
-  typeset -g POWERLEVEL9K_BATTERY_VISUAL_IDENTIFIER_EXPANSION= #!
-  typeset -g POWERLEVEL9K_BATTERY_HIDE_ABOVE_THRESHOLD=99 #!
+  typeset -g POWERLEVEL9K_BATTERY_VISUAL_IDENTIFIER_EXPANSION=
+  typeset -g POWERLEVEL9K_BATTERY_HIDE_ABOVE_THRESHOLD=99
     #####################################[ wifi: wifi speed ]#####################################
   # WiFi color.
   typeset -g POWERLEVEL9K_WIFI_FOREGROUND=68
@@ -1660,18 +1649,18 @@
 
   ####################################[ time: current time ]####################################
   # Current time color.
-  #? typeset -g POWERLEVEL9K_TIME_FOREGROUND=66
-  typeset -g POWERLEVEL9K_TIME_FOREGROUND=60 #!
+  #typeset -g POWERLEVEL9K_TIME_FOREGROUND=66
+  typeset -g POWERLEVEL9K_TIME_FOREGROUND=60
   # Format for the current time: 09:51:02. See `man 3 strftime`.
-  #? typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
-  typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}' #!
+  #typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
+  typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
   # If set to true, time will update when you hit enter. This way prompts for the past
   # commands will contain the start times of their commands as opposed to the default
   # behavior where they contain the end times of their preceding commands.
   typeset -g POWERLEVEL9K_TIME_UPDATE_ON_COMMAND=false
   # Custom icon.
   # typeset -g POWERLEVEL9K_TIME_VISUAL_IDENTIFIER_EXPANSION='⭐'
-  typeset -g POWERLEVEL9K_TIME_VISUAL_IDENTIFIER_EXPANSION='' #!
+  typeset -g POWERLEVEL9K_TIME_VISUAL_IDENTIFIER_EXPANSION=''
   # Custom prefix.
   # typeset -g POWERLEVEL9K_TIME_PREFIX='%fat '
 
@@ -1745,7 +1734,10 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
 
-if [ -f "${ARC_P10K_PROMPT}" ]; then                         #!
-    typeset -g POWERLEVEL9K_ARC_VISUAL_IDENTIFIER_EXPANSION= #!
-    source "${ARC_P10K_PROMPT}"                              #!
-fi                                                           #!
+if [ -f "${ARC_P10K_PROMPT}" ]; then
+    typeset -g POWERLEVEL9K_ARC_VISUAL_IDENTIFIER_EXPANSION=
+    typeset -g POWERLEVEL9K_ARC_CURRENT_DIRECTORY_ONLY=1
+    typeset -ga POWERLEVEL9K_ARC_MODULES=(all)
+
+    source "${ARC_P10K_PROMPT}"
+fi
