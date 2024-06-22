@@ -16,6 +16,7 @@ pnpmTools=(
     "npm-check"
     "npm-check-updates"
     "terminal-image-cli"
+    "vtop"
 )
 
 printf "\n"
