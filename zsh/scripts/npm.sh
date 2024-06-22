@@ -10,13 +10,13 @@ pnpmTools=(
     "check-imports"
     "fkill-cli"
     "fx"
+    "gtop"
     "http-server"
     "knip"
     "npkill"
-    "npm-check"
     "npm-check-updates"
+    "npm-check"
     "terminal-image-cli"
-    "gtop"
     "vtop"
 )
 
