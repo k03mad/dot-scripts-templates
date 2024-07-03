@@ -61,6 +61,11 @@ ac() {
     arc commit -m "$(echo "$@")"
 }
 
+asm() {
+    as
+    arc submit -m "$(echo "$@")"
+}
+
 apr() {
     as
     arc pr create --push -m "$(echo "$@")"
