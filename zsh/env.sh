@@ -16,6 +16,8 @@ export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
 export GIT_CONFIG_GLOBAL="${DOT_FOLDER_CONFIGS}/.gitconfig"
 export MICRO_CONFIG_HOME="${DOT_FOLDER_CONFIGS}/micro"
 
+export ARC_EDITOR="micro"
+
 export FZF_DEFAULT_OPTS="--preview-window 70% --info=hidden --prompt="
 
 export HOMEBREW_NO_ANALYTICS=1
