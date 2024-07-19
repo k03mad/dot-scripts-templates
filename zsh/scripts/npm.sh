@@ -5,6 +5,7 @@ npmTools=(
 )
 
 pnpmTools=(
+    "@k03mad/actual-versions"
     "@k03mad/dns-leak"
     "@k03mad/ip2geo"
     "check-imports"
