@@ -17,7 +17,7 @@ pnpmTools=(
     "npkill"
     "npm-check-updates"
     "npm-check"
-    "terminal-image-cli"
+    "speed-cloudflare-cli"     "terminal-image-cli"
     "vtop"
 )
 
