@@ -6,6 +6,7 @@ npmTools=(
 
 pnpmTools=(
     "@k03mad/actual-versions"
+    "@k03mad/dice"
     "@k03mad/dns-leak"
     "@k03mad/ip2geo"
     "check-imports"
@@ -17,7 +18,7 @@ pnpmTools=(
     "npkill"
     "npm-check-updates"
     "npm-check"
-    "speed-cloudflare-cli" 
+    "speed-cloudflare-cli"
     "terminal-image-cli"
     "vtop"
 )
