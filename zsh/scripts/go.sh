@@ -3,6 +3,7 @@
 tools=(
     "Gelio/go-global-update"
     "owenthereal/ccat"
+    "edoardottt/cariddi/cmd/cariddi"
 )
 
 for i in "${tools[@]}"
