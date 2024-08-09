@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
 
 taps=(
-    "homebrew/cask-fonts"
-    "homebrew/cask-versions"
     "homebrew/command-not-found"
 )
 
