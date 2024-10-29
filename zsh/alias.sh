@@ -185,3 +185,7 @@ alias scenable="sudo systemctl enable"
 alias scdisable="sudo systemctl disable"
 alias scstart="sudo systemctl start"
 alias scstop="sudo systemctl stop"
+
+# apps
+alias steam="open Applications/Steam.app"
+alias crossover="open Applications/CrossOver.app"
