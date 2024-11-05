@@ -188,4 +188,5 @@ alias scstop="sudo systemctl stop"
 
 # apps
 alias steam="open /Applications/Steam.app"
+alias steam-nimrods='open "$HOME/Library/Application Support/Steam/steamapps/common/NIMRODS/NIMRODS.app"'
 alias crossover="open /Applications/CrossOver.app"
