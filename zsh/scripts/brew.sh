@@ -11,7 +11,6 @@ tools=(
     "bettercap"
     "ccat"
     "curl"
-    "dog"
     "exifrenamer"
     "findutils"
     "font-fira-code-nerd-font"
@@ -47,11 +46,29 @@ tools=(
     "ycd/tap/dstp"
 )
 
+casks=(
+    netiquette
+    omnidisksweeper
+    pearcleaner
+    steam
+    taskexplorer
+    transmission
+)
+
 for i in "${taps[@]}"
 do
     printf "✨ %s\n" "$i"
     brew tap "$i"
 done
 
-printf "✨ %s\n" "${tools[@]}"
-brew install "${tools[@]}"
+for i in "${tools[@]}"
+do
+    printf "✨ %s\n" "$i"
+    brew install "$i"
+done
+
+for i in "${casks[@]}"
+do
+    printf "✨ %s\n" "$i"
+    brew install --cask "$i"
+done

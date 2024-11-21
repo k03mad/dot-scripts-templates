@@ -19,28 +19,6 @@ ipi() {
         | jq --arg delim '.' 'reduce (tostream|select(length==2)) as $i ({};.[[$i[0][]|tostring]|join($delim)] = $i[1])'
 }
 
-doh() {
-    resolver=${2:-@https://one.one.one.one/dns-query}
-
-    if [ -z "$2" ]; then
-        echo "${resolver}"
-    fi
-
-    echo
-    dog "$1" --time --https "${resolver}"
-}
-
-dot() {
-    resolver=${2:-@one.one.one.one}
-
-    if [ -z "$2" ]; then
-        echo "${resolver}"
-    fi
-
-    echo
-    dog "$1" --time --tls "${resolver}"
-}
-
 gc() {
     gs
     git commit -m "$(echo "$@")"
