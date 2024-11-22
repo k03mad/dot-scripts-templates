@@ -46,6 +46,7 @@ casks=(
     "balenaetcher"
     "exifrenamer"
     "font-fira-code-nerd-font"
+    "keepingyouawake"
     "netiquette"
     "omnidisksweeper"
     "pearcleaner"
