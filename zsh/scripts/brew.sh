@@ -5,15 +5,11 @@ taps=(
 )
 
 tools=(
-    "android-platform-tools"
     "aria2"
-    "balenaetcher"
     "bettercap"
     "ccat"
     "curl"
-    "exifrenamer"
     "findutils"
-    "font-fira-code-nerd-font"
     "fzf"
     "gh"
     "git"
@@ -42,17 +38,20 @@ tools=(
     "yt-dlp"
     "zoxide"
     "zsh"
-    "MisterTea/et/et"
-    "ycd/tap/dstp"
 )
 
 casks=(
-    netiquette
-    omnidisksweeper
-    pearcleaner
-    steam
-    taskexplorer
-    transmission
+    "android-commandlinetools"
+    "android-platform-tools"
+    "balenaetcher"
+    "exifrenamer"
+    "font-fira-code-nerd-font"
+    "netiquette"
+    "omnidisksweeper"
+    "pearcleaner"
+    "steam"
+    "taskexplorer"
+    "transmission"
 )
 
 for i in "${taps[@]}"
@@ -64,7 +63,7 @@ done
 for i in "${tools[@]}"
 do
     printf "✨ %s\n" "$i"
-    brew install "$i"
+    brew search "$i"
 done
 
 for i in "${casks[@]}"

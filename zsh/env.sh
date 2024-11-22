@@ -71,18 +71,13 @@ fi
 if [ -f "${HOME}/.workrc" ]; then
     source "${HOME}/.workrc"
 
-    export ANDROID_HOME="${HOME}/Library/Android/sdk"
-    export ANDROID_HOME_TOOLS="${ANDROID_HOME}/tools"
-    export ANDROID_HOME_PLATFORM_TOOLS="${ANDROID_HOME}/platform-tools"
+    export ANDROID_COMMANDLINE_BUILD_TOOLS="/opt/homebrew/share/android-commandlinetools/build-tools"
 
-    export ANDROID_HOME_BUILD_TOOLS_VERSION=$(ls "${ANDROID_HOME}/build-tools" | sort -r | head -n 1)
-    export ANDROID_HOME_BUILD_TOOLS="${ANDROID_HOME}/build-tools/${ANDROID_HOME_BUILD_TOOLS_VERSION}"
+    export ANDROID_HOME_BUILD_TOOLS_VERSION=$(ls "${ANDROID_COMMANDLINE_BUILD_TOOLS}" | sort -r | head -n 1)
+    export ANDROID_HOME_BUILD_TOOLS="${ANDROID_COMMANDLINE_BUILD_TOOLS}/${ANDROID_HOME_BUILD_TOOLS_VERSION}"
 
     export PATH="\
-${ANDROID_HOME_TOOLS}:\
-${ANDROID_HOME_PLATFORM_TOOLS}:\
 ${ANDROID_HOME_BUILD_TOOLS}:\
-${ANDROID_HOME_BUILD_TOOLS_VERSION}:\
 ${PATH}\
     "
 fi
