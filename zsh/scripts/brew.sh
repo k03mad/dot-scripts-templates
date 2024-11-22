@@ -63,7 +63,7 @@ done
 for i in "${tools[@]}"
 do
     printf "✨ %s\n" "$i"
-    brew search "$i"
+    brew install "$i"
 done
 
 for i in "${casks[@]}"
