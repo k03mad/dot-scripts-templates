@@ -3,10 +3,6 @@
 ___print "quit prefs"
 osascript -e 'tell application "System Preferences" to quit'
 
-___print "ntp"
-m ntp enable
-m ntp set ru.pool.ntp.org
-
 ___print "dock"
 m dock position LEFT
 m dock autohide NO
