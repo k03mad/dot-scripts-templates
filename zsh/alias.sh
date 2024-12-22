@@ -102,8 +102,8 @@ alias goup="go-global-update"
 
 alias nalaup="\
     sudo nala upgrade \
-    && nala autoremove \
-    && nala autopurge \
+    && sudo nala autoremove \
+    && sudo nala autopurge \
 "
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
