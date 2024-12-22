@@ -100,7 +100,11 @@ alias cargoup="rustup update && cargo install-update -a"
 alias goin="\${DOT_FOLDER_ZSH_SCRIPTS}/go.sh"
 alias goup="go-global-update"
 
-alias nalaup="nala upgrade && nala autoremove && nala autopurge"
+alias nalaup="\
+    sudo nala upgrade \
+    && nala autoremove \
+    && nala autopurge \
+"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="\
