@@ -13,6 +13,7 @@ tools=(
     "mc"
     "micro"
     "nano"
+    "nala"
     "ncdu"
     "neofetch"
     "nmap"
