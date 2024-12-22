@@ -100,11 +100,19 @@ alias cargoup="rustup update && cargo install-update -a"
 alias goin="\${DOT_FOLDER_ZSH_SCRIPTS}/go.sh"
 alias goup="go-global-update"
 
-alias nalaup="\
-    sudo nala upgrade \
-    && sudo nala autoremove \
-    && sudo nala autopurge \
-"
+if [ -n "${TERMUX_VERSION}" ]; then
+    alias nalaup="\
+        nala upgrade \
+        && nala autoremove \
+        && nala autopurge \
+    "
+elif
+    alias nalaup="\
+        sudo nala upgrade \
+        && sudo nala autoremove \
+        && sudo nala autopurge \
+    "
+fi
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="\
