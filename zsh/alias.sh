@@ -106,7 +106,7 @@ if [ -n "${TERMUX_VERSION}" ]; then
         && nala autoremove \
         && nala autopurge \
     "
-elif
+else
     alias nalaup="\
         sudo nala upgrade \
         && sudo nala autoremove \
