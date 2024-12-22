@@ -101,13 +101,13 @@ alias goin="\${DOT_FOLDER_ZSH_SCRIPTS}/go.sh"
 alias goup="go-global-update"
 
 if [ -n "${TERMUX_VERSION}" ]; then
-    alias nalaup="\
+    alias nup="\
         nala upgrade \
         && nala autoremove \
         && nala autopurge \
     "
 else
-    alias nalaup="\
+    alias nup="\
         sudo nala upgrade \
         && sudo nala autoremove \
         && sudo nala autopurge \
