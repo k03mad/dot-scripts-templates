@@ -83,12 +83,6 @@ alias pkgup="\
     && apt autoremove \
 "
 
-alias nup="\
-    sudo nala upgrade \
-    && sudo nala autoremove \
-    && sudo nala autopurge \
-"
-
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
 alias brewup="\
     brew list \
