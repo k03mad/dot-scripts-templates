@@ -83,6 +83,12 @@ alias pkgup="\
     && apt autoremove \
 "
 
+alias nup="\
+    sudo nala upgrade \
+    && sudo nala autoremove \
+    && sudo nala autopurge \
+"
+
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
 alias brewup="\
     brew list \
@@ -99,20 +105,6 @@ alias cargoup="rustup update && cargo install-update -a"
 
 alias goin="\${DOT_FOLDER_ZSH_SCRIPTS}/go.sh"
 alias goup="go-global-update"
-
-if [ -n "${TERMUX_VERSION}" ]; then
-    alias nup="\
-        nala upgrade \
-        && nala autoremove \
-        && nala autopurge \
-    "
-else
-    alias nup="\
-        sudo nala upgrade \
-        && sudo nala autoremove \
-        && sudo nala autopurge \
-    "
-fi
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="\
