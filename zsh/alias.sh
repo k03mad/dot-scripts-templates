@@ -102,13 +102,15 @@ alias goup="go-global-update"
 
 if [ -n "${TERMUX_VERSION}" ]; then
     alias nup="\
-        nala upgrade \
+        nala update \
+        && nala upgrade \
         && nala autoremove \
         && nala autopurge \
     "
 else
     alias nup="\
-        sudo nala upgrade \
+        sudo nala update \
+        && sudo nala upgrade \
         && sudo nala autoremove \
         && sudo nala autopurge \
     "
