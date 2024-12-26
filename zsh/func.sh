@@ -60,22 +60,15 @@ ach() {
 }
 
 chpwd() {
-    if [ -z "${SKIP_CHPWD}" ]; then
-        if command -v lsd &> /dev/null
-            then
-                dls
-            else
-                els
-        fi
+    if [ -z "${SKIP_CHPWD}" ] && command -v lsd &> /dev/null; then
+        dls
     fi
 
-    if [ -z "${SKIP_NVMRC}" ]; then
-        if [ "${PWD}" != "${PREV_PWD}" ]; then
-            PREV_PWD="${PWD}"
+    if [ -z "${SKIP_NVMRC}" ] && [ "${PWD}" != "${PREV_PWD}" ]; then
+        PREV_PWD="${PWD}"
 
-            if [ -e ".nvmrc" ]; then
-                nvm use
-            fi
+        if [ -e ".nvmrc" ]; then
+            nvm use
         fi
     fi
 }
@@ -95,7 +88,7 @@ npmup() {
     npmls
 
     echo
-    echo "✨ ${c[green]}npm update${c[reset]}"
+    echo -e "\n✨ ${c[green]}npm update${c[reset]}\n"
     echo
 
     OUTDATED=$(npm outdated -g --parseable --depth=0)
@@ -123,7 +116,7 @@ npmup() {
     pnpm update -g --latest
 }
 
-prdel() {
+promdel() {
     curl -X POST -v -g "http://localhost:12000/api/v1/admin/tsdb/delete_series?match[]=$1"
     curl -X POST -v http://localhost:12000/api/v1/admin/tsdb/clean_tombstones
 }

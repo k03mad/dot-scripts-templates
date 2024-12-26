@@ -24,13 +24,5 @@ pnpmTools=(
     "vtop"
 )
 
-printf "\n"
-printf "✨ npm install: %s\n" "${npmTools[@]}"
-
 npm i "${npmTools[@]}" -g
-
-printf "\n"
-printf "✨ pnpm install: %s\n" "${pnpmTools[@]}"
-printf "\n"
-
 pnpm i "${pnpmTools[@]}" -g

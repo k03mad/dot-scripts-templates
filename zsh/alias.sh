@@ -21,8 +21,6 @@ alias sdock="defaults write com.apple.dock persistent-apps -array-add '{tile-dat
 
 alias dst="dd if=/dev/zero of=./testfile.mad bs=8k count=3000000 status=progress && del ./testfile.mad"
 
-alias aadb="aapt dump badging"
-
 # downloaders
 alias aria="aria2c \
     --continue=true \
@@ -67,20 +65,27 @@ alias adblist="\
 "
 
 # pkg managers
-alias aptin="\${DOT_FOLDER_ZSH_SCRIPTS}/apt.sh"
 alias aptup="\
     sudo apt-get update \
+    && sudo apt-get upgrade \
     && sudo apt-get dist-upgrade \
-    && sudo apt-get autoremove \
     && sudo apt-get clean \
+    && sudo apt-get autopurge \
+"
+
+alias aptfup="\
+    sudo apt-fast update \
+    && sudo apt-fast upgrade \
+    && sudo apt-fast dist-upgrade \
+    && sudo apt-fast clean \
+    && sudo apt-fast autopurge \
 "
 
 alias pkgup="\
     pkg update \
     && pkg upgrade \
-    && pkg autoclean \
     && pkg clean \
-    && apt autoremove \
+    && apt autopurge \
 "
 
 alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
@@ -93,12 +98,6 @@ alias brewup="\
     && brew doctor \
 "
 alias brewcl="brew remove \$(brew list --formula)"
-
-alias cargoin="\${DOT_FOLDER_ZSH_SCRIPTS}/cargo.sh"
-alias cargoup="rustup update && cargo install-update -a"
-
-alias goin="\${DOT_FOLDER_ZSH_SCRIPTS}/go.sh"
-alias goup="go-global-update"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="\
@@ -147,33 +146,22 @@ alias nvmls="\
 
 alias zshin="\${DOT_FOLDER_ZSH_SCRIPTS}/zsh.sh"
 
-# docker
-alias dcup="docker-compose pull && docker-compose up -d && dprune"
-alias dprune="docker system prune -af"
-
 # git/arc
-alias gs="git status -s"
 alias ga="git add . && gs"
+alias gbd="git branch -D \$(git branch | grep -v \* | xargs -r)"
 alias gp="git push"
 alias gpl="git pull origin master --no-edit"
 alias gplo="git pull origin \$(git branch | grep '\*' | cut -d' ' -f2-) --no-edit"
 alias grh="git reset --hard"
-alias gbd="git branch -D \$(git branch | grep -v \* | xargs -r)"
+alias gs="git status -s"
 
 alias aa="arc add . && as"
-alias фф=aa
-alias ap="arc push"
-alias фз=ap
-alias am="arc mount ~/arcadia"
-alias фь=am
-alias as="arc status -s"
-alias фы=as
-alias apl="arc pull"
-alias фзд=apl
-alias arh="arc reset --hard --force"
-alias фкр=arh
 alias abd="arc branch | grep -v trunk | xargs -L 1 arc branch -D"
-alias фив=abd
+alias am="arc mount ~/arcadia"
+alias ap="arc push"
+alias apl="arc pull"
+alias arh="arc reset --hard --force"
+alias as="arc status -s"
 
 # service
 alias scstatus="sudo systemctl status"
@@ -185,5 +173,4 @@ alias scstop="sudo systemctl stop"
 
 # apps
 alias steam="open /Applications/Steam.app"
-alias steam-nimrods='open "$HOME/Library/Application Support/Steam/steamapps/common/NIMRODS/NIMRODS.app"'
 alias crossover="open /Applications/CrossOver.app"

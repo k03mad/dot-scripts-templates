@@ -11,7 +11,6 @@ plugins=(
     "MichaelAquilina/zsh-you-should-use:you-should-use"
     "TamCore/autoupdate-oh-my-zsh-plugins:autoupdate"
     "zdharma-continuum/fast-syntax-highlighting"
-    "zpm-zsh/colors"
     "zsh-users/zsh-autosuggestions"
 )
 
@@ -22,7 +21,6 @@ cd "${ZSH_CUSTOM_PLUGINS}" || exit
 
 for i in "${plugins[@]}"
 do
-    printf "✨ %s\n" "$i"
     githubUrl="https://github.com/$(echo "$i" | cut -d ":" -f 1).git"
     clonePath="$(echo "$i" | cut -d ":" -f 2)"
 

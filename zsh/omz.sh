@@ -13,9 +13,9 @@ export plugins=(
     fast-syntax-highlighting
     fzf-tab
     you-should-use
+    zoxide
     zsh-autosuggestions
     zsh-better-npm-completion
-    zsh-completions
     zsh-nvm
 )
 
@@ -25,8 +25,3 @@ zstyle ':fzf-tab:complete:cat:*' fzf-preview '! [[ $(file --mime-type $realpath)
 zstyle ':fzf-tab:complete:ccat:*' fzf-preview '! [[ $(file --mime-type $realpath) =~ "directory|binary" ]] && ccat --color="always" $realpath'
 
 source "${ZSH}/oh-my-zsh.sh"
-
-eval "$(zoxide init zsh)"
-
-autoload -Uz compinit
-compinit

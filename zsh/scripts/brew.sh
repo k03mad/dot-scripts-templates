@@ -57,18 +57,8 @@ casks=(
 
 for i in "${taps[@]}"
 do
-    printf "✨ %s\n" "$i"
     brew tap "$i"
 done
 
-for i in "${tools[@]}"
-do
-    printf "✨ %s\n" "$i"
-    brew install "$i"
-done
-
-for i in "${casks[@]}"
-do
-    printf "✨ %s\n" "$i"
-    brew install --cask "$i"
-done
+brew install "${tools[@]}"
+brew install --cask "${casks[@]}"

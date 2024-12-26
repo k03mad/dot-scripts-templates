@@ -53,6 +53,7 @@ ${PATH}\
 
 export FPATH="\
 ${HOME}/.zfunc:\
+${ZSH_CUSTOM_PLUGINS}/zsh-completions/src:\
 ${FPATH}\
 "
 
@@ -62,15 +63,7 @@ if [ -n "${TERMUX_VERSION}" ]; then
     export OPENSSL_DIR="${PREFIX}"
 fi
 
-if [ -n "${IS_RPI}" ]; then
-    sudo sh -c 'echo 0 > /sys/class/leds/PWR/brightness'
-    sudo sh -c 'echo 0 > /sys/class/leds/ACT/brightness'
-    sudo "${GIT_FOLDER}/lan951x-led-ctl/lan951x-led-ctl" --fdx=0 --lnk=0 --spd=0 > /dev/null
-fi
-
-if [ -f "${HOME}/.workrc" ]; then
-    source "${HOME}/.workrc"
-
+if [ -n "${IS_MACWORK}" ]; then
     export ANDROID_COMMANDLINE_BUILD_TOOLS="/opt/homebrew/share/android-commandlinetools/build-tools"
 
     export ANDROID_HOME_BUILD_TOOLS_VERSION=$(ls "${ANDROID_COMMANDLINE_BUILD_TOOLS}" | sort -r | head -n 1)
@@ -82,6 +75,11 @@ ${PATH}\
     "
 fi
 
-if [ -f "${HOME}/.keyrc" ]; then
-    source "${HOME}/.keyrc"
+if [ -n "${IS_RPI}" ]; then
+    sudo sh -c 'echo 0 > /sys/class/leds/PWR/brightness'
+    sudo sh -c 'echo 0 > /sys/class/leds/ACT/brightness'
+    sudo "${GIT_FOLDER}/lan951x-led-ctl/lan951x-led-ctl" --fdx=0 --lnk=0 --spd=0 > /dev/null
 fi
+
+[[ -s "${HOME}/.keyrc" ]] && source "${HOME}/.keyrc"
+[[ -s "${HOME}/.workrc" ]] && source "${HOME}/.workrc"

@@ -26,10 +26,4 @@ tools=(
     "zsh"
 )
 
-printf "✨ %s\n" "${tools[@]}"
-
-if [ -n "${TERMUX_VERSION}" ]; then
-    apt-get -y install "${tools[@]}"
-else
-    sudo apt-get -y install "${tools[@]}"
-fi
+sudo apt-get -y install "${tools[@]}"
