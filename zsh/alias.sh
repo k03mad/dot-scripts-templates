@@ -174,3 +174,4 @@ alias scstop="sudo systemctl stop"
 # apps
 alias steam="open /Applications/Steam.app"
 alias crossover="open /Applications/CrossOver.app"
+alias greenlight="open /Applications/Greenlight.app"
