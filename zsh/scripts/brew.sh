@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 taps=(
+    "domt4/autoupdate"
     "homebrew/command-not-found"
 )
 
@@ -62,3 +63,5 @@ done
 
 brew install "${tools[@]}"
 brew install --cask "${casks[@]}"
+
+brew autoupdate start 43200 --cleanup --immediate
