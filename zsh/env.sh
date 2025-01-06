@@ -68,8 +68,8 @@ if [ -f "${HOME}/InternalRootCA.crt" ]; then
     export NODE_EXTRA_CA_CERTS="${HOME}/InternalRootCA.crt"
 fi
 
-if [ -d "/opt/homebrew/share/android-commandlinetools/build-tools" ]; then
-    export ANDROID_HOME_BUILD_TOOLS_VERSION=$(ls "/opt/homebrew/share/android-commandlinetools/build-tools" | sort -r | head -n 1)
-    export ANDROID_HOME_BUILD_TOOLS="/opt/homebrew/share/android-commandlinetools/build-tools/${ANDROID_HOME_BUILD_TOOLS_VERSION}"
+if [ -d "${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools" ]; then
+    export ANDROID_HOME_BUILD_TOOLS_VERSION_FOLDER=$(ls "${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools" | sort -r | head -n 1)
+    export ANDROID_HOME_BUILD_TOOLS="${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools/${ANDROID_HOME_BUILD_TOOLS_VERSION_FOLDER}"
     export PATH="${ANDROID_HOME_BUILD_TOOLS}:${PATH}"
 fi
