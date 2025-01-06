@@ -1,4 +1,5 @@
 # shellcheck source=/dev/null disable=SC2012,SC2155
+
 setopt histignorealldups
 
 export GIT_FOLDER="${HOME}/git"
@@ -58,28 +59,17 @@ ${FPATH}\
 "
 
 if [ -n "${TERMUX_VERSION}" ]; then
-    export SKIP_NVMRC=true
-    export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+    export SKIP_NVMRC="true"
+    export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
     export OPENSSL_DIR="${PREFIX}"
 fi
 
-if [ -n "${IS_MACWORK}" ]; then
-    export ANDROID_COMMANDLINE_BUILD_TOOLS="/opt/homebrew/share/android-commandlinetools/build-tools"
-
-    export ANDROID_HOME_BUILD_TOOLS_VERSION=$(ls "${ANDROID_COMMANDLINE_BUILD_TOOLS}" | sort -r | head -n 1)
-    export ANDROID_HOME_BUILD_TOOLS="${ANDROID_COMMANDLINE_BUILD_TOOLS}/${ANDROID_HOME_BUILD_TOOLS_VERSION}"
-
-    export PATH="\
-${ANDROID_HOME_BUILD_TOOLS}:\
-${PATH}\
-    "
+if [ -f "${HOME}/InternalRootCA.crt" ]; then
+    export NODE_EXTRA_CA_CERTS="${HOME}/InternalRootCA.crt"
 fi
 
-if [ -n "${IS_RPI}" ]; then
-    sudo sh -c 'echo 0 > /sys/class/leds/PWR/brightness'
-    sudo sh -c 'echo 0 > /sys/class/leds/ACT/brightness'
-    sudo "${GIT_FOLDER}/lan951x-led-ctl/lan951x-led-ctl" --fdx=0 --lnk=0 --spd=0 > /dev/null
+if [ -d "/opt/homebrew/share/android-commandlinetools/build-tools" ]; then
+    export ANDROID_HOME_BUILD_TOOLS_VERSION=$(ls "/opt/homebrew/share/android-commandlinetools/build-tools" | sort -r | head -n 1)
+    export ANDROID_HOME_BUILD_TOOLS="/opt/homebrew/share/android-commandlinetools/build-tools/${ANDROID_HOME_BUILD_TOOLS_VERSION}"
+    export PATH="${ANDROID_HOME_BUILD_TOOLS}:${PATH}"
 fi
-
-[[ -s "${HOME}/.keyrc" ]] && source "${HOME}/.keyrc"
-[[ -s "${HOME}/.workrc" ]] && source "${HOME}/.workrc"

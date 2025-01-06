@@ -11,6 +11,7 @@ plugins=(
     "MichaelAquilina/zsh-you-should-use:you-should-use"
     "TamCore/autoupdate-oh-my-zsh-plugins:autoupdate"
     "zdharma-continuum/fast-syntax-highlighting"
+    "zpm-zsh/colors"
     "zsh-users/zsh-autosuggestions"
 )
 
