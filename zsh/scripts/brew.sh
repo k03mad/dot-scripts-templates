@@ -45,6 +45,7 @@ casks=(
     "android-commandlinetools"
     "android-platform-tools"
     "balenaetcher"
+    "crystalfetch"
     "exifrenamer"
     "font-fira-code-nerd-font"
     "keepingyouawake"
