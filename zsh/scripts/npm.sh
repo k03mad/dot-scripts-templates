@@ -17,6 +17,7 @@ pnpmTools=(
     "gtop"
     "http-server"
     "knip"
+    "node-modules-inspector"
     "npkill"
     "npm-check-updates"
     "npm-check"
