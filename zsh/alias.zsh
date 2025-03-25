@@ -73,14 +73,6 @@ alias aptup="\
     && sudo apt-get autopurge \
 "
 
-alias aptfup="\
-    sudo apt-fast update \
-    && sudo apt-fast upgrade \
-    && sudo apt-fast dist-upgrade \
-    && sudo apt-fast clean \
-    && sudo apt-fast autopurge \
-"
-
 alias pkgup="\
     pkg update \
     && pkg upgrade \
