@@ -132,7 +132,6 @@ alias nvmls="\
     && echo \"✨ \${c[green]}node \${c[magenta]}remote\${c[reset]}  \$(nvm version-remote)\" \
     && echo \
     && nvm ls \
-    && nodever \
     && npmls \
 "
 
