@@ -64,10 +64,6 @@ if [ -n "${TERMUX_VERSION}" ]; then
     export OPENSSL_DIR="${PREFIX}"
 fi
 
-if [ -f "${HOME}/InternalRootCA.crt" ]; then
-    export NODE_EXTRA_CA_CERTS="${HOME}/InternalRootCA.crt"
-fi
-
 if [ -d "${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools" ]; then
     export ANDROID_HOME_BUILD_TOOLS_VERSION_FOLDER=$(ls "${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools" | sort -r | head -n 1)
     export ANDROID_HOME_BUILD_TOOLS="${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools/${ANDROID_HOME_BUILD_TOOLS_VERSION_FOLDER}"
