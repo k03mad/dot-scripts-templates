@@ -10,8 +10,8 @@ alias del="rm -rfv"
 
 alias lsd="lsd -lA --group-dirs first --size short --date '+[%d.%m.%y %X]'"
 alias dls="lsd --blocks date,size,name"
-alias sls="dls --total-size"
-alias tls="sls --tree --ignore-glob node_modules --ignore-glob .git"
+alias sls="lsd --blocks date,size,name --total-size --sizesort"
+alias tls="lsd --blocks date,size,name --total-size --tree --ignore-glob node_modules --ignore-glob .git"
 
 alias ft="ag -fi --depth=-1"
 alias ports="sudo lsof -i -P -n | grep LISTEN"
