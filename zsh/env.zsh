@@ -23,7 +23,6 @@ export FZF_DEFAULT_OPTS="--preview-window 70% --info=hidden --prompt="
 
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
-export ET_NO_TELEMETRY=1
 
 if [ -n "${TERMUX_VERSION}" ]; then
     export SKIP_NVMRC="true"
