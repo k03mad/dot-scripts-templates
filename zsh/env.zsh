@@ -32,9 +32,12 @@ fi
 
 if [ -n "${MAC_WORK}" ]; then
     export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
+    export ANDROID_HOME="${HOME}/Library/Android/sdk"
+    export PATH="${PATH}:${ANDROID_HOME}/emulator:${ANDROID_HOME}/platform-tools"
 fi
 
 export PATH="\
+${PATH}:\
 /data/data/com.termux/files/usr/bin:\
 /data/data/com.termux/files/usr/bin/applets:\
 /opt/homebrew/bin:\
@@ -51,8 +54,7 @@ ${HOME}/.gvm/go/bin:\
 ${HOME}/.local/bin:\
 ${HOME}/arcadia:\
 ${HOME}/bin:\
-${HOME}/go/bin:\
-${PATH}\
+${HOME}/go/bin
 "
 
 export FPATH="\
