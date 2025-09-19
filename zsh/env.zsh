@@ -59,3 +59,7 @@ if [ -n "${TERMUX_VERSION}" ]; then
     export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
     export OPENSSL_DIR="${PREFIX}"
 fi
+
+if [ -n "${MAC_WORK}" ]; then
+    export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
+fi
