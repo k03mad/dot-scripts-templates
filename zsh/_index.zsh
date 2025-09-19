@@ -11,5 +11,3 @@ source "${dir}/func.zsh"
 
 source "${dir}/omz.zsh"
 source "${dir}/p10k.zsh"
-
-source "${dir}/start.zsh"

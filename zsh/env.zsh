@@ -25,9 +25,6 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export ET_NO_TELEMETRY=1
 
-#export NVM_LAZY_LOAD="true"
-export M2_HOME="/usr/local/bin/maven"
-
 export PATH="\
 /data/data/com.termux/files/usr/bin:\
 /data/data/com.termux/files/usr/bin/applets:\
@@ -39,7 +36,6 @@ export PATH="\
 /usr/local/go/bin:\
 /usr/local/opt/curl/bin:\
 /usr/local/opt/findutils/libexec/gnubin:\
-/usr/local/opt/maven@3.5/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
 ${HOME}/.cargo/bin:\
@@ -62,10 +58,4 @@ if [ -n "${TERMUX_VERSION}" ]; then
     export SKIP_NVMRC="true"
     export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
     export OPENSSL_DIR="${PREFIX}"
-fi
-
-if [ -d "${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools" ]; then
-    export ANDROID_HOME_BUILD_TOOLS_VERSION_FOLDER=$(ls "${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools" | sort -r | head -n 1)
-    export ANDROID_HOME_BUILD_TOOLS="${HOMEBREW_PREFIX}/share/android-commandlinetools/build-tools/${ANDROID_HOME_BUILD_TOOLS_VERSION_FOLDER}"
-    export PATH="${ANDROID_HOME_BUILD_TOOLS}:${PATH}"
 fi
