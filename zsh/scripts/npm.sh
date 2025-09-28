@@ -13,4 +13,4 @@ tools=(
 )
 
 npm i "${tools[@]}" -g
-npmls
+npm ls -g --depth=0
