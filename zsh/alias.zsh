@@ -91,6 +91,8 @@ alias brewup="\
 "
 alias brewcl="brew remove \$(brew list --formula)"
 
+alias gitup="\${DOT_FOLDER_ZSH_SCRIPTS}/git.sh"
+
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="\
     npm ls -g --depth=0 \
