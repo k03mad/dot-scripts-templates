@@ -1,10 +1,6 @@
 #!/usr/bin/env zsh
 
-npmTools=(
-    "pnpm"
-)
-
-pnpmTools=(
+tools=(
     "@eslint/config-inspector"
     "@k03mad/actual-versions"
     "@k03mad/dice"
@@ -26,5 +22,4 @@ pnpmTools=(
     "vtop"
 )
 
-npm i "${npmTools[@]}" -g
-pnpm i "${pnpmTools[@]}" -g
+npm i "${tools[@]}" -g
