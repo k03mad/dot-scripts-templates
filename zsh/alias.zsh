@@ -101,7 +101,7 @@ alias npmcl="\
     && echo ✨ npm rm \
     && echo \
     && (npm ls -g --json \
-        | jq -r '.dependencies|keys-[\"npm\",\"corepack\"]|join(\"\n\")' \
+        | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' \
         | xargs -t npm remove -g || true)
 "
 
