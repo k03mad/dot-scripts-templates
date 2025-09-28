@@ -13,3 +13,4 @@ tools=(
 )
 
 npm i "${tools[@]}" -g
+npmls
