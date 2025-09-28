@@ -47,7 +47,8 @@ ${PATH}:\
 /usr/local/go/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
-${HOME}/arcadia\
+${HOME}/arcadia:\
+${HOME}/go/bin\
 "
 
 export FPATH="\
