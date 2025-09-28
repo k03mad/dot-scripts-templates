@@ -93,31 +93,16 @@ alias brewcl="brew remove \$(brew list --formula)"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="\
-    echo \
-    && echo ✨ \${c[green]}npm ls\${c[reset]} \
-    && echo \
-    && npm ls -g --depth=0 \
-    && (npm outdated -g || true) \
-    && echo \
-    && echo ✨ \${c[green]}pnpm ls\${c[reset]} \
-    && echo \
-    && pnpm ls -g \
-    && pnpm outdated -g \
+    npm ls -g --depth=0 \
+    && (npm outdated -g || true)
 "
 alias npmcl="\
     echo \
     && echo ✨ npm rm \
     && echo \
     && (npm ls -g --json \
-        | jq -r '.dependencies|keys-[\"npm\",\"corepack\",\"pnpm\"]|join(\"\n\")' \
-        | xargs -t npm remove -g || true) \
-    && echo \
-    && echo ✨ pnpm rm \
-    && echo \
-    && echo rm -rf \$(dirname \$(pnpm root -g)) \
-    && echo Press enter to continue... \
-    && read -s -n 2 \
-    && rm -rf \$(dirname \$(pnpm root -g)) \
+        | jq -r '.dependencies|keys-[\"npm\",\"corepack\"]|join(\"\n\")' \
+        | xargs -t npm remove -g || true)
 "
 
 alias nvmin="nvm install \$(cat .nvmrc) && echo && npmin"
@@ -126,13 +111,11 @@ alias nvmcl="rm -rfv \$(ls -td \${NVM_DIR}/versions/node/* | tail -n +2) && rm -
 alias nvmls="\
     echo \
     && echo \"✨ \${c[green]}npm  \${c[blue]}current\${c[reset]} v\$(npm -v)\" \
-    && echo ✨ \${c[green]}pnpm \${c[blue]}current\${c[reset]} v\$(pnpm -v) \
     && echo \
     && echo ✨ \${c[green]}node \${c[blue]}current\${c[reset]} \$(node -v) \
     && echo \"✨ \${c[green]}node \${c[magenta]}remote\${c[reset]}  \$(nvm version-remote)\" \
     && echo \
-    && nvm ls \
-    && npmls \
+    && nvm ls
 "
 
 alias zshin="\${DOT_FOLDER_ZSH_SCRIPTS}/zsh.sh"
