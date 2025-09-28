@@ -13,7 +13,6 @@ alias dls="lsd --blocks date,size,name"
 alias sls="lsd --blocks date,size,name --total-size --sizesort"
 alias tls="lsd --blocks date,size,name --total-size --tree --ignore-glob node_modules --ignore-glob .git"
 
-alias ft="ag -fi --depth=-1"
 alias ports="sudo lsof -i -P -n | grep LISTEN"
 
 alias dsc="find . -name '.DS_Store' -type f -exec rm -rfv {} \;"
@@ -80,7 +79,6 @@ alias pkgup="\
     && apt autopurge \
 "
 
-alias brewin="\${DOT_FOLDER_ZSH_SCRIPTS}/brew.sh"
 alias brewup="\
     brew list \
     && brew update \

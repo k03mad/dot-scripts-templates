@@ -108,12 +108,6 @@ npmup() {
     if (( ${#NPM_TO[@]} != 0 )); then
         npm i "${NPM_TO[@]}" -g
     fi
-
-    echo
-    echo "✨ ${c[green]}pnpm update${c[reset]}"
-    echo
-
-    pnpm update -g --latest
 }
 
 promdel() {
