@@ -54,7 +54,7 @@ ${HOME}/.gvm/go/bin:\
 ${HOME}/.local/bin:\
 ${HOME}/arcadia:\
 ${HOME}/bin:\
-${HOME}/go/bin
+${HOME}/go/bin\
 "
 
 export FPATH="\
