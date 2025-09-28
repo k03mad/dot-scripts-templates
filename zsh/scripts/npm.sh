@@ -13,4 +13,6 @@ tools=(
 )
 
 npm i "${tools[@]}" -g
+
+echo ""
 npm ls -g --depth=0
