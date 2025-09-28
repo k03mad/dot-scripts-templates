@@ -39,26 +39,18 @@ fi
 export PATH="\
 ${PATH}:\
 /data/data/com.termux/files/usr/bin:\
-/data/data/com.termux/files/usr/bin/applets:\
 /opt/homebrew/bin:\
 /opt/homebrew/opt/curl/bin:\
 /opt/homebrew/sbin:\
 /sbin:\
 /usr/local/bin:\
 /usr/local/go/bin:\
-/usr/local/opt/curl/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
-${HOME}/.cargo/bin:\
-${HOME}/.gvm/go/bin:\
-${HOME}/.local/bin:\
-${HOME}/arcadia:\
-${HOME}/bin:\
-${HOME}/go/bin\
+${HOME}/arcadia\
 "
 
 export FPATH="\
-${HOME}/.zfunc:\
-${ZSH_CUSTOM_PLUGINS}/zsh-completions/src:\
-${FPATH}\
+${FPATH}:\
+${ZSH_CUSTOM_PLUGINS}/zsh-completions/src\
 "
