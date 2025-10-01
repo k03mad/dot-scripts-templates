@@ -148,7 +148,13 @@ process_folder() {
     echo -e "  ${YELLOW}🧹 npm cache clean${NC}"
     npm cache clean --force
 
-    echo -e "  ${BLUE}📦 npm i (после обновления)${NC}"
+    echo -e "  ${YELLOW}🧹 remove node_modules${NC}"
+    rm -rf node_modules
+
+    echo -e "  ${YELLOW}🧹 remove lock${NC}"
+    rm -rf package-lock.json
+
+    echo -e "  ${BLUE}📦 npm i${NC}"
     npm i
 
     echo -e "  ${BLUE}📝 git add .${NC}"
