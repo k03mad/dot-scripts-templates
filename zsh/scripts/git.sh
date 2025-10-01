@@ -75,7 +75,7 @@ update_version() {
     local new_version="$major.$minor.$patch"
     echo -e "  ${PURPLE}🔢 Новая версия: ${WHITE}$new_version${NC}"
 
-    sed -i '' "s/\"version\": *\"[^\"]*\"/\"version\": \"$new_version\"/" "$package_file"
+    sed "s/\"version\": *\"[^\"]*\"/\"version\": \"$new_version\"/" "$package_file" > "$package_file.tmp" && mv "$package_file.tmp" "$package_file"
 
     echo -e "  ${GREEN}✅ Версия обновлена в package.json${NC}"
 }
@@ -153,6 +153,9 @@ process_folder() {
 
     echo -e "  ${BLUE}📝 git add .${NC}"
     git add .
+
+    echo -e "  ${BLUE}📊 git status${NC}"
+    git status
 
     echo -e "  ${BLUE}💾 git commit${NC}"
     git commit -m "update deps"
