@@ -123,7 +123,7 @@ process_folder() {
     git pull
 
     echo -e "  ${BLUE}📦 nvm use${NC}"
-    nvm use || true
+    ~/.nvm/nvm-exec use || true
 
     echo -e "  ${BLUE}📦 npm i${NC}"
     npm i
