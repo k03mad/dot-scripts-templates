@@ -24,6 +24,9 @@ CYAN=$'\033[0;36m'
 WHITE=$'\033[1;37m'
 NC=$'\033[0m'
 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 print_separator() {
     local width
     local separator
@@ -123,7 +126,7 @@ process_folder() {
     git pull
 
     echo -e "  ${BLUE}📦 nvm use${NC}"
-    ~/.nvm/nvm-exec use || true
+    nvm use
 
     echo -e "  ${BLUE}📦 npm i${NC}"
     npm i
