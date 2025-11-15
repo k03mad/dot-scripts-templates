@@ -122,6 +122,9 @@ process_folder() {
     echo -e "  ${BLUE}📥 git pull${NC}"
     git pull
 
+    echo -e "  ${BLUE}📦 nvm use${NC}"
+    nvm use || true
+
     echo -e "  ${BLUE}📦 npm i${NC}"
     npm i
 
