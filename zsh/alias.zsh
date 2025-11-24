@@ -149,7 +149,3 @@ alias scstop="sudo systemctl stop"
 alias steam="open /Applications/Steam.app"
 alias crossover="open /Applications/CrossOver.app"
 alias greenlight="open /Applications/Greenlight.app"
-
-# aa
-
-alias aa="while true; do ~/Library/Android/sdk/extras/google/auto/desktop-head-unit --usb; sleep 1; done"
