@@ -7,10 +7,9 @@ folders=(
     "simple-prom          sleep_1"
     "request              sleep_1"
     "ip2geo               sleep_1"
-    "mik-prom-exporter    sleep_3"
-    "sys-prom-exporter    sleep_3"
-    "vdsina-prom-exporter sleep_3"
-    "iptv-mp"
+    "mik-prom-exporter    sleep_2"
+    "sys-prom-exporter    sleep_2"
+    "vdsina-prom-exporter sleep_2"
     "wp-color-apk         skip_ncu"
 )
 
