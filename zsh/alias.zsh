@@ -136,6 +136,7 @@ alias ap="arc push"
 alias apl="arc pull"
 alias arh="arc reset --hard --force"
 alias as="arc status -s"
+alias act="arc checkout trunk"
 
 # service
 alias scstatus="sudo systemctl status"
