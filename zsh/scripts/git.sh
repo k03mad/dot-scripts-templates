@@ -48,7 +48,90 @@ countdown() {
     printf "\r  %s✅ Ожидание завершено!%s     \n" "$GREEN" "$NC"
 }
 
+analyze_dependency_changes() {
+    local old_package="$1"
+    local new_package="$2"
+    local temp_file=$(mktemp)
+
+    echo "patch" > "$temp_file"
+
+    jq -r '.dependencies // {} | keys[]' "$old_package" 2>/dev/null | while read -r pkg_name; do
+        local old_ver=$(jq -r --arg key "$pkg_name" '.dependencies[$key]' "$old_package" 2>/dev/null)
+        local new_ver=$(jq -r --arg key "$pkg_name" '.dependencies[$key] // empty' "$new_package" 2>/dev/null)
+
+        if [ -z "$new_ver" ]; then
+            continue
+        fi
+
+        old_ver=$(echo "$old_ver" | sed 's/^[\^~>=<]*//')
+        new_ver=$(echo "$new_ver" | sed 's/^[\^~>=<]*//')
+
+        if [ "$old_ver" = "$new_ver" ]; then
+            continue
+        fi
+
+        IFS='.' read -r old_major old_minor old_patch <<< "$old_ver"
+        IFS='.' read -r new_major new_minor new_patch <<< "$new_ver"
+
+        old_patch=$(echo "$old_patch" | sed 's/[^0-9].*//')
+        new_patch=$(echo "$new_patch" | sed 's/[^0-9].*//')
+
+        if [ "$old_major" != "$new_major" ]; then
+            echo -e "    ${RED}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
+            echo "major" > "$temp_file"
+        elif [ "$old_minor" != "$new_minor" ]; then
+            echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
+            local current_max=$(cat "$temp_file")
+            if [ "$current_max" != "major" ]; then
+                echo "minor" > "$temp_file"
+            fi
+        elif [ "$old_patch" != "$new_patch" ]; then
+            echo -e "    ${CYAN}📦 $pkg_name: $old_ver → $new_ver (patch)${NC}" >&2
+        fi
+    done
+
+    jq -r '.devDependencies // {} | keys[]' "$old_package" 2>/dev/null | while read -r pkg_name; do
+        local old_ver=$(jq -r --arg key "$pkg_name" '.devDependencies[$key]' "$old_package" 2>/dev/null)
+        local new_ver=$(jq -r --arg key "$pkg_name" '.devDependencies[$key] // empty' "$new_package" 2>/dev/null)
+
+        if [ -z "$new_ver" ]; then
+            continue
+        fi
+
+        old_ver=$(echo "$old_ver" | sed 's/^[\^~>=<]*//')
+        new_ver=$(echo "$new_ver" | sed 's/^[\^~>=<]*//')
+
+        if [ "$old_ver" = "$new_ver" ]; then
+            continue
+        fi
+
+        IFS='.' read -r old_major old_minor old_patch <<< "$old_ver"
+        IFS='.' read -r new_major new_minor new_patch <<< "$new_ver"
+
+        old_patch=$(echo "$old_patch" | sed 's/[^0-9].*//')
+        new_patch=$(echo "$new_patch" | sed 's/[^0-9].*//')
+
+        if [ "$old_major" != "$new_major" ]; then
+            echo -e "    ${RED}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
+            echo "major" > "$temp_file"
+        elif [ "$old_minor" != "$new_minor" ]; then
+            echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
+            local current_max=$(cat "$temp_file")
+            if [ "$current_max" != "major" ]; then
+                echo "minor" > "$temp_file"
+            fi
+        elif [ "$old_patch" != "$new_patch" ]; then
+            echo -e "    ${CYAN}📦 $pkg_name: $old_ver → $new_ver (patch)${NC}" >&2
+        fi
+    done
+
+    local max_change=$(cat "$temp_file")
+    rm -f "$temp_file"
+    echo "$max_change"
+}
+
 update_version() {
+    local old_package_file="$1"
     local package_file="package.json"
 
     local current_version
@@ -63,17 +146,29 @@ update_version() {
 
     IFS='.' read -r major minor patch <<< "$current_version"
 
-    if [ "$patch" -lt 10 ]; then
-        patch=$((patch + 1))
-    else
-        patch=0
-        if [ "$minor" -lt 10 ]; then
-            minor=$((minor + 1))
-        else
-            minor=0
-            major=$((major + 1))
-        fi
+    local change_level="patch"
+
+    if [ -n "$old_package_file" ] && [ -f "$old_package_file" ]; then
+        echo -e "  ${CYAN}🔍 Анализирую изменения зависимостей:${NC}"
+        change_level=$(analyze_dependency_changes "$old_package_file" "$package_file")
     fi
+
+    echo -e "  ${PURPLE}📊 Уровень изменений: ${WHITE}$change_level${NC}"
+
+    case "$change_level" in
+        "major")
+            major=$((major + 1))
+            minor=0
+            patch=0
+            ;;
+        "minor")
+            minor=$((minor + 1))
+            patch=0
+            ;;
+        "patch")
+            patch=$((patch + 1))
+            ;;
+    esac
 
     local new_version="$major.$minor.$patch"
     echo -e "  ${PURPLE}🔢 Новая версия: ${WHITE}$new_version${NC}"
@@ -138,18 +233,25 @@ process_folder() {
     fi
 
     echo -e "  ${PURPLE}🔍 ncu -u${NC}"
+
+    local temp_dir=$(mktemp -d)
+    local old_package_file="$temp_dir/package.json.old"
+    cp package.json "$old_package_file"
+
     ncu -u
 
     git_status_after=$(git status --porcelain)
 
     if [ -z "$git_status_after" ]; then
         echo -e "  ${GREEN}✅ Нет изменений после ncu -u, переходим к следующей папке${NC}"
+        rm -rf "$temp_dir"
         cd ..
         return
     fi
 
     echo -e "  ${CYAN}🔄 Обновляю версию в package.json${NC}"
-    update_version
+    update_version "$old_package_file"
+    rm -rf "$temp_dir"
 
     echo -e "  ${YELLOW}🧹 npm cache clean${NC}"
     npm cache clean --force
@@ -214,6 +316,8 @@ get_remaining_folders() {
 }
 
 echo -e "${WHITE}🚀 Начинаю обновление зависимостей в проектах${NC}"
+
+cd ~/git
 echo -e "${BLUE}📁 Текущая директория: ${WHITE}$(pwd)${NC}"
 
 echo ""
