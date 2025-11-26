@@ -160,7 +160,7 @@ update_version() {
     local change_level="patch"
 
     if [ -n "$old_package_file" ] && [ -f "$old_package_file" ]; then
-        echo -e "  ${CYAN}🔍 Анализирую изменения зависимостей:${NC}"
+        echo -e "  ${CYAN}🔍 Анализирую изменения зависимостей${NC}"
         change_level=$(analyze_dependency_changes "$old_package_file" "$package_file")
     fi
 
@@ -257,7 +257,7 @@ process_folder() {
     git_status_after=$(git status --porcelain)
 
     if [ -z "$git_status_after" ]; then
-        echo -e "  ${GREEN}✅ Нет изменений после ncu -u, переходим к следующей папке${NC}"
+        echo -e "  ${GREEN}✅ Нет изменений, переходим к следующей папке${NC}"
         rm -rf "$temp_dir"
         cd .. || return
         return
