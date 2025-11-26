@@ -269,7 +269,7 @@ process_folder() {
     rm -rf "$temp_dir"
 
     echo -e "  ${YELLOW}🧹 npm cache clean${NC}"
-    npm cache clean --force
+    npm cache clean --force --loglevel=error
 
     echo -e "  ${YELLOW}🧹 remove node_modules${NC}"
     rm -rf node_modules
