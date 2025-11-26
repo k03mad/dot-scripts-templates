@@ -10,7 +10,6 @@ folders=(
     "mik-prom-exporter    sleep_2"
     "sys-prom-exporter    sleep_2"
     "vdsina-prom-exporter sleep_2"
-    "wp-color-apk         skip_ncu"
 )
 
 RED=$'\033[0;31m'
