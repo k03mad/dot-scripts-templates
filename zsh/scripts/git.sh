@@ -24,8 +24,10 @@ CYAN=$'\033[0;36m'
 WHITE=$'\033[1;37m'
 NC=$'\033[0m'
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+export NVM_DIR
+# shellcheck source=/dev/null
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 print_separator() {
     local width
@@ -51,20 +53,25 @@ countdown() {
 analyze_dependency_changes() {
     local old_package="$1"
     local new_package="$2"
-    local temp_file=$(mktemp)
+    local temp_file
+    temp_file=$(mktemp)
 
     echo "patch" > "$temp_file"
 
     jq -r '.dependencies // {} | keys[]' "$old_package" 2>/dev/null | while read -r pkg_name; do
-        local old_ver=$(jq -r --arg key "$pkg_name" '.dependencies[$key]' "$old_package" 2>/dev/null)
-        local new_ver=$(jq -r --arg key "$pkg_name" '.dependencies[$key] // empty' "$new_package" 2>/dev/null)
+        old_ver=$(jq -r --arg key "$pkg_name" '.dependencies[$key]' "$old_package" 2>/dev/null)
+        new_ver=$(jq -r --arg key "$pkg_name" '.dependencies[$key] // empty' "$new_package" 2>/dev/null)
 
         if [ -z "$new_ver" ]; then
             continue
         fi
 
-        old_ver=$(echo "$old_ver" | sed 's/^[\^~>=<]*//')
-        new_ver=$(echo "$new_ver" | sed 's/^[\^~>=<]*//')
+        old_ver="${old_ver#[~^>=<]}"
+        old_ver="${old_ver#[~^>=<]}"
+        old_ver="${old_ver#[~^>=<]}"
+        new_ver="${new_ver#[~^>=<]}"
+        new_ver="${new_ver#[~^>=<]}"
+        new_ver="${new_ver#[~^>=<]}"
 
         if [ "$old_ver" = "$new_ver" ]; then
             continue
@@ -73,15 +80,15 @@ analyze_dependency_changes() {
         IFS='.' read -r old_major old_minor old_patch <<< "$old_ver"
         IFS='.' read -r new_major new_minor new_patch <<< "$new_ver"
 
-        old_patch=$(echo "$old_patch" | sed 's/[^0-9].*//')
-        new_patch=$(echo "$new_patch" | sed 's/[^0-9].*//')
+        old_patch="${old_patch%%[!0-9]*}"
+        new_patch="${new_patch%%[!0-9]*}"
 
         if [ "$old_major" != "$new_major" ]; then
             echo -e "    ${RED}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
             echo "major" > "$temp_file"
         elif [ "$old_minor" != "$new_minor" ]; then
             echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
-            local current_max=$(cat "$temp_file")
+            current_max=$(cat "$temp_file")
             if [ "$current_max" != "major" ]; then
                 echo "minor" > "$temp_file"
             fi
@@ -91,15 +98,19 @@ analyze_dependency_changes() {
     done
 
     jq -r '.devDependencies // {} | keys[]' "$old_package" 2>/dev/null | while read -r pkg_name; do
-        local old_ver=$(jq -r --arg key "$pkg_name" '.devDependencies[$key]' "$old_package" 2>/dev/null)
-        local new_ver=$(jq -r --arg key "$pkg_name" '.devDependencies[$key] // empty' "$new_package" 2>/dev/null)
+        old_ver=$(jq -r --arg key "$pkg_name" '.devDependencies[$key]' "$old_package" 2>/dev/null)
+        new_ver=$(jq -r --arg key "$pkg_name" '.devDependencies[$key] // empty' "$new_package" 2>/dev/null)
 
         if [ -z "$new_ver" ]; then
             continue
         fi
 
-        old_ver=$(echo "$old_ver" | sed 's/^[\^~>=<]*//')
-        new_ver=$(echo "$new_ver" | sed 's/^[\^~>=<]*//')
+        old_ver="${old_ver#[~^>=<]}"
+        old_ver="${old_ver#[~^>=<]}"
+        old_ver="${old_ver#[~^>=<]}"
+        new_ver="${new_ver#[~^>=<]}"
+        new_ver="${new_ver#[~^>=<]}"
+        new_ver="${new_ver#[~^>=<]}"
 
         if [ "$old_ver" = "$new_ver" ]; then
             continue
@@ -108,15 +119,15 @@ analyze_dependency_changes() {
         IFS='.' read -r old_major old_minor old_patch <<< "$old_ver"
         IFS='.' read -r new_major new_minor new_patch <<< "$new_ver"
 
-        old_patch=$(echo "$old_patch" | sed 's/[^0-9].*//')
-        new_patch=$(echo "$new_patch" | sed 's/[^0-9].*//')
+        old_patch="${old_patch%%[!0-9]*}"
+        new_patch="${new_patch%%[!0-9]*}"
 
         if [ "$old_major" != "$new_major" ]; then
             echo -e "    ${RED}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
             echo "major" > "$temp_file"
         elif [ "$old_minor" != "$new_minor" ]; then
             echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
-            local current_max=$(cat "$temp_file")
+            current_max=$(cat "$temp_file")
             if [ "$current_max" != "major" ]; then
                 echo "minor" > "$temp_file"
             fi
@@ -125,7 +136,8 @@ analyze_dependency_changes() {
         fi
     done
 
-    local max_change=$(cat "$temp_file")
+    local max_change
+    max_change=$(cat "$temp_file")
     rm -f "$temp_file"
     echo "$max_change"
 }
@@ -192,11 +204,11 @@ process_folder() {
         return
     fi
 
-    cd "$folder_name"
+    cd "$folder_name" || return
 
     if [ ! -d ".git" ]; then
         echo -e "${RED}❌ В папке $folder_name нет git репозитория, пропускаю${NC}"
-        cd ..
+        cd .. || return
         return
     fi
 
@@ -210,7 +222,7 @@ process_folder() {
         git pull
 
         echo -e "  ${GREEN}✅ Git операции выполнены, переходим к следующей папке${NC}"
-        cd ..
+        cd .. || return
         return
     fi
 
@@ -228,24 +240,27 @@ process_folder() {
 
     if [ "$skip_update" = "skip_ncu" ]; then
         echo -e "  ${YELLOW}⏭️  Пропускаю обновление зависимостей (skip_ncu)${NC}"
-        cd ..
+        cd .. || return
         return
     fi
 
     echo -e "  ${PURPLE}🔍 ncu -u${NC}"
 
-    local temp_dir=$(mktemp -d)
-    local old_package_file="$temp_dir/package.json.old"
+    local temp_dir
+    local old_package_file
+    temp_dir=$(mktemp -d)
+    old_package_file="$temp_dir/package.json.old"
     cp package.json "$old_package_file"
 
     ncu -u
 
+    local git_status_after
     git_status_after=$(git status --porcelain)
 
     if [ -z "$git_status_after" ]; then
         echo -e "  ${GREEN}✅ Нет изменений после ncu -u, переходим к следующей папке${NC}"
         rm -rf "$temp_dir"
-        cd ..
+        cd .. || return
         return
     fi
 
@@ -283,7 +298,7 @@ process_folder() {
 
     echo -e "  ${GREEN}✅ Папка ${WHITE}$folder_name${GREEN} обработана успешно${NC}"
 
-    cd ..
+    cd .. || return
 }
 
 get_remaining_folders() {
@@ -295,13 +310,13 @@ get_remaining_folders() {
     done
 
     for dir in */; do
-        dir_name="${dir%/}"
+        local dir_name="${dir%/}"
 
         if [[ "$dir_name" == .* ]]; then
             continue
         fi
 
-        is_priority=false
+        local is_priority=false
         for priority_folder in "${priority_folders[@]}"; do
             if [ "$dir_name" = "$priority_folder" ]; then
                 is_priority=true
@@ -317,7 +332,7 @@ get_remaining_folders() {
 
 echo -e "${WHITE}🚀 Начинаю обновление зависимостей в проектах${NC}"
 
-cd ~/git
+cd ~/git || exit 1
 echo -e "${BLUE}📁 Текущая директория: ${WHITE}$(pwd)${NC}"
 
 echo ""
