@@ -93,16 +93,31 @@ alias gitup="\${DOT_FOLDER_ZSH_SCRIPTS}/git.sh"
 
 alias npmin="\${DOT_FOLDER_ZSH_SCRIPTS}/npm.sh"
 alias npmls="\
-    npm ls -g --depth=0 \
-    && (npm outdated -g || true)
+    echo \
+    && echo ✨ \${c[green]}npm ls\${c[reset]} \
+    && echo \
+    && npm ls -g --depth=0 \
+    && (npm outdated -g || true) \
+    && echo \
+    && echo ✨ \${c[green]}pnpm ls\${c[reset]} \
+    && echo \
+    && pnpm ls -g \
+    && pnpm outdated -g \
 "
 alias npmcl="\
     echo \
     && echo ✨ npm rm \
     && echo \
     && (npm ls -g --json \
-        | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' \
-        | xargs -t npm remove -g || true)
+        | jq -r '.dependencies|keys-[\"npm\",\"corepack\",\"pnpm\"]|join(\"\n\")' \
+        | xargs -t npm remove -g || true) \
+    && echo \
+    && echo ✨ pnpm rm \
+    && echo \
+    && echo rm -rf \$(dirname \$(pnpm root -g)) \
+    && echo Press enter to continue... \
+    && read -s -n 2 \
+    && rm -rf \$(dirname \$(pnpm root -g)) \
 "
 
 alias nvmin="nvm install \$(cat .nvmrc) && echo && npmin"
