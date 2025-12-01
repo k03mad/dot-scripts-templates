@@ -81,7 +81,7 @@ analyze_dependency_changes() {
         new_patch="${new_patch%%[!0-9]*}"
 
         if [ "$old_major" != "$new_major" ]; then
-            echo -e "    ${RED}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
+            echo -e "    ${PURPLE}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
             echo "major" > "$temp_file"
         elif [ "$old_minor" != "$new_minor" ]; then
             echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
@@ -120,7 +120,7 @@ analyze_dependency_changes() {
         new_patch="${new_patch%%[!0-9]*}"
 
         if [ "$old_major" != "$new_major" ]; then
-            echo -e "    ${RED}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
+            echo -e "    ${PURPLE}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
             echo "major" > "$temp_file"
         elif [ "$old_minor" != "$new_minor" ]; then
             echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
@@ -147,11 +147,11 @@ update_version() {
     current_version=$(grep '"version":' "$package_file" | sed 's/.*"version": *"\([^"]*\)".*/\1/')
 
     if [ -z "$current_version" ]; then
-        echo -e "  ${YELLOW}⚠️  Не удалось найти версию в package.json${NC}"
+        echo -e "  ${YELLOW}⚠️ Не удалось найти версию в package.json${NC}"
         return
     fi
 
-    echo -e "  ${BLUE}📋 Текущая версия: ${WHITE}$current_version${NC}"
+    echo -e "  ${CYAN}🏷️ Текущая версия: ${WHITE}$current_version${NC}"
 
     IFS='.' read -r major minor patch <<< "$current_version"
 
@@ -162,7 +162,7 @@ update_version() {
         change_level=$(analyze_dependency_changes "$old_package_file" "$package_file")
     fi
 
-    echo -e "  ${PURPLE}📊 Уровень изменений: ${WHITE}$change_level${NC}"
+    echo -e "  ${CYAN}📊 Уровень изменений: ${WHITE}$change_level${NC}"
 
     case "$change_level" in
         "major")
@@ -180,7 +180,7 @@ update_version() {
     esac
 
     local new_version="$major.$minor.$patch"
-    echo -e "  ${PURPLE}🔢 Новая версия: ${WHITE}$new_version${NC}"
+    echo -e "  ${PURPLE}🏷️ Новая версия: ${WHITE}$new_version${NC}"
 
     sed "s/\"version\": *\"[^\"]*\"/\"version\": \"$new_version\"/" "$package_file" > "$package_file.tmp" && mv "$package_file.tmp" "$package_file"
 
@@ -193,7 +193,7 @@ process_folder() {
     local skip_update="$3"
 
     print_separator
-    echo -e "${CYAN}🔄 Обрабатываю папку: ${WHITE}$folder_name${NC}"
+    echo -e "${CYAN}⚙️ Обрабатываю папку: ${WHITE}$folder_name${NC}"
     print_separator
 
     if [ ! -d "$folder_name" ]; then
@@ -210,12 +210,12 @@ process_folder() {
     fi
 
     if [ ! -f "package.json" ]; then
-        echo -e "${YELLOW}⚠️  В папке $folder_name нет package.json, выполняю только git операции${NC}"
+        echo -e "${YELLOW}⚠️ В папке $folder_name нет package.json, выполняю только git операции${NC}"
 
-        echo -e "  ${BLUE}📥 git reset --hard${NC}"
+        echo -e "  ${BLUE}🔀 git reset --hard${NC}"
         git reset --hard
 
-        echo -e "  ${BLUE}📥 git pull${NC}"
+        echo -e "  ${BLUE}⬇️ git pull${NC}"
         git pull
 
         echo -e "  ${GREEN}✅ Git операции выполнены, переходим к следующей папке${NC}"
@@ -223,10 +223,10 @@ process_folder() {
         return
     fi
 
-    echo -e "  ${BLUE}📥 git reset --hard${NC}"
+    echo -e "  ${BLUE}🔀 git reset --hard${NC}"
     git reset --hard
 
-    echo -e "  ${BLUE}📥 git pull${NC}"
+    echo -e "  ${BLUE}⬇️ git pull${NC}"
     git pull
 
     echo -e "  ${BLUE}📦 nvm use${NC}"
@@ -236,12 +236,12 @@ process_folder() {
     pnpm i
 
     if [ "$skip_update" = "skip_ncu" ]; then
-        echo -e "  ${YELLOW}⏭️  Пропускаю обновление зависимостей (skip_ncu)${NC}"
+        echo -e "  ${YELLOW}⏭️ Пропускаю обновление зависимостей (skip_ncu)${NC}"
         cd .. || return
         return
     fi
 
-    echo -e "  ${PURPLE}🔍 ncu -u${NC}"
+    echo -e "  ${PURPLE}🔄 ncu -u${NC}"
 
     local temp_dir
     local old_package_file
@@ -251,7 +251,7 @@ process_folder() {
 
     ncu -u
 
-    echo -e "  ${BLUE}📊 git status${NC}"
+    echo -e "  ${CYAN}📊 git status${NC}"
     git status
 
     local git_status_after
@@ -264,29 +264,29 @@ process_folder() {
         return
     fi
 
-    echo -e "  ${CYAN}🔄 Обновляю версию в package.json${NC}"
+    echo -e "  ${CYAN}🏷️ Обновляю версию в package.json${NC}"
     update_version "$old_package_file"
     rm -rfv "$temp_dir"
 
-    echo -e "  ${YELLOW}🧹 remove node_modules${NC}"
+    echo -e "  ${YELLOW}🗑️ remove node_modules${NC}"
     rm -rf node_modules
 
-    echo -e "  ${YELLOW}🧹 remove lock${NC}"
+    echo -e "  ${YELLOW}🗑️ remove lock${NC}"
     rm -rfv package-lock.json pnpm-lock.yaml
 
     echo -e "  ${BLUE}📦 pnpm i${NC}"
     pnpm i
 
-    echo -e "  ${BLUE}📝 git add .${NC}"
+    echo -e "  ${BLUE}🔀 git add .${NC}"
     git add .
 
-    echo -e "  ${BLUE}📊 git status${NC}"
+    echo -e "  ${CYAN}📊 git status${NC}"
     git status
 
     echo -e "  ${BLUE}💾 git commit${NC}"
     git commit -m "update deps"
 
-    echo -e "  ${BLUE}📤 git push${NC}"
+    echo -e "  ${BLUE}⬆️ git push${NC}"
     git push
 
     if [ "$timeout" -gt 0 ]; then
@@ -330,7 +330,7 @@ get_remaining_folders() {
 echo -e "${WHITE}🚀 Начинаю обновление зависимостей в проектах${NC}"
 
 cd ~/git || exit 1
-echo -e "${BLUE}📁 Текущая директория: ${WHITE}$(pwd)${NC}"
+echo -e "${CYAN}📁 Текущая директория: ${WHITE}$(pwd)${NC}"
 
 echo ""
 echo -e "${PURPLE}🔥 Обрабатываю приоритетные папки:${NC}"
