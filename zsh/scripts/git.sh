@@ -251,25 +251,28 @@ process_folder() {
 
     ncu -u
 
+    echo -e "  ${BLUE}📥 git status${NC}"
+    git status
+
     local git_status_after
     git_status_after=$(git status --porcelain)
 
     if [ -z "$git_status_after" ]; then
         echo -e "  ${GREEN}✅ Нет изменений, переходим к следующей папке${NC}"
-        rm -rf "$temp_dir"
+        rm -rfv "$temp_dir"
         cd .. || return
         return
     fi
 
     echo -e "  ${CYAN}🔄 Обновляю версию в package.json${NC}"
     update_version "$old_package_file"
-    rm -rf "$temp_dir"
+    rm -rfv "$temp_dir"
 
     echo -e "  ${YELLOW}🧹 remove node_modules${NC}"
     rm -rf node_modules
 
     echo -e "  ${YELLOW}🧹 remove lock${NC}"
-    rm -rf package-lock.json pnpm-lock.yaml
+    rm -rfv package-lock.json pnpm-lock.yaml
 
     echo -e "  ${BLUE}📦 pnpm i${NC}"
     pnpm i
