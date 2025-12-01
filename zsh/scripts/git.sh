@@ -232,8 +232,8 @@ process_folder() {
     echo -e "  ${BLUE}📦 nvm use${NC}"
     nvm use
 
-    echo -e "  ${BLUE}📦 npm i${NC}"
-    npm i
+    echo -e "  ${BLUE}📦 pnpm i${NC}"
+    pnpm i
 
     if [ "$skip_update" = "skip_ncu" ]; then
         echo -e "  ${YELLOW}⏭️  Пропускаю обновление зависимостей (skip_ncu)${NC}"
@@ -265,17 +265,14 @@ process_folder() {
     update_version "$old_package_file"
     rm -rf "$temp_dir"
 
-    echo -e "  ${YELLOW}🧹 npm cache clean${NC}"
-    npm cache clean --force --loglevel=error
-
     echo -e "  ${YELLOW}🧹 remove node_modules${NC}"
     rm -rf node_modules
 
     echo -e "  ${YELLOW}🧹 remove lock${NC}"
-    rm -rf package-lock.json
+    rm -rf package-lock.json pnpm-lock.yaml
 
-    echo -e "  ${BLUE}📦 npm i${NC}"
-    npm i
+    echo -e "  ${BLUE}📦 pnpm i${NC}"
+    pnpm i
 
     echo -e "  ${BLUE}📝 git add .${NC}"
     git add .
