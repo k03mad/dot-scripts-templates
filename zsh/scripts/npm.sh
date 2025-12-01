@@ -1,6 +1,10 @@
 #!/usr/bin/env zsh
 
-tools=(
+npmTools=(
+    "pnpm"
+)
+
+pnpmTools=(
     "@k03mad/actual-versions"
     "@k03mad/dice"
     "@k03mad/dns-leak"
@@ -12,7 +16,8 @@ tools=(
     "npm-check"
 )
 
-npm i "${tools[@]}" -g
-
-echo ""
+npm i "${npmTools[@]}" -g
 npm ls -g --depth=0
+
+pnpm i "${pnpmTools[@]}" -g
+pnpm ls -g

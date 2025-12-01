@@ -95,9 +95,11 @@ npmup() {
 
     NPM_FROM=($(echo "$OUTDATED" | cut -d: -f3))
     NPM_FROM=(${NPM_FROM[@]/#npm@*})
+    NPM_FROM=(${NPM_FROM[@]/#corepack@*})
 
     NPM_TO=($(echo "$OUTDATED" | cut -d: -f4))
     NPM_TO=(${NPM_TO[@]/#npm@*})
+    NPM_TO=(${NPM_TO[@]/#corepack@*})
 
     for (( i = 1; i <= $#NPM_FROM; i++ )) do
         echo "✨ ${c[yellow]}${NPM_FROM[i]}${c[reset]} => ${c[green]}${NPM_TO[i]}${c[reset]}"
@@ -106,6 +108,12 @@ npmup() {
     if (( ${#NPM_TO[@]} != 0 )); then
         npm i "${NPM_TO[@]}" -g
     fi
+
+    echo
+    echo "✨ ${c[green]}pnpm update${c[reset]}"
+    echo
+
+    pnpm update -g --latest
 }
 
 promdel() {
