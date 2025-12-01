@@ -193,7 +193,7 @@ process_folder() {
     local skip_update="$3"
 
     print_separator
-    echo -e "${CYAN}⚙️ Обрабатываю папку: ${WHITE}$folder_name${NC}"
+    echo -e "${CYAN}⚙️  Обрабатываю папку: ${WHITE}$folder_name${NC}"
     print_separator
 
     if [ ! -d "$folder_name" ]; then
@@ -215,7 +215,7 @@ process_folder() {
         echo -e "  ${BLUE}🔀 git reset --hard${NC}"
         git reset --hard
 
-        echo -e "  ${BLUE}⬇️ git pull${NC}"
+        echo -e "  ${BLUE}⬇️  git pull${NC}"
         git pull
 
         echo -e "  ${GREEN}✅ Git операции выполнены, переходим к следующей папке${NC}"
@@ -226,7 +226,7 @@ process_folder() {
     echo -e "  ${BLUE}🔀 git reset --hard${NC}"
     git reset --hard
 
-    echo -e "  ${BLUE}⬇️ git pull${NC}"
+    echo -e "  ${BLUE}⬇️  git pull${NC}"
     git pull
 
     echo -e "  ${BLUE}📦 nvm use${NC}"
