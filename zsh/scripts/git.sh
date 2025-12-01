@@ -151,7 +151,7 @@ update_version() {
         return
     fi
 
-    echo -e "  ${CYAN}🏷️ Текущая версия: ${WHITE}$current_version${NC}"
+    echo -e "  ${CYAN}🏷️  Текущая версия: ${WHITE}$current_version${NC}"
 
     IFS='.' read -r major minor patch <<< "$current_version"
 
@@ -180,7 +180,7 @@ update_version() {
     esac
 
     local new_version="$major.$minor.$patch"
-    echo -e "  ${PURPLE}🏷️ Новая версия: ${WHITE}$new_version${NC}"
+    echo -e "  ${PURPLE}🏷️  Новая версия: ${WHITE}$new_version${NC}"
 
     sed "s/\"version\": *\"[^\"]*\"/\"version\": \"$new_version\"/" "$package_file" > "$package_file.tmp" && mv "$package_file.tmp" "$package_file"
 
@@ -264,14 +264,14 @@ process_folder() {
         return
     fi
 
-    echo -e "  ${CYAN}🏷️ Обновляю версию в package.json${NC}"
+    echo -e "  ${CYAN}🏷️  Обновляю версию в package.json${NC}"
     update_version "$old_package_file"
     rm -rfv "$temp_dir"
 
-    echo -e "  ${YELLOW}🗑️ remove node_modules${NC}"
+    echo -e "  ${YELLOW}🗑️  remove node_modules${NC}"
     rm -rf node_modules
 
-    echo -e "  ${YELLOW}🗑️ remove lock${NC}"
+    echo -e "  ${YELLOW}🗑️  remove lock${NC}"
     rm -rfv package-lock.json pnpm-lock.yaml
 
     echo -e "  ${BLUE}📦 pnpm i${NC}"
@@ -286,7 +286,7 @@ process_folder() {
     echo -e "  ${BLUE}💾 git commit${NC}"
     git commit -m "update deps"
 
-    echo -e "  ${BLUE}⬆️ git push${NC}"
+    echo -e "  ${BLUE}⬆️  git push${NC}"
     git push
 
     if [ "$timeout" -gt 0 ]; then
