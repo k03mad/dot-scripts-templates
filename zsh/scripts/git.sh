@@ -147,7 +147,7 @@ update_version() {
     current_version=$(grep '"version":' "$package_file" | sed 's/.*"version": *"\([^"]*\)".*/\1/')
 
     if [ -z "$current_version" ]; then
-        echo -e "  ${YELLOW}⚠️ Не удалось найти версию в package.json${NC}"
+        echo -e "  ${RED}❌ Не удалось найти версию в package.json${NC}"
         return
     fi
 
@@ -197,14 +197,14 @@ process_folder() {
     print_separator
 
     if [ ! -d "$folder_name" ]; then
-        echo -e "${RED}❌ Папка $folder_name не найдена, пропускаю${NC}"
+        echo -e "${YELLOW}⚠️ Папка $folder_name не найдена, пропускаю${NC}"
         return
     fi
 
     cd "$folder_name" || return
 
     if [ ! -d ".git" ]; then
-        echo -e "${RED}❌ В папке $folder_name нет git репозитория, пропускаю${NC}"
+        echo -e "${YELLOW}⚠️ В папке $folder_name нет git репозитория, пропускаю${NC}"
         cd .. || return
         return
     fi
@@ -212,7 +212,7 @@ process_folder() {
     if [ ! -f "package.json" ]; then
         echo -e "${YELLOW}⚠️ В папке $folder_name нет package.json, выполняю только git операции${NC}"
 
-        echo -e "  ${BLUE}🔀 git reset --hard${NC}"
+        echo -e "  ${BLUE}🔀 git reset${NC}"
         git reset --hard
 
         echo -e "  ${BLUE}⬇️  git pull${NC}"
@@ -223,7 +223,7 @@ process_folder() {
         return
     fi
 
-    echo -e "  ${BLUE}🔀 git reset --hard${NC}"
+    echo -e "  ${BLUE}🔀 git reset${NC}"
     git reset --hard
 
     echo -e "  ${BLUE}⬇️  git pull${NC}"
@@ -241,7 +241,7 @@ process_folder() {
         return
     fi
 
-    echo -e "  ${PURPLE}🔄 ncu -u${NC}"
+    echo -e "  ${PURPLE}🔄 ncu${NC}"
 
     local temp_dir
     local old_package_file
@@ -249,7 +249,7 @@ process_folder() {
     old_package_file="$temp_dir/package.json.old"
     cp package.json "$old_package_file"
 
-    ncu -u
+    ncu --no-cache -u
 
     echo -e "  ${CYAN}📊 git status${NC}"
     git status
@@ -277,7 +277,7 @@ process_folder() {
     echo -e "  ${BLUE}📦 pnpm i${NC}"
     pnpm i
 
-    echo -e "  ${BLUE}🔀 git add .${NC}"
+    echo -e "  ${BLUE}🔀 git add${NC}"
     git add .
 
     echo -e "  ${CYAN}📊 git status${NC}"
