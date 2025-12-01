@@ -251,7 +251,7 @@ process_folder() {
 
     ncu -u
 
-    echo -e "  ${BLUE}📥 git status${NC}"
+    echo -e "  ${BLUE}📊 git status${NC}"
     git status
 
     local git_status_after
