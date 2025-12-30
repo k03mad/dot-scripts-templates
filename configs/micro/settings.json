@@ -1,5 +1,6 @@
 {
     "autosu": true,
+    "clipboard": "external",
     "colorscheme": "geany",
     "keepautoindent": true,
     "mkparents": true,
