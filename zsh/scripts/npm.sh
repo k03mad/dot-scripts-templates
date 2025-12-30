@@ -10,8 +10,6 @@ pnpmTools=(
     "@k03mad/dns-leak"
     "@k03mad/ip2geo"
     "@k03mad/nodejs-versions"
-    "check-imports"
-    "knip"
     "npm-check-updates"
     "npm-check"
 )
