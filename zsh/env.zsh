@@ -39,6 +39,7 @@ fi
 export PATH="\
 ${PATH}:\
 /data/data/com.termux/files/usr/bin:\
+/data/data/com.termux/files/home/.cargo/bin:\
 /opt/homebrew/bin:\
 /opt/homebrew/opt/curl/bin:\
 /opt/homebrew/sbin:\
