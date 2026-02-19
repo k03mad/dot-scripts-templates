@@ -3,7 +3,7 @@
 set -e
 
 folders=(
-    "eslint-config        sleep_1"
+    "oxlint-config        sleep_1"
     "simple-prom          sleep_1"
     "request              sleep_1"
     "ip2geo               sleep_1"
