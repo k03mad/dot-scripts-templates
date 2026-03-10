@@ -120,3 +120,21 @@ promdel() {
     curl -X POST -v -g "http://localhost:12000/api/v1/admin/tsdb/delete_series?match[]=$1"
     curl -X POST -v http://localhost:12000/api/v1/admin/tsdb/clean_tombstones
 }
+
+vpn() {
+    if [[ $# -eq 0 ]]; then
+        return 1
+    fi
+
+    local domain="$1"
+    shift
+    local comment="$*"
+
+    ssh mik "/ip dns static add type=FWD forward-to=adg address-list=tovpnTemp match-subdomain=yes name=$domain comment=\"$comment\"" > /dev/null 2>&1
+    ssh opi "dig $domain @mik" 2>&1
+
+    echo "═══════════════════════════════════════════"
+    echo
+
+    ssh opi "traceroute $domain | head -n 6" 2>&1
+}
