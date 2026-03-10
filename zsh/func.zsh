@@ -121,7 +121,7 @@ promdel() {
     curl -X POST -v http://localhost:12000/api/v1/admin/tsdb/clean_tombstones
 }
 
-vpn() {
+fwd() {
     if [[ $# -eq 0 ]]; then
         return 1
     fi
