@@ -135,10 +135,10 @@ fwd() {
         /ip dns cache flush
     " > /dev/null 2>&1
 
-    ssh opi "dig $domain @mik" 2>&1
-
-    echo "═══════════════════════════════════════════"
-    echo
-
-    ssh opi "traceroute $domain | head -n 6" 2>&1
+    ssh opi "
+        dig $domain @mik
+        echo '═══════════════════════════════════════════'
+        echo
+        traceroute -m 6 $domain
+    " 2>&1
 }
