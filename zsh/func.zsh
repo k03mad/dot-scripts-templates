@@ -131,7 +131,7 @@ fwd() {
     local comment="$*"
 
     ssh mik "
-        /ip dns static add type=FWD forward-to=adg address-list=tovpnTemp match-subdomain=yes name=$domain comment=\"$comment\"
+        /ip dns static add type=FWD forward-to=cf address-list=tovpnTemp match-subdomain=yes name=$domain comment=\"$comment\"
         /ip dns cache flush
     " > /dev/null 2>&1
 
