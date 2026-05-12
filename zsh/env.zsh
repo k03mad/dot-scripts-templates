@@ -48,6 +48,7 @@ ${PATH}:\
 /usr/local/go/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
+${HOME}/.local/share/pnpm/bin:\
 ${HOME}/arcadia:\
 ${HOME}/go/bin\
 "
