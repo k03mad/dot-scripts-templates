@@ -38,8 +38,8 @@ fi
 
 export PATH="\
 ${PATH}:\
-/data/data/com.termux/files/usr/bin:\
 /data/data/com.termux/files/home/.cargo/bin:\
+/data/data/com.termux/files/usr/bin:\
 /opt/homebrew/bin:\
 /opt/homebrew/opt/curl/bin:\
 /opt/homebrew/sbin:\
@@ -49,6 +49,7 @@ ${PATH}:\
 /usr/local/sbin:\
 /usr/sbin:\
 ${HOME}/.local/share/pnpm/bin:\
+${HOME}/Library/pnpm/bin:\
 ${HOME}/arcadia:\
 ${HOME}/go/bin\
 "

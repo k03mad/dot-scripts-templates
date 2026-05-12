@@ -114,10 +114,10 @@ alias npmcl="\
     && echo \
     && echo ✨ pnpm rm \
     && echo \
-    && echo rm -rfv ~/.local/share/pnpm \
+    && echo rm -rfv ~/.local/share/pnpm ~/Library/pnpm \
     && echo Press enter to continue... \
     && read -s -n 2 \
-    && rm -rfv ~/.local/share/pnpm \
+    && rm -rfv ~/.local/share/pnpm ~/Library/pnpm \
 "
 
 alias nvmin="nvm install \$(cat .nvmrc) && echo && npmin"
