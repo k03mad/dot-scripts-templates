@@ -7,7 +7,6 @@ folders=(
     "simple-prom          sleep_1"
     "request              sleep_1"
     "ip2geo               sleep_1"
-    "adg-mik-sync         sleep_2"
     "iptv-mp              sleep_2"
     "mik-prom-exporter    sleep_2"
     "sys-prom-exporter    sleep_2"
