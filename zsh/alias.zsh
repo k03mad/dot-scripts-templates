@@ -109,15 +109,15 @@ alias npmcl="\
     && echo ✨ npm rm \
     && echo \
     && (npm ls -g --json \
-        | jq -r '.dependencies|keys-[\"npm\",\"corepack\",\"pnpm\"]|join(\"\n\")' \
+        | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' \
         | xargs -t npm remove -g || true) \
     && echo \
     && echo ✨ pnpm rm \
     && echo \
-    && echo rm -rf \$(dirname \$(pnpm root -g)) \
+    && echo rm -rfv ~/.local/share/pnpm \
     && echo Press enter to continue... \
     && read -s -n 2 \
-    && rm -rf \$(dirname \$(pnpm root -g)) \
+    && rm -rfv ~/.local/share/pnpm \
 "
 
 alias nvmin="nvm install \$(cat .nvmrc) && echo && npmin"
