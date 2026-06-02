@@ -269,12 +269,6 @@ process_folder() {
     update_version "$old_package_file"
     rm -rfv "$temp_dir"
 
-    echo -e "  ${YELLOW}🗑️  remove node_modules${NC}"
-    rm -rf node_modules
-
-    echo -e "  ${YELLOW}🗑️  remove lock${NC}"
-    rm -rfv package-lock.json pnpm-lock.yaml
-
     echo -e "  ${BLUE}📦 pnpm i${NC}"
     pnpm i
 
