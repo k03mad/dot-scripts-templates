@@ -10,7 +10,6 @@ folders=(
     "iptv-mp              sleep_1"
     "mik-prom-exporter    sleep_1"
     "sys-prom-exporter    sleep_1"
-    "vdsina-prom-exporter sleep_1"
 )
 
 RED=$'\033[0;31m'
