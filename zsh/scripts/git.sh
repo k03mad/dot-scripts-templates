@@ -274,9 +274,6 @@ process_folder() {
     echo -e "  ${YELLOW}🗑️  remove lock${NC}"
     rm -rfv package-lock.json pnpm-lock.yaml
 
-    echo -e "  ${YELLOW}🗑️  remove workspace${NC}"
-    rm -rfv pnpm-workspace.yaml
-
     echo -e "  ${BLUE}📦 pnpm i${NC}"
     pnpm i
 
