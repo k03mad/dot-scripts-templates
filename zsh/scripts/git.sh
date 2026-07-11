@@ -10,7 +10,6 @@ folders=(
     "iptv-mp              sleep_1"
     "mik-prom-exporter    sleep_1"
     "sys-prom-exporter    sleep_1"
-    "vdsina-prom-exporter sleep_1"
 )
 
 RED=$'\033[0;31m'
@@ -274,9 +273,6 @@ process_folder() {
 
     echo -e "  ${YELLOW}🗑️  remove lock${NC}"
     rm -rfv package-lock.json pnpm-lock.yaml
-
-    echo -e "  ${YELLOW}🗑️  remove workspace${NC}"
-    rm -rfv pnpm-workspace.yaml
 
     echo -e "  ${BLUE}📦 pnpm i${NC}"
     pnpm i
