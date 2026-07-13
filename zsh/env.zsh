@@ -3,6 +3,7 @@
 setopt histignorealldups
 
 export GIT_FOLDER="${HOME}/git"
+export GIT_CONFIG_GLOBAL="${DOT_FOLDER_CONFIGS}/.gitconfig"
 
 export DOT_FOLDER="${GIT_FOLDER}/dot-scripts-templates"
 export DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
@@ -13,11 +14,6 @@ export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_CUSTOM="${ZSH}/custom"
 export ZSH_CUSTOM_PLUGINS="${ZSH_CUSTOM}/plugins"
 export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
-
-export GIT_CONFIG_GLOBAL="${DOT_FOLDER_CONFIGS}/.gitconfig"
-export MICRO_CONFIG_HOME="${DOT_FOLDER_CONFIGS}/micro"
-
-export ARC_EDITOR="micro"
 
 export FZF_DEFAULT_OPTS="--preview-window 70% --info=hidden --prompt="
 
@@ -38,8 +34,6 @@ fi
 
 export PATH="\
 ${PATH}:\
-/data/data/com.termux/files/home/.cargo/bin:\
-/data/data/com.termux/files/usr/bin:\
 /opt/homebrew/bin:\
 /opt/homebrew/opt/curl/bin:\
 /opt/homebrew/sbin:\
@@ -48,12 +42,14 @@ ${PATH}:\
 /usr/local/go/bin:\
 /usr/local/sbin:\
 /usr/sbin:\
+${HOME}/.cargo/bin:\
 ${HOME}/.local/bin:\
 ${HOME}/.local/share/pnpm/bin:\
 ${HOME}/.opencode/bin:\
 ${HOME}/Library/pnpm/bin:\
 ${HOME}/arcadia:\
-${HOME}/go/bin\
+${HOME}/go/bin:\
+${PREFIX}/bin
 "
 
 export FPATH="\
