@@ -151,14 +151,19 @@ fllm() {
     echo "${c[dim]}────────────────────────────────${c[reset]}"
     printf "${c[bold]}%-4s %-6s %-30s${c[reset]}\n" "RANK" "SCORE" "ID"
 
+    local i=0
     printf '%s\n' "$parsed" | tail -n +2 | while IFS=$'\t' read -r rank score id; do
-        local rcol="${c[reset]}"
-        case "$rank" in
-            1) rcol="${c[orange]}" ;;
-            2) rcol="${c[cyan]}" ;;
-            3) rcol="${c[green]}" ;;
-        esac
-        printf "${c[bold]}${rcol}#%-3s${c[reset]} ${c[bold]}${c[yellow]}%-5s${c[reset]} %-30s\n" "$rank" "$score" "$id"
+        i=$((i + 1))
+        if [ "$i" -le 3 ]; then
+            local rcol="${c[orange]}"
+            case "$rank" in
+                2) rcol="${c[cyan]}" ;;
+                3) rcol="${c[green]}" ;;
+            esac
+            printf "${c[bold]}${rcol}#%-3s %-5s %-30s${c[reset]}\n" "$rank" "$score" "$id"
+        else
+            printf "#%-3s %-5s %-30s\n" "$rank" "$score" "$id"
+        fi
     done
 
     echo "${c[dim]}────────────────────────────────${c[reset]}"
