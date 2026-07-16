@@ -35,8 +35,8 @@ gci() {
     local diff
     diff=$(git diff --staged --stat)
     if [ -z "$diff" ]; then
-        git add -A
-        diff=$(git diff --staged --stat)
+        echo "${c[bold]}${c[red]}Error:${c[reset]} нет добавленных изменений (git add)"
+        return 1
     fi
 
     local prompt="Придумай сообщение для git-коммита в формате Conventional Commits: <type>(<scope>): <subject>, где type ∈ {feat,fix,docs,style,refactor,perf,test,build,ci,chore,revert}. Заголовок до 50 символов, без описания. Ответь только одной строкой с сообщением коммита, без кавычек и пояснений. Изменения:\n$diff"
