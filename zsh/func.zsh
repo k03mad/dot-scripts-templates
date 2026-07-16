@@ -296,12 +296,17 @@ trgeo() {
 
         echo "      ${c_geo}— ${GEO_FLAG} ${geo}${c_rst}"
         [[ -n "$GEO_ASN" ]] && echo "      ${c_as}— ${GEO_ASN}${c_rst}"
-        if [[ -n "$GEO_ASN" && "${(L)GEO_ASN}" == *"${(L)GEO_ISP}"* ]]; then
-            [[ -n "$GEO_ORG" && "$GEO_ORG" != "$GEO_ISP" ]] && echo "      ${c_net}— ${GEO_ORG}${c_rst}"
-        else
-            echo "      ${c_net}— ${GEO_ISP:-}${c_rst}"
-            [[ -n "$GEO_ORG" && "$GEO_ORG" != "$GEO_ISP" ]] && echo "      ${c_net}— ${GEO_ORG}${c_rst}"
-        fi
+
+        local a="${(L)GEO_ASN}" i="${(L)GEO_ISP}" o="${(L)GEO_ORG}"
+        local show_isp=1 show_org=1
+        [[ -z "$GEO_ISP" ]] && show_isp=0
+        [[ -z "$GEO_ORG" ]] && show_org=0
+        [[ $show_isp -eq 1 && -n "$a" && "$a" == *"$i"* ]] && show_isp=0
+        [[ $show_isp -eq 1 && -n "$o" && "$o" == *"$i"* ]] && show_isp=0
+        [[ $show_org -eq 1 && -n "$a" && "$a" == *"$o"* ]] && show_org=0
+        [[ $show_org -eq 1 && -n "$i" && "$i" == *"$o"* ]] && show_org=0
+        [[ $show_isp -eq 1 ]] && echo "      ${c_net}— ${GEO_ISP}${c_rst}"
+        [[ $show_org -eq 1 ]] && echo "      ${c_net}— ${GEO_ORG}${c_rst}"
     }
 
     print_priv() {
@@ -393,13 +398,26 @@ trgeo() {
                     print_priv
                 fi
             else
-                local first=1
-                for (( i = 1; i <= $#pub_ip; i++ )); do
-                    (( first )) || echo
-                    first=0
+                local done=() gi=1
+                while (( gi <= $#pub_ip )); do
+                    local skip=0
+                    for d in "${done[@]}"; do
+                        [[ "$d" == "$gi" ]] && skip=1 && break
+                    done
+                    (( skip )) && { gi=$((gi+1)); continue }
+                    local group=() g_sig="${pub_sig[gi]}"
+                    for (( j = gi; j <= $#pub_ip; j++ )); do
+                        [[ "${pub_sig[j]}" == "$g_sig" ]] || continue
+                        group+=("$(fmt_ip "${pub_ip[j]}" "${pub_dom[j]}")")
+                        done+=("$j")
+                    done
+                    local joined="$(printf '%s, ' "${group[@]}")"
+                    joined="${joined%, }"
+                    (( gi > 1 )) && echo
                     set_hop_label "$hop"
-                    printf '  %s%2s%s  %s\n' "$c_hop" "$hlabel" "$c_rst" "$(fmt_ip "${pub_ip[i]}" "${pub_dom[i]}")"
-                    geo_fetch "${pub_ip[i]}" && geo_print
+                    printf '  %s%2s%s  %s\n' "$c_hop" "$hlabel" "$c_rst" "$joined"
+                    geo_fetch "${pub_ip[gi]}" && geo_print
+                    gi=$((gi+1))
                 done
                 if (( ${#priv[@]} > 0 )); then
                     echo
