@@ -39,7 +39,7 @@ gci() {
         diff=$(git diff --staged --stat)
     fi
 
-    local prompt="Придумай сообщение для git-коммита в формате Conventional Commits: <type>(<scope>): <subject>, где type ∈ {feat,fix,docs,style,refactor,perf,test,build,ci,chore,revert}. Заголовок до 50 символов, опционально пустая строка и подробное описание. Ответь только сообщением коммита, без кавычек и пояснений. Изменения:\n$diff"
+    local prompt="Придумай сообщение для git-коммита в формате Conventional Commits: <type>(<scope>): <subject>, где type ∈ {feat,fix,docs,style,refactor,perf,test,build,ci,chore,revert}. Заголовок до 50 символов, без описания. Ответь только одной строкой с сообщением коммита, без кавычек и пояснений. Изменения:\n$diff"
 
     local msg
     msg=$(curl -s "https://openrouter.ai/api/v1/chat/completions" \
