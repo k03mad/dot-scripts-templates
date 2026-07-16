@@ -24,6 +24,43 @@ gc() {
     git commit -m "$(echo "$@")"
 }
 
+gci() {
+    if [ -z "${OPENROUTER_API_KEY}" ]; then
+        echo "${c[bold]}${c[red]}Error:${c[reset]} OPENROUTER_API_KEY не задан"
+        return 1
+    fi
+
+    echo "${c[green]}generating commit message…${c[reset]}"
+
+    local diff
+    diff=$(git diff --staged --stat)
+    if [ -z "$diff" ]; then
+        git add -A
+        diff=$(git diff --staged --stat)
+    fi
+
+    local prompt="Придумай сообщение для git-коммита в формате Conventional Commits: <type>(<scope>): <subject>, где type ∈ {feat,fix,docs,style,refactor,perf,test,build,ci,chore,revert}. Заголовок до 50 символов, опционально пустая строка и подробное описание. Ответь только сообщением коммита, без кавычек и пояснений. Изменения:\n$diff"
+
+    local msg
+    msg=$(curl -s "https://openrouter.ai/api/v1/chat/completions" \
+        -H "Authorization: Bearer ${OPENROUTER_API_KEY}" \
+        -H "Content-Type: application/json" \
+        -d "$(jq -n --arg p "$prompt" '{
+            model: "openrouter/free",
+            messages: [{ role: "user", content: $p }]
+        }')" \
+        | jq -r '.choices[0].message.content // empty')
+
+    if [ -z "$msg" ]; then
+        echo "${c[bold]}${c[red]}Error:${c[reset]} не удалось получить сообщение от нейронки"
+        return 1
+    fi
+
+    echo "${c[yellow]}message:${c[reset]} $msg"
+    gs
+    git commit -m "$msg"
+}
+
 gch() {
     if [ -z "$*" ]; then
         echo "${c[green]}checkout to ${c[magenta]}master${c[reset]}"
