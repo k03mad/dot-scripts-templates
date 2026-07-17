@@ -232,8 +232,8 @@ process_folder() {
     echo -e "  ${BLUE}📦 nvm use${NC}"
     nvm use
 
-    echo -e "  ${BLUE}📦 pnpm i${NC}"
-    pnpm i
+    echo -e "  ${BLUE}📦 npm i${NC}"
+    npm i
 
     if [ "$skip_update" = "skip_ncu" ]; then
         echo -e "  ${YELLOW}⏭️ Пропускаю обновление зависимостей (skip_ncu)${NC}"
@@ -272,10 +272,10 @@ process_folder() {
     rm -rf node_modules
 
     echo -e "  ${YELLOW}🗑️  remove lock${NC}"
-    rm -rfv package-lock.json pnpm-lock.yaml
+    rm -rfv package-lock.json
 
-    echo -e "  ${BLUE}📦 pnpm i${NC}"
-    pnpm i
+    echo -e "  ${BLUE}📦 npm i${NC}"
+    npm i
 
     echo -e "  ${BLUE}🔀 git add${NC}"
     git add .

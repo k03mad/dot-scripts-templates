@@ -1,10 +1,7 @@
 #!/usr/bin/env zsh
 
 npmTools=(
-    "pnpm"
-)
-
-pnpmTools=(
+    "@earendil-works/pi-coding-agent"
     "@k03mad/dice"
     "@k03mad/dns-leak"
     "@k03mad/ip2geo"
@@ -15,6 +12,3 @@ pnpmTools=(
 
 npm i "${npmTools[@]}" -g
 npm ls -g --depth=0
-
-pnpm i "${pnpmTools[@]}" -g
-pnpm ls -g

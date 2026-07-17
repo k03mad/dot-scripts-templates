@@ -47,9 +47,9 @@ ${HOME}/.cargo/bin:\
 ${HOME}/.local/bin:\
 ${HOME}/.local/share/pnpm/bin:\
 ${HOME}/.opencode/bin:\
-${HOME}/Library/pnpm/bin:\
 ${HOME}/arcadia:\
 ${HOME}/go/bin:\
+${HOME}/Library/pnpm/bin:\
 ${PREFIX}/bin
 "
 

@@ -98,11 +98,6 @@ alias npmls="\
     && echo \
     && npm ls -g --depth=0 \
     && (npm outdated -g || true) \
-    && echo \
-    && echo ✨ \${c[green]}pnpm ls\${c[reset]} \
-    && echo \
-    && pnpm ls -g \
-    && pnpm outdated -g \
 "
 alias npmcl="\
     echo \
@@ -111,13 +106,6 @@ alias npmcl="\
     && (npm ls -g --json \
         | jq -r '.dependencies|keys-[\"npm\"]|join(\"\n\")' \
         | xargs -t npm remove -g || true) \
-    && echo \
-    && echo ✨ pnpm rm \
-    && echo \
-    && echo rm -rfv ~/.local/share/pnpm ~/Library/pnpm \
-    && echo Press enter to continue... \
-    && read -s -n 2 \
-    && rm -rfv ~/.local/share/pnpm ~/Library/pnpm \
 "
 
 alias nvmin="nvm install \$(cat .nvmrc) && echo && npmin"

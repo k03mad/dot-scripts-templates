@@ -108,12 +108,6 @@ npmup() {
     if (( ${#NPM_TO[@]} != 0 )); then
         npm i "${NPM_TO[@]}" -g
     fi
-
-    echo
-    echo "✨ ${c[green]}pnpm update${c[reset]}"
-    echo
-
-    pnpm update -g --latest
 }
 
 promdel() {
@@ -149,4 +143,3 @@ for _f in "${0:A:h}"/*.zsh(N); do
     [[ "${_f:t}" == "_common.zsh" ]] && continue
     source "${_f}"
 done
-
