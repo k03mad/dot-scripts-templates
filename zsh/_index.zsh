@@ -7,7 +7,7 @@ source "${HOME}/.env.local.zsh" 2> /dev/null
 source "${HOME}/.env.work.zsh" 2> /dev/null
 
 source "${dir}/alias.zsh"
-source "${dir}/func.zsh"
+source "${dir}/func/_common.zsh"
 
 source "${dir}/omz.zsh"
 source "${dir}/p10k.zsh"
