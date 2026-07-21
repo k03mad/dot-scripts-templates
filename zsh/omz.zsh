@@ -1,5 +1,3 @@
-# shellcheck source=/dev/null disable=2016
-
 export UPDATE_ZSH_DAYS=30
 #export DISABLE_UPDATE_PROMPT="true"
 

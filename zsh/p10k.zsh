@@ -1,5 +1,3 @@
-# shellcheck disable=1072,1073
-
 # https://raw.githubusercontent.com/romkatv/powerlevel10k/master/config/p10k-lean.zsh
 # Config for Powerlevel10k with lean prompt style. Type `p10k configure` to generate
 # your own config based on it.

@@ -1,12 +1,9 @@
-# shellcheck source=/dev/null disable=SC2012,SC2155
-
 setopt histignorealldups
 
 export GIT_FOLDER="${HOME}/git"
 
 export DOT_FOLDER="${GIT_FOLDER}/dot-scripts-templates"
 export DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
-export DOT_FOLDER_ZSH_SCRIPTS="${DOT_FOLDER}/zsh/scripts"
 export DOT_FOLDER_CONFIGS="${DOT_FOLDER}/configs"
 
 export GIT_CONFIG_GLOBAL="${DOT_FOLDER_CONFIGS}/.gitconfig"

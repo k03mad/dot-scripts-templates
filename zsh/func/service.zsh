@@ -1,0 +1,6 @@
+alias scstatus="sudo systemctl status"
+alias screstart="sudo systemctl daemon-reload && sudo systemctl restart"
+alias scenable="sudo systemctl enable"
+alias scdisable="sudo systemctl disable"
+alias scstart="sudo systemctl start"
+alias scstop="sudo systemctl stop"
