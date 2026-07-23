@@ -24,7 +24,7 @@ chpwd() {
 
 w() {
     echo "${c[green]}which:${c[reset]}"
-    which "$1"
+    which -a "$1"
     echo
     echo "${c[yellow]}where:${c[reset]}"
     where "$1"
@@ -356,4 +356,3 @@ trgeo() {
 
     echo
 }
-
