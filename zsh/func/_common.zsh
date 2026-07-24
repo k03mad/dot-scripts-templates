@@ -58,13 +58,14 @@ fwd() {
     ssh mik "
         /ip dns static add type=FWD forward-to=toVpn address-list=tovpnTemp match-subdomain=yes name=$domain comment=\"$comment\"
         /ip dns cache flush
-    " > /dev/null 2>&1
+        /ip dns static print where name="$domain"
+    " 2>&1
 
     ssh opi "
         dig $domain @mik
         echo '═══════════════════════════════════════════'
         echo
-        traceroute -m 6 $domain
+        traceroute -m 3 $domain
     " 2>&1
 }
 
