@@ -9,7 +9,7 @@ alias del="rm -rfv"
 alias ports="sudo lsof -i -P -n | grep LISTEN"
 
 chpwd() {
-    if [ -z "${SKIP_CHPWD}" ] && command -v lsd &> /dev/null; then
+    if [ -z "${SKIP_CHPWD}" ] && [ -t 1 ] && command -v lsd &> /dev/null; then
         dls
     fi
 
