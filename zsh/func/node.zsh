@@ -38,7 +38,7 @@ npmin() {
         "npm-check"
     )
 
-    npm i "${npmTools[@]}" -g
+    npm i "${npmTools[@]}" -g --dangerously-allow-all-scripts
     npm ls -g --depth=0
 }
 
@@ -64,7 +64,7 @@ npmup() {
     done
 
     if (( ${#NPM_TO[@]} != 0 )); then
-        npm i "${NPM_TO[@]}" -g
+        npm i "${NPM_TO[@]}" -g --dangerously-allow-all-scripts
     fi
 }
 
