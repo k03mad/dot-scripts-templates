@@ -82,6 +82,15 @@ fllm() {
         return 1
     fi
 
+    # strip invalid lone surrogate escapes (e.g. \ud808) that jq >= 1.8 rejects
+    data=$(printf '%s\n' "$data" | python3 -c '
+import re, sys
+s = sys.stdin.read()
+s = re.sub(r"\\u[dD][89a-bA-B][0-9a-fA-F]{2}(?!\\u[dD][c-fC-F][0-9a-fA-F]{2})", "", s)
+s = re.sub(r"(?<!\\u[dD][89a-bA-B][0-9a-fA-F]{2})\\u[dD][c-fC-F][0-9a-fA-F]{2}", "", s)
+sys.stdout.write(s)
+') || return 1
+
     local parsed updated
     parsed=$(printf '%s\n' "$data" | jq -r '
         ( ( .updatedAt // "n/a" ) as $u
