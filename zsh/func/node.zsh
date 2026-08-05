@@ -73,12 +73,8 @@ gitup() (
 
     local folders=(
         "oxlint-config        sleep_1"
-        "simple-prom          sleep_1"
-        "request              sleep_1"
         "ip2geo               sleep_1"
         "iptv-mp              sleep_1"
-        "mik-prom-exporter    sleep_1"
-        "sys-prom-exporter    sleep_1"
     )
 
     local RED=$'\033[0;31m'
