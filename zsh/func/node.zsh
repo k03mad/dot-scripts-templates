@@ -68,7 +68,7 @@ npmup() {
     fi
 }
 
-gitup() {
+gitup() (
     set -e
 
     local folders=(
@@ -441,4 +441,4 @@ gitup() {
     done
 
     echo -e "${GREEN}🎉 Все папки обработаны!${NC}"
-}
+)
