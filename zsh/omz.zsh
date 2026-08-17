@@ -50,6 +50,7 @@ ${PREFIX}/bin
 
 FPATH="\
 ${FPATH}:\
+${PREFIX}/share/zsh/site-functions:\
 ${ZSH_CUSTOM_PLUGINS}/zsh-completions/src\
 "
 
