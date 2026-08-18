@@ -3,14 +3,14 @@ setopt hist_reduce_blanks
 setopt numeric_glob_sort
 setopt glob_dots
 
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_ENV_HINTS=1
+typeset -U path fpath
 
 GIT_FOLDER="${HOME}/git"
-
 DOT_FOLDER="${GIT_FOLDER}/dot-scripts-templates"
 DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
 
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ENV_HINTS=1
 export FZF_DEFAULT_OPTS="--preview-window 70% --info=hidden --prompt="
 export GIT_CONFIG_GLOBAL="${DOT_FOLDER}/configs/.gitconfig"
 
@@ -37,47 +37,44 @@ plugins=(
     zsh-nvm
 )
 
-if [ -n "${TERMUX_VERSION}" ]; then
-    SKIP_NVMRC="true"
-    export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
+if [[ -n ${TERMUX_VERSION} ]]; then
+    SKIP_NVMRC=true
     export OPENSSL_DIR="${PREFIX}"
+
+    path+=(
+        "${PREFIX}/bin"
+    )
+
+    fpath+=(
+        "${PREFIX}/share/zsh/site-functions"
+    )
 fi
 
-if [ -n "${MAC_WORK}" ]; then
-    export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
-    export ANDROID_HOME="${HOME}/Library/Android/sdk"
-    export PATH="${PATH}:${ANDROID_HOME}/emulator:${ANDROID_HOME}/platform-tools"
-fi
+path+=(
+    /opt/homebrew/bin
+    /opt/homebrew/opt/curl/bin
+    /opt/homebrew/sbin
+    /sbin
+    /usr/local/bin
+    /usr/local/go/bin
+    /usr/local/sbin
+    /usr/sbin
+    "${HOME}/.cargo/bin"
+    "${HOME}/.local/bin"
+    "${HOME}/.local/share/pnpm/bin"
+    "${HOME}/.opencode/bin"
+    "${HOME}/arcadia"
+    "${HOME}/go/bin"
+    "${HOME}/Library/pnpm/bin"
+)
 
-export PATH="\
-${PATH}:\
-/opt/homebrew/bin:\
-/opt/homebrew/opt/curl/bin:\
-/opt/homebrew/sbin:\
-/sbin:\
-/usr/local/bin:\
-/usr/local/go/bin:\
-/usr/local/sbin:\
-/usr/sbin:\
-${HOME}/.cargo/bin:\
-${HOME}/.local/bin:\
-${HOME}/.local/share/pnpm/bin:\
-${HOME}/.opencode/bin:\
-${HOME}/arcadia:\
-${HOME}/go/bin:\
-${HOME}/Library/pnpm/bin:\
-${PREFIX}/bin
-"
-
-FPATH="\
-${FPATH}:\
-${PREFIX}/share/zsh/site-functions:\
-${ZSH_CUSTOM_PLUGINS}/zsh-completions/src\
-"
+fpath+=(
+    "${ZSH_CUSTOM_PLUGINS}/zsh-completions/src"
+)
 
 source "${ZSH}/oh-my-zsh.sh"
 
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -A --group-dirs="first" --color="always" $realpath'
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'lsd -A --group-dirs="first" --color="always" $realpath'
 zstyle ':fzf-tab:complete:cat:*' fzf-preview '! [[ $(file --mime-type $realpath) =~ "directory|binary" ]] && cat $realpath'
