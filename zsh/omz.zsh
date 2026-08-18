@@ -3,18 +3,39 @@ setopt hist_reduce_blanks
 setopt numeric_glob_sort
 setopt glob_dots
 
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ENV_HINTS=1
+
 GIT_FOLDER="${HOME}/git"
 
 DOT_FOLDER="${GIT_FOLDER}/dot-scripts-templates"
 DOT_FOLDER_ZSH="${DOT_FOLDER}/zsh"
-DOT_FOLDER_CONFIGS="${DOT_FOLDER}/configs"
 
-export GIT_CONFIG_GLOBAL="${DOT_FOLDER_CONFIGS}/.gitconfig"
+export FZF_DEFAULT_OPTS="--preview-window 70% --info=hidden --prompt="
+export GIT_CONFIG_GLOBAL="${DOT_FOLDER}/configs/.gitconfig"
 
 export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_CUSTOM="${ZSH}/custom"
 export ZSH_CUSTOM_PLUGINS="${ZSH_CUSTOM}/plugins"
 export ZSH_CUSTOM_THEMES="${ZSH_CUSTOM}/themes"
+
+UPDATE_ZSH_DAYS=30
+ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+plugins=(
+    async
+    autoupdate
+    colors
+    command-not-found
+    fast-syntax-highlighting
+    fzf-tab
+    you-should-use
+    zoxide
+    zsh-autosuggestions
+    zsh-better-npm-completion
+    zsh-nvm
+)
 
 if [ -n "${TERMUX_VERSION}" ]; then
     SKIP_NVMRC="true"
@@ -53,31 +74,6 @@ ${FPATH}:\
 ${PREFIX}/share/zsh/site-functions:\
 ${ZSH_CUSTOM_PLUGINS}/zsh-completions/src\
 "
-
-ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
-
-export FZF_DEFAULT_OPTS="--preview-window 70% --info=hidden --prompt="
-
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_ENV_HINTS=1
-
-UPDATE_ZSH_DAYS=30
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-plugins=(
-    async
-    autoupdate
-    colors
-    command-not-found
-    fast-syntax-highlighting
-    fzf-tab
-    you-should-use
-    zoxide
-    zsh-autosuggestions
-    zsh-better-npm-completion
-    zsh-nvm
-)
 
 source "${ZSH}/oh-my-zsh.sh"
 
