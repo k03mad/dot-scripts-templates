@@ -72,8 +72,8 @@ gitup() (
     set -e
 
     local folders=(
-        "oxlint-config        sleep_1"
-        "ip2geo               sleep_1"
+        "oxlint-config 1"
+        "ip2geo 1"
     )
 
     local RED=$'\033[0;31m'
@@ -113,92 +113,49 @@ gitup() (
     analyze_dependency_changes() {
         local old_package="$1"
         local new_package="$2"
-        local temp_file
-        temp_file=$(mktemp)
+        local max_change="patch" section pkg_name old_ver new_ver
+        local old_major old_minor old_patch new_major new_minor new_patch
 
-        echo "patch" > "$temp_file"
+        for section in dependencies devDependencies; do
+            jq -r --arg section "$section" '.[$section] // {} | keys[]' "$old_package" 2>/dev/null | while read -r pkg_name; do
+                old_ver=$(jq -r --arg section "$section" --arg key "$pkg_name" '.[$section][$key]' "$old_package" 2>/dev/null)
+                new_ver=$(jq -r --arg section "$section" --arg key "$pkg_name" '.[$section][$key] // empty' "$new_package" 2>/dev/null)
 
-        jq -r '.dependencies // {} | keys[]' "$old_package" 2>/dev/null | while read -r pkg_name; do
-            old_ver=$(jq -r --arg key "$pkg_name" '.dependencies[$key]' "$old_package" 2>/dev/null)
-            new_ver=$(jq -r --arg key "$pkg_name" '.dependencies[$key] // empty' "$new_package" 2>/dev/null)
-
-            if [ -z "$new_ver" ]; then
-                continue
-            fi
-
-            old_ver="${old_ver#[~^>=<]}"
-            old_ver="${old_ver#[~^>=<]}"
-            old_ver="${old_ver#[~^>=<]}"
-            new_ver="${new_ver#[~^>=<]}"
-            new_ver="${new_ver#[~^>=<]}"
-            new_ver="${new_ver#[~^>=<]}"
-
-            if [ "$old_ver" = "$new_ver" ]; then
-                continue
-            fi
-
-            IFS='.' read -r old_major old_minor old_patch <<< "$old_ver"
-            IFS='.' read -r new_major new_minor new_patch <<< "$new_ver"
-
-            old_patch="${old_patch%%[!0-9]*}"
-            new_patch="${new_patch%%[!0-9]*}"
-
-            if [ "$old_major" != "$new_major" ]; then
-                echo -e "    ${PURPLE}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
-                echo "major" > "$temp_file"
-            elif [ "$old_minor" != "$new_minor" ]; then
-                echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
-                local current_max=$(cat "$temp_file")
-                if [ "$current_max" != "major" ]; then
-                    echo "minor" > "$temp_file"
+                if [ -z "$new_ver" ]; then
+                    continue
                 fi
-            elif [ "$old_patch" != "$new_patch" ]; then
-                echo -e "    ${CYAN}📦 $pkg_name: $old_ver → $new_ver (patch)${NC}" >&2
-            fi
+
+                old_ver="${old_ver#[~^>=<]}"
+                old_ver="${old_ver#[~^>=<]}"
+                old_ver="${old_ver#[~^>=<]}"
+                new_ver="${new_ver#[~^>=<]}"
+                new_ver="${new_ver#[~^>=<]}"
+                new_ver="${new_ver#[~^>=<]}"
+
+                if [ "$old_ver" = "$new_ver" ]; then
+                    continue
+                fi
+
+                IFS='.' read -r old_major old_minor old_patch <<< "$old_ver"
+                IFS='.' read -r new_major new_minor new_patch <<< "$new_ver"
+
+                old_patch="${old_patch%%[!0-9]*}"
+                new_patch="${new_patch%%[!0-9]*}"
+
+                if [ "$old_major" != "$new_major" ]; then
+                    echo -e "    ${PURPLE}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
+                    max_change="major"
+                elif [ "$old_minor" != "$new_minor" ]; then
+                    echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
+                    if [ "$max_change" != "major" ]; then
+                        max_change="minor"
+                    fi
+                elif [ "$old_patch" != "$new_patch" ]; then
+                    echo -e "    ${CYAN}📦 $pkg_name: $old_ver → $new_ver (patch)${NC}" >&2
+                fi
+            done
         done
 
-        jq -r '.devDependencies // {} | keys[]' "$old_package" 2>/dev/null | while read -r pkg_name; do
-            old_ver=$(jq -r --arg key "$pkg_name" '.devDependencies[$key]' "$old_package" 2>/dev/null)
-            new_ver=$(jq -r --arg key "$pkg_name" '.devDependencies[$key] // empty' "$new_package" 2>/dev/null)
-
-            if [ -z "$new_ver" ]; then
-                continue
-            fi
-
-            old_ver="${old_ver#[~^>=<]}"
-            old_ver="${old_ver#[~^>=<]}"
-            old_ver="${old_ver#[~^>=<]}"
-            new_ver="${new_ver#[~^>=<]}"
-            new_ver="${new_ver#[~^>=<]}"
-            new_ver="${new_ver#[~^>=<]}"
-
-            if [ "$old_ver" = "$new_ver" ]; then
-                continue
-            fi
-
-            IFS='.' read -r old_major old_minor old_patch <<< "$old_ver"
-            IFS='.' read -r new_major new_minor new_patch <<< "$new_ver"
-
-            old_patch="${old_patch%%[!0-9]*}"
-            new_patch="${new_patch%%[!0-9]*}"
-
-            if [ "$old_major" != "$new_major" ]; then
-                echo -e "    ${PURPLE}📦 $pkg_name: $old_ver → $new_ver (major)${NC}" >&2
-                echo "major" > "$temp_file"
-            elif [ "$old_minor" != "$new_minor" ]; then
-                echo -e "    ${YELLOW}📦 $pkg_name: $old_ver → $new_ver (minor)${NC}" >&2
-                local current_max=$(cat "$temp_file")
-                if [ "$current_max" != "major" ]; then
-                    echo "minor" > "$temp_file"
-                fi
-            elif [ "$old_patch" != "$new_patch" ]; then
-                echo -e "    ${CYAN}📦 $pkg_name: $old_ver → $new_ver (patch)${NC}" >&2
-            fi
-        done
-
-        local max_change
-        max_change=$(cat "$temp_file")
-        rm -f "$temp_file"
         echo "$max_change"
     }
 
@@ -207,7 +164,7 @@ gitup() (
         local package_file="package.json"
 
         local current_version
-        current_version=$(grep '"version":' "$package_file" | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+        current_version=$(jq -r '.version // empty' "$package_file")
 
         if [ -z "$current_version" ]; then
             echo -e "  ${RED}❌ Не удалось найти версию в package.json${NC}"
@@ -215,8 +172,6 @@ gitup() (
         fi
 
         echo -e "  ${CYAN}🏷️  Текущая версия: ${WHITE}$current_version${NC}"
-
-        IFS='.' read -r major minor patch <<< "$current_version"
 
         local change_level="patch"
 
@@ -227,25 +182,7 @@ gitup() (
 
         echo -e "  ${CYAN}📊 Уровень изменений: ${WHITE}$change_level${NC}"
 
-        case "$change_level" in
-            "major")
-                major=$((major + 1))
-                minor=0
-                patch=0
-                ;;
-            "minor")
-                minor=$((minor + 1))
-                patch=0
-                ;;
-            "patch")
-                patch=$((patch + 1))
-                ;;
-        esac
-
-        local new_version="$major.$minor.$patch"
-        echo -e "  ${PURPLE}🏷️  Новая версия: ${WHITE}$new_version${NC}"
-
-        sed "s/\"version\": *\"[^\"]*\"/\"version\": \"$new_version\"/" "$package_file" > "$package_file.tmp" && mv "$package_file.tmp" "$package_file"
+        npm version "$change_level" --no-git-tag-version --ignore-scripts || return
 
         echo -e "  ${GREEN}✅ Версия обновлена в package.json${NC}"
     }
@@ -253,7 +190,6 @@ gitup() (
     process_folder() {
         local folder_name="$1"
         local timeout="$2"
-        local skip_update="$3"
 
         print_separator
         echo -e "${CYAN}⚙️  Обрабатываю папку: ${WHITE}$folder_name${NC}"
@@ -297,12 +233,6 @@ gitup() (
 
         echo -e "  ${BLUE}📦 npm i${NC}"
         npm i
-
-        if [ "$skip_update" = "skip_ncu" ]; then
-            echo -e "  ${YELLOW}⏭️ Пропускаю обновление зависимостей (skip_ncu)${NC}"
-            cd .. || return
-            return
-        fi
 
         echo -e "  ${PURPLE}🔄 ncu${NC}"
 
@@ -362,31 +292,12 @@ gitup() (
     }
 
     get_remaining_folders() {
-        local priority_folders=()
-
-        for item in "${folders[@]}"; do
-            read -r folder_name _ <<< "$item"
-            priority_folders+=("$folder_name")
-        done
-
-        for dir in */; do
-            local dir_name="${dir%/}"
-
-            if [[ "$dir_name" == .* ]]; then
-                continue
-            fi
-
-            local is_priority=false
-            for priority_folder in "${priority_folders[@]}"; do
-                if [ "$dir_name" = "$priority_folder" ]; then
-                    is_priority=true
-                    break
-                fi
-            done
-
-            if [ "$is_priority" = false ]; then
-                echo "$dir_name"
-            fi
+        local priority_folders=("${(@)folders%% *}")
+        local dir dir_name
+        for dir in */(N); do
+            dir_name="${dir%/}"
+            [[ "$dir_name" == .* || ${priority_folders[(Ie)$dir_name]} -ne 0 ]] && continue
+            print -r -- "$dir_name"
         done
     }
 
@@ -400,24 +311,8 @@ gitup() (
     echo ""
 
     for item in "${folders[@]}"; do
-        read -r folder_name timeout_or_flag <<< "$item"
-        if [[ -n "$timeout_or_flag" ]]; then
-            if [[ "$timeout_or_flag" == "skip_ncu" ]]; then
-                local timeout="0"
-                local skip_flag="skip_ncu"
-            elif [[ "$timeout_or_flag" == sleep_* ]]; then
-                local timeout="${timeout_or_flag#sleep_}"
-                local skip_flag=""
-            else
-                local timeout="$timeout_or_flag"
-                local skip_flag=""
-            fi
-        else
-            local timeout="0"
-            local skip_flag=""
-        fi
-
-        process_folder "$folder_name" "$timeout" "$skip_flag"
+        read -r folder_name timeout <<< "$item"
+        process_folder "$folder_name" "$timeout"
         echo ""
     done
 
@@ -431,7 +326,7 @@ gitup() (
     done < <(get_remaining_folders)
 
     for folder_name in "${remaining_folders[@]}"; do
-        process_folder "$folder_name" "0" ""
+        process_folder "$folder_name" "0"
         echo ""
     done
 
