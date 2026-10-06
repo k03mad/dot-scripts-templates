@@ -33,10 +33,13 @@ npmin() {
         "@k03mad/dns-leak"
         "@k03mad/ip2geo"
         "@k03mad/nodejs-versions"
-        "ketch-cli"
+        "ketch-cli:skip_termux"
         "npm-check-updates"
         "npm-check"
     )
+
+    [[ -n ${TERMUX_VERSION} ]] && npmTools=(${npmTools:#*:skip_termux})
+    npmTools=(${npmTools%:skip_termux})
 
     npm i "${npmTools[@]}" -g --dangerously-allow-all-scripts
     npm ls -g --depth=0
