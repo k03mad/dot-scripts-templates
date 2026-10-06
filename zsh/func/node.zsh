@@ -33,6 +33,7 @@ npmin() {
         "@k03mad/dns-leak"
         "@k03mad/ip2geo"
         "@k03mad/nodejs-versions"
+        "ketch-cli"
         "npm-check-updates"
         "npm-check"
     )
