@@ -56,7 +56,7 @@ fwd() {
     local comment="$*"
 
     ssh mik "
-        /ip dns static add type=FWD forward-to=toVpn address-list=tovpnTemp match-subdomain=yes name=$domain comment=\"$comment\"
+        /ip dns static add type=FWD forward-to=adg address-list=tovpn match-subdomain=yes name=$domain comment=\"$comment\"
         /ip dns cache flush
         /ip dns static print where name="$domain"
     " 2>&1
