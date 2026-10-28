@@ -1,8 +1,7 @@
 alias sudo="sudo "
 alias s="sudo \$(fc -ln -1)"
 
-alias q="exit"
-alias й=q
+alias q='exit' й='exit'
 
 alias del="rm -rfv"
 
